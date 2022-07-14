@@ -28,7 +28,7 @@
      * OPTIONS DEFAULT
      */
     rm01VA.optsDefault = {
-      isAutoInit : true,
+      isAutoInit : false,
       isOffCanvas : true,
       isBreadcrumb : false,
   
@@ -485,7 +485,8 @@
         var $linkItem = $link.find('a');
   
         va.$linkToggle = $();
-        $linkItem.after( M.NS(o.html.caret) );
+        $linkItem.append( M.NS(o.html.caret) );
+        $linkItem
         $linkItem.each(function() {
           var $itemCur = $(this);
           var linkHref = $itemCur.prop('href');

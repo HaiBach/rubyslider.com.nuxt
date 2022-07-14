@@ -8,6 +8,9 @@ useHead({
   meta: [
     { name: 'description', content: 'Best slider and tabs jquery plugin' },
   ],
+  link: [
+    { rel: 'icon', href: "/favicon.ico" }
+  ],
   script: [
     { src: './assets/js/jquery.min.js', mode: 'client' },
     { src: './assets/js/rubymenu2.js', mode: 'client' },
