@@ -1,12 +1,7 @@
 <script setup>
-import jquery from 'jquery'
-// import '../assets/js/ruby01'
-
-// console.log(window.jQuery)
-// import jQuery from '/assets/js/jquery.min.js'
-// const jQuery = require('/assets/js/jquery.min.js')
-
-// console.log(jquery)
+onMounted(() => {
+  const rubymenu = jQuery('.rm01').rubymenu()
+})
 </script>
 
 

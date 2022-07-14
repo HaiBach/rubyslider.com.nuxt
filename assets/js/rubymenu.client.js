@@ -9,8 +9,8 @@
  * @version       1.x
  * @lastUpdate    10-10-2018
  */
-export default function rubymenu() {
-  // ;(function($) {
+// export default function rubymenu() {
+  ;(function($) {
     'use strict';
     
     
@@ -1145,5 +1145,5 @@ export default function rubymenu() {
     };
     $(document).ready(function() { AUTOINIT( $('.' + rm01VA.namespace) ) });
     
-    // })(jQuery);
-};
+    })(jQuery);
+// };
