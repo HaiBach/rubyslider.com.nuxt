@@ -83,6 +83,7 @@
   // Link
   .rm01link {
     a {
+      position: relative;
       padding: 10px 20px;
       color: #fff;
       border: 1px solid transparent;
@@ -137,6 +138,25 @@
       border: 1px solid var(--color-primary);
       border-radius: 4px;
       .rm01list {
+        .rm01caret {
+          position: absolute;
+          right: 20px;
+          &::before, &::after {
+            background-color: #666;
+          }
+          &::after {
+            display: block;
+          }
+        }
+        &.rm01open {
+          .rm01caret {
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+      .rm01link {
         a {
           padding-left: 20px;
           padding-right: 20px;
@@ -150,23 +170,23 @@
         }
       }
     }
+    .rm01menu-lv2 {
+      left: 0;
+      top: 100%;
+      margin-top: 2px;
+      z-index: 2;
+    }
+    .rm01menu-lv3 {
+      left: 100%;
+      top: -2px;
+      margin-left: 3px;
+    }
 
     /***** MENU RIGHT *****/
     &.rm01right {
       left: auto;
       right: 1px;
     }
-  }
-  .rm01menu-lv2 {
-    left: 0;
-    top: calc(100% + 2px);
-    z-index: 9;
-    border-radius: 0 0 4px 4px;
-  }
-  .rm01menu-lv3 {
-    left: 100%;
-    top: 0;
-    border-radius: 4px;
   }
 
   .rm01list {
@@ -196,22 +216,6 @@
     }
     &::after {
       transform: rotate(90deg);
-    }
-  }
-  .rm01menu {
-    .rm01menu {
-      .rm01caret {
-        &::before {
-          display: none;
-        }
-        &::after {
-          content: "\0203A";
-          display: block;
-          position: absolute;
-          right: 15px;
-          top: 10px;
-        }
-      }
     }
   }
 
