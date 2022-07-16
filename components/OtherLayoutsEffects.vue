@@ -69,13 +69,13 @@ export default {
     <div class="col6">
     <div class="slider-math rs01 ruby-mark">
       <div class="rs01slide">
-        <img class="rs01imgback" src="@/assets/img/season-landscape2.jpg" alt="Season 2">
+        <img class="rs01imgback" src="~/assets/img/season-landscape2.jpg" alt="Season 2">
       </div>
       <div class="rs01slide">
-        <img class="rs01imgback" src="@/assets/img/season-landscape4.jpg" alt="Season 4">
+        <img class="rs01imgback" src="~/assets/img/season-landscape4.jpg" alt="Season 4">
       </div>
       <div class="rs01slide">
-        <img class="rs01imgback" src="@/assets/img/season-landscape7.jpg" alt="Season 7">
+        <img class="rs01imgback" src="~/assets/img/season-landscape7.jpg" alt="Season 7">
       </div>
     </div>
 
@@ -88,9 +88,9 @@ export default {
     <!-- CSS ONE EFFECT - begin -->
     <div class="col6">
     <div class="slider-one-effect rs01 ruby-mark">
-      <img class="rs01imgback" src="@/assets/img/season-landscape2.jpg" alt="Season 2">
-      <img class="rs01imgback" src="@/assets/img/season-landscape4.jpg" alt="Season 4">
-      <img class="rs01imgback" src="@/assets/img/season-landscape7.jpg" alt="Season 7">
+      <img class="rs01imgback" src="~/assets/img/season-landscape2.jpg" alt="Season 2">
+      <img class="rs01imgback" src="~/assets/img/season-landscape4.jpg" alt="Season 4">
+      <img class="rs01imgback" src="~/assets/img/season-landscape7.jpg" alt="Season 7">
     </div>
 
     <a class="effect-title" href="slider-effect-cssOne.html" target="_blank">50+ CSS One Effects</a>
@@ -102,9 +102,9 @@ export default {
     <!-- CENTER LAYOUT - LINE EFFECT - begin -->
     <div class="col6">
     <div class="slider-line-effect rs01 ruby-mark">
-      <img class="rs01imgback" src="@/assets/img/season-landscape2.jpg" alt="Season 2">
-      <img class="rs01imgback" src="@/assets/img/season-landscape4.jpg" alt="Season 4">
-      <img class="rs01imgback" src="@/assets/img/season-landscape7.jpg" alt="Season 7">
+      <img class="rs01imgback" src="~/assets/img/season-landscape2.jpg" alt="Season 2">
+      <img class="rs01imgback" src="~/assets/img/season-landscape4.jpg" alt="Season 4">
+      <img class="rs01imgback" src="~/assets/img/season-landscape7.jpg" alt="Season 7">
     </div>
 
     <a class="effect-title" href="slider-layout-center.html" target="_blank">Center Layout - Line Effect</a>
@@ -158,22 +158,22 @@ export default {
         <div class="rs01pagitem">IMAGE LAZYLOAD</div>
         <div class="row">
           <div class="col4 col-xs-4">
-            <img class="rs01img card-img" src="@/assets/img/food-thumbnail1.jpg" alt="Food 1">
+            <img class="rs01img card-img" src="~/assets/img/food-thumbnail1.jpg" alt="Food 1">
           </div>
           <div class="col4 col-xs-4">
-            <img class="rs01img card-img" src="@/assets/img/food-thumbnail2.jpg" alt="Food 2">
+            <img class="rs01img card-img" src="~/assets/img/food-thumbnail2.jpg" alt="Food 2">
           </div>
           <div class="col4 col-xs-4">
-            <img class="rs01img card-img" src="@/assets/img/food-thumbnail3.jpg" alt="Food 3">
+            <img class="rs01img card-img" src="~/assets/img/food-thumbnail3.jpg" alt="Food 3">
           </div>
           <div class="col4 col-xs-4">
-            <img class="rs01img card-img" src="@/assets/img/food-thumbnail4.jpg" alt="Food 4">
+            <img class="rs01img card-img" src="~/assets/img/food-thumbnail4.jpg" alt="Food 4">
           </div>
           <div class="col4 col-xs-4">
-            <img class="rs01img card-img" src="@/assets/img/food-thumbnail6.jpg" alt="Food 6">
+            <img class="rs01img card-img" src="~/assets/img/food-thumbnail6.jpg" alt="Food 6">
           </div>
           <div class="col4 col-xs-4">
-            <img class="rs01img card-img" src="@/assets/img/food-thumbnail7.jpg" alt="Food 7">
+            <img class="rs01img card-img" src="~/assets/img/food-thumbnail7.jpg" alt="Food 7">
           </div>
         </div>
       </div>

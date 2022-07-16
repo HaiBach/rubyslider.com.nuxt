@@ -6,7 +6,7 @@ const MENUS = ref({
       {
         key: '1.1',
         name: 'List templates',
-        to: '/slider-list-templates'
+        to: '/slider'
       },
       {
         key: '1.2',

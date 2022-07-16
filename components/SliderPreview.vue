@@ -42,16 +42,16 @@ onMounted(() => {
     <div class="container">
       <div class="slider-preview rs01 rs01timer-arcTop">
         <div class="rs01slide">
-          <img class="rs01imgback" src="@/assets/img/vietnam-large1.jpg" alt="Viet Nam 1">
+          <img class="rs01imgback" src="~/assets/img/vietnam-large1.jpg" alt="Viet Nam 1">
         </div>
         <div class="rs01slide">
-          <img class="rs01imgback" src="@/assets/img/vietnam-large2.jpg" alt="Viet Nam 2">
+          <img class="rs01imgback" src="~/assets/img/vietnam-large2.jpg" alt="Viet Nam 2">
         </div>
         <div class="rs01slide">
-          <img class="rs01imgback" src="@/assets/img/vietnam-large3.jpg" alt="Viet Nam 3">
+          <img class="rs01imgback" src="~/assets/img/vietnam-large3.jpg" alt="Viet Nam 3">
         </div>
         <div class="rs01slide">
-          <img class="rs01imgback" src="@/assets/img/vietnam-large4.jpg" alt="Viet Nam 4">
+          <img class="rs01imgback" src="~/assets/img/vietnam-large4.jpg" alt="Viet Nam 4">
         </div>
         <div class="rs01slide">
           <img class="rs01imgback" src="@/assets/img/video-preview.jpg" data-video-link="https://www.youtube.com/watch?v=2O0nz6o_oAE" alt=">Pictures of South East Asia">

@@ -1,4 +1,4 @@
 <template>
   <SliderPreview />
-  <OtherLayoutsEffects />
+  <!-- <OtherLayoutsEffects /> -->
 </template>
