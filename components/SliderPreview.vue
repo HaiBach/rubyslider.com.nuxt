@@ -1,52 +1,45 @@
-<script>
-export default {
-  data() {
-    return {}
-  },
-  mounted() {
-    window.jQuery('.slider-preview').rubyslider({
-      fx: "coverflow3D",
-      coverflow3D: {
-        widthSlide: [0.8, [1040, 1200, 10000]],
-        opacity: 0.3
-      },
-      speed: 800,
-      width: 1140,
-      imageback: {
-        position: "fit"
-      },
-      isKeyboard: true,
-      isSlideshow: true,
-      slideshow: {
-        delay: 5000,
-        isAutoRun: false
-      },
-      timerArc: {
-        stroke: "#cc0055"
-      },
-      video: {
-        isPauseThenRemove: true
-      }
-    })
-  }
-}
+<script setup>
+
+onMounted(() => {
+  const sliderPreview = jQuery('.slider-preview').rubyslider({
+    fx: "coverflow3D",
+    coverflow3D: {
+      widthSlide: [0.8, [1040, 1200, 10000]],
+      opacity: 0.3
+    },
+    speed: 800,
+    width: 1140,
+    imageback: {
+      position: "fit"
+    },
+    isKeyboard: true,
+    isSlideshow: true,
+    slideshow: {
+      delay: 5000,
+      isAutoRun: false
+    },
+    timerArc: {
+      stroke: "#cc0055"
+    },
+    video: {
+      isPauseThenRemove: true
+    }
+  })
+})
 </script>
 
 
 <template>
   <div class="wrapper">
 
-    <!-- TITLE HEADING - begin -->
     <div class="title-head">
       <div class="title-head-inner">
           <h1>PLUGIN PREVIEW</h1>
           <h5>Best slider &amp; tabs premium jQuery plugin</h5>
       </div>
     </div>
-    <!-- TITLE HEADING - end -->
 
 
-    <!-- SLIDER PREVIEW - begin -->
     <div class="container">
       <div class="slider-preview rs01 rs01timer-arcTop">
         <div class="rs01slide">
@@ -66,7 +59,6 @@ export default {
         </div>
       </div>
     </div>
-    <!-- SLIDER PREVIEW - end -->
 
   </div>
 </template>

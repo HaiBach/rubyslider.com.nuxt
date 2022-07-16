@@ -183,21 +183,21 @@ onMounted(() => {
 <nav class="rm01">
 
   <ul class="rm01menu">
-    <li v-for="(menuLevel1, keyLevel1) in MENUS">
+    <li v-for="(menuLevel1, keyLevel1) in MENUS" :key="menuLevel1.key">
       <a :href="menuLevel1.to">
         <i class="menu-icon" v-if="menuLevel1.icon" v-html="menuLevel1.icon"></i>
         <span>{{ keyLevel1 }}</span>
       </a>
-      
+
       <ul class="rm01menu" v-if="menuLevel1.menus">
-        <li v-for="(menuLevel2, keyLevel2) in menuLevel1.menus">
+        <li v-for="menuLevel2 in menuLevel1.menus" :key="menuLevel2.key">
           <a :href="menuLevel2.to">
             <i class="menu-icon" v-if="menuLevel2.icon" v-html="menuLevel2.icon"></i>
             <span>{{ menuLevel2.name }}</span>
           </a>
 
           <ul class="rm01menu" v-if="!!menuLevel2.menus">
-            <li v-for="(menuLevel3, keyLevel3) in menuLevel2.menus">
+            <li v-for="menuLevel3 in menuLevel2.menus" :key="menuLevel3.key">
               <a :href="menuLevel3.to">
                 <i class="menu-icon" v-if="menuLevel3.icon" v-html="menuLevel3.icon"></i>
                 <span>{{ menuLevel3.name }}</span>

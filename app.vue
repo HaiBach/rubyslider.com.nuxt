@@ -14,13 +14,15 @@ useHead({
   script: [
     { src: './assets/js/jquery.min.js', mode: 'client' },
     { src: './assets/js/rubymenu2.js', mode: 'client' },
+    { src: './assets/js/rubyanimate.js', mode: 'client' },
+    { src: './assets/js/rubyslider.js', mode: 'client' },
   ]
 })
 </script>
 
 
 <template>
-  <Header></Header>
+  <Header />
   <NuxtPage />
-  <!-- <Footer /> -->
+  <Footer />
 </template>
