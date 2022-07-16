@@ -1,5 +1,4 @@
 <script setup>
-
 onMounted(() => {
   const sliderPreview = jQuery('.slider-preview').rubyslider({
     fx: "coverflow3D",
@@ -35,7 +34,7 @@ onMounted(() => {
     <div class="title-head">
       <div class="title-head-inner">
           <h1>PLUGIN PREVIEW</h1>
-          <h5>Best slider &amp; tabs premium jQuery plugin</h5>
+          <p>Best slider &amp; tabs premium jQuery plugin</p>
       </div>
     </div>
 
@@ -70,7 +69,12 @@ onMounted(() => {
   padding-bottom: 100px;
 }
 .title-head h1 {
+  margin-bottom: 15px;
+  font-size: 62px;
   letter-spacing: 4px;
+}
+.title-head p {
+  font-size: 18px;
 }
 </style>
 
