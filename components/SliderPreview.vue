@@ -84,7 +84,7 @@ onMounted(() => {
     overflow: visible;
   }
   .rs01slide {
-    border-radius: 4px;
+    border-radius: 8px;
   }
   .rs01ss-control {
     right: 5px; top: 5px;
