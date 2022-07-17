@@ -212,37 +212,39 @@ onMounted(() => {
 
 
 <template>
-  <SliderTypography />
+  <div>
+    <SliderTypography />
 
-  <!-- Slider List Templates -->
-  <div class="wrapper">
-    <div id="slider-list-templates" class="rs01">
-      <div
-        v-for="(items, tabName) in sliderData"
-        :id="tabName.toLowerCase()"
-        >
+    <!-- Slider List Templates -->
+    <div class="wrapper">
+      <div id="slider-list-templates" class="rs01">
+        <div
+          v-for="(items, tabName) in sliderData"
+          :id="tabName.toLowerCase()"
+          >
 
-        <div class="rs01pagitem">{{ tabName }}</div>
-        <div class="container">
-          <div class="row-small row-mobile items show-full">
-            
-            <div
-              v-for="(item, itemName) in items"
-              class="col3 col-s-4 col-xxs-6"
-              >
-              <article>
-                <figure class="thumbnail">
-                  <a class="linkto" :href="item.link">
-                    <img :src="item.thumbnail" :alt="itemName">
-                  </a>
-                </figure>
-              </article>
+          <div class="rs01pagitem">{{ tabName }}</div>
+          <div class="container">
+            <div class="row-small row-mobile items show-full">
+              
+              <div
+                v-for="(item, itemName) in items"
+                class="col3 col-s-4 col-xxs-6"
+                >
+                <article>
+                  <figure class="thumbnail">
+                    <a class="linkto" :href="item.link">
+                      <img :src="item.thumbnail" :alt="itemName">
+                    </a>
+                  </figure>
+                </article>
+              </div>
+              <!-- /.item -->
+
             </div>
-            <!-- /.item -->
-
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </div>
