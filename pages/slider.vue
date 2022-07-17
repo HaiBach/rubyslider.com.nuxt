@@ -201,18 +201,18 @@ onMounted(() => {
   //     $sliderListTemplates.rubyslider( sliderOptions )
   //     console.log('# rubyslider run')
   //   }
-  // }, 1000)
-  if ($sliderListTemplates.length) {
-    $sliderListTemplates.rubyslider( sliderOptions )
-    console.log('# rubyslider run')
-  }
+  // }, 100)
+  // if ($sliderListTemplates.length) {
+  //   $sliderListTemplates.rubyslider( sliderOptions )
+  //   console.log('# rubyslider run')
+  // }
   console.log('# Page slider: mounted')
 })
 </script>
 
 
 <template>
-  <div>
+  <main>
     <SliderTypography />
 
     <!-- Slider List Templates -->
@@ -247,7 +247,7 @@ onMounted(() => {
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 

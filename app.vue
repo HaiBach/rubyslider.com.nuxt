@@ -6,9 +6,9 @@ import './assets/main.scss'
 <template>
   <div id="page">
     <Header />
-    <main id="main">
+    <NuxtLayout>
       <NuxtPage />
-    </main>
+    </NuxtLayout>
     <Footer />
   </div>
 </template>

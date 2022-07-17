@@ -10,5 +10,7 @@ onMounted(() => {
 
 
 <template>
-  <SliderPreview />
+  <main>
+    <SliderPreview />
+  </main>
 </template>
