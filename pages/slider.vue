@@ -1,4 +1,8 @@
 <script setup>
+definePageMeta({
+  key: route => route.fullPath
+})
+
 const sliderData = {
   'LAYOUT': {
     'Basic Layout': {
@@ -162,20 +166,26 @@ const sliderData = {
 }
 
 // LifeCycle
+const sliderOptions = {
+  optionsPlus: "tabs",
+  fx: "line",
+  speed: 600,
+  pag: {
+    align: "center"
+  },
+  isKeyboard: true,
+  isDeeplinking: true,
+  load: {
+    isLazy: false
+  }
+}
+const $sliderPreview = jQuery('#slider-preview')
+// $sliderPreview.length && $sliderPreview.rubyslider( sliderOptions )
+console.log('# Page slider')
+
 onMounted(() => {
-  jQuery('#slider-list-templates').rubyslider({
-    optionsPlus: "tabs",
-    fx: "line",
-    speed: 600,
-    pag: {
-      align: "center"
-    },
-    isKeyboard: true,
-    isDeeplinking: true,
-    load: {
-      isLazy: false
-    }
-  })
+  // jQuery('#slider-preview').rubyslider( sliderOptions )
+  console.log('# Page slider: mounted')
 })
 </script>
 

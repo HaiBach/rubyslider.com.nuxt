@@ -27,7 +27,8 @@ useHead({
 <template>
   <div>
     <Header />
-    <main>
+    <main id="main">
+      <NuxtLoadingIndicator />
       <NuxtPage />
     </main>
     <Footer />

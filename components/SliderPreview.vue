@@ -1,29 +1,47 @@
 <script setup>
+const sliderOptions = {
+  fx: "coverflow3D",
+  coverflow3D: {
+    widthSlide: [0.8, [1040, 1200, 10000]],
+    opacity: 0.3
+  },
+  speed: 800,
+  width: 1140,
+  imageback: {
+    position: "fit"
+  },
+  isKeyboard: true,
+  isSlideshow: true,
+  slideshow: {
+    delay: 5000,
+    isAutoRun: false
+  },
+  timerArc: {
+    stroke: "#cc0055"
+  },
+  video: {
+    isPauseThenRemove: true
+  }
+}
+
+
+
+// onRendered(() => {
+//   console.log(window.jQuery)
+//   if (!!window.jQuery) {
+//     let $sliderPreview = jQuery('.slider-preview')
+//     $sliderPreview.length && $sliderPreview.rubyslider( sliderOptions )
+//   }
+// })
+
 onMounted(() => {
-  const sliderPreview = jQuery('.slider-preview').rubyslider({
-    fx: "coverflow3D",
-    coverflow3D: {
-      widthSlide: [0.8, [1040, 1200, 10000]],
-      opacity: 0.3
-    },
-    speed: 800,
-    width: 1140,
-    imageback: {
-      position: "fit"
-    },
-    isKeyboard: true,
-    isSlideshow: true,
-    slideshow: {
-      delay: 5000,
-      isAutoRun: false
-    },
-    timerArc: {
-      stroke: "#cc0055"
-    },
-    video: {
-      isPauseThenRemove: true
-    }
-  })
+  // $sliderPreview = jQuery('.slider-preview')
+  // $sliderPreview.length && $sliderPreview.rubyslider( sliderOptions )
+  console.log(' #slider preview mounted')
+})
+
+onUpdated(() => {
+  console.log( '# SliderPreview updated')
 })
 </script>
 
@@ -80,6 +98,8 @@ onMounted(() => {
 
 <style lang="scss">
 .slider-preview {
+  opacity: 0;
+  max-height: 400px;
   > .rs01viewport {
     overflow: visible;
   }
@@ -92,6 +112,10 @@ onMounted(() => {
   .rs01iframe {
     display: block;
     margin-bottom: 0;
+  }
+  &.rs01ready {
+    opacity: 1;
+    max-height: none;
   }
 }
 </style>
