@@ -192,8 +192,16 @@ const sliderOptions = {
 // }
 
 onMounted(() => {
-  const $sliderListTemplates = jQuery('#slider-list-templates')
+  let $sliderListTemplates = jQuery('#slider-list-templates')
   console.log( $sliderListTemplates.length, $sliderListTemplates )
+
+  // setTimeout(() => {
+  //   $sliderListTemplates = jQuery('#slider-list-templates')
+  //   if ($sliderListTemplates.length) {
+  //     $sliderListTemplates.rubyslider( sliderOptions )
+  //     console.log('# rubyslider run')
+  //   }
+  // }, 1000)
   if ($sliderListTemplates.length) {
     $sliderListTemplates.rubyslider( sliderOptions )
     console.log('# rubyslider run')
