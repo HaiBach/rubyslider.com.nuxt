@@ -3,7 +3,7 @@ definePageMeta({
   key: route => route.fullPath
 })
 
-const sliderData = {
+const sliderData = ref({
   'LAYOUT': {
     'Basic Layout': {
       link: '/slider-layout-basic',
@@ -163,7 +163,7 @@ const sliderData = {
       thumbnail: 'assets/img/template-api-cookie.png',
     },
   }
-}
+})
 
 // LifeCycle
 const sliderOptions = {
@@ -179,12 +179,25 @@ const sliderOptions = {
     isLazy: false
   }
 }
-const $sliderPreview = jQuery('#slider-preview')
-// $sliderPreview.length && $sliderPreview.rubyslider( sliderOptions )
-console.log('# Page slider')
+
+// console.log('# Page slider', process.client)
+// if (process.client) {
+//   const $sliderListTemplates = jQuery('#slider-list-templates')
+//   console.log('# page slider', !!$sliderListTemplates.length, $sliderListTemplates.html())
+
+//   if (!!$sliderListTemplates.length) {
+//     $sliderListTemplates.rubyslider( sliderOptions )
+//     console.log('# run slider')
+//   }
+// }
 
 onMounted(() => {
-  // jQuery('#slider-preview').rubyslider( sliderOptions )
+  const $sliderListTemplates = jQuery('#slider-list-templates')
+  console.log( $sliderListTemplates.length, $sliderListTemplates )
+  if ($sliderListTemplates.length) {
+    $sliderListTemplates.rubyslider( sliderOptions )
+    console.log('# rubyslider run')
+  }
   console.log('# Page slider: mounted')
 })
 </script>

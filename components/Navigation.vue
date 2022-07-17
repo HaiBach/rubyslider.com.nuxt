@@ -43,7 +43,7 @@ const MENUS = ref({
           { key: '1.3.5', name: 'CSS Two', to: '/slider/effect-cssTwo' },
           { key: '1.3.6', name: 'CSS Four', to: '/slider/effect-cssFour' },
           { key: '1.3.7', name: 'Coverflow3D', to: '/slider/effect-coverflow3D' },
-          { key: '1.3.8', name: 'Effect Random', to: '/lider-effect-random' },
+          { key: '1.3.8', name: 'Effect Random', to: '/slider/effect-random' },
           { key: '1.3.9', name: 'Effect Control', to: '/slider/effect-control' },
         ]
       },
@@ -126,7 +126,7 @@ const MENUS = ref({
         name: 'Position',
         menus: [
           { key: '2.5.1', name: 'Hor Begin-Begin', to: '/tabs/pos-hor-beginBegin' },
-          { key: '2.5.2', name: 'Hor Begin-Center', to: '/__tabs-pos-hor-beginCente__' },
+          { key: '2.5.2', name: 'Hor Begin-Center', to: '/tabs/pos-hor-beginCenter' },
           { key: '2.5.3', name: 'Hor Begin-End', to: '/tabs/pos-hor-beginEnd' },
           { key: '2.5.4', name: 'Hor Begin-Justify', to: '/tabs/pos-hor-beginJustify' },
           { key: '2.5.5', name: 'Hor End-Begin', to: '/tabs/pos-hor-endBegin.' },
@@ -150,12 +150,12 @@ const MENUS = ref({
       {
         key: '3.1',
         name: 'Create CSS effect',
-        to: '/page-create-css-effect',
+        to: '/tools/create-css-effect',
       },
       {
         key: '3.2',
         name: 'Preview CSS effect',
-        to: '/page-preview-css-effect',
+        to: '/tools/preview-css-effect',
       }
     ],
   },
