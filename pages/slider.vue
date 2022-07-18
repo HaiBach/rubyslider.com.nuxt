@@ -3,7 +3,7 @@ definePageMeta({
   key: route => route.fullPath
 })
 
-const sliderData = ref({
+const sliderData = {
   'LAYOUT': {
     'Basic Layout': {
       link: '/slider-layout-basic',
@@ -163,7 +163,7 @@ const sliderData = ref({
       thumbnail: 'assets/img/template-api-cookie.png',
     },
   }
-})
+}
 
 // LifeCycle
 const sliderOptions = {
@@ -180,33 +180,17 @@ const sliderOptions = {
   }
 }
 
-// console.log('# Page slider', process.client)
-// if (process.client) {
-//   const $sliderListTemplates = jQuery('#slider-list-templates')
-//   console.log('# page slider', !!$sliderListTemplates.length, $sliderListTemplates.html())
-
-//   if (!!$sliderListTemplates.length) {
-//     $sliderListTemplates.rubyslider( sliderOptions )
-//     console.log('# run slider')
-//   }
-// }
-
 onMounted(() => {
-  let $sliderListTemplates = jQuery('#slider-list-templates')
-  console.log( $sliderListTemplates.length, $sliderListTemplates )
+  console.log( '#List template - begin mounted')
 
-  // setTimeout(() => {
-  //   $sliderListTemplates = jQuery('#slider-list-templates')
-  //   if ($sliderListTemplates.length) {
-  //     $sliderListTemplates.rubyslider( sliderOptions )
-  //     console.log('# rubyslider run')
-  //   }
-  // }, 100)
-  // if ($sliderListTemplates.length) {
-  //   $sliderListTemplates.rubyslider( sliderOptions )
-  //   console.log('# rubyslider run')
-  // }
-  console.log('# Page slider: mounted')
+  setTimeout(() => {
+    const $sliderListTemplates = jQuery('#list-templates__slider')
+    if ($sliderListTemplates.length) {
+      $sliderListTemplates.rubyslider( sliderOptions )
+      console.log('#List template - setTimout - setup rubyslider')
+    }
+  }, 400)
+  console.log('#List template - mounted end')
 })
 </script>
 
@@ -216,8 +200,8 @@ onMounted(() => {
     <SliderTypography />
 
     <!-- Slider List Templates -->
-    <div class="wrapper">
-      <div id="slider-list-templates" class="rs01">
+    <div class="list-templates">
+      <div id="list-templates__slider" class="rs01">
         <div
           v-for="(items, tabName) in sliderData"
           :id="tabName.toLowerCase()"
@@ -252,18 +236,18 @@ onMounted(() => {
 
 
 <style scoped>
-#slider-list-templates .rs01pagitem {
+#list-templates__slider .rs01pagitem {
   padding: 10px 25px !important;
   margin-left: 10px; margin-right: 10px;
   background-color: #f9f9f9;
   border-radius: 20px;
   color: #333;
 }
-#slider-list-templates .rs01pagitem:hover {
+#list-templates__slider .rs01pagitem:hover {
   background-color: #e5e5e5;
   color: #000;
 }
-#slider-list-templates .rs01pagitem.rs01cur {
+#list-templates__slider .rs01pagitem.rs01cur {
   background-color: #cc0055;
   border-color: #cc0055;
   color: #fff;

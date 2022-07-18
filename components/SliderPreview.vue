@@ -24,31 +24,27 @@ const sliderOptions = {
   }
 }
 
-
-
-// onRendered(() => {
-//   console.log(window.jQuery)
-//   if (!!window.jQuery) {
-//     let $sliderPreview = jQuery('.slider-preview')
-//     $sliderPreview.length && $sliderPreview.rubyslider( sliderOptions )
-//   }
-// })
-
 onMounted(() => {
-  // $sliderPreview = jQuery('.slider-preview')
-  // $sliderPreview.length && $sliderPreview.rubyslider( sliderOptions )
-  console.log(' #slider preview mounted')
+  console.log('#SliderPreview mounted begin')
+  setTimeout(() => {
+    const $sliderPreview = jQuery('.slider-preview')
+
+    if ($sliderPreview.length) {
+      $sliderPreview.rubyslider( sliderOptions )
+      console.log('#SliderPreview rubyslider setup')
+    }
+  }, 400)
+  console.log('#SliderPreview mounted end')
 })
 
 onUpdated(() => {
-  console.log( '# SliderPreview updated')
+  console.log( '#SliderPreview udpate')
 })
 </script>
 
 
 <template>
-  <div class="wrapper">
-
+  <section class="mv">
     <div class="title-head">
       <div class="title-head-inner">
           <h1>PLUGIN PREVIEW</h1>
@@ -76,14 +72,14 @@ onUpdated(() => {
         </div>
       </div>
     </div>
-
-  </div>
+  </section>
 </template>
 
 
 <style scoped>
-.wrapper {
+.mv {
   overflow: hidden;
+  padding-top: 50px;
   padding-bottom: 100px;
 }
 .title-head h1 {
@@ -98,7 +94,7 @@ onUpdated(() => {
 
 <style lang="scss">
 .slider-preview {
-  opacity: 0;
+  filter:grayscale(1);
   max-height: 400px;
   > .rs01viewport {
     overflow: visible;
@@ -116,6 +112,7 @@ onUpdated(() => {
   &.rs01ready {
     opacity: 1;
     max-height: none;
+    filter: none;
   }
 }
 </style>
