@@ -108,13 +108,13 @@
 ============================================================== */
 
   /* Font primary */
-  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+  // @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
 
   /* Font alternative */
-  @import url(http://fonts.googleapis.com/css?family=Raleway:100,300,700);
+  // @import url(http://fonts.googleapis.com/css?family=Raleway:100,300,700);
 
   /* Font code */
-  @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,700);
+  // @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,700);
 
 
 /*  Font
@@ -140,7 +140,9 @@
   .tt-content
 
   /* Font */
-  { font-family: "Open Sans", "HelveticaNeue", Helvetica, Arial, sans-serif; }
+  {
+    font-family: var(--font-primary);
+  }
 
 
 
@@ -157,7 +159,9 @@
   .dropcap:first-letter
 
   /* Font */
-  { font-family: "Raleway", sans-serif; }
+  {
+    font-family: var(--font-alter);
+  }
 
 
 
@@ -787,7 +791,7 @@
     /*border: 1px solid #e5e5e5;*/
     border-left: 1px dashed #d5d5d5;
     background-color: #fff;
-    font-family: "Source Code Pro", monospace, sans-serif;
+    font-family: var(--font-code);
     font-size: 12px;
     line-height: 19px;
   }

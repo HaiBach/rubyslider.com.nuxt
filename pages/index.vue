@@ -1,3 +1,16 @@
+<script setup>
+definePageMeta({
+  key: route => route.fullPath
+})
+
+onMounted(() => {
+  console.log('# page index mounted')
+})
+</script>
+
+
 <template>
-<h1>Xin chào</h1>
+  <main>
+    <SliderPreview />
+  </main>
 </template>
