@@ -81,7 +81,7 @@ const MENUS = ref({
       {
         key: '2.1',
         name: 'List templates',
-        to: '/tabs/list-templates',
+        to: '/tabs',
       },
       {
         key: '2.2',

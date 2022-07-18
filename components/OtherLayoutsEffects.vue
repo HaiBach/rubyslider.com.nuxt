@@ -1,44 +1,46 @@
 <script>
 export default {
   mounted() {
-    const sliderMath = jQuery('.slider-math').rubyslider({
-      fx: "rectRun",
-      speed: 800,
-      width: 940,
-      pag: {
-        type: "bullet",
-        isMark: true
-      }
-    })
-    const sliderOneEffect = jQuery('.slider-one-effect').rubyslider({
-      fx: "cssOne",
-      speed: 800,
-      width: 940,
-      pag: {
-        type: "bullet",
-        isMark: true
-      }
-    })
-    const sliderLineEffect = jQuery('.slider-line-effect').rubyslider({
-      fx: "line",
-      speed: 400,
-      width: 755,
-      widthSlide: 0.8,
-      margin: 1,
-      pag: {
-        type: "bullet",
-        isMark: true
-      }
-    })
-    const sliderTabs = jQuery('.slider-tabs').rubyslider({
-      optionsPlus: "tabs",
-      fx: "cssOne",
-      cssOne: "scalePulse",
-      speed: 800,
-      pag: {
-        align: "center"
-      }
-    })
+    setTimeout(() => {
+      const sliderMath = jQuery('.slider-math').rubyslider({
+        fx: "rectRun",
+        speed: 800,
+        width: 940,
+        pag: {
+          type: "bullet",
+          isMark: true
+        }
+      })
+      const sliderOneEffect = jQuery('.slider-one-effect').rubyslider({
+        fx: "cssOne",
+        speed: 800,
+        width: 940,
+        pag: {
+          type: "bullet",
+          isMark: true
+        }
+      })
+      const sliderLineEffect = jQuery('.slider-line-effect').rubyslider({
+        fx: "line",
+        speed: 400,
+        width: 755,
+        widthSlide: 0.8,
+        margin: 1,
+        pag: {
+          type: "bullet",
+          isMark: true
+        }
+      })
+      const sliderTabs = jQuery('.slider-tabs').rubyslider({
+        optionsPlus: "tabs",
+        fx: "cssOne",
+        cssOne: "scalePulse",
+        speed: 800,
+        pag: {
+          align: "center"
+        }
+      })
+    }, 400)
   }
 }
 </script>

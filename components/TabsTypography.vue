@@ -1,12 +1,12 @@
 <template>
 <div class="typography">
   <div class="container">
-    <h1 class="typo">
-      <span class="typo-1">SLIDER</span>
-      <span class="typo-2">LIST</span>
-      <span class="typo-3">TEMPLATES</span>
-      <span class="typo-4">OVER 30+ SLIDER STARTER TEMPLATES</span>
-    </h1>
+  <h1 class="typo">
+    <span class="typo-1">TABS</span>
+    <span class="typo-2">LIST</span>
+    <span class="typo-3">TEMPLATES</span>
+    <span class="typo-4">OVER 35+ TABS STARTER TEMPLATES</span>
+  </h1>
   </div>
 </div>
 </template>
@@ -27,8 +27,7 @@
 @media only screen and (min-width: 768px) {
   .typo {
     width: 768px;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 100px; padding-bottom: 50px;
     margin: 0 auto;
     text-align: center;
   }
@@ -39,25 +38,22 @@
   .typo-1 {
     float: left;
     margin-bottom: 20px;
-    color: #000;
-    font-size: 11.5em;
-    font-weight: 100;
+    color: #444;
+    font-size: 14em;
     line-height: .8em;
   }
   .typo-2 {
     float: left;
-    margin-bottom: 10px;
     color: #999;
-    font-size: 7em;
+    font-size: 8.6em;
     font-weight: 700;
     line-height: .85em;
     margin-bottom: 10px;
   }
   .typo-3 {
     float: left;
-    margin-bottom: 20px;
     color: #666;
-    font-size: 2.5em;
+    font-size: 3.1em;
     font-weight: 300;
     line-height: 1em;
   }
@@ -71,7 +67,7 @@
     font-size: 1.46em;
     font-weight: 300;
     line-height: 1em;
-    letter-spacing: 11px;
+    letter-spacing: 12px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -85,15 +81,10 @@
     font-size: 4.6em;
     line-height: .9em;
   }
-  .typo-1 {
-    font-weight: 700;
-  }
   .typo-4 {
     display: inline-block;
     padding-top: 10px;
     border-top: 1px solid #aaa;
-    font-size: 1.4em;
-    font-weight: 300;
   }
 }
 @media only screen and (max-width: 479px) {

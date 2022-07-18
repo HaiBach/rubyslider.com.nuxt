@@ -17,10 +17,10 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Raleway:wght@100;300;700&family=Source+Code+Pro:wght@400;500;700&display=swap' },
       ],
       script: [
-        { src: '/js/jquery.min.js', mode: 'client' },
-        { src: '/js/rubymenu2.js', mode: 'client' },
-        { src: '/js/rubyanimate.js', mode: 'client' },
-        { src: '/js/rubyslider.js', mode: 'client' },
+        { src: '/js/jquery.min.js' },
+        { src: '/js/rubymenu2.js' },
+        { src: '/js/rubyanimate.js' },
+        { src: '/js/rubyslider.js' },
       ]
     }
   }
