@@ -189,8 +189,8 @@ export default {
 
 <style scoped>
 .effect-others {
-  background-color: #f9f9f9;
-  border: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
   border-width: 1px 0;
   text-align: center;
 }
@@ -200,6 +200,7 @@ export default {
   padding: 10px 25px;
   border: 1px solid #999;
   border-radius: 20px;
+  background-color: #fff;
 }
 .effect-title:hover {
   border-color: #c05;

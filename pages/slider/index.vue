@@ -196,48 +196,42 @@ onMounted(() => {
 
 
 <template>
-  <main>
-    <div v-if="$route.params.slug == ''">
-      <SliderTypography />
+  <div>
+    <SliderTypography />
 
-      <!-- Slider List Templates -->
-      <div class="list-templates">
-        <div id="list-templates__slider" class="rs01">
-          <div
-            v-for="(items, tabName) in sliderData"
-            :id="tabName.toLowerCase()"
-            >
+    <!-- Slider List Templates -->
+    <div class="list-templates">
+      <div id="list-templates__slider" class="rs01">
+        <div
+          v-for="(items, tabName) in sliderData"
+          :id="tabName.toLowerCase()"
+          >
 
-            <div class="rs01pagitem">{{ tabName }}</div>
-            <div class="container">
-              <div class="row-small row-mobile items show-full">
-                
-                <div
-                  v-for="(item, itemName) in items"
-                  class="col3 col-s-4 col-xxs-6"
-                  >
-                  <article>
-                    <figure class="thumbnail">
-                      <a class="linkto" :href="item.link">
-                        <img :src="item.thumbnail" :alt="itemName">
-                      </a>
-                    </figure>
-                  </article>
-                </div>
-                <!-- /.item -->
-
+          <div class="rs01pagitem">{{ tabName }}</div>
+          <div class="container">
+            <div class="row-small row-mobile items show-full">
+              
+              <div
+                v-for="(item, itemName) in items"
+                class="col3 col-s-4 col-xxs-6"
+                >
+                <article>
+                  <figure class="thumbnail">
+                    <a class="linkto" :href="item.link">
+                      <img :src="item.thumbnail" :alt="itemName">
+                    </a>
+                  </figure>
+                </article>
               </div>
-            </div>
+              <!-- /.item -->
 
+            </div>
           </div>
+
         </div>
       </div>
     </div>
-    
-    <div v-else>
-      <NuxtPage />
-    </div>    
-  </main>
+  </div>
 </template>
 
 

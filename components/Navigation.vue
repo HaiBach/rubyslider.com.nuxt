@@ -14,8 +14,8 @@ const MENUS = ref({
         menus:
         [
           { key: '1.2.1', name: 'Basic', to: '/slider/layout-basic' },
-          { key: '1.2.2', name: 'Classic 1', to: '/slider/layout-classic1' },
-          { key: '1.2.3', name: 'Classic 2', to: '/slider/layout-classic2' },
+          { key: '1.2.2', name: 'Classic 1', to: '/slider/layout-classic-1' },
+          { key: '1.2.3', name: 'Classic 2', to: '/slider/layout-classic-2' },
           { key: '1.2.4', name: 'Center', to: '/slider/layout-center' },
           { key: '1.2.5', name: 'Carousel', to: '/slider/layout-carousel' },
           { key: '1.2.6', name: 'Outbox', to: '/slider/layout-outbox' },
