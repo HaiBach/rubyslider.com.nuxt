@@ -2,7 +2,8 @@
 const sliderOptions = {
   optionsPlus: "carousel",
   widthSlide: 300,
-  imagePosition: 'fill'
+  height: 450,
+  imagePosition: 'fit'
 }
 
 onMounted(() => {
@@ -22,7 +23,7 @@ onMounted(() => {
 
       <div class="title-head">
         <div class="title-head-inner">
-          <h1>BASIC LAYOUT</h1>
+          <h1>CAROUSEL LAYOUT</h1>
         </div>
       </div>
 
@@ -47,7 +48,7 @@ onMounted(() => {
   overflow: visible;
 }
 .slider-preview .rs01slide {
-  border-radius: 4px;
+  border-radius: 8px;
 }
 </style>
  
