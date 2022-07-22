@@ -1,14 +1,14 @@
 <script setup>
 const sliderOptions = {
-  fx: "line",
+  fx: 'line',
   speed: 600,
   width: 1140,
   height: 600,
   margin: 10,
   imagePosition: 'fill',
   pag: {
-    type: "bullet",
-    "isMark": true
+    type: 'bullet',
+    isMark: true,
   },
   isNav: true
 }

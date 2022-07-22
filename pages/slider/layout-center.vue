@@ -1,6 +1,6 @@
 <script setup>
 const sliderOptions = {
-  fx: "line",
+  fx: 'line',
   speed: 600,
   width: 1140,
   height: 600,

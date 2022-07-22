@@ -1,6 +1,6 @@
 <script setup>
 const sliderOptions = {
-  fx: "cssOne",
+  fx: 'cssOne',
   speed: 800,
   width: 1140,
   height: 550,
@@ -21,12 +21,7 @@ onMounted(() => {
 <template>
   <div class="wrapper">
     <div class="container">
-
-      <div class="title-head">
-        <div class="title-head-inner">
-          <h1>BASIC LAYOUT</h1>
-        </div>
-      </div>
+      <TitleHead title="BASIC LAYOUT" />
 
       <div id="layout-basic__slider" class="slider-preview rs01">
         <a class="rs01imgback" href="/img/vietnam-large1.jpg">Việt Nam 1</a>
@@ -35,8 +30,7 @@ onMounted(() => {
         <a class="rs01imgback" href="/img/vietnam-large4.jpg">Việt Nam 4</a>
         <a class="rs01imgback" href="/img/vietnam-large5.jpg">Việt Nam 5</a>
         <a class="rs01imgback" href="/img/vietnam-large6.jpg">Việt Nam 6</a>
-      </div>
-
+      </div> <!-- /.rs01 -->
     </div>
   </div>
 </template>

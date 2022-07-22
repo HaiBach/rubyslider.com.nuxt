@@ -1,6 +1,6 @@
 <script setup>
 const sliderOptions = {
-  optionsPlus: "carousel",
+  optionsPlus: 'carousel',
   widthSlide: 300,
   height: 450,
   imagePosition: 'fit'
