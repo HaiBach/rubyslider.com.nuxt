@@ -22,55 +22,55 @@ const sliderData = {
       thumbnail: '../assets/img/template-layout-center.png',
     },
     'Carousel Layout': {
-      link: 'slider-layout-carousel',
+      link: '/slider/layout-carousel',
       thumbnail: '../assets/img/template-layout-carousel.png',
     },
     'Outbox Layout': {
-      link: 'slider-layout-outbox',
+      link: '/slider/layout-outbox',
       thumbnail: '../assets/img/template-layout-outbox.png',
     },
     'Device Layout': {
-      link: 'slider-layout-device',
+      link: '/slider/layout-device',
       thumbnail: '../assets/img/template-layout-device.png',
     },
-    'Coverscreen Layout': {
-      link: 'slider-layout-coverscreen',
+    'Cover-screen Layout': {
+      link: '/slider/layout-coverscreen',
       thumbnail: '../assets/img/template-layout-coverscreen.png',
     },
     'Fullwidth Layout': {
-      link: 'slider-layout-fullwidth',
+      link: '/slider/layout-fullwidth',
       thumbnail: '../assets/img/template-layout-fullwidth.png',
     },
     'Fullwidth-Range Layout': {
-      link: 'slider-layout-fullwidthRange',
+      link: '/slider/layout-fullwidthRange',
       thumbnail: '../assets/img/template-layout-fullwidthRange.png',
     },
     'Vertical Thumb Layout': {
-      link: 'slider-layout-verticalThumb',
+      link: '/slider/layout-verticalThumb',
       thumbnail: '../assets/img/template-layout-vertical.png',
     },
     'Nested Layout': {
-      link: 'slider-layout-nested',
+      link: '/slider/layout-nested',
       thumbnail: '../assets/img/template-layout-nested.png',
     },
     'Multi Layout': {
-      link: 'slider-layout-multi',
+      link: '/slider/layout-multi',
       thumbnail: '../assets/img/template-layout-multi.png',
     },
     'Caption Layout': {
-      link: 'slider-layout-caption',
+      link: '/slider/layout-caption',
       thumbnail: '../assets/img/template-layout-caption.png',
     },
     'Height-Auto Layout': {
-      link: 'slider-layout-heightAuto',
+      link: '/slider/layout-heightAuto',
       thumbnail: '../assets/img/template-layout-heightAuto.png',
     },
     'Height-Fixed Layout': {
-      link: 'slider-layout-heightFixed',
+      link: '/slider/layout-heightFixed',
       thumbnail: '../assets/img/template-layout-heightFixed.png',
     },
     'Slider in Box': {
-      link: 'slider-layout-inbox',
+      link: '/slider/layout-inbox',
       thumbnail: '../assets/img/template-layout-box.png',
     },
   },
@@ -210,7 +210,6 @@ onMounted(() => {
           <div class="rs01pagitem">{{ tabName }}</div>
           <div class="container">
             <div class="row-small row-mobile items show-full">
-              
               <div
                 v-for="(item, itemName) in items"
                 class="col3 col-s-4 col-xxs-6"
@@ -222,15 +221,8 @@ onMounted(() => {
                       <figcaption>{{ itemName }}</figcaption>
                     </figure>
                   </NuxtLink>
-                  <!-- <figure class="thumbnail">
-                    <a class="linkto" :href="item.link">
-                      <img :src="item.thumbnail" :alt="itemName">
-                    </a>
-                  </figure> -->
                 </article>
-              </div>
-              <!-- /.item -->
-
+              </div> <!-- /.item -->
             </div>
           </div>
 

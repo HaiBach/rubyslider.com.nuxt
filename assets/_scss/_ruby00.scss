@@ -1897,7 +1897,6 @@
       height: 100%;
       left: 0;
       top: 0;
-      // opacity: .7;
       background-color: transparent;
       border: 1px solid transparent;
       border-radius: 8px;
@@ -1925,7 +1924,7 @@
     img {
       display: block;
       margin-bottom: 0;
-      transition: transform .15s;
+      transition: transform .25s;
     }
     figcaption {
       transition: all .25s;
@@ -1933,8 +1932,6 @@
     &:hover {
       &::after {
         background-color: rgba($color: #c05, $alpha: .05);
-        // background-color: rgba($color: #000, $alpha: .07);
-        // border-color: rgba($color: #c05, $alpha: .25);
         transform: scale(.85);
       }
       &::before {
@@ -1945,7 +1942,7 @@
         transform: translate3d(0,-25px,0) scale(.5);
       }
       figcaption {
-        transform: translate3d(0,-72px,0) scale(1.4);
+        transform: translate3d(0,-68px,0) scale(1.4);
         font-weight: bold;
       }
     }
@@ -3512,15 +3509,17 @@
       position: relative;
       img {
         display: block;
-        width: 100%;
+        max-width: 100%;
         height: auto;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
     .zoom, .linkto {
       margin-bottom: 0;
     }
     figcaption {
-      color: var(--color-primary);
+      // color: var(--color-primary);
     }
 
     // Meta

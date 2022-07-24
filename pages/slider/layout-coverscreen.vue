@@ -68,17 +68,6 @@ onMounted(() => {
   min-height: 600px;
   background-color: #f0f0f0;
   .slider-preview {
-    // z-index: -1;
-    // &::after {
-    //   content: '';
-    //   display: block;
-    //   position: absolute;
-    //   left: 0; top: 0;
-    //   width: 100%; height: 100%;
-    //   background: transparent url(/img/overlay-boken.png) center center;
-    //   opacity: 0.5;
-    //   z-index: 99999;
-    // }
     .rs01slide {
       border-radius: 0;
     }
