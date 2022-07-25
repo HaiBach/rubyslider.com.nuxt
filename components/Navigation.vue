@@ -22,13 +22,13 @@ const MENUS = ref({
           { key: '1.2.7', name: 'Device', to: '/slider/layout-device' },
           { key: '1.2.8', name: 'Coverscreen', to: '/slider/layout-coverscreen' },
           { key: '1.2.9', name: 'Fullwidth', to: '/slider/layout-fullwidth' },
-          { key: '1.2.10', name: 'Fullwidth Range', to: '/slider/layout-fullwidthRange' },
-          { key: '1.2.11', name: 'Vertical Thumbnail', to: '/slider/layout-verticalThumb' },
+          { key: '1.2.10', name: 'Fullwidth Range', to: '/slider/layout-fullwidth-range' },
+          { key: '1.2.11', name: 'Vertical Thumbnail', to: '/slider/layout-vertical-thumb' },
           { key: '1.2.12', name: 'Nested', to: '/slider/layout-nested' },
           { key: '1.2.13', name: 'Multi', to: '/slider/layout-multi' },
           { key: '1.2.14', name: 'Caption', to: '/slider/layout-caption' },
-          { key: '1.2.15', name: 'Height Auto', to: '/slider/layout-heightAuto' },
-          { key: '1.2.16', name: 'Height Fixed', to: '/slider/layout-heightFixed' },
+          { key: '1.2.15', name: 'Height Auto', to: '/slider/layout-height-auto' },
+          { key: '1.2.16', name: 'Height Fixed', to: '/slider/layout-height-fixed' },
         ]
       },
       {
