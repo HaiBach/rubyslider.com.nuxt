@@ -42,11 +42,11 @@ const sliderData = {
       thumbnail: '../assets/img/template-layout-fullwidth.png',
     },
     'Fullwidth-Range Layout': {
-      link: '/slider/layout-fullwidthRange',
+      link: '/slider/layout-fullwidth-range',
       thumbnail: '../assets/img/template-layout-fullwidthRange.png',
     },
     'Vertical Thumb Layout': {
-      link: '/slider/layout-verticalThumb',
+      link: '/slider/layout-vertical-thumbnail',
       thumbnail: '../assets/img/template-layout-vertical.png',
     },
     'Nested Layout': {
@@ -54,7 +54,7 @@ const sliderData = {
       thumbnail: '../assets/img/template-layout-nested.png',
     },
     'Multi Layout': {
-      link: '/slider/layout-multi',
+      link: '/slider/layout-multiple',
       thumbnail: '../assets/img/template-layout-multi.png',
     },
     'Caption Layout': {
@@ -62,11 +62,11 @@ const sliderData = {
       thumbnail: '../assets/img/template-layout-caption.png',
     },
     'Height-Auto Layout': {
-      link: '/slider/layout-heightAuto',
+      link: '/slider/layout-height-auto',
       thumbnail: '../assets/img/template-layout-heightAuto.png',
     },
     'Height-Fixed Layout': {
-      link: '/slider/layout-heightFixed',
+      link: '/slider/layout-height-fixed',
       thumbnail: '../assets/img/template-layout-heightFixed.png',
     },
     'Slider in Box': {
