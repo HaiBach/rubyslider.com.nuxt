@@ -61,11 +61,11 @@ const sliderData = {
       link: '/slider/layout-caption',
       thumbnail: '../assets/img/template-layout-caption.png',
     },
-    'Height-Auto Layout': {
+    'Auto-Height Layout': {
       link: '/slider/layout-height-auto',
       thumbnail: '../assets/img/template-layout-heightAuto.png',
     },
-    'Height-Fixed Layout': {
+    'Fixed-Height Layout': {
       link: '/slider/layout-height-fixed',
       thumbnail: '../assets/img/template-layout-heightFixed.png',
     },
