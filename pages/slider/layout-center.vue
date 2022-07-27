@@ -4,17 +4,19 @@ const sliderOptions = {
   speed: 600,
   width: 1140,
   height: 600,
-  widthSlide: [
-    0.7,
-    [720, 768, 959],
-    [940, 960, 10000]
-  ],
-  margin: [
-    [5, 0, 479],
-    10,
-    [20, 960, 10000]
-  ],
-  imagePosition: 'fill',
+  // widthSlide: [
+  //   '70%',
+  //   [720, 768, 959],
+  //   [940, 960, 10000]
+  // ],
+  // margin: [
+  //   [5, 0, 479],
+  //   10,
+  //   [20, 960, 10000]
+  // ],
+  widthSlide: [1140, 940, '70%'],
+  margin: [20, 10, 10, 5],
+  // imagePosition: 'fill',
 }
 
 onMounted(() => {

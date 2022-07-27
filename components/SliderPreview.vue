@@ -1,14 +1,15 @@
 <script setup>
 const sliderOptions = {
-  fx: "coverflow3D",
+  fx: 'coverflow3D',
   coverflow3D: {
-    widthSlide: [0.8, [1040, 1200, 10000]],
+    // widthSlide: [0.8, [1040, 1200, 10000]],
+    widthSlide: [1040, '80%'],
     opacity: 0.3
   },
   speed: 800,
   width: 1140,
   imageback: {
-    position: "fit"
+    position: 'fit'
   },
   isKeyboard: true,
   isSlideshow: true,
@@ -17,7 +18,7 @@ const sliderOptions = {
     isAutoRun: false
   },
   timerArc: {
-    stroke: "#cc0055"
+    stroke: '#cc0055'
   },
   video: {
     isPauseThenRemove: true

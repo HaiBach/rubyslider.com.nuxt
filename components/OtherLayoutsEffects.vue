@@ -3,41 +3,42 @@ export default {
   mounted() {
     setTimeout(() => {
       const sliderMath = jQuery('.slider-math').rubyslider({
-        fx: "rectRun",
+        fx: 'rectRun',
         speed: 800,
         width: 940,
         pag: {
-          type: "bullet",
+          type: 'bullet',
           isMark: true
         }
       })
       const sliderOneEffect = jQuery('.slider-one-effect').rubyslider({
-        fx: "cssOne",
+        fx: 'cssOne',
         speed: 800,
         width: 940,
         pag: {
-          type: "bullet",
+          type: 'bullet',
           isMark: true
         }
       })
       const sliderLineEffect = jQuery('.slider-line-effect').rubyslider({
-        fx: "line",
+        fx: 'line',
         speed: 400,
         width: 755,
-        widthSlide: 0.8,
+        widthSlide: '80%',
         margin: 1,
         pag: {
-          type: "bullet",
+          type: 'bullet',
           isMark: true
         }
       })
       const sliderTabs = jQuery('.slider-tabs').rubyslider({
-        optionsPlus: "tabs",
-        fx: "cssOne",
-        cssOne: "scalePulse",
+        // optionsPlus: "tabs",
+        type: 'tabs',
+        fx: 'cssOne',
+        cssOne: 'scalePulse',
         speed: 800,
         pag: {
-          align: "center"
+          align: 'center'
         }
       })
     }, 400)
@@ -63,7 +64,7 @@ export default {
 
     <!-- MATH EFFECT - begin -->
     <div class="col6">
-      <div class="slider-math rs01 ruby-mark">
+      <div class="slider-math rs01">
         <div class="rs01slide">
           <img class="rs01imgback" src="/img/season-landscape2.jpg" alt="Season 2">
         </div>
@@ -81,7 +82,7 @@ export default {
 
     <!-- CSS ONE EFFECT - begin -->
     <div class="col6">
-      <div class="slider-one-effect rs01 ruby-mark">
+      <div class="slider-one-effect rs01">
         <img class="rs01imgback" src="/img/season-landscape2.jpg" alt="Season 2">
         <img class="rs01imgback" src="/img/season-landscape4.jpg" alt="Season 4">
         <img class="rs01imgback" src="/img/season-landscape7.jpg" alt="Season 7">
@@ -94,7 +95,7 @@ export default {
 
     <!-- CENTER LAYOUT - LINE EFFECT - begin -->
     <div class="col6">
-      <div class="slider-line-effect rs01 ruby-mark">
+      <div class="slider-line-effect rs01">
         <img class="rs01imgback" src="/img/season-landscape2.jpg" alt="Season 2">
         <img class="rs01imgback" src="/img/season-landscape4.jpg" alt="Season 4">
         <img class="rs01imgback" src="/img/season-landscape7.jpg" alt="Season 7">
