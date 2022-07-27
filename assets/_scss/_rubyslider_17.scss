@@ -661,8 +661,7 @@
     background-color: #cc0055;
 }
 .rs01pagmark-transition .rs01pagmark-item {
-    -webkit-transition: -webkit-transform .2s, width .2s, height .2s;
-            transition:         transform .2s, width .2s, height .2s;
+    transition: transform .3s, width .3s, height .3s;
 }
 .rs01pagdirs-hor > .rs01pagmark .rs01pagmark-item {
     height: 100%;
