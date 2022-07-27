@@ -69,10 +69,10 @@ const sliderData = {
       link: '/slider/layout-height-fixed',
       thumbnail: '../assets/img/template-layout-heightFixed.png',
     },
-    'Slider in Box': {
-      link: '/slider/layout-inbox',
-      thumbnail: '../assets/img/template-layout-box.png',
-    },
+    // 'Slider in Box': {
+    //   link: '/slider/layout-inbox',
+    //   thumbnail: '../assets/img/template-layout-box.png',
+    // },
   },
 
   'EFFECT': {
@@ -167,7 +167,7 @@ const sliderData = {
 
 // LifeCycle
 const sliderOptions = {
-  optionsPlus: "tabs",
+  type: 'tabs',
   fx: "line",
   speed: 600,
   pag: {

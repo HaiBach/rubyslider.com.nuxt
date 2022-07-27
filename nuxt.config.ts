@@ -20,7 +20,7 @@ export default defineNuxtConfig({
         { src: '/js/jquery.min.js' },
         { src: '/js/rubymenu2.js' },
         { src: '/js/rubyanimate.js' },
-        { src: '/js/rubyslider.js' },
+        { src: '/js/rubyslider_17.js' },
       ]
     }
   }
