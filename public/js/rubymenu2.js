@@ -5,10 +5,11 @@
  * Biến $link định nghĩa cho {ns}link
  * Biến $linkItem định nghĩa cho link <a>
  * 
- * @author        HaiBach / Nguyen Van Thy
+ * @author        HaiBach / Nguyễn Văn Thy
  * @version       1.x
  * @lastUpdate    10-10-2018
  */
+
 ;(function($) {
   'use strict';
   
@@ -518,7 +519,7 @@
         /**
          * STORE LINK <A> NORMAL UNDER LIST - MENU
          */
-        va.$link = $ruby.find( M.NS('.{ns}list > a') ).not(va.$linkToggle).not(va.$linkBack);
+        va.$link = $ruby.find( M.NS('.{ns}link > a') ).not(va.$linkToggle).not(va.$linkBack);
       },
   
       // Render the markup breadcrumb at first
@@ -604,6 +605,7 @@
         var tapEvName = 'click.'+ va.ns + va.codekey;
   
         // DANG KI EVENT TAP TREN BUTTON
+        console.log('##', va.$canvasToggle)
         va.$canvasToggle.on(tapEvName, function() {
           if( is.push ) {
             API.pushOff();
@@ -658,8 +660,10 @@
         /**
          * REGISTER EVENT 'TAP' ON LINK <A>
          */
+        console.log('#list link', va.$link)
         va.$link.on(tapEvName, function() {
           var $link = $(this);
+          console.log('# link tap', $link)
   
           // Conditional execution
           if( !$link.is(va.$linkCur) ) {
@@ -686,6 +690,8 @@
   
             // Update the markup breadcrumb
             RENDER.BreadcrumbUpdate();
+            API.removeOpenAll()
+            console.log('## tap on link')
           }
         });
   
@@ -694,6 +700,7 @@
         /**
          * REGISTER 'TAP' EVENT ON LINK-TOGGLE
          */
+        console.log('# Link toggle', va.$linkToggle)
         va.$linkToggle.on(tapEvName, function() {
           var $link = $(this).closest( M.NS('.{ns}link') );
           API.openMenu( $link );
@@ -1035,6 +1042,7 @@
       // Loai bo Class 'Open' tren cac List + Menu
       searchOpen : function($parent, selectorName) {
         var $open = $parent[selectorName]( M.NS('.{ns}open') );
+        console.log('#search open', $open)
         $open.length && $open.removeClass(va.ns +'open');
       },
       removeOpenAll : function($linkCur) {
