@@ -75,7 +75,7 @@ export default {
           <img class="rs01imgback" src="/img/season-landscape7.jpg" alt="Season 7">
         </div>
       </div>
-      <a class="effect-title" href="slider-effect-math.html" target="_blank">8 Math Effects</a>
+      <NuxtLink class="effect-title" to="/slider/effect-math">8 Math Effects</NuxtLink>
     </div>
     <!-- MATH EFFECT - end -->
 
@@ -87,7 +87,7 @@ export default {
         <img class="rs01imgback" src="/img/season-landscape4.jpg" alt="Season 4">
         <img class="rs01imgback" src="/img/season-landscape7.jpg" alt="Season 7">
       </div>
-      <a class="effect-title" href="slider-effect-cssOne.html" target="_blank">50+ CSS One Effects</a>
+      <NuxtLink class="effect-title" to="/slider/effect-cssOne">50+ CSS One Effects</NuxtLink>
     </div>
     <!-- CSS ONE EFFECT - end -->
 
@@ -100,7 +100,7 @@ export default {
         <img class="rs01imgback" src="/img/season-landscape4.jpg" alt="Season 4">
         <img class="rs01imgback" src="/img/season-landscape7.jpg" alt="Season 7">
       </div>
-      <a class="effect-title" href="slider-layout-center.html" target="_blank">Center Layout - Line Effect</a>
+      <NuxtLink class="effect-title" to="/slider/layout-center">Center Layout - Line Effect</NuxtLink>
     </div>
     <!-- CENTER LAYOUT - LINE EFFECT - end -->
 
@@ -178,7 +178,7 @@ export default {
           </div>
         </div>
       </div>
-      <a class="effect-title" href="page-templates-tabs.html" target="_blank">Tabs Layout</a>
+      <NuxtLink class="effect-title" to="/tabs">Tabs Layout</NuxtLink>
     </div>
     <!-- TABS LAYOUT - end -->
 

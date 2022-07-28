@@ -36,7 +36,7 @@ const MENUS = ref({
         name: 'Effect',
         menus:
         [
-          { key: '1.3.1', name: 'Line Effect', to: '/slider/effect-lin' },
+          { key: '1.3.1', name: 'Line Effect', to: '/slider/effect-line' },
           { key: '1.3.2', name: 'Fade Effect', to: '/slider/effect-fade' },
           { key: '1.3.3', name: 'Math Effect', to: '/slider/effect-math' },
           { key: '1.3.4', name: 'CSS One', to: '/slider/effect-cssOne' },

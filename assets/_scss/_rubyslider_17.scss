@@ -557,7 +557,8 @@
 }
 .rs01thumbnail .rs01pagmark-item {
     background-color: transparent;
-    border: 2px solid #333;
+    // border: 2px solid #333;
+    border: 1px solid rgba($color: #000, $alpha: .75);
     border-radius: 4px;
     box-sizing: border-box;
 }
