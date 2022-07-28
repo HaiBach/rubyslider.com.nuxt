@@ -39,10 +39,10 @@ const MENUS = ref({
           { key: '1.3.1', name: 'Line Effect', to: '/slider/effect-line' },
           { key: '1.3.2', name: 'Fade Effect', to: '/slider/effect-fade' },
           { key: '1.3.3', name: 'Math Effect', to: '/slider/effect-math' },
-          { key: '1.3.4', name: 'CSS One', to: '/slider/effect-cssOne' },
-          { key: '1.3.5', name: 'CSS Two', to: '/slider/effect-cssTwo' },
-          { key: '1.3.6', name: 'CSS Four', to: '/slider/effect-cssFour' },
-          { key: '1.3.7', name: 'Coverflow3D', to: '/slider/effect-coverflow3D' },
+          { key: '1.3.4', name: 'CSS One', to: '/slider/effect-css-one' },
+          { key: '1.3.5', name: 'CSS Two', to: '/slider/effect-css-two' },
+          { key: '1.3.6', name: 'CSS Four', to: '/slider/effect-css-four' },
+          { key: '1.3.7', name: 'Coverflow3D', to: '/slider/effect-coverflow3d' },
           { key: '1.3.8', name: 'Effect Random', to: '/slider/effect-random' },
           { key: '1.3.9', name: 'Effect Control', to: '/slider/effect-control' },
         ]
@@ -52,9 +52,9 @@ const MENUS = ref({
         name: 'Slideshow',
         menus:
         [
-          { key: '1.4.1', name: 'Arc Timer', to: '/slider/slideshow-timerArc' },
-          { key: '1.4.2', name: 'Line Timer', to: '/slider/slideshow-timerLine' },
-          { key: '1.4.3', name: 'Timer Only', to: '/slider/slideshow-timerOnly' },
+          { key: '1.4.1', name: 'Arc Timer', to: '/slider/slideshow-timer-arc' },
+          { key: '1.4.2', name: 'Line Timer', to: '/slider/slideshow-timer-line' },
+          { key: '1.4.3', name: 'Timer Only', to: '/slider/slideshow-timer-only' },
           { key: '1.4.4', name: 'Slideshow Random', to: '/slider/slideshow-random' },
         ]
       },
@@ -63,12 +63,12 @@ const MENUS = ref({
         name: 'API',
         menus:
         [
-          { key: '1.5.1', name: 'Add-Remove Tabs', to: '/slider/api-addremove' },
+          { key: '1.5.1', name: 'Add-Remove Tabs', to: '/slider/api-add-remove' },
           { key: '1.5.2', name: 'Callback Event', to: '/slider/api-callback' },
-          { key: '1.5.3', name: 'Show By Device', to: '/slider/api-showByDevic' },
-          { key: '1.5.4', name: 'Show In Range', to: '/slider/api-showInRange' },
+          { key: '1.5.3', name: 'Show By Device', to: '/slider/api-show-by-device' },
+          { key: '1.5.4', name: 'Show In Range', to: '/slider/api-show-in-range' },
           { key: '1.5.5', name: 'Deep Linking', to: '/slider/api-deeplinking' },
-          { key: '1.5.6', name: 'Deep Linking Multi', to: '/slider/api-deeplinkingMulti' },
+          { key: '1.5.6', name: 'Deep Linking Multi', to: '/slider/api-deeplinking-multi' },
           { key: '1.5.7', name: 'Cookie', to: '/slider/api-cookie' },
         ]
       }
@@ -101,9 +101,9 @@ const MENUS = ref({
         menus: [
           { key: '2.3.1', name: 'Line', to: '/tabs/effect-line' },
           { key: '2.3.2', name: 'Fade', to: '/tabs/effect-fade' },
-          { key: '2.3.3', name: 'CSS One', to: '/tabs/effect-cssOne' },
-          { key: '2.3.4', name: 'CSS Two', to: '/tabs/effect-cssTwo' },
-          { key: '2.3.5', name: 'CSS Four', to: '/tabs/effect-cssFour' },
+          { key: '2.3.3', name: 'CSS One', to: '/tabs/effect-css-one' },
+          { key: '2.3.4', name: 'CSS Two', to: '/tabs/effect-css-two' },
+          { key: '2.3.5', name: 'CSS Four', to: '/tabs/effect-css-four' },
           { key: '2.3.6', name: 'None', to: '/tabs/effect-none' },
           { key: '2.3.7', name: 'Effect Random', to: '/tabs/effect-random' },
           { key: '2.3.8', name: 'Effect Control', to: '/tabs/effect-control' },

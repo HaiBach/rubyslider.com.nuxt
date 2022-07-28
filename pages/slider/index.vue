@@ -89,19 +89,19 @@ const sliderData = {
       thumbnail: '../assets/img/template-fx-math.png',
     },
     'CSS One Effect': {
-      link: '/slider/effect-cssOne',
+      link: '/slider/effect-css-one',
       thumbnail: '../assets/img/template-fx-cssOne.png',
     },
     'CSS Two Effect': {
-      link: '/slider/effect-cssTwo',
+      link: '/slider/effect-css-two',
       thumbnail: '../assets/img/template-fx-cssTwo.png',
     },
     'CSS Four Effect': {
-      link: '/slider/effect-cssFour',
+      link: '/slider/effect-css-four',
       thumbnail: '../assets/img/template-fx-cssFour.png',
     },
     'Coverflow3D Effect': {
-      link: '/slider/effect-coverflow3D',
+      link: '/slider/effect-coverflow3d',
       thumbnail: '../assets/img/template-fx-coverflow3D.png',
     },
     'Effect Random': {
@@ -116,15 +116,15 @@ const sliderData = {
 
   'SLIDESHOW': {
     'Arc Timer': {
-      link: '/slider/slideshow-timerArc',
+      link: '/slider/slideshow-timer-arc',
       thumbnail: '../assets/img/template-timer-arc.png',
     },
     'Line Timer': {
-      link: '/slider/slideshow-timerLine',
+      link: '/slider/slideshow-timer-line',
       thumbnail: '../assets/img/template-timer-line.png',
     },
     'Timer Only': {
-      link: '/slider/slideshow-timerOnly',
+      link: '/slider/slideshow-timer-only',
       thumbnail: '../assets/img/template-timer-only.png',
     },
     'Slideshow Random': {
@@ -143,11 +143,11 @@ const sliderData = {
       thumbnail: '../assets/img/template-api-callback.png',
     },
     'Show By Device': {
-      link: '/slider/api-showByDevice',
+      link: '/slider/api-show-by-device',
       thumbnail: '../assets/img/template-api-showByDevice.png',
     },
     'Show In Range': {
-      link: '/slider/api-showInRange',
+      link: '/slider/api-show-in-range',
       thumbnail: '../assets/img/template-api-showInRange.png',
     },
     'Deep Linking': {
@@ -155,7 +155,7 @@ const sliderData = {
       thumbnail: '../assets/img/template-api-deeplinking.png',
     },
     'Deep Linking Multi': {
-      link: '/slider/api-deeplinkingMulti',
+      link: '/slider/api-deeplinking-multi',
       thumbnail: '../assets/img/template-api-deeplinkingMulti.png',
     },
     'Cookie': {

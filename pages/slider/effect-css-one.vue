@@ -1,14 +1,14 @@
 <script setup>
 const sliderOptions = {
   fx: 'cssOne',
-  cssOne: 'fade',
-  speed: 800,
+  speed: 600,
   width: 1880,
+  height: 550
 }
 
 onMounted(() => {
   setTimeout(() => {
-    const $slider = jQuery('#effect-fade__slider')
+    const $slider = jQuery('#effect-css-one__slider')
     if ($slider.length) {
       $slider.rubyslider( sliderOptions )
     }
@@ -20,9 +20,9 @@ onMounted(() => {
 <template>
   <div class="wrapper">
     <div class="container">
-      <TitleHead title="FADE EFFECT" />
+      <TitleHead title="CSS ONE EFFECTS" />
 
-      <div id="effect-fade__slider" class="slider-preview rs01">
+      <div id="effect-css-one__slider" class="slider-preview rs01">
         <a class="rs01imgback" href="/img/vietnam-large1.jpg">Việt Nam 1</a>
         <a class="rs01imgback" href="/img/vietnam-large2.jpg">Việt Nam 2</a>
         <a class="rs01imgback" href="/img/vietnam-large3.jpg">Việt Nam 3</a>
@@ -33,4 +33,8 @@ onMounted(() => {
     </div>
   </div>
 </template>
+
+
+<style lang="scss">
+</style>
  

@@ -8,7 +8,6 @@ export default {
         width: 940,
         pag: {
           type: 'bullet',
-          isMark: true
         }
       })
       const sliderOneEffect = jQuery('.slider-one-effect').rubyslider({
@@ -17,7 +16,6 @@ export default {
         width: 940,
         pag: {
           type: 'bullet',
-          isMark: true
         }
       })
       const sliderLineEffect = jQuery('.slider-line-effect').rubyslider({
@@ -28,11 +26,9 @@ export default {
         margin: 1,
         pag: {
           type: 'bullet',
-          isMark: true
         }
       })
       const sliderTabs = jQuery('.slider-tabs').rubyslider({
-        // optionsPlus: "tabs",
         type: 'tabs',
         fx: 'cssOne',
         cssOne: 'scalePulse',
@@ -65,15 +61,9 @@ export default {
     <!-- MATH EFFECT - begin -->
     <div class="col6">
       <div class="slider-math rs01">
-        <div class="rs01slide">
-          <img class="rs01imgback" src="/img/season-landscape2.jpg" alt="Season 2">
-        </div>
-        <div class="rs01slide">
-          <img class="rs01imgback" src="/img/season-landscape4.jpg" alt="Season 4">
-        </div>
-        <div class="rs01slide">
-          <img class="rs01imgback" src="/img/season-landscape7.jpg" alt="Season 7">
-        </div>
+        <img class="rs01imgback" src="/img/season-landscape2.jpg" alt="Season 2">
+        <img class="rs01imgback" src="/img/season-landscape4.jpg" alt="Season 4">
+        <img class="rs01imgback" src="/img/season-landscape7.jpg" alt="Season 7">
       </div>
       <NuxtLink class="effect-title" to="/slider/effect-math">8 Math Effects</NuxtLink>
     </div>
