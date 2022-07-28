@@ -1031,19 +1031,14 @@
     max-width: 100%;
     margin: 0 0 10px;
     padding: 9px 12px;
-    border: 1px solid #e5e5e5;
+    border: 1px solid rgba($color: #000, $alpha: .1);
     border-left-width: 4px;
     outline: none;
-    background-color: transparent;
+    background-color: #fff;
     color: #999;
     font-size: 14px;
     line-height: 18px;
-
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-        box-sizing: border-box;
-
-    *height: 18px; *color: #444;      /* Fix IE7 */
+    box-sizing: border-box;
   }
 
   input[type="text"]:focus,
@@ -1084,7 +1079,9 @@
     border: 1px solid #e5e5e5;
   }
 
-  label, legend { display: block; }
+  label, legend {
+    display: block;
+  }
   legend {
     margin-bottom: 10px;
     padding-left: 5px; padding-right: 5px;
@@ -1098,13 +1095,19 @@
   form.block input[type="password"],
   form.block input[type="email"],
   form.block textarea,
-  form.block select { width: 100%; }
+  form.block select {
+    width: 100%;
+  }
 
   .ie7 form.block input[type="text"],
   .ie7 form.block input[type="password"],
   .ie7 form.block input[type="email"],
   .ie7 form.block textarea,
-  .ie7 form.block select { width: 92.5%; padding-left: 3%; padding-right: 3%; }
+  .ie7 form.block select {
+    width: 92.5%;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
 
 
 
@@ -1120,12 +1123,17 @@
 
     *left: 11px; *top: 11px;
   }
-  .input-icon [class*="i-"]:before { margin-right: 0; margin-left: -50%; }
-
+  .input-icon [class*="i-"]:before {
+    margin-right: 0;
+    margin-left: -50%;
+  }
   .input-icon input[type="text"],
-  .input-icon input[type="password"] { border-left-width: 38px; }
-
-  .ie7 form.block .input-icon { padding-right: 38px; }
+  .input-icon input[type="password"] {
+    border-left-width: 38px;
+  }
+  .ie7 form.block .input-icon {
+    padding-right: 38px;
+  }
 
 
 
@@ -1134,20 +1142,24 @@
   input[type="password"].large,
   .input-icon.large > input[type="text"],
   .input-icon.large > input[type="password"] {
-    padding-top: 11px; padding-bottom: 11px;
+    padding-top: 11px;
+    padding-bottom: 11px;
     border-left-width: 6px;
-    height: 48px; line-height: 24px;
-
-    *height: 24px; /* Fix IE7 */
+    height: 48px;
+    line-height: 24px;
   }
   .input-icon.large > input[type="text"],
-  .input-icon.large > input[type="password"] { border-left-width: 48px; }
+  .input-icon.large > input[type="password"] {
+    border-left-width: 48px;
+  }
   .input-icon.large > [class*="i-"] {
-    left: 24px; *left: 16px;
+    left: 24px;
     font-size: 1.6em;
     line-height: 28px;
   }
-  .ie7 form.block .input-icon.large { padding-right: 48px; }
+  .ie7 form.block .input-icon.large {
+    padding-right: 48px;
+  }
 
 
 
@@ -1432,27 +1444,26 @@
     height: 38px;
     margin: 0 0 20px;
     padding: 0 20px;
-
-    border: 1px solid #e5e5e5;
-    background-color: transparent;
+    border: 1px solid rgba($color: #000, $alpha: .1);
+    background-color: #fff;
     color: #999;
     font-size: .85em;
     line-height: 36px;
     outline: 0;
     text-decoration: none;
     cursor: pointer;
-
-    *display: inline;
-    zoom: 1;
-
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-        box-sizing: border-box;
+    box-sizing: border-box;
   }
-  a.btn { color: #999; }
-
-  .btn:hover { border-color: #999; color: #333; }
-  .btn:active { border-color: #333; }
+  a.btn {
+    color: #999;
+  }
+  .btn:hover {
+    border-color: #999;
+    color: #333;
+  }
+  .btn:active {
+    border-color: #333;
+  }
 
   /* Fix IE */
   /* Remove Extra Width in IE7 */
