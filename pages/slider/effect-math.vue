@@ -103,8 +103,8 @@ onMounted(() => {
       <div class="container">
         <div class="hr circle"></div>
 
-        <div class="title-big-wrap">
-          <h2 class="">EXAMPLES OF LIVE EFFECT</h2>
+        <div class="fxlive__title">
+          <h2>EXAMPLES OF LIVE EFFECT</h2>
         </div>
 
         <div class="fxlive__table row">
@@ -141,8 +141,10 @@ onMounted(() => {
     margin-top: 50px;
     margin-bottom: 80px;
   }
-  h2 {
-    font-size: 46px;
+  &__title {
+    h2 {
+      font-size: 46px;
+    }
   }
   &__item {
     margin-bottom: 100px;

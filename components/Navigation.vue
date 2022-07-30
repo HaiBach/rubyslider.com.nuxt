@@ -5,7 +5,7 @@ const MENUS = ref({
     menus: [
       {
         key: '1.1',
-        name: 'List templates',
+        name: 'List All Examples',
         to: '/slider'
       },
       {
@@ -80,7 +80,7 @@ const MENUS = ref({
     menus: [
       {
         key: '2.1',
-        name: 'List templates',
+        name: 'List All Examples',
         to: '/tabs',
       },
       {
