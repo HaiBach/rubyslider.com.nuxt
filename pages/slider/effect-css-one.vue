@@ -14,6 +14,13 @@ const aFx = [
   'slideBehind', 'vacuumHor', 'vacuumVer', 'br',
   'scaleSoft', 'snapHor', 'snapVer', 'letInHor', 'letInVer', 'stickHor', 'stickVer', 'growthHor', 'growthVer', 'soEdgeHor', 'soEdgeVer', 'shake', 'tinHor', 'tinVer'
 ]
+const aFxName = [
+  'Glue Horizontal', 'Glue Vertical', 'Fold Horizontal', 'Fold Vertical', 'Fold From Horizontal', 'Fold From Vertical', 'Room Horizontal', 'Room Vertical', 'Flit Horizontal', 'Flit Vertical', 'Hinge', 'Roll', 'br',
+  'Move Horizontal', 'Move Vertical', 'Fade', 'Fade Horizontal', 'Fade Vertical', 'Scale In Horizontal', 'Scale In Vertical', 'Scale Out Horizontal', 'Scale Out Vertical', 'Scale Pulse', 'Scale Wave', 'Rotate Edge Horizontal', 'Rotate Edge Vertical', 'Newspaper', 'Push From Horizontal', 'Push From Vertical', 'Slide', 'br',
+  'Fall', 'Pulse Short', 'Rotate Soft', 'Rotate Deal', 'Wheel Horizontal', 'Wheel Vertical', 'Snake Horizontal', 'Snake Vertical', 'Shuffle', 'Browse Left', 'Browse Right', 'Slide Behind', 'Vacuum Horizontal', 'Vacuum Vertical', 'br',
+  'Scale Soft', 'Snap Horizontal', 'Snap Vertical', 'Let In Horizontal', 'Let In Vertical', 'Stick Horizontal', 'Stick Vertical', 'Growth Horizontal', 'Growth Vertical', 'Soft Edge Horizontal', 'Soft Edge Vertical', 'Shake', 'Tin Horizontal', 'Tin Vertical'
+]
+let fxCount = 1
 
 onMounted(() => {
   setTimeout(() => {
@@ -238,19 +245,17 @@ onMounted(() => {
             <div class="cssone__item" :data-fx="fx">
               <div class="cssone__preview">
                 <div class="cssone__slide cssone--slide-1">
-                  <div class="cssone__name">
-                    <span class="cssone__num">{{ index }}</span>{{ fx }}
-                  </div>
+                  <div class="cssone__name">{{ aFxName[index] }}</div>
                 </div>
                 <div class="cssone__slide cssone--slide-2">
-                  <div class="cssone__name">
-                    <span class="cssone__num">{{ index }}</span>{{ fx }}
-                  </div>
+                  <div class="cssone__name">{{ aFxName[index] }}</div>
                 </div>
               </div>
               <div class="cssone__item_footer">
+                <div class="cssone__tag">#{{ fxCount++ }}</div>
                 <div class="cssone__select">
-                  <span class="cssone__one">one</span>
+                  <button class="cssone__btn">Apply to Slider</button>
+                  <!-- <span class="cssone__one">one</span> -->
                 </div>
               </div>
             </div>
@@ -288,16 +293,21 @@ onMounted(() => {
     position: relative;
     margin-bottom: 50px;
   }
-  &__name {
-    position: absolute;
-    width: 100%;
-    padding-top: 28px;
-    text-align: center;
-    color: #fff;
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
   }
+  &__name {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  /** Effect Preview */
   &__preview {
     position: relative;
-    height: 140px;
+    height: 160px;
     cursor: pointer;
   }
   &__slide {
@@ -315,28 +325,42 @@ onMounted(() => {
     background-color: #c05;
   }
   &__item_footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
     margin-top: 10px;
+  }
+  &__tag {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+    color: #999;
   }
   // Select button
   &__select {
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    z-index: 99;
-    span {
+    button {
       display: block;
-      float: left;
-      width: 20px;
-      height: 12px;
+      min-width: 120px;
       padding: 5px;
-      margin-left: 2px;
-      background-color: hsla(0,0%,100%,.1);
-      border-radius: 0 4px 0 0;
-      color: hsla(0,0%,0%,.4);
-      font-size: 11px;
-      line-height: 12px;
-      cursor: pointer;
+      padding: 10px 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+      background-color: rgba($color: #000, $alpha: .1);
+      border-width: 0;
+      border-radius: 4px;
+      color: #333;
+      font-size: 12px;
+      line-height: 1.2;
+      text-align: center;
       box-sizing: content-box;
+      outline: none;
+      cursor: pointer;
+      transition: all .2s;
+      &:hover {
+        background-color: rgba($color: #000, $alpha: .25);
+        color: #000;
+      }
     }
   }
   &__one {
@@ -348,7 +372,7 @@ onMounted(() => {
   &__br {
     float: left;
     width: 100%;
-    height: 80px;
+    height: 150px;
   }
   /* Effect number */
   &__num {
