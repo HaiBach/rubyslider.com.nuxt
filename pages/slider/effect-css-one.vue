@@ -1,9 +1,10 @@
 <script setup>
 const sliderOptions = {
   fx: 'cssOne',
-  speed: 600,
+  speed: 800,
   width: 1880,
-  height: 550
+  height: 500,
+  // imagePosition: 'fill'
 }
 const aFx = [
   'glueHor', 'glueVer', 'foldHor', 'foldVer', 'foldFromHor', 'foldFromVer', 'roomHor', 'roomVer', 'flitHor', 'flitVer',
@@ -246,16 +247,24 @@ onMounted(() => {
               <div class="cssone__preview">
                 <div class="cssone__slide cssone--slide-1">
                   <div class="cssone__name">{{ aFxName[index] }}</div>
+                  <div class="cssone__slide_name">Back</div>
                 </div>
                 <div class="cssone__slide cssone--slide-2">
                   <div class="cssone__name">{{ aFxName[index] }}</div>
+                  <div class="cssone__slide_name">Front</div>
                 </div>
               </div>
               <div class="cssone__item_footer">
                 <div class="cssone__tag">#{{ fxCount++ }}</div>
                 <div class="cssone__select">
-                  <button class="cssone__btn">Apply to Slider</button>
-                  <!-- <span class="cssone__one">one</span> -->
+                  <button class="cssone__one">
+                    <span>Apply to Slider</span>
+                    <i>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-magic" viewBox="0 0 16 16">
+                        <path d="M9.5 2.672a.5.5 0 1 0 1 0V.843a.5.5 0 0 0-1 0v1.829Zm4.5.035A.5.5 0 0 0 13.293 2L12 3.293a.5.5 0 1 0 .707.707L14 2.707ZM7.293 4A.5.5 0 1 0 8 3.293L6.707 2A.5.5 0 0 0 6 2.707L7.293 4Zm-.621 2.5a.5.5 0 1 0 0-1H4.843a.5.5 0 1 0 0 1h1.829Zm8.485 0a.5.5 0 1 0 0-1h-1.829a.5.5 0 0 0 0 1h1.829ZM13.293 10A.5.5 0 1 0 14 9.293L12.707 8a.5.5 0 1 0-.707.707L13.293 10ZM9.5 11.157a.5.5 0 0 0 1 0V9.328a.5.5 0 0 0-1 0v1.829Zm1.854-5.097a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L8.646 5.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0l1.293-1.293Zm-3 3a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L.646 13.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0L8.354 9.06Z"/>
+                      </svg>
+                    </i>
+                  </button>
                 </div>
               </div>
             </div>
@@ -272,10 +281,11 @@ onMounted(() => {
 
 <style lang="scss">
 .cssone {
-  background-color: #f0f0f0;
   padding-bottom: 100px;
+  margin-top: 50px;
+  background-color: #f0f0f0;
   .hr {
-    margin-top: 50px;
+    margin-top: 0;
     margin-bottom: 80px;
   }
   &__title {
@@ -295,12 +305,19 @@ onMounted(() => {
   }
   &__slide {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    color: #fff;
+  }
+  &__slide_name {
+    padding-top: 2px;
+    margin-top: 5px;
+    border-top: 1px dashed #fff;
+    opacity: .7;
   }
   &__name {
-    color: #fff;
     font-size: 16px;
     font-weight: bold;
   }
@@ -312,14 +329,15 @@ onMounted(() => {
   }
   &__slide {
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     border-radius: 6px;
     box-sizing: border-box;
   }
   &--slide-1 {
-    background-color: #00c0dc;
+    background-color: #00aac4;
   }
   &--slide-2 {
     background-color: #c05;
@@ -340,7 +358,9 @@ onMounted(() => {
   // Select button
   &__select {
     button {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       min-width: 120px;
       padding: 5px;
       padding: 10px 20px;
@@ -351,7 +371,7 @@ onMounted(() => {
       border-radius: 4px;
       color: #333;
       font-size: 12px;
-      line-height: 1.2;
+      line-height: 1.4;
       text-align: center;
       box-sizing: content-box;
       outline: none;
@@ -361,12 +381,17 @@ onMounted(() => {
         background-color: rgba($color: #000, $alpha: .25);
         color: #000;
       }
+      &.cssone--actived {
+        background-color: rgba($color: #000, $alpha: .85);
+        color: #fff;
+      }
     }
-  }
-  &__one {
-    &.cssone--actived {
-      background-color: #0cf;
-      color: #fff;
+    i {
+      padding-left: 5px;
+      font-size: 0.8em;
+    }
+    svg {
+      display: block;
     }
   }
   &__br {
