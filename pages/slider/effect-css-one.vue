@@ -312,7 +312,7 @@ onMounted(() => {
     color: #fff;
   }
   &__slide_name {
-    padding-top: 2px;
+    padding-top: 1px;
     margin-top: 5px;
     border-top: 1px dashed #fff;
     opacity: .7;
@@ -333,7 +333,7 @@ onMounted(() => {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 6px;
+    border-radius: 8px;
     box-sizing: border-box;
   }
   &--slide-1 {
@@ -363,15 +363,15 @@ onMounted(() => {
       align-items: center;
       min-width: 120px;
       padding: 5px;
-      padding: 10px 20px;
+      padding: 12px 20px;
       margin-left: 10px;
       margin-right: 10px;
       background-color: rgba($color: #000, $alpha: .1);
       border-width: 0;
-      border-radius: 4px;
+      border-radius: 6px;
       color: #333;
       font-size: 12px;
-      line-height: 1.4;
+      line-height: 1.2;
       text-align: center;
       box-sizing: content-box;
       outline: none;
