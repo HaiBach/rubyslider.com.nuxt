@@ -21,19 +21,18 @@ onMounted(() => {
 
     /** SLIDER PREVIEW */
     const $slider = jQuery('#effect-math__slider')
-    const actived = 'fxlive--actived'
+    const actived = 'fxmath--actived'
     let rubyPreview
     let fxDefault
 
     if ($slider.length) {
       rubyPreview = $slider.rubyslider( sliderOptions )
       fxDefault = rubyPreview.optsCur().fx
-      console.log(fxDefault)
     }
 
     /** FX LIVE */
-    const $fxLive = jQuery('.fxlive__slider')
-    $fxLive.each(function() {
+    const $fxmath = jQuery('.fxmath__slider')
+    $fxmath.each(function() {
       const $fxSlider = $(this)
       const fxName = $fxSlider.data('fx')
       const options = {
@@ -48,14 +47,13 @@ onMounted(() => {
       $fxSlider.rubyslider( options )
 
       // Actived button select at begin
-      console.log(fxName == fxDefault)
       if (fxName == fxDefault) {
-        $fxSlider.parent().find('.fxlive__select').addClass(actived)
+        $fxSlider.parent().find('.fxmath__select').addClass(actived)
       }
     })
 
     /** EVENT TAP ON FX SELECT BUTTON */
-    const $fxSelect = $('.fxlive__select');
+    const $fxSelect = $('.fxmath__select');
     $fxSelect.on('click', function() {
         const $selectCur = $(this)
         const fxName = $selectCur.data('fx')
@@ -99,31 +97,30 @@ onMounted(() => {
       </div>
     </div>
 
-    <div class="fxlive">
+    <div class="fxmath">
       <div class="container">
         <div class="hr circle"></div>
-
-        <div class="fxlive__title">
+        <div class="fxmath__title">
           <h2>EXAMPLES OF LIVE EFFECT</h2>
         </div>
+      </div>
 
-        <div class="fxlive__table row">
-          <div
-            v-for="(fx, key) in aFx"
-            :key="key"
-            class="fxlive__item col6"
-            >
-            <div class="fxlive__item_inner">
-              <div class="rs01 fxlive__slider" :data-fx="fx">
-                <a class="rs01imgback" href="/img/vietnam-large2.jpg">Việt Nam 2</a>
-                <a class="rs01imgback" href="/img/vietnam-large4.jpg">Việt Nam 4</a>
-                <a class="rs01imgback" href="/img/vietnam-large6.jpg">Việt Nam 6</a>
-              </div>
-              <div class="fxlive__item_footer">
-                <h3>#{{ (key + 1)  + ' - ' + fx }}</h3>
-                <div class="fxlive__btn">
-                  <a class="fxlive__select" :data-fx="fx">Apply to Slider Preview</a>
-                </div>
+      <div class="fxmath__table">
+        <div
+          v-for="(fx, key) in aFx"
+          :key="key"
+          class="fxmath__item"
+          >
+          <div class="fxmath__item_inner">
+            <div class="rs01 fxmath__slider" :data-fx="fx">
+              <a class="rs01imgback" href="/img/vietnam-large2.jpg">Việt Nam 2</a>
+              <a class="rs01imgback" href="/img/vietnam-large4.jpg">Việt Nam 4</a>
+              <a class="rs01imgback" href="/img/vietnam-large6.jpg">Việt Nam 6</a>
+            </div>
+            <div class="fxmath__item_footer">
+              <h3>#{{ (key + 1)  + ' - ' + fx }}</h3>
+              <div class="fxmath__btn">
+                <button class="fxmath__select" :data-fx="fx">Apply to Slider Preview</button>
               </div>
             </div>
           </div>
@@ -135,19 +132,31 @@ onMounted(() => {
 
 
 <style lang="scss">
-.fxlive {
+.fxmath {
+  padding-left: 150px;
+  padding-right: 150px;
   background-color: #f0f0f0;
   .hr {
-    margin-top: 50px;
-    margin-bottom: 80px;
+    margin-top: 80px;
+    margin-bottom: 100px;
   }
   &__title {
+    margin-bottom: 100px;
+    text-align: center;
     h2 {
       font-size: 46px;
     }
   }
+  &__table {
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__item {
-    margin-bottom: 100px;
+    width: 50%;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 150px;
+    box-sizing: border-box;
   }
   &__item_footer {
     display: flex;
@@ -164,9 +173,12 @@ onMounted(() => {
   /** Slider */
   &__slider {
     margin-bottom: 10px;
+    .rs01viewport {
+      border-radius: 8px;
+    }
   }
 
-  /** Button select */
+  /** Button Select */
   &__select {
     display: block;
     padding: 9px 20px;
@@ -181,7 +193,7 @@ onMounted(() => {
       border-color: rgba($color: #000, $alpha: .5);
       color: #fff;
     }
-    &.fxlive--actived {
+    &.fxmath--actived {
       background-color: #cc0055;
       border-color: #cc0055;
       color: #fff;

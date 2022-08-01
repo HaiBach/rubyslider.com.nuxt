@@ -760,23 +760,26 @@
   /* Prettyprint
   ---------------------------------------------------------- */
   .prettyprint, .prettyall {
-    margin-top: 0; margin-bottom: 20px;
-    /*padding: 10px;*/
-    padding: 0 15px;
-
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 10px 15px;
     /*border: 1px solid #e5e5e5;*/
-    border-left: 1px dashed #d5d5d5;
+    border-left: 1px dashed rgba($color: #000, $alpha: .5);
     background-color: #fff;
     font-family: var(--font-code);
     font-size: 12px;
-    line-height: 19px;
+    line-height: 1.8;
   }
-  .prettyprint span { word-wrap: break-word; }
+  .prettyprint span {
+    word-wrap: break-word;
+  }
   .prettyall > .prettyprint {
     padding: 0;
     border-width: 0;
   }
-  .prettyall > .prettyprint:last-child { margin-bottom: 0; }
+  .prettyall > .prettyprint:last-child {
+    margin-bottom: 0;
+  }
 
 
 
