@@ -115,7 +115,7 @@ onMounted(() => {
   <div>
     <div class="wrapper">
       <div class="container">
-        <TitleHead title="COVERFLOW 3D EFFECT">
+        <TitleHead title="COVERFLOW 3D EFFECTS">
           <div class="title-desc">Slider Preview</div>
         </TitleHead>
       </div>
@@ -134,40 +134,38 @@ onMounted(() => {
       <div class="container">
         <div class="coverflow3d__hr hr circle"></div>
         <div class="coverflow3d__title">
-          <h2>CUSTOM STYLE OF EFFECT</h2>
+          <h2>CUSTOM STYLE OF EFFECTS</h2>
         </div>
       </div>
 
       <!-- Templates gallery -->
-      <div class="coverflow3d__table row">
+      <div class="coverflow3d__table">
         <div
           v-for="(fx, index) in aFxCustom"
           :key="index"
-          class="col6"
+          class="coverflow3d__item"
           >
-          <div class="coverflow3d__item">
-            <div class="coverflow3d__live">
-              <div class="coverflow3d__slider rs01">
-                <a class="rs01imgback" href="/img/season-landscape2.jpg">Season 2</a>
-                <a class="rs01imgback" href="/img/season-landscape4.jpg">Season 4</a>
-                <a class="rs01imgback" href="/img/season-landscape6.jpg">Season 6</a>
-                <a class="rs01imgback" href="/img/season-landscape7.jpg">Season 7</a>
-              </div>
+          <div class="coverflow3d__live">
+            <div class="coverflow3d__slider rs01">
+              <a class="rs01imgback" href="/img/season-landscape2.jpg">Season 2</a>
+              <a class="rs01imgback" href="/img/season-landscape4.jpg">Season 4</a>
+              <a class="rs01imgback" href="/img/season-landscape6.jpg">Season 6</a>
+              <a class="rs01imgback" href="/img/season-landscape7.jpg">Season 7</a>
             </div>
-            <pre class="coverflow3d__option prettyprint">{{ fx }}</pre>
-            <div class="coverflow3d__item_footer">
-              <h3 class="coverflow3d__tag">#{{ index + 1 }} - Style {{ index + 1 }}</h3>
-              <div class="coverflow3d__btn">
-                <button class="coverflow3d__select" :data-fx-index="index">
-                  <span>Apply to Slider Preview</span>
-                  <i>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                      <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-                      <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
-                    </svg>
-                  </i>
-                </button>
-              </div>
+          </div>
+          <pre class="coverflow3d__option prettyprint">{{ fx }}</pre>
+          <div class="coverflow3d__item_footer">
+            <h3 class="coverflow3d__tag">#{{ index + 1 }} - Style {{ index + 1 }}</h3>
+            <div class="coverflow3d__btn">
+              <button class="coverflow3d__select" :data-fx-index="index">
+                <span>Apply to Slider Preview</span>
+                <i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                    <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+                    <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+                  </svg>
+                </i>
+              </button>
             </div>
           </div>
         </div>
@@ -179,8 +177,8 @@ onMounted(() => {
 
 <style lang="scss">
 .coverflow3d {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
   background-color: #f0f0f0;
   .hr {
     margin-top: 100px;
@@ -193,10 +191,16 @@ onMounted(() => {
       font-size: 46px;
     }
   }
+  &__table {
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__item {
-    padding-left: 50px;
-    padding-right: 50px;
+    width: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-bottom: 150px;
+    box-sizing: border-box;
   }
   &__option {
     padding-left: 20px;
@@ -267,6 +271,60 @@ onMounted(() => {
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 1px 2px rgba($color: #000, $alpha: .2);
+  }
+
+  /** Media */
+  @media (min-width: 1200px) {
+  }
+  @media (min-width: 1400px) {
+    &__item {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+  @media (max-width: 991px) {
+    &__item {
+      width: 100%;
+    }
+    &__select {
+      min-width: auto;
+      padding: 10px 15px;
+      font-size: 12px;
+    }
+    &__tag {
+      font-size: 21px;
+    }
+  }
+  @media (max-width: 767px) {
+    .hr {
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+    &__title {
+      margin-bottom: 80px;
+      h2 {
+        font-size: 35px;
+      }
+    }
+  }
+  @media (max-width: 575px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    .hr {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+    &__title {
+      margin-bottom: 60px;
+      h2 {
+        font-size: 28px;
+      }
+    }
+    &__item {
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 100px;
+    }
   }
 }
 </style>

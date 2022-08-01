@@ -108,16 +108,15 @@ body {
   padding-top: 5px;
   border-top: 1px dashed #cc0055;
 }
-@media only screen and (min-width: 1px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .title-head {
     margin-bottom: 30px;
   }
   .title-head h1 {
     font-size: 35px !important;
-    line-height: 1.2em;
   }
 }
-@media only screen and (min-width: 1px) and (max-width: 479px) {
+@media (max-width: 575px) {
   .title-head h1 {
     font-size: 28px !important;
     font-weight: 200;

@@ -96,7 +96,7 @@
     font-weight: 300;
   }
 }
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 575px) {
   .typo-1, .typo-2, .typo-3 {
     font-size: 3.5em;
   }

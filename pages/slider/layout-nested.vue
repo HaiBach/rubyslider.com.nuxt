@@ -74,7 +74,7 @@ onMounted(() => {
   @media only screen and (max-width: 959px) {
     width: 300px;
   }
-  @media only screen and (max-width: 479px) {
+  @media only screen and (max-width: 575px) {
     position: static;
     width: auto;
     margin-top: 5px;

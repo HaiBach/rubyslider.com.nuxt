@@ -96,7 +96,7 @@ onMounted(() => {
       padding: 15px !important;
   }
 }
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 575px) {
   .slider-preview {
       padding: 0;
       border-width: 0;
