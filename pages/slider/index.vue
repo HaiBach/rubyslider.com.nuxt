@@ -104,11 +104,11 @@ const sliderData = {
       link: '/slider/effect-coverflow3d',
       thumbnail: '/img/template-fx-coverflow3D.png',
     },
-    'Effect Random': {
-      link: '/slider/effect-random',
+    'Random Math Effect': {
+      link: '/slider/effect-random-math',
       thumbnail: '/img/template-random.png',
     },
-    'Effect Control': {
+    'Control Effect': {
       link: '/slider/effect-control',
       thumbnail: '/img/template-fx-control.png',
     },
@@ -181,16 +181,12 @@ const sliderOptions = {
 }
 
 onMounted(() => {
-  console.log( '#List template - begin mounted')
-
   setTimeout(() => {
     const $sliderListTemplates = jQuery('#list-templates__slider')
     if ($sliderListTemplates.length) {
       $sliderListTemplates.rubyslider( sliderOptions )
-      console.log('#List template - setTimout - setup rubyslider')
     }
   }, 400)
-  console.log('#List template - mounted end')
 })
 </script>
 
@@ -234,6 +230,9 @@ onMounted(() => {
 
 
 <style scoped>
+#list-templates__slider {
+  margin-top: 50px;
+}
 #list-templates__slider .rs01pagitem {
   padding: 10px 25px !important;
   margin-left: 10px;

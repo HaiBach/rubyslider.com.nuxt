@@ -39,12 +39,12 @@ const MENUS = ref({
           { key: '1.3.1', name: 'Line Effect', to: '/slider/effect-line' },
           { key: '1.3.2', name: 'Fade Effect', to: '/slider/effect-fade' },
           { key: '1.3.3', name: 'Math Effect', to: '/slider/effect-math' },
-          { key: '1.3.4', name: 'CSS One', to: '/slider/effect-css-one' },
-          { key: '1.3.5', name: 'CSS Two', to: '/slider/effect-css-two' },
-          { key: '1.3.6', name: 'CSS Four', to: '/slider/effect-css-four' },
-          { key: '1.3.7', name: 'Coverflow3D', to: '/slider/effect-coverflow3d' },
-          { key: '1.3.8', name: 'Effect Random', to: '/slider/effect-random' },
-          { key: '1.3.9', name: 'Effect Control', to: '/slider/effect-control' },
+          { key: '1.3.4', name: 'CSS One Effect', to: '/slider/effect-css-one' },
+          { key: '1.3.5', name: 'CSS Two Effect', to: '/slider/effect-css-two' },
+          { key: '1.3.6', name: 'CSS Four Effect', to: '/slider/effect-css-four' },
+          { key: '1.3.7', name: 'Coverflow3D Effect', to: '/slider/effect-coverflow3d' },
+          { key: '1.3.8', name: 'Random Math Effect', to: '/slider/effect-random-math' },
+          { key: '1.3.9', name: 'Control Effect', to: '/slider/effect-control' },
         ]
       },
       {

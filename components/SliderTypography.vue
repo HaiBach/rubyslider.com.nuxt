@@ -64,7 +64,7 @@
   .typo-4 {
     clear: both;
     display: inline-block;
-    padding-top: 15px;
+    padding-top: 20px;
     margin-bottom: 0;
     border-top: 1px solid #ddd;
     color: #666;
