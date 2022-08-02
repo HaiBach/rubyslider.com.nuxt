@@ -286,13 +286,13 @@ onMounted(() => {
     &__item {
       width: 100%;
     }
+    &__tag {
+      font-size: 21px;
+    }
     &__select {
       min-width: auto;
       padding: 10px 15px;
       font-size: 12px;
-    }
-    &__tag {
-      font-size: 21px;
     }
   }
   @media (max-width: 767px) {
