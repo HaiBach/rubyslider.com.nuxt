@@ -23,5 +23,6 @@ export default defineNuxtConfig({
         { src: '/js/rubyslider_17.js' },
       ]
     }
-  }
+  },
+  // ssr: false
 })
