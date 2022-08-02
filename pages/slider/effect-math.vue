@@ -7,11 +7,12 @@ const aFx = [
   'rubyMove',
   'rubyRun',
   'rubyScale',
-  'zigzagRun'
+  'zigzagRun',
+  'randomMath'
 ]
 const sliderOptions = {
   fx: 'rectRun',
-  speed: 800,
+  speed: 1000,
   width: 1880,
   height: 520,
 }

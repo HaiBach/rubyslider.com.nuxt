@@ -43,7 +43,7 @@ const MENUS = ref({
           { key: '1.3.5', name: 'CSS Two Effect', to: '/slider/effect-css-two' },
           { key: '1.3.6', name: 'CSS Four Effect', to: '/slider/effect-css-four' },
           { key: '1.3.7', name: 'Coverflow3D Effect', to: '/slider/effect-coverflow3d' },
-          { key: '1.3.8', name: 'Random Math Effect', to: '/slider/effect-random-math' },
+          // { key: '1.3.8', name: 'Random Math Effect', to: '/slider/effect-random-math' },
           { key: '1.3.9', name: 'Control Effect', to: '/slider/effect-control' },
         ]
       },
