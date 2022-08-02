@@ -7,160 +7,160 @@ const sliderData = {
   'LAYOUT': {
     'Basic Layout': {
       link: '/slider/layout-basic',
-      thumbnail: '../assets/img/template-layout-basic.png',
+      thumbnail: '/img/template-layout-basic.png',
     },
     'Classic-1 Layout': {
       link: '/slider/layout-classic-1',
-      thumbnail: '../assets/img/template-layout-classic1.png',
+      thumbnail: '/img/template-layout-classic1.png',
     },
     'Classic-2 Layout': {
       link: '/slider/layout-classic-2',
-      thumbnail: '../assets/img/template-layout-classic2.png',
+      thumbnail: '/img/template-layout-classic2.png',
     },
     'Center Layout': {
       link: '/slider/layout-center',
-      thumbnail: '../assets/img/template-layout-center.png',
+      thumbnail: '/img/template-layout-center.png',
     },
     'Carousel Layout': {
       link: '/slider/layout-carousel',
-      thumbnail: '../assets/img/template-layout-carousel.png',
+      thumbnail: '/img/template-layout-carousel.png',
     },
     'Outbox Layout': {
       link: '/slider/layout-outbox',
-      thumbnail: '../assets/img/template-layout-outbox.png',
+      thumbnail: '/img/template-layout-outbox.png',
     },
     'Device Layout': {
       link: '/slider/layout-device',
-      thumbnail: '../assets/img/template-layout-device.png',
+      thumbnail: '/img/template-layout-device.png',
     },
     'Cover-screen Layout': {
       link: '/slider/layout-coverscreen',
-      thumbnail: '../assets/img/template-layout-coverscreen.png',
+      thumbnail: '/img/template-layout-coverscreen.png',
     },
     'Fullwidth Layout': {
       link: '/slider/layout-fullwidth',
-      thumbnail: '../assets/img/template-layout-fullwidth.png',
+      thumbnail: '/img/template-layout-fullwidth.png',
     },
     'Fullwidth-Range Layout': {
       link: '/slider/layout-fullwidth-range',
-      thumbnail: '../assets/img/template-layout-fullwidthRange.png',
+      thumbnail: '/img/template-layout-fullwidthRange.png',
     },
     'Vertical Thumb Layout': {
       link: '/slider/layout-vertical-thumbnail',
-      thumbnail: '../assets/img/template-layout-vertical.png',
+      thumbnail: '/img/template-layout-vertical.png',
     },
     'Nested Layout': {
       link: '/slider/layout-nested',
-      thumbnail: '../assets/img/template-layout-nested.png',
+      thumbnail: '/img/template-layout-nested.png',
     },
     'Multi Layout': {
       link: '/slider/layout-multiple',
-      thumbnail: '../assets/img/template-layout-multi.png',
+      thumbnail: '/img/template-layout-multi.png',
     },
     'Caption Layout': {
       link: '/slider/layout-caption',
-      thumbnail: '../assets/img/template-layout-caption.png',
+      thumbnail: '/img/template-layout-caption.png',
     },
     'Auto-Height Layout': {
       link: '/slider/layout-height-auto',
-      thumbnail: '../assets/img/template-layout-heightAuto.png',
+      thumbnail: '/img/template-layout-heightAuto.png',
     },
     'Fixed-Height Layout': {
       link: '/slider/layout-height-fixed',
-      thumbnail: '../assets/img/template-layout-heightFixed.png',
+      thumbnail: '/img/template-layout-heightFixed.png',
     },
     // 'Slider in Box': {
     //   link: '/slider/layout-inbox',
-    //   thumbnail: '../assets/img/template-layout-box.png',
+    //   thumbnail: '/img/template-layout-box.png',
     // },
   },
 
   'EFFECT': {
     'Line Effect': {
       link: '/slider/effect-line',
-      thumbnail: '../assets/img/template-fx-line.png',
+      thumbnail: '/img/template-fx-line.png',
     },
     'Fade Effect': {
       link: '/slider/effect-fade',
-      thumbnail: '../assets/img/template-fx-fade.png',
+      thumbnail: '/img/template-fx-fade.png',
     },
     'Math Effect': {
       link: '/slider/effect-math',
-      thumbnail: '../assets/img/template-fx-math.png',
+      thumbnail: '/img/template-fx-math.png',
     },
     'CSS One Effect': {
       link: '/slider/effect-css-one',
-      thumbnail: '../assets/img/template-fx-cssOne.png',
+      thumbnail: '/img/template-fx-cssOne.png',
     },
     'CSS Two Effect': {
       link: '/slider/effect-css-two',
-      thumbnail: '../assets/img/template-fx-cssTwo.png',
+      thumbnail: '/img/template-fx-cssTwo.png',
     },
     'CSS Four Effect': {
       link: '/slider/effect-css-four',
-      thumbnail: '../assets/img/template-fx-cssFour.png',
+      thumbnail: '/img/template-fx-cssFour.png',
     },
     'Coverflow3D Effect': {
       link: '/slider/effect-coverflow3d',
-      thumbnail: '../assets/img/template-fx-coverflow3D.png',
+      thumbnail: '/img/template-fx-coverflow3D.png',
     },
     'Effect Random': {
       link: '/slider/effect-random',
-      thumbnail: '../assets/img/template-random.png',
+      thumbnail: '/img/template-random.png',
     },
     'Effect Control': {
       link: '/slider/effect-control',
-      thumbnail: '../assets/img/template-fx-control.png',
+      thumbnail: '/img/template-fx-control.png',
     },
   },
 
   'SLIDESHOW': {
     'Arc Timer': {
       link: '/slider/slideshow-timer-arc',
-      thumbnail: '../assets/img/template-timer-arc.png',
+      thumbnail: '/img/template-timer-arc.png',
     },
     'Line Timer': {
       link: '/slider/slideshow-timer-line',
-      thumbnail: '../assets/img/template-timer-line.png',
+      thumbnail: '/img/template-timer-line.png',
     },
     'Timer Only': {
       link: '/slider/slideshow-timer-only',
-      thumbnail: '../assets/img/template-timer-only.png',
+      thumbnail: '/img/template-timer-only.png',
     },
     'Slideshow Random': {
       link: '/slider/slideshow-random',
-      thumbnail: '../assets/img/template-random.png',
+      thumbnail: '/img/template-random.png',
     },
   },
 
   'API': {
     'Add-Remove Slider': {
       link: '/slider/api-addremove',
-      thumbnail: '../assets/img/template-api-addremove.png',
+      thumbnail: '/img/template-api-addremove.png',
     },
     'Callback Event': {
       link: '/slider/api-callback',
-      thumbnail: '../assets/img/template-api-callback.png',
+      thumbnail: '/img/template-api-callback.png',
     },
     'Show By Device': {
       link: '/slider/api-show-by-device',
-      thumbnail: '../assets/img/template-api-showByDevice.png',
+      thumbnail: '/img/template-api-showByDevice.png',
     },
     'Show In Range': {
       link: '/slider/api-show-in-range',
-      thumbnail: '../assets/img/template-api-showInRange.png',
+      thumbnail: '/img/template-api-showInRange.png',
     },
     'Deep Linking': {
       link: '/slider/api-deeplinking',
-      thumbnail: '../assets/img/template-api-deeplinking.png',
+      thumbnail: '/img/template-api-deeplinking.png',
     },
     'Deep Linking Multi': {
       link: '/slider/api-deeplinking-multi',
-      thumbnail: '../assets/img/template-api-deeplinkingMulti.png',
+      thumbnail: '/img/template-api-deeplinkingMulti.png',
     },
     'Cookie': {
       link: '/slider/api-cookie',
-      thumbnail: '../assets/img/template-api-cookie.png',
+      thumbnail: '/img/template-api-cookie.png',
     },
   }
 }
