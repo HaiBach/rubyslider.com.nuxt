@@ -11,8 +11,6 @@ useHead({
   ]
 })
 
-
-
 onMounted(() => {
 })
 </script>

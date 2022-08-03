@@ -419,16 +419,11 @@ input.rf01input-updown-value:focus {
  * UI RANGER
  */
 .rr01 {
-  position: relative;
+  // position: relative;
   overflow: hidden;
   font-family: Consolas, Monaco, monospace;
-
-  -webkit-user-select: none;
-     -moz-user-select: none;
-    -ms-user-select: none;
-      user-select: none;
+  user-select: none;
 }
-
 
 /* RANGER TRACK */
 .rr01track {
@@ -440,36 +435,40 @@ input.rf01input-updown-value:focus {
 .rr01track:after {
   content: '';
   display: block;
-  height: 1px;
+  height: 2px;
   background-color: #e5e5e5;
 }
-
 
 /* RANGER THUMB */
 .rr01thumb {
   position: absolute;
-  left: 0; top: 5px;
-  width: 25px; height: 25px;
+  left: 0;
+  top: 5px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
   z-index: 2;
 }
 .rr01thumb::after {
   display: block;
   content: '';
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: #cc0055;
 }
 .rr01thumb:before {
   position: absolute;
-  right: 100%; top: 50%;
+  right: 100%;
+  top: 50%;
   content: '';
   display: block;
-  width: 20000px; height: 1px;
+  width: 20000px;
+  height: 2px;
   margin-right: -12px;
   background-color: #cc0055;
+  border-radius: 100px;
 }
-
 
 /* RANGER VALUE */
 input.rr01value {
@@ -486,7 +485,6 @@ input.rr01value:focus {
   border-bottom-color: #ccc;
   box-shadow: none;
 }
-
 
 /* RANGER OTHER */
 .rr01novalue > input {

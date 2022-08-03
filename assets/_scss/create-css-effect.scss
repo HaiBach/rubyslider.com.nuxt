@@ -95,22 +95,18 @@
   margin: 0 auto;
   background-color: rgba(0,0,0,.05);
   border: 1px dashed transparent;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
 }
 .fxdemo__item > img {
   display: block;
   width: 500px;
   height: auto;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 .fxdemo__item > img::selection {
   background-color: transparent;
 }
-.fxdemo__item > img::-moz-selection {
-  background-color: transparent;
-}
-
 /* Effect running */
 .fxdemo-running .fxdemo__outer {
   border-color: #666;
