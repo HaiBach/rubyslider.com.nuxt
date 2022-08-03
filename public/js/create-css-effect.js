@@ -125,9 +125,9 @@ FXDEMO = {
     Init : function() {
 
         // Initialize variables
-        va.$fxDemoPreview = $('.fxdemo-preview');
-        va.$fxDemoItem    = $('.fxdemo-item');
-        va.$fxDemoOuter   = $('.fxdemo-outer');
+        va.$fxDemoPreview = $('.fxdemo__preview');
+        va.$fxDemoItem    = $('.fxdemo__item');
+        va.$fxDemoOuter   = $('.fxdemo__outer');
         va.tweenDemo      = new RubyTween();
         va.isFxDemo       = va.$fxDemoPreview.length && va.$fxDemoItem.length;
     },
@@ -159,7 +159,7 @@ FXDEMO = {
         // Add special class when run effect
         va.$fxDemoPreview.addClass('fxdemo-running');
 
-        // Remove style for FxDemo-item before setup tween
+        // Remove style for fxdemo__item before setup tween
         va.$fxDemoItem.attr('style', '');
 
         // Tween-animate for fx-item
@@ -269,7 +269,7 @@ RANGER = {
         }
 
 
-        // Update Tween-animate for FxDemo-item if not exist
+        // Update Tween-animate for fxdemo__item if not exist
         if( !va.tweenDemo.tw.animate.length ) FXDEMO.TweenAnimate();
 
         // Tween goto position transform
@@ -311,7 +311,7 @@ CONTROL = {
             isRulerTop  : true,
             isRulerLeft : false,
             isConner    : true,
-            target      : '.fxdemo-outer'
+            target      : '.fxdemo__outer'
         });
     },
 
@@ -472,7 +472,7 @@ EDITOR = {
                 // Update value to 'keyframe' variable
                 va.keyframeCur = keyframe;
 
-                // Update & restart Tween-animate of FxDemo-item
+                // Update & restart Tween-animate of fxdemo__item
                 FXDEMO.UpdateAndRestart();
             }
             catch(e) {
@@ -496,7 +496,7 @@ EDITOR = {
             // Restore content of the editor from Keyframe store globle variable
             EDITOR.SetContent();
 
-            // Update & restart Tween-animate of FxDemo-item
+            // Update & restart Tween-animate of fxdemo__item
             FXDEMO.UpdateAndRestart(true);
 
             // Update position current for the ranger
@@ -751,10 +751,10 @@ FXTABLE = {
                 // Set content for editor with name of effect
                 EDITOR.SetContent();
 
-                // Remove style for FxDemo-item before setup tween
+                // Remove style for fxdemo__item before setup tween
                 va.$fxDemoItem.attr('style', '');
 
-                // Update TweenAnimate on FxDemo-item
+                // Update TweenAnimate on fxdemo__item
                 FXDEMO.TweenAnimate();
                 va.tweenDemo.go(0);
 
@@ -860,7 +860,7 @@ $(window).on('load', function() {
     // Initialize ruler
     CONTROL.Ruler();
 
-    // Prevent 'drag' on image in FxDemo-item
+    // Prevent 'drag' on image in fxdemo__item
     FXDEMO.EventOnItem();
 
     var canvas = document.createElement('canvas');
