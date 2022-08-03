@@ -92,9 +92,10 @@
 /** RULER NUM ZERO **/
 .rubyruler-zero {
   color: #2979ff;
-  font-weight: 600;
+  font-weight: 700;
 }
 .rubyruler-top .rubyruler-zero {
+  border-left-width: 2px;
   border-left-color: #2979ff;
 }
 

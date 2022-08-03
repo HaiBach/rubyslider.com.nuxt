@@ -9,8 +9,8 @@
 .line-space {
   height: 40px;
   padding-top: 50px; padding-bottom:50px;
-  background: url(../imgs/line-space.png) no-repeat center center;
-  background-image: url(../imgs/line-space-01.svg);
+  background: url(/img/line-space.png) no-repeat center center;
+  background-image: url(/img/line-space-01.svg);
 }
 
 
@@ -78,10 +78,11 @@
 
 /** LIVE EFFECT DEMO **/
 .fxdemo-wrap {
+  position: relative;
   background-color: #eee;
 }
 .fxdemo-wrap > .container {
-  position: relative;
+  // position: relative;
 }
 
 .fxdemo-preview {
@@ -99,7 +100,8 @@
 }
 .fxdemo-item > img {
   display: block;
-  width: 300px; height: auto;
+  width: 500px;
+  height: auto;
   border-radius: 4px;
 }
 .fxdemo-item > img::selection {
@@ -290,7 +292,7 @@
   display: inline-block;
   width: 50px; height: 38px;
   margin-right: 10px; margin-bottom: 10px;
-  background: url(../imgs/icon-controls-01.svg) no-repeat 0 -5px;
+  background: url(/img/icon-controls-01.svg) no-repeat 0 -5px;
   cursor: pointer;
 }
 .btn-icon.btn-restart     { background-position: -150px -5px; }

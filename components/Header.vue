@@ -1,7 +1,3 @@
-<script setup>
-</script>
-
-
 <template>
 <header id="header" class="wrapper header">
   <div class="container">

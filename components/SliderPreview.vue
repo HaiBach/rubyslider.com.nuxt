@@ -2,7 +2,6 @@
 const sliderOptions = {
   fx: 'coverflow3D',
   coverflow3D: {
-    // widthSlide: [0.8, [1040, 1200, 10000]],
     widthSlide: [1040, '80%'],
     opacity: 0.3
   },
@@ -14,7 +13,7 @@ const sliderOptions = {
   isKeyboard: true,
   isSlideshow: true,
   slideshow: {
-    delay: 5000,
+    delay: 5000,  
     isAutoRun: false
   },
   timerArc: {
@@ -25,22 +24,24 @@ const sliderOptions = {
   }
 }
 
+const initSetup = function() {
+  const $sliderPreview = jQuery('.slider-preview')
+
+  if ($sliderPreview.length) {
+    $sliderPreview.rubyslider( sliderOptions )
+    console.log('#SliderPreview rubyslider setup')
+  }
+}
+
 onMounted(() => {
   console.log('#SliderPreview mounted begin')
-  setTimeout(() => {
-    const $sliderPreview = jQuery('.slider-preview')
-
-    if ($sliderPreview.length) {
-      $sliderPreview.rubyslider( sliderOptions )
-      console.log('#SliderPreview rubyslider setup')
-    }
-  }, 400)
+  setTimeout(initSetup, 400)
   console.log('#SliderPreview mounted end')
 })
 
-onUpdated(() => {
-  console.log( '#SliderPreview udpate')
-})
+// onUpdated(() => {
+//   console.log( '#SliderPreview udpate')
+// })
 </script>
 
 

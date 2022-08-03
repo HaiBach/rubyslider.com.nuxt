@@ -172,9 +172,13 @@ const MENUS = ref({
   },
 })
 
+const initSetup = function() {
+  jQuery('.rm01').rubymenu()
+}
+
 // Lifecycle mounted
 onMounted(() => {
-  const rubymenu = jQuery('.rm01').rubymenu()
+  setTimeout(initSetup, 400)
 })
 </script>
 

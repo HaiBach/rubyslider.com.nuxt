@@ -7,13 +7,15 @@ const sliderOptions = {
   imagePosition: 'fill'
 }
 
+const initSetup = () => {
+  const $slider = jQuery('#layout-basic__slider')
+  if ($slider.length) {
+    $slider.rubyslider( sliderOptions )
+  }
+}
+
 onMounted(() => {
-  setTimeout(() => {
-    const $slider = jQuery('#layout-basic__slider')
-    if ($slider.length) {
-      $slider.rubyslider( sliderOptions )
-    }
-  }, 400)
+  setTimeout(initSetup, 400)
 })
 </script>
 

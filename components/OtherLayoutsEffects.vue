@@ -77,7 +77,7 @@ export default {
         <img class="rs01imgback" src="/img/season-landscape4.jpg" alt="Season 4">
         <img class="rs01imgback" src="/img/season-landscape7.jpg" alt="Season 7">
       </div>
-      <NuxtLink class="effect-title" to="/slider/effect-cssOne">50+ CSS One Effects</NuxtLink>
+      <NuxtLink class="effect-title" to="/slider/effect-css-one">50+ CSS One Effects</NuxtLink>
     </div>
     <!-- CSS ONE EFFECT - end -->
 
