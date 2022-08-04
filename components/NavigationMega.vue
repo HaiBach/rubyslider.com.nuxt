@@ -1,0 +1,341 @@
+<script setup>
+const MENUS = {
+  'Slider': {
+    key: '1',
+    menus: [
+      {
+        key: '1.1',
+        name: 'List All Examples',
+        to: '/slider'
+      },
+      {
+        key: '1.2',
+        name: 'Layout',
+        menus:
+        [
+          {
+            key: '1.2.1',
+            name: 'Basic',
+            to: '/slider/layout-basic',
+            thumbnail: '/img/template-layout-basic.png',
+          },
+          {
+            key: '1.2.2',
+            name: 'Classic 1',
+            to: '/slider/layout-classic-1',
+            thumbnail: '/img/template-layout-classic1.png',
+          },
+          {
+            key: '1.2.3',
+            name: 'Classic 2',
+            to: '/slider/layout-classic-2',
+            thumbnail: '/img/template-layout-classic2.png',
+          },
+          {
+            key: '1.2.4',
+            name: 'Center',
+            to: '/slider/layout-center',
+            thumbnail: '/img/template-layout-center.png',
+          },
+          { 
+            key: '1.2.5',
+            name: 'Carousel',
+            to: '/slider/layout-carousel',
+            thumbnail: '/img/template-layout-carousel.png',
+          },
+          {
+            key: '1.2.6',
+            name: 'Outbox',
+            to: '/slider/layout-outbox',
+            thumbnail: '/img/template-layout-outbox.png',
+          },
+          {
+            key: '1.2.7',
+            name: 'Device',
+            to: '/slider/layout-device',
+            thumbnail: '/img/template-layout-device.png',
+          },
+          {
+            key: '1.2.8',
+            name: 'Coverscreen',
+            to: '/slider/layout-coverscreen',
+            thumbnail: '/img/template-layout-coverscreen.png',
+          },
+          {
+            key: '1.2.9',
+            name: 'Fullwidth',
+            to: '/slider/layout-fullwidth',
+            thumbnail: '/img/template-layout-fullwidth.png',
+          },
+          {
+            key: '1.2.10',
+            name: 'Fullwidth Range',
+            to: '/slider/layout-fullwidth-range',
+            thumbnail: '/img/template-layout-fullwidthRange.png',
+          },
+          {
+            key: '1.2.11',
+            name: 'Vertical Thumbnail',
+            to: '/slider/layout-vertical-thumbnail',
+            thumbnail: '/img/template-layout-vertical.png',
+          },
+          {
+            key: '1.2.12',
+            name: 'Nested',
+            to: '/slider/layout-nested',
+            thumbnail: '/img/template-layout-nested.png',
+          },
+          {
+            key: '1.2.13',
+            name: 'Multi',
+            to: '/slider/layout-multiple',
+            thumbnail: '/img/template-layout-multi.png',
+          },
+          {
+            key: '1.2.14',
+            name: 'Caption',
+            to: '/slider/layout-caption',
+            thumbnail: '/img/template-layout-caption.png',
+          },
+          {
+            key: '1.2.15',
+            name: 'Height Auto',
+            to: '/slider/layout-height-auto',
+            thumbnail: '/img/template-layout-heightAuto.png',
+          },
+          {
+            key: '1.2.16',
+            name: 'Height Fixed',
+            to: '/slider/layout-height-fixed',
+            thumbnail: '/img/template-layout-heightFixed.png',
+          },
+        ]
+      },
+      {
+        key: '1.3',
+        name: 'Effect',
+        menus:
+        [
+          { key: '1.3.1', name: 'Line Effect', to: '/slider/effect-line' },
+          { key: '1.3.2', name: 'Fade Effect', to: '/slider/effect-fade' },
+          { key: '1.3.3', name: 'Math Effect', to: '/slider/effect-math' },
+          { key: '1.3.4', name: 'CSS One Effect', to: '/slider/effect-css-one' },
+          { key: '1.3.5', name: 'CSS Two Effect', to: '/slider/effect-css-two' },
+          { key: '1.3.6', name: 'CSS Four Effect', to: '/slider/effect-css-four' },
+          { key: '1.3.7', name: 'Coverflow3D Effect', to: '/slider/effect-coverflow3d' },
+          // { key: '1.3.8', name: 'Random Math Effect', to: '/slider/effect-random-math' },
+          { key: '1.3.9', name: 'Control Effect', to: '/slider/effect-control' },
+        ]
+      },
+      {
+        key: '1.4',
+        name: 'Slideshow',
+        menus:
+        [
+          { key: '1.4.1', name: 'Arc Timer', to: '/slider/slideshow-timer-arc' },
+          { key: '1.4.2', name: 'Line Timer', to: '/slider/slideshow-timer-line' },
+          { key: '1.4.3', name: 'Timer Only', to: '/slider/slideshow-timer-only' },
+          { key: '1.4.4', name: 'Slideshow Random', to: '/slider/slideshow-random' },
+        ]
+      },
+      {
+        key: '1.5',
+        name: 'API',
+        menus:
+        [
+          { key: '1.5.1', name: 'Add-Remove Tabs', to: '/slider/api-add-remove' },
+          { key: '1.5.2', name: 'Callback Event', to: '/slider/api-callback' },
+          { key: '1.5.3', name: 'Show By Device', to: '/slider/api-show-by-device' },
+          { key: '1.5.4', name: 'Show In Range', to: '/slider/api-show-in-range' },
+          { key: '1.5.5', name: 'Deep Linking', to: '/slider/api-deeplinking' },
+          { key: '1.5.6', name: 'Deep Linking Multi', to: '/slider/api-deeplinking-multi' },
+          { key: '1.5.7', name: 'Cookie', to: '/slider/api-cookie' },
+        ]
+      }
+    ],
+  },
+
+  // 'Tabs': {
+  //   key: '2',
+  //   menus: [
+  //     {
+  //       key: '2.1',
+  //       name: 'List All Examples',
+  //       to: '/tabs',
+  //     },
+  //     {
+  //       key: '2.2',
+  //       name: 'Layout',
+  //       menus: [
+  //         { key: '2.2.1', name: 'Device', to: '/tabs/layout-device' },
+  //         { key: '2.2.2', name: 'Vertical', to: '/tabs/layout-vertical' },
+  //         { key: '2.2.3', name: 'Nested', to: '/tabs/layout-nested' },
+  //         { key: '2.2.4', name: 'Bullet', to: '/tabs/layout-bullet' },
+  //         { key: '2.2.5', name: 'Fullwidth', to: '/tabs/layout-fullwidth' },
+  //         { key: '2.2.6', name: 'Page', to: '/tabs/layout-page' },
+  //       ]
+  //     },
+  //     {
+  //       key: '2.3',
+  //       name: 'Effect',
+  //       menus: [
+  //         { key: '2.3.1', name: 'Line', to: '/tabs/effect-line' },
+  //         { key: '2.3.2', name: 'Fade', to: '/tabs/effect-fade' },
+  //         { key: '2.3.3', name: 'CSS One', to: '/tabs/effect-css-one' },
+  //         { key: '2.3.4', name: 'CSS Two', to: '/tabs/effect-css-two' },
+  //         { key: '2.3.5', name: 'CSS Four', to: '/tabs/effect-css-four' },
+  //         { key: '2.3.6', name: 'None', to: '/tabs/effect-none' },
+  //         { key: '2.3.7', name: 'Effect Random', to: '/tabs/effect-random' },
+  //         { key: '2.3.8', name: 'Effect Control', to: '/tabs/effect-control' },
+  //       ]
+  //     },
+  //     {
+  //       key: '2.4',
+  //       name: 'Style',
+  //       menus: [
+  //         { key: '2.4.1', name: 'Flat', to: '/tabs/style-flat' },
+  //         { key: '2.4.2', name: 'Flatbox', to: '/tabs/style-flatbox' },
+  //         { key: '2.4.3', name: 'Outline', to: '/tabs/style-round.' },
+  //         { key: '2.4.4', name: 'Underline', to: '/tabs/style-underline' },
+  //         { key: '2.4.5', name: 'Size Of Style', to: '/tabs/style-size' },
+  //         { key: '2.4.6', name: 'Highlight Slide', to: '/tabs/style-highlight' },
+  //       ]
+  //     },
+  //     {
+  //       key: '2.5',
+  //       name: 'Position',
+  //       menus: [
+  //         { key: '2.5.1', name: 'Hor Begin-Begin', to: '/tabs/pos-hor-beginBegin' },
+  //         { key: '2.5.2', name: 'Hor Begin-Center', to: '/tabs/pos-hor-beginCenter' },
+  //         { key: '2.5.3', name: 'Hor Begin-End', to: '/tabs/pos-hor-beginEnd' },
+  //         { key: '2.5.4', name: 'Hor Begin-Justify', to: '/tabs/pos-hor-beginJustify' },
+  //         { key: '2.5.5', name: 'Hor End-Begin', to: '/tabs/pos-hor-endBegin.' },
+  //         { key: '2.5.6', name: 'Hor End-Center', to: '/tabs/pos-hor-endCenter' },
+  //         { key: '2.5.7', name: 'Hor End-End', to: '/tabs/pos-hor-endEnd' },
+  //         { key: '2.5.8', name: 'Hor End-Justify', to: '/tabs/pos-hor-endJustify' },
+  //         { key: '2.5.9', name: 'Ver Begin-Begin', to: '/tabs/pos-ver-beginBegin' },
+  //         { key: '2.5.10', name: 'Ver Begin-Center', to: '/tabs/pos-ver-beginCenter' },
+  //         { key: '2.5.11', name: 'Ver Begin-End', to: '/tabs/pos-ver-beginEnd' },
+  //         { key: '2.5.12', name: 'Ver End-Begin', to: '/tabs/pos-ver-endBegin' },
+  //         { key: '2.5.13', name: 'Ver End-Center', to: '/tabs/pos-ver-endCenter' },
+  //         { key: '2.5.14', name: 'Ver End-End', to: '/tabs/pos-ver-endEnd' },
+  //       ]
+  //     },
+  //   ],
+  // },
+
+  // 'Tools': {
+  //   key: '3',
+  //   menus: [
+  //     {
+  //       key: '3.1',
+  //       name: 'Create CSS effect',
+  //       to: '/tools/create-css-effect',
+  //     },
+  //     {
+  //       key: '3.2',
+  //       name: 'Preview CSS effect',
+  //       to: '/tools/preview-css-effect',
+  //     }
+  //   ],
+  // },
+
+  'Docs': {
+    key: '4',
+    to: '/documentation',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16"><path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/></svg>',
+  },
+  'Download': {
+    key: '5',
+    to: '/download',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>',
+  },
+}
+
+const initSetup = function() {
+  const rubymenu = jQuery('.rm01').rubymenu()
+}
+
+// Lifecycle mounted
+onMounted(() => {
+  initSetup()
+})
+</script>
+
+
+<template>
+<nav class="megamenu">
+  <div class="megamenu__ul megamenu--ul-lv1">
+    <div
+      v-for="(menuLevel1, indexLevel1) in MENUS"
+      class="megamenu__li megamenu--li-lv1">
+
+      <div class="megamenu__link megamenu--link-lv1">
+        <NuxtLink :to="menuLevel1.to">
+          <i v-if="menuLevel1.icon" v-html="menuLevel1.icon "></i>
+          <span>{{ indexLevel1 }}</span>
+          <span class="megamenu__caret" v-if="menuLevel1.menus"></span>
+        </NuxtLink>
+      </div>
+
+      <div
+        v-if="menuLevel1.menus"
+        class="megamenu__board">
+        
+        <div class="megamenu__left">
+          <div class="megamenu__title">
+            <h2 class="megamenu__name">Slider</h2>
+            <p class="megamenu__desc">Over 30+ Slider Starter Examples</p>
+          </div>
+          <div class="megamenu__links"></div>
+        </div> <!-- ./megamenu__left -->
+
+        <div class="megamenu__right">
+          <div class="megamenu__slider rs01">
+            <div
+              v-for="(menuLevel2, indexLevel2) in menuLevel1.menus"
+              :key="menuLevel2.key"
+              class="megamenu__slide rs01slide">
+
+              <div class="megamenu__link megamenu--link-lv2 rs01pagitem">
+                <NuxtLink :to="menuLevel2.to">
+                  <i v-if="menuLevel2.icon" v-html="menuLevel2.icon "></i>
+                  <span>{{ menuLevel2.name }}</span>
+                  <span class="megamenu__caret" v-if="menuLevel2.menus"></span>
+                </NuxtLink>
+              </div>
+              
+              <div
+                v-if="menuLevel2.imageFeature"
+                class="megamenu__image_feature">
+                <figure>
+                  <img :src="menuLevel2.imageFeature" :alt="menuLevel2.name">
+                </figure>
+              </div>
+
+              <div class="megamenu__items">
+                <div
+                  v-for="(menuLevel3, indexLevel3) in menuLevel2.menus"
+                  :key="menuLevel3.key"
+                  class="megamenu__item">
+
+                  <NextLink
+                    :to="menuLevel3.to"
+                    class="megamenu__link megamenu--link-lv3">
+                    <figure class="megamenu__thumb">
+                      <img :src="menuLevel3.thumbnail" :alt="menuLevel3.name">
+                      <figcaption>{{ menuLevel3.name }}</figcaption>
+                    </figure>
+                  </NextLink>                      
+                </div> <!-- ./megamenu__item -->
+              </div> <!-- ./megamenu__items -->
+
+            </div>
+          </div> <!-- ./megamenu__slider -->
+        </div> <!-- ./megamenu__right -->
+      </div>
+
+    </div>
+  </div> <!-- ./megamenu__menu -->
+</nav>
+</template>
