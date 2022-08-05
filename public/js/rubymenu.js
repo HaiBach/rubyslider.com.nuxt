@@ -134,40 +134,44 @@
           return $ul;
         };
   
-        var $menuLv1 = fnMenuLevel($ruby, '> .{ns}menu', 'menu-lv1');
-        var $menuLv2 = fnMenuLevel($menuLv1, '> li > .{ns}menu', 'menu-lv2');
-        var $menuLv3 = fnMenuLevel($menuLv2, '> li > .{ns}menu', 'menu-lv3');
+        var $menuLv1 = fnMenuLevel($ruby, '> .{ns}menu, .{ns}menu-lv1', 'menu-lv1');
+        var $menuLv2 = fnMenuLevel($menuLv1, '> li > .{ns}menu, .{ns}menu-lv2', 'menu-lv2');
+        var $menuLv3 = fnMenuLevel($menuLv2, '> li > .{ns}menu, .{ns}menu-lv3', 'menu-lv3');
   
   
   
         /**
          * CHEN CLASS 'LEVEL' VAO LIST
          */
-        var $lists = fnMenuLevel($ruby, '.{ns}menu > li', 'list');
-        var $listLv1 = fnMenuLevel($menuLv1, '> li', 'list-lv1');
-        var $listLv2 = fnMenuLevel($menuLv2, '> li', 'list-lv2');
-        var $listLv3 = fnMenuLevel($menuLv3, '> li', 'list-lv3');
+        var $lists = fnMenuLevel($ruby, '.{ns}menu > li, .{ns}list', 'list');
+        var $listLv1 = fnMenuLevel($menuLv1, '> li, .{ns}list-lv1', 'list-lv1');
+        var $listLv2 = fnMenuLevel($menuLv2, '> li, .{ns}list-lv2', 'list-lv2');
+        var $listLv3 = fnMenuLevel($menuLv3, '> li, .{ns}list-lv3', 'list-lv3');
   
   
   
         /**
          * CHEN CLASS 'PARENT LEVEL' VAO LIST
          */
+        var level = 1
         var fnListParentLevel = function($parent, classes) {
   
-          var $list = $parent.find( M.NS('> .{ns}menu > li') );
+          var $list = $parent.find( M.NS('> .{ns}menu > li, .{ns}list-lv' + level) );
           $list.each(function() {
             var $li = $(this);
             var $menuChild = $li.find( M.NS('.{ns}menu') );
+            console.log('#1', $menuChild)
   
             if( $menuChild.length ) $li.addClass( va.ns + classes);
           });
+          level++;
           return $list;
         };
   
         // Chen them class 'List Parent Level' 1 & 2
         va.$listParentLV1 = fnListParentLevel($ruby, 'list-parent-lv1');
         va.$listParentLV2 = fnListParentLevel(va.$listParentLV1, 'list-parent-lv2');
+        console.log(va.$listParentLV1)
       },
   
   
@@ -453,7 +457,7 @@
          * CHEN BUTTON BACK TREN SUB MENU
          */
         va.$linkBack = $();
-        var $menuLv2 = $ruby.find( M.NS('> .{ns}menu .{ns}menu') );
+        var $menuLv2 = $ruby.find( M.NS('> .{ns}menu .{ns}menu, .{ns}menu-lv2') );
   
         $menuLv2.each(function() {
           var $menuCur = $(this);

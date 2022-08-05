@@ -34,7 +34,7 @@ onMounted(() => {
         v-if="menuLevel2.menus"
         class="megamenu__slide rs01slide">
 
-        <div class="megamenu__link megamenu--link-lv2 rs01pagitem">
+        <div class="megamenu--link-lv2 rs01pagitem">
           <NuxtLink :to="menuLevel2.to">
             <i v-if="menuLevel2.icon" v-html="menuLevel2.icon "></i>
             <span>{{ menuLevel2.name }}</span>
@@ -55,7 +55,7 @@ onMounted(() => {
 
             <NuxtLink
               :to="menuLevel3.to"
-              class="megamenu__link megamenu--link-lv3">
+              class="megamenu--link-lv3">
               <figure class="megamenu__thumb">
                 <img :src="menuLevel3.thumbnail" :alt="menuLevel3.name">
                 <figcaption>{{ menuLevel3.name }}</figcaption>

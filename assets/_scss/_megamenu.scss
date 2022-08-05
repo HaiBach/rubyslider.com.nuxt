@@ -28,15 +28,17 @@
   }
   &__board {
     position: absolute;
-    z-index: 9;
+    z-index: 99;
     left: 0;
     top: calc(100% + 25px);
     width: 100%;
     padding: 30px 40px 0;
-    background-color: #f5f5f5;
     border: 1px solid rgba($color: #000, $alpha: .25);
     border-radius: 10px;
     box-sizing: border-box;
+    background-color: rgba($color: #f5f5f5, $alpha: .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
   }
   &__board_inner {
     display: flex;
@@ -46,7 +48,7 @@
     width: 380px;
     padding-right: 40px;
     margin-bottom: 30px;
-    border-right: 1px solid #999;
+    border-right: 1px dashed rgba($color: #000, $alpha: .5);
     white-space: nowrap;
     box-sizing: border-box;
     &::before, &::after {
@@ -56,7 +58,7 @@
       width: 7px;
       height: 7px;
       background-color: #fff;
-      border: 1px solid #999;
+      border: 1px solid rgba($color: #000, $alpha: .5);
       border-radius: 100px;
     }
     &::before {
@@ -88,8 +90,11 @@
   }
   /** Links **/
   &__links {
-    .megamenu__link {
+    .megamenu--link-lv2 {
       display: block;
+    }
+    .rs01paginner {
+      display: inline-block;
     }
   }
   &--link-lv2 {
@@ -163,11 +168,12 @@
       height: auto;
       margin-bottom: 0;
       background-color: #fff;
-      border-radius: 4px;
+      border-radius: 6px;
     }
     figcaption {
       margin-top: 5px;
       margin-bottom: 0;
+      color: #000;
     }
   }
 }
