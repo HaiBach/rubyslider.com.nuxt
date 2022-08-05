@@ -11459,7 +11459,7 @@
                   // Insert pagItem & pagInner into ruby
                   va.$pagInner = $('<div/>', {'class' : ns +'paginner'});
                   va.$pagInner.append(va.$pagItem);
-                  va.$pag.prepend(va.$pagInner);
+                  va.$pag.append(va.$pagInner);
   
                   // Insert pagination into ruby depends on position
                   if( !is.pagOutside ) {

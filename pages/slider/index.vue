@@ -104,10 +104,6 @@ const sliderData = {
       link: '/slider/effect-coverflow3d',
       thumbnail: '/img/template-fx-coverflow3D.png',
     },
-    // 'Random Math Effect': {
-    //   link: '/slider/effect-random-math',
-    //   thumbnail: '/img/template-random.png',
-    // },
     'Control Effect': {
       link: '/slider/effect-control',
       thumbnail: '/img/template-fx-control.png',

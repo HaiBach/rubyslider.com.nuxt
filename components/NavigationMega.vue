@@ -116,15 +116,54 @@ const MENUS = {
         name: 'Effect',
         menus:
         [
-          { key: '1.3.1', name: 'Line Effect', to: '/slider/effect-line' },
-          { key: '1.3.2', name: 'Fade Effect', to: '/slider/effect-fade' },
-          { key: '1.3.3', name: 'Math Effect', to: '/slider/effect-math' },
-          { key: '1.3.4', name: 'CSS One Effect', to: '/slider/effect-css-one' },
-          { key: '1.3.5', name: 'CSS Two Effect', to: '/slider/effect-css-two' },
-          { key: '1.3.6', name: 'CSS Four Effect', to: '/slider/effect-css-four' },
-          { key: '1.3.7', name: 'Coverflow3D Effect', to: '/slider/effect-coverflow3d' },
-          // { key: '1.3.8', name: 'Random Math Effect', to: '/slider/effect-random-math' },
-          { key: '1.3.9', name: 'Control Effect', to: '/slider/effect-control' },
+          {
+            key: '1.3.1',
+            name: 'Line Effect',
+            to: '/slider/effect-line',
+            thumbnail: '/img/template-fx-line.png',
+          },
+          {
+            key: '1.3.2',
+            name: 'Fade Effect',
+            to: '/slider/effect-fade',
+            thumbnail: '/img/template-fx-fade.png',
+          },
+          {
+            key: '1.3.3',
+            name: 'Math Effect',
+            to: '/slider/effect-math',
+            thumbnail: '/img/template-fx-math.png',
+          },
+          {
+            key: '1.3.4',
+            name: 'CSS One Effect',
+            to: '/slider/effect-css-one',
+            thumbnail: '/img/template-fx-cssOne.png',
+          },
+          {
+            key: '1.3.5',
+            name: 'CSS Two Effect',
+            to: '/slider/effect-css-two',
+            thumbnail: '/img/template-fx-cssTwo.png',
+          },
+          {
+            key: '1.3.6',
+            name: 'CSS Four Effect',
+            to: '/slider/effect-css-four',
+            thumbnail: '/img/template-fx-cssFour.png',
+          },
+          {
+            key: '1.3.7',
+            name: 'Coverflow3D Effect',
+            to: '/slider/effect-coverflow3d',
+            thumbnail: '/img/template-fx-coverflow3D.png',
+          },
+          {
+            key: '1.3.9',
+            name: 'Control Effect',
+            to: '/slider/effect-control',
+            thumbnail: '/img/template-fx-control.png',
+          },
         ]
       },
       {
@@ -132,10 +171,30 @@ const MENUS = {
         name: 'Slideshow',
         menus:
         [
-          { key: '1.4.1', name: 'Arc Timer', to: '/slider/slideshow-timer-arc' },
-          { key: '1.4.2', name: 'Line Timer', to: '/slider/slideshow-timer-line' },
-          { key: '1.4.3', name: 'Timer Only', to: '/slider/slideshow-timer-only' },
-          { key: '1.4.4', name: 'Slideshow Random', to: '/slider/slideshow-random' },
+          {
+            key: '1.4.1',
+            name: 'Arc Timer',
+            to: '/slider/slideshow-timer-arc',
+            thumbnail: '/img/template-timer-arc.png',
+          },
+          {
+            key: '1.4.2',
+            name: 'Line Timer',
+            to: '/slider/slideshow-timer-line',
+            thumbnail: '/img/template-timer-line.png',
+          },
+          {
+            key: '1.4.3',
+            name: 'Timer Only',
+            to: '/slider/slideshow-timer-only',
+            thumbnail: '/img/template-timer-only.png',
+          },
+          {
+            key: '1.4.4',
+            name: 'Slideshow Random',
+            to: '/slider/slideshow-random',
+            thumbnail: '/img/template-random.png',
+          },
         ]
       },
       {
@@ -143,13 +202,48 @@ const MENUS = {
         name: 'API',
         menus:
         [
-          { key: '1.5.1', name: 'Add-Remove Tabs', to: '/slider/api-add-remove' },
-          { key: '1.5.2', name: 'Callback Event', to: '/slider/api-callback' },
-          { key: '1.5.3', name: 'Show By Device', to: '/slider/api-show-by-device' },
-          { key: '1.5.4', name: 'Show In Range', to: '/slider/api-show-in-range' },
-          { key: '1.5.5', name: 'Deep Linking', to: '/slider/api-deeplinking' },
-          { key: '1.5.6', name: 'Deep Linking Multi', to: '/slider/api-deeplinking-multi' },
-          { key: '1.5.7', name: 'Cookie', to: '/slider/api-cookie' },
+          {
+            key: '1.5.1',
+            name: 'Add-Remove Tabs',
+            to: '/slider/api-add-remove',
+            thumbnail: '/img/template-api-addremove.png',
+          },
+          {
+            key: '1.5.2',
+            name: 'Callback Event',
+            to: '/slider/api-callback',
+            thumbnail: '/img/template-api-callback.png',
+          },
+          {
+            key: '1.5.3',
+            name: 'Show By Device',
+            to: '/slider/api-show-by-device',
+            thumbnail: '/img/template-api-showByDevice.png',
+          },
+          {
+            key: '1.5.4',
+            name: 'Show In Range',
+            to: '/slider/api-show-in-range',
+            thumbnail: '/img/template-api-showInRange.png',
+          },
+          {
+            key: '1.5.5',
+            name: 'Deep Linking',
+            to: '/slider/api-deeplinking',
+            thumbnail: '/img/template-api-deeplinking.png',
+          },
+          {
+            key: '1.5.6',
+            name: 'Deep Linking Multi',
+            to: '/slider/api-deeplinking-multi',
+            thumbnail: '/img/template-api-deeplinkingMulti.png',
+          },
+          {
+            key: '1.5.7',
+            name: 'Cookie',
+            to: '/slider/api-cookie',
+            thumbnail: '/img/template-api-cookie.png',
+          },
         ]
       }
     ],
@@ -251,15 +345,6 @@ const MENUS = {
     icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>',
   },
 }
-
-const initSetup = function() {
-  const rubymenu = jQuery('.rm01').rubymenu()
-}
-
-// Lifecycle mounted
-onMounted(() => {
-  initSetup()
-})
 </script>
 
 
@@ -281,58 +366,32 @@ onMounted(() => {
       <div
         v-if="menuLevel1.menus"
         class="megamenu__board">
-        
-        <div class="megamenu__left">
-          <div class="megamenu__title">
-            <h2 class="megamenu__name">Slider</h2>
-            <p class="megamenu__desc">Over 30+ Slider Starter Examples</p>
-          </div>
-          <div class="megamenu__links"></div>
-        </div> <!-- ./megamenu__left -->
 
-        <div class="megamenu__right">
-          <div class="megamenu__slider rs01">
-            <div
-              v-for="(menuLevel2, indexLevel2) in menuLevel1.menus"
-              :key="menuLevel2.key"
-              class="megamenu__slide rs01slide">
-
-              <div class="megamenu__link megamenu--link-lv2 rs01pagitem">
-                <NuxtLink :to="menuLevel2.to">
-                  <i v-if="menuLevel2.icon" v-html="menuLevel2.icon "></i>
-                  <span>{{ menuLevel2.name }}</span>
-                  <span class="megamenu__caret" v-if="menuLevel2.menus"></span>
-                </NuxtLink>
-              </div>
-              
-              <div
-                v-if="menuLevel2.imageFeature"
-                class="megamenu__image_feature">
-                <figure>
-                  <img :src="menuLevel2.imageFeature" :alt="menuLevel2.name">
-                </figure>
-              </div>
-
-              <div class="megamenu__items">
-                <div
-                  v-for="(menuLevel3, indexLevel3) in menuLevel2.menus"
-                  :key="menuLevel3.key"
-                  class="megamenu__item">
-
-                  <NextLink
-                    :to="menuLevel3.to"
-                    class="megamenu__link megamenu--link-lv3">
-                    <figure class="megamenu__thumb">
-                      <img :src="menuLevel3.thumbnail" :alt="menuLevel3.name">
-                      <figcaption>{{ menuLevel3.name }}</figcaption>
-                    </figure>
-                  </NextLink>                      
-                </div> <!-- ./megamenu__item -->
-              </div> <!-- ./megamenu__items -->
-
+        <div class="megamenu__board_inner">
+          <div class="megamenu__left">
+            <div class="megamenu__title">
+              <h2 class="megamenu__name">Slider</h2>
+              <p class="megamenu__desc">Over 30+ Slider Starter Examples</p>
             </div>
-          </div> <!-- ./megamenu__slider -->
-        </div> <!-- ./megamenu__right -->
+
+            <!-- Rubyslider Pagination -->
+            <div class="megamenu__links rs01pag" data-rubyslider-markup="megamenu-slider">
+              <template v-for="menuLevel2 in menuLevel1.menus">
+                <div v-if="menuLevel2.to" class="megamenu__link megamenu--link-lv2 rs01pagitem">
+                  <NuxtLink :to="menuLevel2.to">
+                    <i v-if="menuLevel2.icon" v-html="menuLevel2.icon "></i>
+                    <span>{{ menuLevel2.name }}</span>
+                    <span class="megamenu__caret" v-if="menuLevel2.menus"></span>
+                  </NuxtLink>
+                </div>
+              </template>
+            </div>
+          </div> <!-- ./megamenu__left -->
+
+          <div class="megamenu__right">
+            <MegamenuSlider :menu-items="menuLevel1" />
+          </div> <!-- ./megamenu__right -->
+        </div>
       </div>
 
     </div>

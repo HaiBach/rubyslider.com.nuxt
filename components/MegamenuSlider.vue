@@ -1,0 +1,71 @@
+<script setup>
+const props = defineProps(['menu-items'])
+const menuLevel1 = props.menuItems
+
+// Slider setup
+const initSetup = function() {
+  const sliderOptions = {
+    name: 'megamenu-slider',
+    fx: 'line',
+    speed: 400,
+    isNav: true,
+    pag: {
+      type: 'list'
+    }
+  }
+  const megamenuSlider = jQuery('.megamenu__slider').rubyslider( sliderOptions )
+}
+
+// Lifecycle mounted
+onMounted(() => {
+  setTimeout(initSetup, 200)
+})
+</script>
+
+
+<template>
+<div class="megamenu__slider rs01">
+  <div class="rs01viewport">
+    <template
+      v-for="menuLevel2 in menuLevel1.menus"
+      :key="menuLevel2.key">
+
+      <div
+        v-if="menuLevel2.menus"
+        class="megamenu__slide rs01slide">
+
+        <div class="megamenu__link megamenu--link-lv2 rs01pagitem">
+          <NuxtLink :to="menuLevel2.to">
+            <i v-if="menuLevel2.icon" v-html="menuLevel2.icon "></i>
+            <span>{{ menuLevel2.name }}</span>
+            <span class="megamenu__caret" v-if="menuLevel2.menus"></span>
+            <i class="megamenu__icon_arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+              </svg>
+            </i>
+          </NuxtLink>
+        </div>
+
+        <div class="megamenu__items">
+          <div
+            v-for="menuLevel3 in menuLevel2.menus"
+            :key="menuLevel3.key"
+            class="megamenu__item">
+
+            <NuxtLink
+              :to="menuLevel3.to"
+              class="megamenu__link megamenu--link-lv3">
+              <figure class="megamenu__thumb">
+                <img :src="menuLevel3.thumbnail" :alt="menuLevel3.name">
+                <figcaption>{{ menuLevel3.name }}</figcaption>
+              </figure>
+            </NuxtLink>
+          </div> <!-- ./megamenu__item -->
+        </div> <!-- ./megamenu__items -->
+      </div>
+    </template>
+  </div>
+  <div class="rs01nav"></div>
+</div> <!-- ./megamenu__slider -->
+</template>
