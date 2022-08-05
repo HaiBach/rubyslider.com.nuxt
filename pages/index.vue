@@ -7,7 +7,7 @@ definePageMeta({
 
 <template>
   <main>
-    <SliderPreview />
+    <MV />
     <OtherLayoutsEffects />
   </main>
 </template>

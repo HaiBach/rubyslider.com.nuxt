@@ -57,7 +57,7 @@ onMounted(() => {
 
     <div class="container">
       <div class="slider-preview rs01 rs01timer-arcTop">
-        <div class="rs01slide">
+        <!-- <div class="rs01slide">
           <img class="rs01imgback" src="/img/vietnam-large1.jpg" alt="Viet Nam 1">
         </div>
         <div class="rs01slide">
@@ -71,7 +71,13 @@ onMounted(() => {
         </div>
         <div class="rs01slide">
           <img class="rs01imgback" src="/img/video-preview.jpg" data-video-link="https://www.youtube.com/watch?v=2O0nz6o_oAE" alt=">Pictures of South East Asia">
-        </div>
+        </div> -->
+        <a class="rs01imgback" href="https://picsum.photos/1140/600?random=1">Lorem Picsum 1</a>
+        <a class="rs01imgback" href="https://picsum.photos/1140/600?random=2">Lorem Picsum 2</a>
+        <a class="rs01imgback" href="https://picsum.photos/1140/600?random=3">Lorem Picsum 3</a>
+        <a class="rs01imgback" href="https://picsum.photos/1140/600?random=4">Lorem Picsum 4</a>
+        <a class="rs01imgback" href="https://picsum.photos/1140/600?random=5">Lorem Picsum 5</a>
+        <a class="rs01imgback" href="https://picsum.photos/1140/600?random=6">Lorem Picsum 6</a>
       </div>
     </div>
   </section>

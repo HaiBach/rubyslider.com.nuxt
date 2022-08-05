@@ -1,45 +1,47 @@
-<script>
-export default {
-  mounted() {
-    setTimeout(() => {
-      const sliderMath = jQuery('.slider-math').rubyslider({
-        fx: 'rectRun',
-        speed: 800,
-        width: 940,
-        pag: {
-          type: 'bullet',
-        }
-      })
-      const sliderOneEffect = jQuery('.slider-one-effect').rubyslider({
-        fx: 'cssOne',
-        speed: 800,
-        width: 940,
-        pag: {
-          type: 'bullet',
-        }
-      })
-      const sliderLineEffect = jQuery('.slider-line-effect').rubyslider({
-        fx: 'line',
-        speed: 400,
-        width: 755,
-        widthSlide: '80%',
-        margin: 1,
-        pag: {
-          type: 'bullet',
-        }
-      })
-      const sliderTabs = jQuery('.slider-tabs').rubyslider({
-        type: 'tabs',
-        fx: 'cssOne',
-        cssOne: 'scalePulse',
-        speed: 800,
-        pag: {
-          align: 'center'
-        }
-      })
-    }, 400)
-  }
+<script setup>
+let randomNum = 1
+
+const initSetup = function() {
+  const sliderMath = jQuery('.slider-math').rubyslider({
+    fx: 'rectRun',
+    speed: 800,
+    width: 800,
+    pag: {
+      type: 'bullet',
+    }
+  })
+  const sliderOneEffect = jQuery('.slider-one-effect').rubyslider({
+    fx: 'cssOne',
+    speed: 800,
+    width: 800,
+    pag: {
+      type: 'bullet',
+    }
+  })
+  const sliderLineEffect = jQuery('.slider-line-effect').rubyslider({
+    fx: 'line',
+    speed: 400,
+    width: 800,
+    widthSlide: '80%',
+    margin: 1,
+    pag: {
+      type: 'bullet',
+    }
+  })
+  const sliderTabs = jQuery('.slider-tabs').rubyslider({
+    type: 'tabs',
+    fx: 'cssOne',
+    cssOne: 'scalePulse',
+    speed: 800,
+    pag: {
+      align: 'center'
+    }
+  })
 }
+
+onMounted(() => {
+  setTimeout(initSetup, 400)
+})
 </script>
 
 
@@ -61,9 +63,11 @@ export default {
     <!-- MATH EFFECT - begin -->
     <div class="col6">
       <div class="slider-math rs01">
-        <img class="rs01imgback" src="/img/season-landscape2.jpg" alt="Season 2">
-        <img class="rs01imgback" src="/img/season-landscape4.jpg" alt="Season 4">
-        <img class="rs01imgback" src="/img/season-landscape7.jpg" alt="Season 7">
+        <a
+          v-for="i in 4"
+          class="rs01imgback"
+          :href="'https://picsum.photos/800/480?random=' + randomNum"
+          >Lorem Picsum {{ randomNum++ }}</a>
       </div>
       <NuxtLink class="effect-title" to="/slider/effect-math">8 Math Effects</NuxtLink>
     </div>
@@ -73,9 +77,11 @@ export default {
     <!-- CSS ONE EFFECT - begin -->
     <div class="col6">
       <div class="slider-one-effect rs01">
-        <img class="rs01imgback" src="/img/season-landscape2.jpg" alt="Season 2">
-        <img class="rs01imgback" src="/img/season-landscape4.jpg" alt="Season 4">
-        <img class="rs01imgback" src="/img/season-landscape7.jpg" alt="Season 7">
+        <a
+          v-for="i in 4"
+          class="rs01imgback"
+          :href="'https://picsum.photos/800/480?random=' + randomNum"
+          >Lorem Picsum {{ randomNum++ }}</a>
       </div>
       <NuxtLink class="effect-title" to="/slider/effect-css-one">50+ CSS One Effects</NuxtLink>
     </div>
@@ -86,9 +92,11 @@ export default {
     <!-- CENTER LAYOUT - LINE EFFECT - begin -->
     <div class="col6">
       <div class="slider-line-effect rs01">
-        <img class="rs01imgback" src="/img/season-landscape2.jpg" alt="Season 2">
-        <img class="rs01imgback" src="/img/season-landscape4.jpg" alt="Season 4">
-        <img class="rs01imgback" src="/img/season-landscape7.jpg" alt="Season 7">
+        <a
+          v-for="i in 4"
+          class="rs01imgback"
+          :href="'https://picsum.photos/800/550?random=' + i"
+          >Lorem Picsum {{ i }}</a>
       </div>
       <NuxtLink class="effect-title" to="/slider/layout-center">Center Layout - Line Effect</NuxtLink>
     </div>
