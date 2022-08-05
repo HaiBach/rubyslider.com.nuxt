@@ -5,8 +5,8 @@
       <!-- Logo -->
       <NuxtLink class="logo" to="/" data-mScale="100">RubySlider</NuxtLink>
 
-      <!-- Navigation -->
-      <NavigationMega />
+      <!-- Navigation Mega -->
+      <MegaMenu />
     </div>
   </div>
 </header>

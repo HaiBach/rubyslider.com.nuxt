@@ -6,9 +6,12 @@ const menuLevel1 = props.menuItems
 const initSetup = function() {
   const sliderOptions = {
     name: 'megamenu-slider',
-    fx: 'line',
-    speed: 400,
+    fx: 'cssOne',
+    cssOne: 'fade',
+    speed: 600,
+    margin: 50,
     isNav: true,
+    isLoop: false,
     pag: {
       type: 'list'
     }

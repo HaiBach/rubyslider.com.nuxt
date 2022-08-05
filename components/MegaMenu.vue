@@ -372,13 +372,13 @@ onMounted(() => {
       class="megamenu--li-lv1">
 
       <!-- Link level 1 -->
-      <div class="megamenu--link-lv1">
-        <NuxtLink :to="menuLevel1.to">
+        <NuxtLink
+          :to="menuLevel1.to"
+          class="megamenu--link-lv1">
           <i v-if="menuLevel1.icon" v-html="menuLevel1.icon "></i>
           <span>{{ indexLevel1 }}</span>
           <span class="megamenu__caret" v-if="menuLevel1.menus"></span>
         </NuxtLink>
-      </div>
 
       <!-- Board -->
       <div
@@ -412,7 +412,7 @@ onMounted(() => {
           </div> <!-- ./megamenu__left -->
 
           <div class="megamenu__right">
-            <MegamenuSlider :menu-items="menuLevel1" />
+            <MegaMenuSlider :menu-items="menuLevel1" />
           </div> <!-- ./megamenu__right -->
         </div>
       </div>
