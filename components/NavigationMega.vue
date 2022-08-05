@@ -350,8 +350,11 @@ const MENUS = {
 }
 
 const initSetup = function() {
-  const rubymenu = jQuery('.rm01').rubymenu()
-  console.log(rubymenu)
+  const $linkLevel1 = jQuery('.megamenu--link-lv1')
+  $linkLevel1.on('click', function(e) {
+    e.preventDefault()
+    
+  })
 }
 
 // Lifecycle mounted
@@ -369,7 +372,7 @@ onMounted(() => {
       class="megamenu--li-lv1">
 
       <!-- Link level 1 -->
-      <div class="megamenu--link-lv1 rm01link">
+      <div class="megamenu--link-lv1">
         <NuxtLink :to="menuLevel1.to">
           <i v-if="menuLevel1.icon" v-html="menuLevel1.icon "></i>
           <span>{{ indexLevel1 }}</span>

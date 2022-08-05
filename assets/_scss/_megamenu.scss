@@ -27,6 +27,7 @@
     }
   }
   &__board {
+    visibility: hidden;
     position: absolute;
     z-index: 99;
     left: 0;

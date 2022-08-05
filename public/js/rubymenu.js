@@ -160,7 +160,6 @@
           $list.each(function() {
             var $li = $(this);
             var $menuChild = $li.find( M.NS('.{ns}menu') );
-            console.log('#1', $menuChild)
   
             if( $menuChild.length ) $li.addClass( va.ns + classes);
           });
@@ -171,7 +170,6 @@
         // Chen them class 'List Parent Level' 1 & 2
         va.$listParentLV1 = fnListParentLevel($ruby, 'list-parent-lv1');
         va.$listParentLV2 = fnListParentLevel(va.$listParentLV1, 'list-parent-lv2');
-        console.log(va.$listParentLV1)
       },
   
   
