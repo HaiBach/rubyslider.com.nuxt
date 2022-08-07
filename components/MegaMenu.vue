@@ -349,24 +349,78 @@ const MENUS = {
   },
 }
 
-const initSetup = function() {
-  const $linkLevel1 = jQuery('.megamenu--link-lv1')
-  $linkLevel1.on('click', function(e) {
-    e.preventDefault()
-    
+
+/**
+ * MEGA MENU
+ * Support hover / active action of the mega menu.
+ **/
+const megamenu = function() {
+  const $linkLevel1 = document.querySelectorAll('.megamenu--link-lv1')
+  const $ghost = document.querySelector('.megamenu__ghost')
+  const open = 'megamenu--open'
+  const actived = 'megamenu--actived'
+  let $linkCurrent
+
+  // Event mouse over on Ghost element
+  $ghost.addEventListener('mouseover', closeMenu)
+  
+  // Event on $link level 1
+  $linkLevel1.forEach(($link) => {
+    const $parent = $link.parentNode
+    const $board = $parent.querySelector('.megamenu__board')
+
+    $link.addEventListener('mouseover', openMenu)
+    if ($board) {
+      $board.addEventListener('mouseover', boardOver)
+    }
   })
+
+  // Function Open Menu
+  function openMenu(e) {
+    const $link = e.target
+    const $parent = $link.parentNode
+    // Set the link current
+    $linkCurrent = $link;
+
+    $linkLevel1.forEach(($link) => {
+      const $parent = $link.parentNode
+      $parent.classList.remove(open)
+    })
+    $parent.classList.add(open)
+    $ghost.classList.add(actived)
+    return false
+  }
+  // Function Close Menu
+  function closeMenu(e) {
+    if (!$linkCurrent) return
+    const $parent = $linkCurrent.parentNode
+
+    $parent.classList.remove(open)
+    $ghost.classList.remove(actived)
+    return false
+  }
+  function boardOver(e) {
+    const $board = e.target
+    const $parent = $board.parentNode
+
+    $parent.classList.add(open)
+    $ghost.classList.add(actived)
+    return false
+  }
 }
+
 
 // Lifecycle mounted
 onMounted(() => {
-  initSetup()
+  megamenu()
 })
 </script>
 
 
 <template>
 <nav class="megamenu">
-  <div class="megamenu__ul megamenu--ul-lv1">
+  <div class="megamenu__ghost"></div>
+  <div class="megamenu--ul-lv1">
     <div
       v-for="(menuLevel1, indexLevel1) in MENUS"
       class="megamenu--li-lv1">
