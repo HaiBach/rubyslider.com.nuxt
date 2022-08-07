@@ -359,6 +359,7 @@ const megamenu = function() {
   const $ghost = document.querySelector('.megamenu__ghost')
   const open = 'megamenu--open'
   const actived = 'megamenu--actived'
+  let isOpen = false
   let $linkCurrent
 
   // Event mouse over on Ghost element
@@ -388,6 +389,7 @@ const megamenu = function() {
     })
     $parent.classList.add(open)
     $ghost.classList.add(actived)
+    // isOpen = true;
     return false
   }
   // Function Close Menu
@@ -395,8 +397,15 @@ const megamenu = function() {
     if (!$linkCurrent) return
     const $parent = $linkCurrent.parentNode
 
-    $parent.classList.remove(open)
-    $ghost.classList.remove(actived)
+    setTimeout(function() {
+      // if (isOpen) {
+        $parent.classList.remove(open)
+        $ghost.classList.remove(actived)
+        // isOpen = false;
+      // }
+    }, 100)
+    // $parent.classList.remove(open)
+    // $ghost.classList.remove(actived)
     return false
   }
   function boardOver(e) {
@@ -405,6 +414,7 @@ const megamenu = function() {
 
     $parent.classList.add(open)
     $ghost.classList.add(actived)
+    // isOpen = true
     return false
   }
 }
