@@ -7,7 +7,8 @@ const MENUS = {
       {
         key: '1.1',
         name: 'List All Examples',
-        to: '/slider'
+        to: '/slider',
+        thumbnail: '/img/template-slider-list-all.svg',
       },
       {
         key: '1.2',
@@ -451,7 +452,7 @@ onMounted(() => {
           <div class="megamenu__left">
             <div class="megamenu__title">
               <h2 class="megamenu__name">Slider</h2>
-              <p class="megamenu__desc">Over 30+ Slider Starter Examples</p>
+              <p class="megamenu__desc">Các ví dụ cơ bản về Slider hình ảnh. <br>Bao gồm các thể loại bố cục, hiệu ứng, slideshow và api.<br>Hơn 50+ ví dụ để bắt đầu sử dụng Slider.</p>
             </div>
 
             <!-- Rubyslider Pagination -->

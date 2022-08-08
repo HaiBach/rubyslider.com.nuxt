@@ -59,7 +59,7 @@ onMounted(() => {
           </NuxtLink>
         </div>
 
-        <div class="megamenu__items">
+        <div v-if="menuLevel2.menus" class="megamenu__items">
           <div
             v-for="menuLevel3 in menuLevel2.menus"
             :key="menuLevel3.key"
@@ -75,6 +75,19 @@ onMounted(() => {
             </NuxtLink>
           </div> <!-- ./megamenu__item -->
         </div> <!-- ./megamenu__items -->
+
+        <div v-if="menuLevel2.thumbnail" class="megamenu__item_single">
+          <NuxtLink
+            :to="menuLevel2.to"
+            class="megamenu--link-lv3">
+            <figure class="megamenu__thumb_single">
+              <img :src="menuLevel2.thumbnail" :alt="menuLevel2.name">
+            </figure>
+          </NuxtLink>
+          <div class="megamenu__btn">
+            <NuxtLink :to="menuLevel2.to">Đi đến trang</NuxtLink>
+          </div>
+        </div>
       </div>
     </template>
   </div>
