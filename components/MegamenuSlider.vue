@@ -12,11 +12,22 @@ const initSetup = function() {
     margin: 50,
     isNav: true,
     isLoop: false,
+    isSwipe: false,
     pag: {
       type: 'list'
     }
   }
-  const megamenuSlider = jQuery('.megamenu__slider').rubyslider( sliderOptions )
+  const megaSlider = jQuery('.megamenu__slider').rubyslider( sliderOptions )
+
+  // Event on link level 2
+  const $linkLevel2 = document.querySelectorAll('.megamenu--link-lv2')
+  $linkLevel2.forEach(($link) => {
+    $link.addEventListener('mouseover', linkActived)
+  })
+  function linkActived(e) {
+    const slideNum = this.dataset.slideNum
+    megaSlider.goto( slideNum )
+  }
 }
 
 // Lifecycle mounted
@@ -30,14 +41,12 @@ onMounted(() => {
 <div class="megamenu__slider rs01">
   <div class="rs01viewport">
     <template
-      v-for="menuLevel2 in menuLevel1.menus"
+      v-for="(menuLevel2, indexLevel2) in menuLevel1.menus"
       :key="menuLevel2.key">
 
-      <div
-        v-if="menuLevel2.menus"
-        class="megamenu__slide rs01slide">
+      <div class="megamenu__slide rs01slide">
 
-        <div class="megamenu--link-lv2 rs01pagitem">
+        <div class="megamenu--link-lv2 rs01pagitem" :data-slide-num="indexLevel2">
           <NuxtLink :to="menuLevel2.to">
             <i v-if="menuLevel2.icon" v-html="menuLevel2.icon "></i>
             <span>{{ menuLevel2.name }}</span>

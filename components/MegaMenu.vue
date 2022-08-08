@@ -403,9 +403,7 @@ const megamenu = function() {
         $ghost.classList.remove(actived)
         // isOpen = false;
       // }
-    }, 100)
-    // $parent.classList.remove(open)
-    // $ghost.classList.remove(actived)
+    }, 200)
     return false
   }
   function boardOver(e) {
@@ -422,7 +420,7 @@ const megamenu = function() {
 
 // Lifecycle mounted
 onMounted(() => {
-  megamenu()
+  // megamenu()
 })
 </script>
 
@@ -461,7 +459,7 @@ onMounted(() => {
               class="megamenu__links rs01pag"
               data-rubyslider-markup="megamenu-slider">
 
-              <template
+              <!-- <template
                 v-for="menuLevel2 in menuLevel1.menus">
 
                 <div v-if="menuLevel2.to" class="megamenu__link megamenu--link-lv2 rs01pagitem">
@@ -471,7 +469,7 @@ onMounted(() => {
                     <span class="megamenu__caret" v-if="menuLevel2.menus"></span>
                   </NuxtLink>
                 </div>
-              </template>
+              </template> -->
             </div>
           </div> <!-- ./megamenu__left -->
 
