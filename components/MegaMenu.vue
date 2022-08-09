@@ -374,7 +374,10 @@ const MENUS = {
 
 /**
  * MEGA MENU
- * Support hover / active action of the mega menu.
+ * Support hover / click active action of the mega menu.
+ * Ghost menu support for close the current open menu.
+ * 'hover' action feel not good, lag, does't give a sense of trust.
+ * So, I choose 'click' action instead 
  **/
 const megamenu = function() {
   const $linkLevel1 = document.querySelectorAll('.megamenu--link-lv1')
@@ -385,33 +388,42 @@ const megamenu = function() {
   let $linkCurrent
 
   // Event mouse over on Ghost element
-  $ghost.addEventListener('mouseover', closeMenu)
+  $ghost.addEventListener('click', closeMenu)
   
   // Event on $link level 1
   $linkLevel1.forEach(($link) => {
     const $parent = $link.parentNode
     const $board = $parent.querySelector('.megamenu__board')
 
-    $link.addEventListener('mouseover', openMenu)
-    if ($board) {
-      $board.addEventListener('mouseover', boardOver)
-    }
+    $link.addEventListener('click', toggleMenu)
   })
 
   // Function Open Menu
-  function openMenu(e) {
-    const $link = e.target
-    const $parent = $link.parentNode
-    // Set the link current
-    $linkCurrent = $link;
+  function toggleMenu(e) {
+    const $parent = this.parentNode
 
-    $linkLevel1.forEach(($link) => {
-      const $parent = $link.parentNode
+    // Menu open --> close
+    if ( $parent.classList.contains(open) ) {
       $parent.classList.remove(open)
-    })
+      $ghost.classList.remove(actived)
+    }
+
+    // Menu close --> open
+    else {
+      $linkCurrent = this
+      $linkLevel1.forEach( $el => $el.parentNode.classList.remove(open) )
+      $parent.classList.add(open)
+      $ghost.classList.add(actived)
+    }
+  }
+  function openMenu(e) {
+    const $parent = this.parentNode
+    // Set the link current
+    $linkCurrent = this;
+
+    $linkLevel1.forEach( $el => $el.parentNode.classList.remove(open) )
     $parent.classList.add(open)
     $ghost.classList.add(actived)
-    // isOpen = true;
     return false
   }
   // Function Close Menu
@@ -420,21 +432,9 @@ const megamenu = function() {
     const $parent = $linkCurrent.parentNode
 
     setTimeout(function() {
-      // if (isOpen) {
-        $parent.classList.remove(open)
-        $ghost.classList.remove(actived)
-        // isOpen = false;
-      // }
+      $parent.classList.remove(open)
+      $ghost.classList.remove(actived)
     }, 200)
-    return false
-  }
-  function boardOver(e) {
-    const $board = e.target
-    const $parent = $board.parentNode
-
-    $parent.classList.add(open)
-    $ghost.classList.add(actived)
-    // isOpen = true
     return false
   }
 }
@@ -442,7 +442,7 @@ const megamenu = function() {
 
 // Lifecycle mounted
 onMounted(() => {
-  // megamenu()
+  megamenu()
 })
 </script>
 
