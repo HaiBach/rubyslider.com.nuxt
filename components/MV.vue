@@ -38,10 +38,6 @@ onMounted(() => {
   setTimeout(initSetup, 400)
   console.log('#SliderPreview mounted end')
 })
-
-// onUpdated(() => {
-//   console.log( '#SliderPreview udpate')
-// })
 </script>
 
 
@@ -49,29 +45,16 @@ onMounted(() => {
   <section class="mv">
     <div class="title-head">
       <div class="title-head-inner">
-          <h1>PLUGIN PREVIEW</h1>
-          <p>Best slider &amp; tabs premium jQuery plugin</p>
+          <!-- <h1>PLUGIN PREVIEW</h1>
+          <p>Best slider &amp; tabs premium jQuery plugin</p> -->
+          <h1>RUBY SLIDER </h1>
+          <p>Plugin jQuery tốt nhất dành cho Slider & Tabs</p>
       </div>
     </div>
 
 
     <div class="container">
       <div class="slider-preview rs01 rs01timer-arcTop">
-        <!-- <div class="rs01slide">
-          <img class="rs01imgback" src="/img/vietnam-large1.jpg" alt="Viet Nam 1">
-        </div>
-        <div class="rs01slide">
-          <img class="rs01imgback" src="/img/vietnam-large2.jpg" alt="Viet Nam 2">
-        </div>
-        <div class="rs01slide">
-          <img class="rs01imgback" src="/img/vietnam-large3.jpg" alt="Viet Nam 3">
-        </div>
-        <div class="rs01slide">
-          <img class="rs01imgback" src="/img/vietnam-large4.jpg" alt="Viet Nam 4">
-        </div>
-        <div class="rs01slide">
-          <img class="rs01imgback" src="/img/video-preview.jpg" data-video-link="https://www.youtube.com/watch?v=2O0nz6o_oAE" alt=">Pictures of South East Asia">
-        </div> -->
         <a class="rs01imgback" href="https://picsum.photos/1140/600?random=1">Lorem Picsum 1</a>
         <a class="rs01imgback" href="https://picsum.photos/1140/600?random=2">Lorem Picsum 2</a>
         <a class="rs01imgback" href="https://picsum.photos/1140/600?random=3">Lorem Picsum 3</a>

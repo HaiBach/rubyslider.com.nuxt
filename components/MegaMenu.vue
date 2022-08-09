@@ -6,108 +6,126 @@ const MENUS = {
     menus: [
       {
         key: '1.1',
-        name: 'List All Examples',
+        // name: 'List All Examples',
+        name: 'Tất cả ví dụ',
         to: '/slider',
         thumbnail: '/img/template-slider-list-all.svg',
       },
       {
         key: '1.2',
-        name: 'Layout',
+        // name: 'Layout',
+        name: 'Bố cục',
         menus:
         [
           {
             key: '1.2.1',
-            name: 'Basic',
+            // name: 'Basic',
+            name: 'Cơ bản',
             to: '/slider/layout-basic',
             thumbnail: '/img/template-layout-basic.png',
           },
           {
             key: '1.2.2',
-            name: 'Classic 1',
+            // name: 'Classic 1',
+            name: 'Cổ điển 1',
             to: '/slider/layout-classic-1',
             thumbnail: '/img/template-layout-classic1.png',
           },
           {
             key: '1.2.3',
-            name: 'Classic 2',
+            // name: 'Classic 2',
+            name: 'Cổ điển 2',
             to: '/slider/layout-classic-2',
             thumbnail: '/img/template-layout-classic2.png',
           },
           {
             key: '1.2.4',
-            name: 'Center',
+            // name: 'Center',
+            name: 'Chính giữa',
             to: '/slider/layout-center',
             thumbnail: '/img/template-layout-center.png',
           },
           { 
             key: '1.2.5',
-            name: 'Carousel',
+            // name: 'Carousel',
+            name: 'Băng chuyền',
             to: '/slider/layout-carousel',
             thumbnail: '/img/template-layout-carousel.png',
           },
           {
             key: '1.2.6',
-            name: 'Outbox',
+            // name: 'Outbox',
+            name: 'Ngoài cái hộp',
             to: '/slider/layout-outbox',
             thumbnail: '/img/template-layout-outbox.png',
           },
           {
             key: '1.2.7',
-            name: 'Device',
+            // name: 'Device',
+            name: 'iPad',
             to: '/slider/layout-device',
             thumbnail: '/img/template-layout-device.png',
           },
           {
             key: '1.2.8',
-            name: 'Coverscreen',
+            // name: 'Coverscreen',
+            name: 'Toàn màn hình',
             to: '/slider/layout-coverscreen',
             thumbnail: '/img/template-layout-coverscreen.png',
           },
           {
             key: '1.2.9',
-            name: 'Fullwidth',
+            // name: 'Fullwidth',
+            name: 'Toàn bộ chiều rộng',
             to: '/slider/layout-fullwidth',
             thumbnail: '/img/template-layout-fullwidth.png',
           },
           {
             key: '1.2.10',
-            name: 'Fullwidth Range',
+            // name: 'Fullwidth Range',
+            name: 'Toàn bộ chiều rộng 2',
             to: '/slider/layout-fullwidth-range',
             thumbnail: '/img/template-layout-fullwidthRange.png',
           },
           {
             key: '1.2.11',
-            name: 'Vertical Thumbnail',
+            // name: 'Vertical Thumbnail',
+            name: 'Hình thu nhỏ chiều dọc',
             to: '/slider/layout-vertical-thumbnail',
             thumbnail: '/img/template-layout-vertical.png',
           },
           {
             key: '1.2.12',
-            name: 'Nested',
+            // name: 'Nested',
+            name: 'Lồng nhau',
             to: '/slider/layout-nested',
             thumbnail: '/img/template-layout-nested.png',
           },
           {
             key: '1.2.13',
-            name: 'Multi',
+            // name: 'Multi',
+            name: 'Nhiều slider',
             to: '/slider/layout-multiple',
             thumbnail: '/img/template-layout-multi.png',
           },
           {
             key: '1.2.14',
-            name: 'Caption',
+            // name: 'Caption',
+            name: 'Phụ đề',
             to: '/slider/layout-caption',
             thumbnail: '/img/template-layout-caption.png',
           },
           {
             key: '1.2.15',
-            name: 'Height Auto',
+            // name: 'Height Auto',
+            name: 'Chiều cao tự động',
             to: '/slider/layout-height-auto',
             thumbnail: '/img/template-layout-heightAuto.png',
           },
           {
             key: '1.2.16',
-            name: 'Height Fixed',
+            // name: 'Height Fixed',
+            name: 'Chiều cao cố định',
             to: '/slider/layout-height-fixed',
             thumbnail: '/img/template-layout-heightFixed.png',
           },
@@ -115,7 +133,8 @@ const MENUS = {
       },
       {
         key: '1.3',
-        name: 'Effect',
+        // name: 'Effect',
+        name: 'Hiệu ứng',
         menus:
         [
           {
@@ -338,12 +357,14 @@ const MENUS = {
   //   ],
   // },
 
-  'Docs': {
+  // 'Docs': {
+  'Hướng dẫn': {
     key: '4',
     to: '/documentation',
     icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16"><path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/><path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/><path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/></svg>',
   },
-  'Download': {
+  // 'Download': {
+  'Tải về': {
     key: '5',
     to: '/download',
     icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>',
@@ -475,7 +496,7 @@ onMounted(() => {
           </div> <!-- ./megamenu__left -->
 
           <div class="megamenu__right">
-            <MegaMenuSlider :menu-items="menuLevel1" />
+            <MenuSlider :menu-items="menuLevel1" />
           </div> <!-- ./megamenu__right -->
         </div>
       </div>

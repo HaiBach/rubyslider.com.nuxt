@@ -18,6 +18,7 @@ const initSetup = function() {
     }
   }
   const megaSlider = jQuery('.megamenu__slider').rubyslider( sliderOptions )
+  megaSlider.goto(1)
 
   // Event on link level 2
   const $linkLevel2 = document.querySelectorAll('.megamenu--link-lv2')
@@ -70,8 +71,8 @@ onMounted(() => {
               class="megamenu--link-lv3">
               <figure class="megamenu__thumb">
                 <img :src="menuLevel3.thumbnail" :alt="menuLevel3.name">
-                <figcaption>{{ menuLevel3.name }}</figcaption>
               </figure>
+              <span class="megamenu__figcaption">{{ menuLevel3.name }}</span>
             </NuxtLink>
           </div> <!-- ./megamenu__item -->
         </div> <!-- ./megamenu__items -->

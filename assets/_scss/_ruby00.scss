@@ -331,7 +331,7 @@
   h1, h2, h3,
   h4, h5, h6 {
     margin: 0;
-    color: #181818;
+    color: #000;
     word-wrap: break-word;
   }
   h1, h2 {
@@ -1602,12 +1602,12 @@
 
   /* Theme-dark Button
   ---------------------------------------------------------- */
-  .dark .btn { border-color: #333; color: #181818; }
+  .dark .btn { border-color: #333; color: #000; }
   .dark .btn:hover { border-color: #ccc; color: #ccc; }
   .dark .btn:active { border-color: #fff; color: #fff; }
 
   /* Fix */
-  .dark a.btn { color: #181818; }
+  .dark a.btn { color: #000; }
 
   /* Button Style */
   .dark .btn.link:active { background-color: #333; }
@@ -2508,7 +2508,7 @@
   /* Accordion Bg-Light
   ---------------------------------------------------------- */
   .hsla .bg-light .accordion > section { border-bottom-color: hsla(0,0%,0%,.2); }
-  .bg-light .accordion > section > :first-child { color: #181818; }
+  .bg-light .accordion > section > :first-child { color: #000; }
 
   /* Accordion Bullet */
   .bg-light .accordion > section > :first-child:before,
@@ -2584,7 +2584,7 @@
  { background-color: transparent; }
 
   /* Accordion Header */
-  .accordion.block > section.bg-light > :first-child { color: #181818; }
+  .accordion.block > section.bg-light > :first-child { color: #000; }
   .accordion.block > section.bg-dark > :first-child { color: #fff; }
 
   /* Accordion Block Bg: width 940px */
@@ -2813,7 +2813,7 @@
   /* Tab Horizontal */
   .bg-light .tab-hor .tablist { border-bottom-color: #999; }
   .bg-light .tab-hor .tablist li:hover > a,
-  .bg-light .tab-hor .tablist li.actived > a { border-bottom-color: #666; color: #181818; }
+  .bg-light .tab-hor .tablist li.actived > a { border-bottom-color: #666; color: #000; }
 
   .bg-light .tab-hor.tab-mini .tablist li > a { background-color: hsla(0,0%,0%,.1); }
   .bg-light .tab-hor.tab-mini .tablist li:hover > a,
@@ -2827,7 +2827,7 @@
   /* Tab Vertical */
   .bg-light .tab-ver .tablist li > a { border-bottom-color: #999; }
   .bg-light .tab-ver .tablist li:hover > a,
-  .bg-light .tab-ver .tablist li.actived > a { border-bottom-color: #666; color: #181818; }
+  .bg-light .tab-ver .tablist li.actived > a { border-bottom-color: #666; color: #000; }
 
   .bg-light .tab-ver.tab-mini .tablist { border-right-color: #999; }
   .bg-light .tab-ver.tab-mini .tablist li > a { background-color: hsla(0,0%,0%,.1); }
