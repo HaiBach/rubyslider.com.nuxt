@@ -29,14 +29,11 @@ const initSetup = function() {
 
   if ($sliderPreview.length) {
     $sliderPreview.rubyslider( sliderOptions )
-    console.log('#SliderPreview rubyslider setup')
   }
 }
 
 onMounted(() => {
-  console.log('#SliderPreview mounted begin')
   setTimeout(initSetup, 400)
-  console.log('#SliderPreview mounted end')
 })
 </script>
 
@@ -85,13 +82,17 @@ onMounted(() => {
 
 <style lang="scss">
 .slider-preview {
-  filter:grayscale(1);
+  // visibility: hidden;
+  // filter:grayscale(1);
   max-height: 400px;
   > .rs01viewport {
     overflow: visible;
   }
   .rs01slide {
     border-radius: 8px;
+  }
+  .rs01imgback {
+    visibility: hidden;
   }
   .rs01ss-control {
     right: 5px; top: 5px;
@@ -104,6 +105,9 @@ onMounted(() => {
     opacity: 1;
     max-height: none;
     filter: none;
+    .rs01imgback {
+      visibility: visible;
+    }
   }
 }
 </style>
