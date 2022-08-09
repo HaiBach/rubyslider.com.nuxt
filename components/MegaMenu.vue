@@ -480,18 +480,6 @@ onMounted(() => {
             <div
               class="megamenu__links rs01pag"
               data-rubyslider-markup="megamenu-slider">
-
-              <!-- <template
-                v-for="menuLevel2 in menuLevel1.menus">
-
-                <div v-if="menuLevel2.to" class="megamenu__link megamenu--link-lv2 rs01pagitem">
-                  <NuxtLink :to="menuLevel2.to">
-                    <i v-if="menuLevel2.icon" v-html="menuLevel2.icon "></i>
-                    <span>{{ menuLevel2.name }}</span>
-                    <span class="megamenu__caret" v-if="menuLevel2.menus"></span>
-                  </NuxtLink>
-                </div>
-              </template> -->
             </div>
           </div> <!-- ./megamenu__left -->
 

@@ -1,6 +1,7 @@
 .megamenu {
   z-index: 99;
   &__ghost {
+    // display: none;
     visibility: hidden;
     position: fixed;
     left: 0;
@@ -14,30 +15,6 @@
   &--ul-lv1 {
     display: flex;
     align-items: center;
-  }
-  &--li-lv1 {
-    &.megamenu--open {
-      .megamenu--link-lv1 {
-        background-color: #fff;
-        color: #000;
-        &::before {
-          visibility: visible;
-        }
-      }
-      .megamenu__caret {
-        transform: rotate(180deg);
-        &::before, &::after {
-          background-color: #000;
-        }
-        &::after {
-          opacity: 0;
-        }
-      }
-      .megamenu__board {
-        visibility: visible;
-        animation: menu-effect .2s both;
-      }
-    }
   }
   .megamenu--link-lv1 {
     position: relative;
@@ -67,6 +44,9 @@
     svg {
       display: block;
     }
+    &:hover {
+      background-color: rgba($color: #000, $alpha: .25);
+    }
   }
   &__caret {
     position: relative;
@@ -86,6 +66,30 @@
       transform: rotate(90deg);
     }
   }
+  &--li-lv1 {
+    &.megamenu--open {
+      .megamenu--link-lv1 {
+        background-color: #fff;
+        color: #000;
+        &::before {
+          visibility: visible;
+        }
+      }
+      .megamenu__caret {
+        transform: rotate(180deg);
+        &::before, &::after {
+          background-color: #000;
+        }
+        &::after {
+          opacity: 0;
+        }
+      }
+      .megamenu__board {
+        visibility: visible;
+        animation: menu-effect .2s both;
+      }
+    }
+  }
   &__board {
     visibility: hidden;
     position: absolute;
@@ -93,12 +97,13 @@
     left: 0;
     top: calc(100% + 8px);
     width: 100%;
+    // height: calc(100vh - 100px);
     padding: 30px 40px 0;
     border-radius: 10px;
     box-sizing: border-box;
-    background-color: rgba($color: #f5f5f5, $alpha: .85);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
+    background-color: #f5f5f5;
+    // background-color: rgba($color: #f5f5f5, $alpha: .85);
+    // backdrop-filter: saturate(180%) blur(20px);
     box-shadow: 0 2px 4px rgba($color: #000, $alpha: .2);
   }
   &__board_inner {
@@ -162,7 +167,7 @@
     }
   }
   &--link-lv2 {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     &.rs01pagitem {
       position: static;
       cursor: auto;
@@ -198,9 +203,6 @@
     opacity: 0;
   }
   &--link-lv3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     &:hover {
       .megamenu__thumb {
         animation: zoomOut .2s both;
@@ -208,12 +210,16 @@
       .megamenu__figcaption {
         animation: moveCenterTop .2s both;
         color: var(--color-primary);
+        font-weight: bold;
       }
     }
   }
 
   /** Slider **/
   &__slider {
+    .rs01slide {
+      overflow: visible;
+    }
     .rs01nav-prev {
       left: -45px;
     }
@@ -240,35 +246,32 @@
     box-sizing: border-box;
   }
   &__thumb {
-    position: relative;
+    // position: relative;
     margin: 0;
     text-align: center;
     img {
-      position: relative;
+      // position: relative;
       display: block;
       width: 100%;
       height: auto;
       margin-bottom: 0;
       background-color: #fff;
       border-radius: 6px;
+      box-shadow: 0 1px 2px rgba($color: #000, $alpha: .1);
     }
-    figcaption {
-      margin-top: 5px;
-      margin-bottom: 0;
-      color: #000;
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      left: 8%;
-      top: 4px;
-      width: 84%;
-      height: 100px;
-      background-color: rgba($color: #000, $alpha: .1);
-      border-radius: 6px;
-    }
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   left: 8%;
+    //   top: 4px;
+    //   width: 84%;
+    //   height: 100px;
+    //   background-color: rgba($color: #000, $alpha: .1);
+    //   border-radius: 6px;
+    // }
   }
   &__figcaption {
+    display: block;
     margin-top: 5px;
     margin-bottom: 0;
     color: #000;
@@ -298,6 +301,7 @@
       }
       &:hover {
         &::before {
+          background-color: rgba($color: #000, $alpha: .2);
           animation: shadowDownOut .2s both;
         }
       }
@@ -358,11 +362,9 @@
 @keyframes moveCenterTop {
   0% {
     transform: translate3d(0,0,0) scale(1);
-    font-weight: normal;
   }
   100% {
     transform: translate3d(0,-60px,0) scale(1.2);
-    font-weight: bold;
   }
 }
 @keyframes moveRightShort {
@@ -378,18 +380,18 @@
 @keyframes zoomOut {
   0% {
     transform: perspective(800px) translate3d(0,0,0);
+    opacity: 1;
   }
   100% {
     transform: perspective(800px) translate3d(0,0,-500px);
-    opacity: .5;
+    opacity: 0;
   }
 }
 @keyframes shadowDownOut {
   0% {
     transform: translate3d(0,0,0) scale(1);
   }
-  100% {
-    background-color: rgba($color: #000, $alpha: .2);
+  100% {    
     transform: translate3d(0,20px,0) scale(.9);
   }
 }
