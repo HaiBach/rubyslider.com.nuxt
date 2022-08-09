@@ -8,7 +8,7 @@ const initSetup = function() {
     name: 'megamenu-slider',
     fx: 'cssOne',
     cssOne: 'fade',
-    speed: 600,
+    speed: 400,
     margin: 50,
     isNav: true,
     isLoop: false,

@@ -172,9 +172,7 @@
         font-weight: bold;
       }
       .megamenu__icon_arrow {
-        transition: all .2s;
-        opacity: 1;
-        transform: translate3d(15px,0,0) scale(1.4);
+        animation: moveRightShort .2s both;
       }
     }
   }
@@ -197,7 +195,6 @@
       .megamenu__figcaption {
         animation: moveCenterTop .2s both;
         color: var(--color-primary);
-        text-decoration: underline;
       }
     }
   }
@@ -353,6 +350,16 @@
   100% {
     transform: translate3d(0,-60px,0) scale(1.2);
     font-weight: bold;
+  }
+}
+@keyframes moveRightShort {
+  0% {
+    transform: translate3d(0,0,0) scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(15px,0,0) scale(1.4);
+    opacity: 1;
   }
 }
 @keyframes zoomOut {
