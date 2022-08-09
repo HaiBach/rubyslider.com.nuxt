@@ -18,7 +18,7 @@ const initSetup = function() {
     }
   }
   const megaSlider = jQuery('.megamenu__slider').rubyslider( sliderOptions )
-  megaSlider.goto(1)
+  // megaSlider.goto(1)
 
   // Event on link level 2
   const $linkLevel2 = document.querySelectorAll('.megamenu--link-lv2')

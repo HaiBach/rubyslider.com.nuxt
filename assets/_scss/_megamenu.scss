@@ -74,7 +74,7 @@
     }
   }
   &__board {
-    // visibility: hidden;
+    visibility: hidden;
     position: absolute;
     z-index: 99;
     left: 0;
@@ -93,9 +93,6 @@
   }
   &__left {
     position: relative;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
     width: 380px;
     padding-right: 40px;
     margin-bottom: 30px;
@@ -195,15 +192,12 @@
     align-items: center;
     &:hover {
       .megamenu__thumb {
-        // animation: rotateUpOut .6s both;
-        transform: perspective(800px) translate3d(0,0,-500px);
-        opacity: .5;
+        animation: zoomOut .2s both;
       }
       .megamenu__figcaption {
-        // animation: moveTop .6s both;
-        transform: translate3d(0,-60px,0) scale(1.2);
-        font-weight: bold;
+        animation: moveCenterTop .2s both;
         color: var(--color-primary);
+        text-decoration: underline;
       }
     }
   }
@@ -239,8 +233,6 @@
     position: relative;
     margin: 0;
     text-align: center;
-    transition: all .4s;
-    transform: perspective(800px) transform3d(0,0,0);
     img {
       position: relative;
       display: block;
@@ -271,8 +263,6 @@
     margin-bottom: 0;
     color: #000;
     text-align: center;
-    transition: all .4s;
-    transform: translate3d(0,0,0) scale(1);
   }
 
   /** Item Single **/
@@ -295,13 +285,10 @@
         width: 88%;
         background-color: rgba($color: #000, $alpha: .1);
         border-radius: 12px;
-        transition: all .2s;
-        transform: translate3d(0,0,0) scale(1);
       }
       &:hover {
         &::before {
-          background-color: rgba($color: #000, $alpha: .2);
-          transform: translate3d(0,20px,0) scale(.9);
+          animation: shadowDownOut .2s both;
         }
       }
     }
@@ -358,13 +345,31 @@
     opacity: 0;
   }
 }
-@keyframes moveTop {
+@keyframes moveCenterTop {
   0% {
-    transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0) scale(1);
     font-weight: normal;
   }
   100% {
     transform: translate3d(0,-60px,0) scale(1.2);
     font-weight: bold;
+  }
+}
+@keyframes zoomOut {
+  0% {
+    transform: perspective(800px) translate3d(0,0,0);
+  }
+  100% {
+    transform: perspective(800px) translate3d(0,0,-500px);
+    opacity: .5;
+  }
+}
+@keyframes shadowDownOut {
+  0% {
+    transform: translate3d(0,0,0) scale(1);
+  }
+  100% {
+    background-color: rgba($color: #000, $alpha: .2);
+    transform: translate3d(0,20px,0) scale(.9);
   }
 }
