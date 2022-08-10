@@ -9,6 +9,7 @@
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    transition: all .2s;
   }
 }
 
@@ -36,6 +37,7 @@
 /** SCROLL FIXED **/
 .scrollfixed {
   background-color: var(--color-primary);
+  z-index: 99;
 
   /** FIXED ENABLE - ĐỦ ĐIỀU KIỆN ĐỂ SCROLL FIXED HOẠT ĐỘNG **/
   &--enabled {}
@@ -47,7 +49,6 @@
     top: 0;
     box-shadow: 0 1px 2px rgba($color: #000, $alpha: 0.2);
     animation: headerMoveDown .2s both;
-    z-index: 99;
     .header__inner {
       padding-top: 8px;
       padding-bottom: 8px;
@@ -56,37 +57,6 @@
       top: calc(100% + 4px);
     }
   }
- 
-  // Dành cho PC
-  // @include media-min-width(md) {
-  //   &.fixed-actived {
-  //     .rm01.rm01.rm01hanger .rm01list {
-  //       a {
-  //         padding-top: 17px;
-  //         padding-bottom: 17px;
-  //       }
-  //     }
-  //   }
-  // }
-  /** Media **/
-  // @media (min-wid)
-
-  // Dành cho SP
-  // @include media(md) {
-  //   &.fixed-actived {
-  //     .header-logo {
-  //       padding-top: 8px !important;
-  //       padding-bottom: 8px !important;
-  //     }
-  //   }
-  // }
-  // @include media(sm) {
-  //   &.fixed-actived {
-  //     .rm01.rm01drawer .menu-inner {
-  //       height: calc(100vh - 40px);
-  //     }
-  //   }
-  // }
 }
 
 
