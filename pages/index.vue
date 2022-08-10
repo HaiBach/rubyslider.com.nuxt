@@ -8,6 +8,6 @@ definePageMeta({
 <template>
   <main>
     <MV />
-    <!-- <OtherLayoutsEffects /> -->
+    <OtherLayoutsEffects />
   </main>
 </template>

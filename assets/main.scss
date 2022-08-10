@@ -1,9 +1,11 @@
 @charset 'utf-8';
 
-@import './_scss/normalize';
+// @import './_scss/normalize';
+@import './_scss//bootstrap-reboot';
 @import './_scss/variables';
 
-@import './_scss/rubygrid';
+// @import './_scss/rubygrid';
+@import './_scss/bootstrap-grid';
 @import './_scss/ruby00';
 @import './_scss/ruby01';
 
