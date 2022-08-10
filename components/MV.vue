@@ -10,11 +10,12 @@ const sliderOptions = {
   imageback: {
     position: 'fit'
   },
+  isNav: true,
   isKeyboard: true,
   isSlideshow: true,
   slideshow: {
-    delay: 5000,  
-    isAutoRun: false
+    delay: 4000,  
+    isAutoRun: true
   },
   timerArc: {
     stroke: '#cc0055'
@@ -42,7 +43,7 @@ function randomNum() {
 
 
 <template>
-  <section class="mv">
+  <section class="mv anchor-first">
     <div class="title-head">
       <div class="title-head-inner">
           <!-- <h1>PLUGIN PREVIEW</h1>

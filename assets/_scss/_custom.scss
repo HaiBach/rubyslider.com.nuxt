@@ -56,25 +56,6 @@ body {
 
 
 
-/**
- * LOGO
- */
-.logo {
-  float: left;
-  width: 164px; height: 40px;
-  padding-bottom: 0;
-  background: url(/img/logo-light.svg) no-repeat transparent center -5px;
-  text-indent: -9999px;
-  cursor: pointer;
-}
-.logo:hover {
-  background-position: center -55px;
-}
-
-
-
-
-
 /* Label */
 .label {
   font-size: .85em;

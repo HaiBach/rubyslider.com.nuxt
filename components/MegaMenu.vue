@@ -55,7 +55,7 @@ const MENUS = {
           {
             key: '1.2.6',
             // name: 'Outbox',
-            name: 'Ngoài cái hộp',
+            name: 'Bên ngoài cái hộp',
             to: '/slider/layout-outbox',
             thumbnail: '/img/template-layout-outbox.png',
           },
@@ -430,11 +430,9 @@ const megamenu = function() {
   function closeMenu(e) {
     if (!$linkCurrent) return
     const $parent = $linkCurrent.parentNode
-
-    setTimeout(function() {
-      $parent.classList.remove(open)
-      $ghost.classList.remove(actived)
-    }, 200)
+    
+    $parent.classList.remove(open)
+    $ghost.classList.remove(actived)
     return false
   }
 }
