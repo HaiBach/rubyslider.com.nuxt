@@ -1,6 +1,4 @@
 <script setup>
-let randomNum = 1
-
 const initSetup = function() {
   const sliderMath = jQuery('.slider-math').rubyslider({
     fx: 'rectRun',
@@ -38,10 +36,18 @@ const initSetup = function() {
     }
   })
 }
-
 onMounted(() => {
   setTimeout(initSetup, 400)
 })
+
+/** Random Number */
+let randomNum = 1
+function getRandomNum() {
+  const num = Math.round( Math.random() * 1000000 )
+  randomNum = num
+  return num
+}
+
 </script>
 
 
@@ -66,8 +72,8 @@ onMounted(() => {
         <a
           v-for="i in 4"
           class="rs01imgback"
-          :href="'https://picsum.photos/800/480?random=' + randomNum"
-          >Lorem Picsum {{ randomNum++ }}</a>
+          :href="'https://picsum.photos/800/480?random=' + getRandomNum()"
+          >Lorem Picsum {{ randomNum }}</a>
       </div>
       <NuxtLink class="effect-title" to="/slider/effect-math">8 Math Effects</NuxtLink>
     </div>
@@ -80,8 +86,8 @@ onMounted(() => {
         <a
           v-for="i in 4"
           class="rs01imgback"
-          :href="'https://picsum.photos/800/480?random=' + randomNum"
-          >Lorem Picsum {{ randomNum++ }}</a>
+          :href="'https://picsum.photos/800/480?random=' + getRandomNum()"
+          >Lorem Picsum {{ randomNum }}</a>
       </div>
       <NuxtLink class="effect-title" to="/slider/effect-css-one">50+ CSS One Effects</NuxtLink>
     </div>
@@ -95,8 +101,8 @@ onMounted(() => {
         <a
           v-for="i in 4"
           class="rs01imgback"
-          :href="'https://picsum.photos/800/550?random=' + i"
-          >Lorem Picsum {{ i }}</a>
+          :href="'https://picsum.photos/800/550?random=' + getRandomNum()"
+          >Lorem Picsum {{ randomNum }}</a>
       </div>
       <NuxtLink class="effect-title" to="/slider/layout-center">Center Layout - Line Effect</NuxtLink>
     </div>
