@@ -67,7 +67,7 @@ function getRandomNum() {
   <div class="row">
 
     <!-- MATH EFFECT - begin -->
-    <div class="col6">
+    <div class="col-6">
       <div class="slider-math rs01">
         <a
           v-for="i in 4"
@@ -81,7 +81,7 @@ function getRandomNum() {
 
 
     <!-- CSS ONE EFFECT - begin -->
-    <div class="col6">
+    <div class="col-6">
       <div class="slider-one-effect rs01">
         <a
           v-for="i in 4"
@@ -96,7 +96,7 @@ function getRandomNum() {
 
 
     <!-- CENTER LAYOUT - LINE EFFECT - begin -->
-    <div class="col6">
+    <div class="col-6">
       <div class="slider-line-effect rs01">
         <a
           v-for="i in 4"
@@ -111,7 +111,7 @@ function getRandomNum() {
 
 
     <!-- TABS LAYOUT - begin -->
-    <div class="col6">
+    <div class="col-6">
       <div class="slider-tabs rs01 rs01flat">
         <div>
           <div class="rs01pagitem">OVERVIEW</div>
@@ -125,10 +125,10 @@ function getRandomNum() {
           <div class="rs01pagitem">LAYOUT</div>
           <!-- Dummy Content - begin -->
           <div class="row font-blokk">
-            <div class="col4">
+            <div class="col-4">
               <p class="bo-l-h"><i>Consectetur adipisicing elit. Vel, sequi, quis, minima, dolor quisquam numquam quod in repudiandae officia.</i></p>
             </div>
-            <div class="col8">
+            <div class="col-8">
               <p class="dropcap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, pariatur aliquam molestias aspernatur non. Facere, quibusdam, reiciendis, natus laudantium debitis suscipit consequatur voluptatibus mollitia temporibus quia ratione dignissimos magnam provident.</p>
               <p>Assumenda, repudiandae, iste magni labore culpa eum expedita eligendi odio molestiae temporibus id ab nihil ad sunt mollitia veritatis excepturi. Ullam, odit nesciunt doloribus natus non repudiandae error itaque vero?</p>
             </div>
@@ -154,22 +154,22 @@ function getRandomNum() {
         <div>
           <div class="rs01pagitem">IMAGE LAZYLOAD</div>
           <div class="row">
-            <div class="col4 col-xs-4">
+            <div class="col-4 col-xs-4">
               <img class="rs01img card-img" src="/img/food-thumbnail1.jpg" alt="Food 1">
             </div>
-            <div class="col4 col-xs-4">
+            <div class="col-4 col-xs-4">
               <img class="rs01img card-img" src="/img/food-thumbnail2.jpg" alt="Food 2">
             </div>
-            <div class="col4 col-xs-4">
+            <div class="col-4 col-xs-4">
               <img class="rs01img card-img" src="/img/food-thumbnail3.jpg" alt="Food 3">
             </div>
-            <div class="col4 col-xs-4">
+            <div class="col-4 col-xs-4">
               <img class="rs01img card-img" src="/img/food-thumbnail4.jpg" alt="Food 4">
             </div>
-            <div class="col4 col-xs-4">
+            <div class="col-4 col-xs-4">
               <img class="rs01img card-img" src="/img/food-thumbnail6.jpg" alt="Food 6">
             </div>
-            <div class="col4 col-xs-4">
+            <div class="col-4 col-xs-4">
               <img class="rs01img card-img" src="/img/food-thumbnail7.jpg" alt="Food 7">
             </div>
           </div>

@@ -52,7 +52,7 @@ const scrollfixed = function() {
      */
     function toggleActiveWhenGotoTarget($fixed, dataTarget) {
       var $inner = $fixed.find('.scrollfixed__inner');
-      var $holder = $fixed.find('.scrollfixed__holder');
+      // var $holder = $fixed.find('.scrollfixed__holder');
       var target = $fixed.data(dataTarget);
       var $target = $(target);
 
@@ -60,7 +60,7 @@ const scrollfixed = function() {
       if ( !($inner.length && $target.length) ) return
       // Setup chiều cao cho $holder
       $fixed.addClass(enabled)
-      $holder.css('min-height', $inner.outerHeight())
+      // $holder.css('min-height', $inner.outerHeight())
 
 
       // Tiếp tục thiết lập
@@ -108,9 +108,9 @@ const scrollfixed = function() {
       }
 
       // Cập nhật lại kích thước của holder
-      if ($holder.length) {
-        $holder.css('min-height', Math.round(rectInner.height))
-      }
+      // if ($holder.length) {
+      //   $holder.css('min-height', Math.round(rectInner.height))
+      // }
     }
   })
 }
@@ -122,7 +122,7 @@ onMounted(() => {
 
 <template>
 <header id="header" class="header scrollfixed" data-fixed-bottomout=".anchor-first">
-  <div class="scrollfixed__holder"></div>
+  <!-- <div class="scrollfixed__holder"></div> -->
   <div class="scrollfixed__inner">
     <div class="container">
       <div class="header__inner">

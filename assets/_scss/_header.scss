@@ -14,17 +14,6 @@
 
 /** LOGO **/
 .logo {
-  // overflow: hidden;
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   left: 0;
-  //   top: 0;
-  //   width: 320px;
-  //   height: 150px;
-  //   background-color: rgba($color: #fff, $alpha: .85);
-  //   transform: translate3d(-70px,-50px,0) rotate(-45deg);
-  // }
   a {
     position: relative;
     display: flex;
@@ -46,35 +35,19 @@
 
 /** SCROLL FIXED **/
 .scrollfixed {
-  position: relative;
-  &__inner {
-    // position: relative;
-    // width: 100%;
-    width: 100vw;
-    background-color: var(--color-primary);
-    z-index: 99;
-  }
+  background-color: var(--color-primary);
 
   /** FIXED ENABLE - ĐỦ ĐIỀU KIỆN ĐỂ SCROLL FIXED HOẠT ĐỘNG **/
-  &--enabled {
-    .scrollfixed__inner {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
+  &--enabled {}
 
  
   /** FIXED ACTIVED - KHI SCROLL FIXED KÍCH HOẠT **/
   &--actived {
-    .scrollfixed__inner {
-      position: fixed;
-      // background-color: rgba($color: #c05, $alpha: .9);
-      box-shadow: 0 1px 2px rgba($color: #000, $alpha: 0.2);
-      animation: headerMoveDown .2s both;
-      // -webkit-backdrop-filter: saturate(180%) blur(20px);
-      // backdrop-filter: saturate(180%) blur(20px);
-    }
+    position: sticky;
+    top: 0;
+    box-shadow: 0 1px 2px rgba($color: #000, $alpha: 0.2);
+    animation: headerMoveDown .2s both;
+    z-index: 99;
     .header__inner {
       padding-top: 8px;
       padding-bottom: 8px;
@@ -119,7 +92,14 @@
 
 
 
-
+@keyframes headerMoveUp {
+  0% {
+    transform: translate3d(0,0,0);
+  }
+  100% {
+    transform: translate3d(0,-100%,0);
+  }
+}
 @keyframes headerMoveDown {
   0% {
     transform: translate3d(0,-100%,0);

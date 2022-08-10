@@ -26,7 +26,7 @@ const sliderOptions = {
 }
 
 const initSetup = function() {
-  const $sliderPreview = jQuery('.slider-preview')
+  const $sliderPreview = jQuery('.mv__slider')
 
   if ($sliderPreview.length) {
     $sliderPreview.rubyslider( sliderOptions )
@@ -55,7 +55,7 @@ function randomNum() {
 
 
     <div class="container">
-      <div class="slider-preview rs01 rs01timer-arcTop">
+      <div class="mv__slider rs01 rs01timer-arcTop">
         <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 1</a>
         <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 2</a>
         <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 3</a>
@@ -85,9 +85,8 @@ function randomNum() {
 </style>
 
 <style lang="scss">
-.slider-preview {
-  // visibility: hidden;
-  // filter:grayscale(1);
+.mv__slider {
+  // filter: grayscale(1);
   max-height: 400px;
   > .rs01viewport {
     overflow: visible;
@@ -98,8 +97,16 @@ function randomNum() {
   .rs01imgback {
     visibility: hidden;
   }
-  .rs01ss-control {
-    right: 5px; top: 5px;
+  .rs01nav-prev {
+    left: -30px;
+  }
+  .rs01nav-next {
+    right: -30px;
+  }
+  &.rs01timer-arcTop {
+    .rs01ss-control {
+      right: -20px;
+    }
   }
   .rs01iframe {
     display: block;
