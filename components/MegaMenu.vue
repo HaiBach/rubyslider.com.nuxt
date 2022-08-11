@@ -2,6 +2,8 @@
 const MENUS = {
   'Slider': {
     key: '1',
+    name: 'Slider',
+    description: 'Các ví dụ cơ bản về Slider hình ảnh. <br>Bao gồm các thể loại bố cục, hiệu ứng, slideshow và api. <br>Hơn 50+ ví dụ để bắt đầu sử dụng Slider.',
     icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-images" viewBox="0 0 16 16"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"/></svg>',
     menus: [
       {
@@ -384,7 +386,6 @@ const megamenu = function() {
   const $ghost = document.querySelector('.megamenu__ghost')
   const open = 'megamenu--open'
   const actived = 'megamenu--actived'
-  let isOpen = false
   let $linkCurrent
 
   // Event mouse over on Ghost element
@@ -393,8 +394,6 @@ const megamenu = function() {
   // Event on $link level 1
   $linkLevel1.forEach(($link) => {
     const $parent = $link.parentNode
-    const $board = $parent.querySelector('.megamenu__board')
-
     $link.addEventListener('click', toggleMenu)
   })
 
@@ -415,16 +414,6 @@ const megamenu = function() {
       $parent.classList.add(open)
       $ghost.classList.add(actived)
     }
-  }
-  function openMenu(e) {
-    const $parent = this.parentNode
-    // Set the link current
-    $linkCurrent = this;
-
-    $linkLevel1.forEach( $el => $el.parentNode.classList.remove(open) )
-    $parent.classList.add(open)
-    $ghost.classList.add(actived)
-    return false
   }
   // Function Close Menu
   function closeMenu(e) {
@@ -470,8 +459,8 @@ onMounted(() => {
         <div class="megamenu__board_inner">
           <div class="megamenu__left">
             <div class="megamenu__title">
-              <h2 class="megamenu__name">Slider</h2>
-              <p class="megamenu__desc">Các ví dụ cơ bản về Slider hình ảnh. <br>Bao gồm các thể loại bố cục, hiệu ứng, slideshow và api.<br>Hơn 50+ ví dụ để bắt đầu sử dụng Slider.</p>
+              <h2 class="megamenu__name">{{ menuLevel1.name }}</h2>
+              <p class="megamenu__desc" v-html="menuLevel1.description"></p>
             </div>
 
             <!-- Rubyslider Pagination -->
