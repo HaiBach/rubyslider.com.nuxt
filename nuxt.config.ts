@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     head: {
       title: 'RubySlider | Nguyễn Văn Thy',
       charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+      viewport: 'width=device-width, initial-scale=1.0',
       meta: [
         { name: 'description', content: 'Best slider and tabs jquery plugin' },
       ],

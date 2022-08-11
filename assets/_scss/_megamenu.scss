@@ -40,7 +40,7 @@
     // }
     i {
       display: block;
-      padding-right: 8px;
+      padding-right: 7px;
     }
     svg {
       display: block;
@@ -92,6 +92,7 @@
     }
   }
   &__board {
+    overflow: hidden;
     visibility: hidden;
     position: absolute;
     z-index: 99;

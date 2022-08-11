@@ -123,7 +123,7 @@ onMounted(() => {
 <template>
 <header id="header" class="header scrollfixed" data-fixed-bottomout=".anchor-first">
   <!-- <div class="scrollfixed__holder"></div> -->
-  <div class="scrollfixed__inner">
+  <!-- <div class="scrollfixed__inner"> -->
     <div class="container">
       <div class="header__inner">
         <!-- Logo -->
@@ -133,6 +133,6 @@ onMounted(() => {
         <MegaMenu />
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 </header>
 </template>

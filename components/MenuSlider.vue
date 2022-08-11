@@ -1,11 +1,12 @@
 <script setup>
 const props = defineProps(['menu-items'])
 const menuLevel1 = props.menuItems
+const sliderName = 'megaslider-' + menuLevel1.slug
 
 // Slider setup
 const initSetup = function() {
   const sliderOptions = {
-    name: 'megamenu-slider',
+    name: sliderName,
     fx: 'cssOne',
     cssOne: 'fade',
     speed: 400,
@@ -17,8 +18,8 @@ const initSetup = function() {
       type: 'list'
     }
   }
-  const megaSlider = jQuery('.megamenu__slider').rubyslider( sliderOptions )
-  // megaSlider.goto(1)
+  console.log(sliderName)
+  const megaSlider = jQuery('.' + sliderName).rubyslider( sliderOptions )
 
   // Event on link level 2
   const $linkLevel2 = document.querySelectorAll('.megamenu--link-lv2')
@@ -39,7 +40,7 @@ onMounted(() => {
 
 
 <template>
-<div class="megamenu__slider rs01">
+<div :class="'megamenu__slider rs01 ' + sliderName">
   <div class="rs01viewport">
     <template
       v-for="(menuLevel2, indexLevel2) in menuLevel1.menus"

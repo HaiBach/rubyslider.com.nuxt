@@ -10,27 +10,8 @@
     min-height: 90px;
     padding-top: 20px;
     padding-bottom: 20px;
-    // transition: all .2s;
   }
 }
-
-/** LOGO **/
-.logo {
-  a {
-    position: relative;
-    display: flex;
-    align-items: center;
-    color: #fff;
-    transition: all .2s;
-    svg {
-      display: block;
-    }
-    &:hover {
-      color: rgba($color: #000, $alpha: .75);
-    }
-  }
-}
-
 
 
 
