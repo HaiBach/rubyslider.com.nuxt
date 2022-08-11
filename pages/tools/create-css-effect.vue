@@ -19,7 +19,8 @@ onMounted(() => {
 <template>
   <div class="wrapper">
     <div class="container">
-      <TitleHead title="CREATE CSS EFFECT" />
+      <!-- <TitleHead title="CREATE CSS EFFECT" /> -->
+      <TitleHead title="TẠO MỚI HIỆU ỨNG CSS" />
     </div>
 
     <!-- LIVE EFFECT - begin

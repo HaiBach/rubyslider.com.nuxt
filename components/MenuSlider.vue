@@ -18,11 +18,11 @@ const initSetup = function() {
       type: 'list'
     }
   }
-  console.log(sliderName)
   const megaSlider = jQuery('.' + sliderName).rubyslider( sliderOptions )
 
   // Event on link level 2
-  const $linkLevel2 = document.querySelectorAll('.megamenu--link-lv2')
+  const $sliderPag = document.querySelector('.megamenu__links.' + sliderName)
+  const $linkLevel2 = $sliderPag.querySelectorAll('.megamenu--link-lv2')
   $linkLevel2.forEach(($link) => {
     $link.addEventListener('mouseover', linkActived)
   })

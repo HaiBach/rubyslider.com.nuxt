@@ -474,7 +474,7 @@ onMounted(() => {
 
             <!-- Rubyslider Pagination -->
             <div
-              class="megamenu__links rs01pag"
+              :class="'megamenu__links rs01pag megaslider-' + menuLevel1.slug"
               :data-rubyslider-markup="'megaslider-' + menuLevel1.slug">
             </div>
           </div> <!-- ./megamenu__left -->

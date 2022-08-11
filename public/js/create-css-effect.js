@@ -620,7 +620,7 @@ FXTABLE = {
 
         function RenderFxChild(fxCur) {
             numFx++;
-            return     '<div class="col3 col-xxs-6">'
+            return     '<div class="col-3 col-xxs-6">'
                     +  '<div class="fx rs01swipe-prevent" data-fx="'+ fxCur +'">'
                     +  '    <div class="fx-live">'
                     +  '        <div class="fx-name"><span class="fx-num">'+ numFx + '</span>' + fxCur +'</div>'
