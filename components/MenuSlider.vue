@@ -18,7 +18,7 @@ const initSetup = function() {
       type: 'list'
     }
   }
-  const megaSlider = jQuery('.' + sliderName).rubyslider( sliderOptions )
+  const megaSlider = jQuery('.megamenu__slider.' + sliderName).rubyslider( sliderOptions )
 
   // Event on link level 2
   const $sliderPag = document.querySelector('.megamenu__links.' + sliderName)
