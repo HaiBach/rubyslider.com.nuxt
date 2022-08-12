@@ -392,6 +392,7 @@ const MENUS = {
  **/
 const megamenu = function() {
   const $linkLevel1 = document.querySelectorAll('.megamenu--link-lv1')
+  const $linkLevel3 = document.querySelectorAll('.megamenu--link-lv3')
   const $ghost = document.querySelector('.megamenu__ghost')
   const open = 'megamenu--open'
   const actived = 'megamenu--actived'
@@ -399,12 +400,39 @@ const megamenu = function() {
 
   // Event mouse over on Ghost element
   $ghost.addEventListener('click', closeMenu)
+
   
   // Event on $link level 1
   $linkLevel1.forEach(($link) => {
-    const $parent = $link.parentNode
     $link.addEventListener('click', toggleMenu)
   })
+
+  /**
+   * Search parent with 'megamenu--li-lv1' class
+   * This code like 'closest' func of jQuery
+   * Mục đích: để đóng mega menu khi click vào link level 3
+   */
+  $linkLevel3.forEach(($link) => {
+    let $listParent = null
+    let $nodeCurrent = $link
+
+    while (!$listParent) {
+      const $parent = $nodeCurrent.parentNode
+      const isTrueParent = $parent.classList.contains('megamenu--li-lv1')
+      
+      if (isTrueParent) {
+        $listParent = $nodeCurrent
+        break
+      }
+      else {
+        $nodeCurrent = $parent
+      }
+    }
+    // Add event click to List level 1
+    $listParent.addEventListener('click', toggleMenu)
+  })
+  
+
 
   // Function Open Menu
   function toggleMenu(e) {
