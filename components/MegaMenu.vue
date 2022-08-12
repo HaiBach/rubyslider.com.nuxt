@@ -404,7 +404,7 @@ const megamenu = function() {
   
   // Event on $link level 1
   $linkLevel1.forEach(($link) => {
-    $link.addEventListener('click', toggleMenu)
+    $link.addEventListener('click', () => { toggleMenu($link.parentNode) })
   })
 
   /**
@@ -419,24 +419,25 @@ const megamenu = function() {
     while (!$listParent) {
       const $parent = $nodeCurrent.parentNode
       const isTrueParent = $parent.classList.contains('megamenu--li-lv1')
+      // console.log(isTrueParent, $parent)
       
       if (isTrueParent) {
-        $listParent = $nodeCurrent
+        $listParent = $parent
         break
       }
       else {
         $nodeCurrent = $parent
       }
     }
-    // Add event click to List level 1
-    $listParent.addEventListener('click', toggleMenu)
+    // Add event click to Link level 3
+    $link.addEventListener('click', () => { toggleMenu($listParent) })
   })
   
 
 
   // Function Open Menu
-  function toggleMenu(e) {
-    const $parent = this.parentNode
+  function toggleMenu($parent) {
+    // const $parent = this.parentNode
 
     // Menu open --> close
     if ( $parent.classList.contains(open) ) {

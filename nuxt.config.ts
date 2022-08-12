@@ -18,7 +18,7 @@ export default defineNuxtConfig({
       ],
       script: [
         { src: '/js/jquery.min.js' },
-        { src: '/js/rubymenu.js' },
+        // { src: '/js/rubymenu.js' },
         { src: '/js/rubyanimate.js' },
         { src: '/js/rubyslider_17.js' },
       ]
