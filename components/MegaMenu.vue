@@ -396,7 +396,7 @@ const megamenu = function() {
   const $ghost = document.querySelector('.megamenu__ghost')
   const open = 'megamenu--open'
   const actived = 'megamenu--actived'
-  let $linkCurrent
+  let $parentCurrent
 
   // Event mouse over on Ghost element
   $ghost.addEventListener('click', closeMenu)
@@ -447,7 +447,7 @@ const megamenu = function() {
 
     // Menu close --> open
     else {
-      $linkCurrent = this
+      $parentCurrent = $parent
       $linkLevel1.forEach( $el => $el.parentNode.classList.remove(open) )
       $parent.classList.add(open)
       $ghost.classList.add(actived)
@@ -455,10 +455,10 @@ const megamenu = function() {
   }
   // Function Close Menu
   function closeMenu(e) {
-    if (!$linkCurrent) return
-    const $parent = $linkCurrent.parentNode
+    console.log($parentCurrent)
+    if (!$parentCurrent) return
     
-    $parent.classList.remove(open)
+    $parentCurrent.classList.remove(open)
     $ghost.classList.remove(actived)
     return false
   }
