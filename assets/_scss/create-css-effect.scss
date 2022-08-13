@@ -23,7 +23,7 @@
   color: #aaa;
 }
 .text-index {
-  color: #cc0055;
+  color: var(--color-primary);
   font-size: 30px;
   font-weight: 600;
   line-height: 1.2em;
@@ -87,7 +87,8 @@
 
 .fxdemo__preview {
   position: relative;
-  padding-top: 100px; padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   text-align: center;
 }
 .fxdemo__outer {
@@ -103,6 +104,7 @@
   width: 500px;
   height: auto;
   border-radius: 8px;
+  box-shadow: 0 1px 2px rgba($color: #000, $alpha: .25);
 }
 .fxdemo__item > img::selection {
   background-color: transparent;
@@ -420,7 +422,7 @@
   line-height: 1.8em;
 }
 .manual-wrap a {
-  color: #cc0055;
+  color: var(--color-primary);
 }
 .manual-wrap .rs01pagitem {
   font-size: 14px;

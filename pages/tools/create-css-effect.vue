@@ -17,10 +17,10 @@ onMounted(() => {
 
 
 <template>
-  <div class="wrapper">
+  <div class="purewrap">
     <div class="container">
-      <!-- <TitleHead title="CREATE CSS EFFECT" /> -->
-      <TitleHead title="TẠO MỚI HIỆU ỨNG CSS" />
+      <!-- <TitleHead title="TẠO MỚI HIỆU ỨNG CSS" /> -->
+      <MVTypography></MVTypography>
     </div>
 
     <!-- LIVE EFFECT - begin
@@ -34,7 +34,7 @@ onMounted(() => {
         <div class="fxdemo__preview">
           <div class="fxdemo__outer">
             <div class="fxdemo__item">
-              <img src="/img/animal-focus-free7.jpg" atl="Effect preview">
+              <img src="/img/create-css-effect/image-full-color.svg" atl="Effect preview">
             </div>
           </div>
         </div>

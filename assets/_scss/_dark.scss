@@ -14,7 +14,7 @@
   }
   > article, > li {
     &:hover {
-    border-color: #cc0055;
+    border-color: var(--color-primary);
     }
   }
   .meta {
@@ -26,7 +26,7 @@
     }
     &:hover {
     > .title {
-      color: #cc0055;
+      color: var(--color-primary);
     }
     }
   }

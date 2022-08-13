@@ -91,7 +91,7 @@ function randomNum() {
     overflow: visible;
   }
   .rs01slide {
-    border-radius: 8px;
+    border-radius: 12px;
   }
   .rs01imgback {
     visibility: hidden;

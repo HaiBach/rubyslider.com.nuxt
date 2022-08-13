@@ -201,10 +201,10 @@ onMounted(() => {
 
           <div class="rs01pagitem">{{ tabName }}</div>
           <div class="container">
-            <div class="row-small row-mobile items show-full">
+            <div class="row items show-full">
               <div
                 v-for="(item, itemName) in items"
-                class="col3 col-s-4 col-xxs-6"
+                class="col-4 col-sm-3 col-xxs-6"
                 >
                 <article>
                   <NuxtLink class="linkto" :to="item.link">

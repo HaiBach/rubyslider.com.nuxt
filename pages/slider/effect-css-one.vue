@@ -340,7 +340,7 @@ onMounted(() => {
     background-color: #00aac4;
   }
   &--slide-2 {
-    background-color: #c05;
+    background-color: var(--color-primary);
   }
   &__item_footer {
     position: relative;

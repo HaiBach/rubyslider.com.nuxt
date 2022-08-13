@@ -64,7 +64,7 @@ function getRandomNum() {
 
 
 
-  <div class="row">
+  <div class="row gx-5">
 
     <!-- MATH EFFECT - begin -->
     <div class="col-6">
@@ -192,13 +192,7 @@ function getRandomNum() {
 </template>
 
 
-<style scoped>
-.effect-others {
-  background-color: #f5f5f5;
-  border: 1px solid #e0e0e0;
-  border-width: 1px 0;
-  text-align: center;
-}
+<style lang="scss">
 .effect-title {
   display: inline-block;
   margin: 20px auto 50px auto;
@@ -206,17 +200,32 @@ function getRandomNum() {
   border: 1px solid #999;
   border-radius: 20px;
   background-color: #fff;
-}
-.effect-title:hover {
-  border-color: #c05;
+  &:hover {
+    border-color: var(--color-primary);
+  }
 }
 
-/* SLIDER */
-.effect-others .rs01 {
-  text-align: left;
-}
-.effect-others .rs01pag.rs01bullet {
-  position: absolute;
-  bottom: 0;
+.effect-others {
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-width: 1px 0;
+  text-align: center;
+
+  /* SLIDER */
+  .rs01 {
+    text-align: left;
+  }
+  .rs01slide {
+    border-radius: 8px;
+  }
+  .rs01pag {
+    &.rs01bullet {
+      position: absolute;
+      bottom: 0;
+    }
+    .rs01pagitem {
+      background-color: rgba($color: #000, $alpha: .75);
+    }
+  }
 }
 </style>

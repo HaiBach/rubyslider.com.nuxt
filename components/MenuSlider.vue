@@ -76,8 +76,9 @@ onMounted(() => {
           </div> <!-- ./megamenu__item -->
         </div> <!-- ./megamenu__items -->
 
-        <div v-if="menuLevel2.thumbnail" class="megamenu__item_single">
+        <div v-if="menuLevel2.to" class="megamenu__item_single">
           <NuxtLink
+            v-if="menuLevel2.thumbnail"
             :to="menuLevel2.to"
             class="megamenu--link-lv3">
             <figure class="megamenu__thumb_single">

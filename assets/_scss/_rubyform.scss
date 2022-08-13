@@ -26,8 +26,8 @@
   color: #444;
 }
 .rf01btn.rt03actived {
-  border-color: #cc0055;
-  color: #cc0055;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 /* BUTTON LARGE */
@@ -44,13 +44,13 @@
   cursor: pointer;
 }
 .rf01btn-large:hover {
-  color: #cc0055;
-  border-color: #cc0055;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 /* Mau sac cho button */
-.rf01btn-blue         { color: #cc0055 !important; }
-.rf01btn-blue:hover     { border-color: #cc0055; }
+.rf01btn-blue         { color: var(--color-primary) !important; }
+.rf01btn-blue:hover     { border-color: var(--color-primary); }
 .rf01btn-red        { color: #dd0000 !important; }
 .rf01btn-red:hover      { border-color: #dd0000; }
 
@@ -189,11 +189,11 @@ input.rf01input-smallhide {
 }
 
 .rf01checkbox.rt03selected {
-  background-color: #cc0055;
+  background-color: var(--color-primary);
   /*background-color: rgba(0,153,221,.75);*/
 }
 .rf01checkbox.rt03selected:after {
-  border-color: #cc0055;
+  border-color: var(--color-primary);
   background-color: #fff;
   -webkit-transform: translateX(26px);
       transform: translateX(26px);
@@ -327,7 +327,7 @@ input.rf01input-updown-value:focus {
       user-select: none;
 }
 .rf01input-updown-up:hover , .rf01input-updown-down:hover {
-  background-color: #cc0055;
+  background-color: var(--color-primary);
   color: #fff;
 }
 .rf01input-updown-up {
@@ -382,8 +382,8 @@ input.rf01input-updown-value:focus {
   color: #666;
 }
 .rf01input-modal:hover > span, .rf01input-modal.cb18actived > span {
-  border-color: #cc0055;
-  color: #cc0055;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 
@@ -455,7 +455,7 @@ input.rf01input-updown-value:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #cc0055;
+  background-color: var(--color-primary);
 }
 .rr01thumb:before {
   position: absolute;
@@ -466,7 +466,7 @@ input.rf01input-updown-value:focus {
   width: 20000px;
   height: 2px;
   margin-right: -12px;
-  background-color: #cc0055;
+  background-color: var(--color-primary);
   border-radius: 100px;
 }
 
@@ -595,10 +595,10 @@ input.rr01value:focus {
   border-color: #ddd;
 }
 .rf01select-one .rt03select-item.rt03selected {
-  border: 1px solid #cc0055;
+  border: 1px solid var(--color-primary);
 }
 .rf01select-one .rt03select-item.rt03selected span {
-  background-color: #cc0055;
+  background-color: var(--color-primary);
   color: #fff;
 }
 

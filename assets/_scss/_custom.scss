@@ -44,7 +44,7 @@ body {
  */
 .wrapper.header {
   padding-top: 20px; padding-bottom: 20px;
-  background-color: #cc0055;
+  background-color: var(--color-primary);
 }
 @media only screen and (max-width: 767px) {
   .wrapper.header {
@@ -87,7 +87,7 @@ body {
   zoom: 1;
   margin-top: 5px;
   padding-top: 5px;
-  border-top: 1px dashed #cc0055;
+  border-top: 1px dashed var(--color-primary);
 }
 @media (max-width: 767px) {
   .title-head {
@@ -387,7 +387,7 @@ img.card-img {
 .area-highlight {
   padding: 20px;
   margin-bottom: 50px;
-  border: 1px dashed #cc0055;
+  border: 1px dashed var(--color-primary);
   border-radius: 4px;
 }
 
@@ -478,7 +478,7 @@ img.card-img {
 .ruby-mark .rs01pagmark-item {
   height: 8px !important;
   margin-left: -1px;
-  background-color: #cc0055;
+  background-color: var(--color-primary);
   border: 1px solid #ff0077;
   border-radius: 50%;
 }
@@ -498,6 +498,6 @@ img.card-img {
   margin-bottom: 0;
 }
 .tabs-form .rs01pagitem.rs01cur {
-  border-color: #cc0055;
-  color: #cc0055;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
