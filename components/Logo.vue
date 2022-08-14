@@ -10,6 +10,7 @@
 
 <style lang="scss">
 .logo {
+  z-index: 100;
   a {
     position: relative;
     display: flex;
@@ -36,6 +37,20 @@
     font-size: 12px;
     color: rgba($color: #fff, $alpha: .5);
     transition: all .2s;
+  }
+}
+body {
+  &.megamenu--actived {
+    .logo {
+      a {
+        &:hover {
+          color: var(--color-primary);
+          .logo__version {
+            color: var(--color-primary);
+          }
+        }
+      }
+    }
   }
 }
 </style>

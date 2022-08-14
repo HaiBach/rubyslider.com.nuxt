@@ -132,3 +132,61 @@ onMounted(() => {
   </div>
 </header>
 </template>
+
+
+<style lang="scss">
+.header {
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 90px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+/** SCROLL FIXED **/
+.scrollfixed {
+  background-color: var(--color-primary);
+  z-index: 99;
+
+  /** FIXED ENABLE - ĐỦ ĐIỀU KIỆN ĐỂ SCROLL FIXED HOẠT ĐỘNG **/
+  &--enabled {}
+ 
+  /** FIXED ACTIVED - KHI SCROLL FIXED KÍCH HOẠT **/
+  &--actived {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 1px 2px rgba($color: #000, $alpha: 0.2);
+    animation: headerMoveDown .2s both;
+    .header__inner {
+      min-height: 60px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .megamenu__board {
+      top: calc(100% - 4px);
+    }
+  }
+}
+
+/** KEYFRAMES */
+@keyframes headerMoveUp {
+  0% {
+    transform: translate3d(0,0,0);
+  }
+  100% {
+    transform: translate3d(0,-100%,0);
+  }
+}
+@keyframes headerMoveDown {
+  0% {
+    transform: translate3d(0,-100%,0);
+  }
+  100% {
+    transform: translate3d(0,0,0);
+  }
+}
+</style>

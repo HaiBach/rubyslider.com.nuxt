@@ -9,6 +9,10 @@
     width: 100vw;
     height: 100vh;
     // background-color: blue;
+    background-color: rgba($color: #000, $alpha: .75);
+    // backdrop-filter: saturate(180%) blur(10px);
+    // -webkit-filter: saturate(180%) blur(10px);
+    // filter: saturate(180%) blur(10px);
     &.megamenu--actived {
       visibility: visible;
     }
@@ -313,16 +317,16 @@
   }
 }
 
-body {
-  main {
-    transition: all .6s;
-  }
-  &.megamenu--actived {
-    main {
-      filter: brightness(2) grayscale(1);
-    }
-  }
-}
+// body {
+//   main {
+//     transition: all .6s;
+//   }
+//   &.megamenu--actived {
+//     main {
+//       filter: brightness(2) grayscale(1);
+//     }
+//   }
+// }
 
 
 
