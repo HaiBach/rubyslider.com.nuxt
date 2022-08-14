@@ -86,7 +86,7 @@ onMounted(() => {
             </figure>
           </NuxtLink>
           <div class="megamenu__btn">
-            <NuxtLink :to="menuLevel2.to">Đi đến trang</NuxtLink>
+            <NuxtLink :to="menuLevel2.to" class="megamenu--link-lv3">Đi đến trang</NuxtLink>
           </div>
         </div>
       </div>
