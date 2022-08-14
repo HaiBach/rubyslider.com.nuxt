@@ -52,22 +52,24 @@ function getRandomNum() {
 
 
 <template>
-<div class="wrapper effect-others">
-  <div class="container">
+<div class="effect-others">
+  <!-- <TitleHead title="CÁC HIỆU ỨNG <strong>&amp;</strong> BỐ CỤC KHÁC">
+    <div class="title-desc">RubySlider hỗ trợ nhiều hiệu ứng khác nhau, từ hiệu ứng đơn giản đến hiệu ứng 3d nổi bật.<br>Đáp đứng gần như đầy đủ trong các thiết kế website thông thường.</div>
+  </TitleHead> -->
+  <TitleHead>
+    <template #title>
+      <h2>CÁC HIỆU ỨNG <strong>&amp;</strong> BỐ CỤC KHÁC</h2>
+    </template>
+    <template #desc>
+      <p>RubySlider hỗ trợ nhiều hiệu ứng khác nhau, từ hiệu ứng đơn giản đến 3D nổi bật.<br>Đáp đứng gần như đầy đủ trong các thiết kế website thông thường.</p>
+    </template>
+  </TitleHead>
 
-  <!-- Heading - begin -->
-  <div class="title-big-wrap">
-    <h1>OTHER LAYOUTS <strong>&amp;</strong> EFFECTS</h1>
-  </div>
-  <!-- Heading - end -->
 
-
-
-
-  <div class="row gx-5">
+  <div class="effect-others__items grid-custom">
 
     <!-- MATH EFFECT - begin -->
-    <div class="col-6">
+    <div class="effect-others__item grid-custom__item">
       <div class="slider-math rs01">
         <a
           v-for="i in 4"
@@ -75,13 +77,13 @@ function getRandomNum() {
           :href="'https://picsum.photos/800/480?random=' + getRandomNum()"
           >Lorem Picsum {{ randomNum }}</a>
       </div>
-      <NuxtLink class="effect-title" to="/slider/effect-math">8 Math Effects</NuxtLink>
+      <NuxtLink class="effect-others__btn" to="/slider/effect-math">8 hiệu ứng Math</NuxtLink>
     </div>
     <!-- MATH EFFECT - end -->
 
 
     <!-- CSS ONE EFFECT - begin -->
-    <div class="col-6">
+    <div class="effect-others__item grid-custom__item">
       <div class="slider-one-effect rs01">
         <a
           v-for="i in 4"
@@ -89,14 +91,14 @@ function getRandomNum() {
           :href="'https://picsum.photos/800/480?random=' + getRandomNum()"
           >Lorem Picsum {{ randomNum }}</a>
       </div>
-      <NuxtLink class="effect-title" to="/slider/effect-css-one">50+ CSS One Effects</NuxtLink>
+      <NuxtLink class="effect-others__btn" to="/slider/effect-css-one">50+ hiệu ứng CSS One</NuxtLink>
     </div>
     <!-- CSS ONE EFFECT - end -->
 
 
 
     <!-- CENTER LAYOUT - LINE EFFECT - begin -->
-    <div class="col-6">
+    <div class="effect-others__item grid-custom__item">
       <div class="slider-line-effect rs01">
         <a
           v-for="i in 4"
@@ -104,14 +106,14 @@ function getRandomNum() {
           :href="'https://picsum.photos/800/550?random=' + getRandomNum()"
           >Lorem Picsum {{ randomNum }}</a>
       </div>
-      <NuxtLink class="effect-title" to="/slider/layout-center">Center Layout - Line Effect</NuxtLink>
+      <NuxtLink class="effect-others__btn" to="/slider/layout-center">Bố cục chính giữa</NuxtLink>
     </div>
     <!-- CENTER LAYOUT - LINE EFFECT - end -->
 
 
 
     <!-- TABS LAYOUT - begin -->
-    <div class="col-6">
+    <div class="effect-others__item grid-custom__item">
       <div class="slider-tabs rs01 rs01flat">
         <div>
           <div class="rs01pagitem">OVERVIEW</div>
@@ -182,30 +184,18 @@ function getRandomNum() {
           </div>
         </div>
       </div>
-      <NuxtLink class="effect-title" to="/tabs">Tabs Layout</NuxtLink>
+      <NuxtLink class="effect-others__btn" to="/tabs">Bố cục Tabs</NuxtLink>
     </div>
     <!-- TABS LAYOUT - end -->
 
-  </div>
   </div>
 </div>
 </template>
 
 
 <style lang="scss">
-.effect-title {
-  display: inline-block;
-  margin: 20px auto 50px auto;
-  padding: 10px 25px;
-  border: 1px solid #999;
-  border-radius: 20px;
-  background-color: #fff;
-  &:hover {
-    border-color: var(--color-primary);
-  }
-}
-
 .effect-others {
+  padding-top: 50px;
   background-color: #f5f5f5;
   border: 1px solid #e0e0e0;
   border-width: 1px 0;
@@ -223,8 +213,27 @@ function getRandomNum() {
       position: absolute;
       bottom: 0;
     }
+  }
+  .rs01bullet {
     .rs01pagitem {
       background-color: rgba($color: #000, $alpha: .75);
+    }
+  }
+
+  /** Button */
+  &__btn {
+    display: inline-block;
+    min-width: 250px;
+    padding: 10px 25px;
+    margin: 20px auto;
+    border-radius: 8px;
+    background-color: rgba($color: #000, $alpha: .1);
+    color: #000;
+    font-size: .875em;;
+    text-decoration: none;
+    &:hover {
+      background-color: rgba($color: #000, $alpha: .75);
+      color: #fff;
     }
   }
 }

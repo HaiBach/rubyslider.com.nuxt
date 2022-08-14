@@ -1,0 +1,23 @@
+body {
+  font-family: var( --font-primary);
+}
+/** Heading **/
+h1, h2, h3,
+h4, h5, h6 {
+  color: #000;
+  font-family: var(--font-alter);
+  line-height: 1.1;
+}
+h1, h2 {
+  font-weight: 100;
+}
+h3, h4, h5, h6 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+/* Text & Label */
+.text-code,
+.label.code {
+  font-family: "Source Code Pro", monospace, serif;
+}

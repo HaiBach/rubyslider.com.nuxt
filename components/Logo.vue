@@ -15,6 +15,7 @@
     display: flex;
     align-items: center;
     color: #fff;
+    text-decoration: none;
     transition: all .2s;
     svg {
       display: block;

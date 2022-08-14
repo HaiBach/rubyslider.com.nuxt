@@ -26,9 +26,11 @@
     border-radius: 6px;
     border: 1px solid transparent;
     color: #fff;
+    font-size: .875em;;
     line-height: 1.2;
-    cursor: pointer;
+    text-decoration: none;
     transition: background .15s;
+    cursor: pointer;
     i {
       display: block;
       padding-right: 7px;
@@ -81,7 +83,7 @@
     }
   }
   &__board {
-    overflow: hidden;
+    // overflow: hidden;
     visibility: hidden;
     position: absolute;
     left: 0;
@@ -166,9 +168,7 @@
     color: #000;
     font-size: 24px;
     line-height: 1.4;
-    span {
-      cursor: pointer;
-    }
+    cursor: pointer;
     &.rs01cur {
       position: relative;
       color: var(--color-primary);
@@ -187,6 +187,8 @@
     opacity: 0;
   }
   &--link-lv3 {
+    font-size: .875em;
+    text-decoration: none;
     &:hover {
       .megamenu__thumb {
         animation: zoomOut .2s both;
@@ -208,7 +210,7 @@
       border-radius: 100px;
     }
     .rs01nav-prev {
-      left: -55px;
+      left: -85px;
     }
     .rs01nav-next {
       right: -85px;
@@ -229,7 +231,7 @@
     width: 25%;
     padding-left: 10px;
     padding-right: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     box-sizing: border-box;
   }
   &__thumb {
@@ -265,11 +267,11 @@
     figure {
       position: relative;
       display: block;
-      margin: 0 auto 20px;
+      margin: 0 auto 30px;
       &::before {
         content: '';
         position: absolute;
-        bottom: 8px;
+        bottom: -8px;
         left: 6%;
         height: 100px;
         width: 88%;
@@ -299,12 +301,25 @@
       background-color: rgba($color: #000, $alpha: .1);
       border-radius: 6px;
       color: #000;
+      font-size: .875em;
       text-align: center;
+      text-decoration: none;
       transition: background .2s;
       &:hover {
         background-color: rgba($color: #000, $alpha: .85);
         color: #fff;
       }
+    }
+  }
+}
+
+body {
+  main {
+    transition: all .6s;
+  }
+  &.megamenu--actived {
+    main {
+      filter: brightness(2) grayscale(1);
     }
   }
 }

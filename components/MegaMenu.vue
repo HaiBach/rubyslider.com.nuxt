@@ -446,6 +446,7 @@ const megamenu = function() {
     if ( $parent.classList.contains(open) ) {
       $parent.classList.remove(open)
       $ghost.classList.remove(actived)
+      document.body.classList.remove(actived)
     }
 
     // Menu close --> open
@@ -454,6 +455,7 @@ const megamenu = function() {
       $linkLevel1.forEach( $el => $el.parentNode.classList.remove(open) )
       $parent.classList.add(open)
       $ghost.classList.add(actived)
+      document.body.classList.add(actived)
     }
   }
   // Function Close Menu
@@ -463,6 +465,7 @@ const megamenu = function() {
     
     $parentCurrent.classList.remove(open)
     $ghost.classList.remove(actived)
+    document.body.classList.remove(actived)
     return false
   }
 }

@@ -24,15 +24,15 @@ const scrollfixed = function() {
 
 
     // THỰC HIỆN LÚC BAN ĐẦU
-    toggleActiveWhenGotoTarget($fixed, 'fixed-bottomin')
+    // toggleActiveWhenGotoTarget($fixed, 'fixed-bottomin')
     toggleActiveWhenGotoTarget($fixed, 'fixed-bottomout')
-    toggleActiveWhenGotoTarget($fixed, 'fixed-topin')
+    // toggleActiveWhenGotoTarget($fixed, 'fixed-topin')
 
     // THIẾT LẬP EVENT SCROLL
     $(document).on('scroll', function(e) {
-      toggleActiveWhenGotoTarget($fixed, 'fixed-bottomin')
+      // toggleActiveWhenGotoTarget($fixed, 'fixed-bottomin')
       toggleActiveWhenGotoTarget($fixed, 'fixed-bottomout')
-      toggleActiveWhenGotoTarget($fixed, 'fixed-topin')
+      // toggleActiveWhenGotoTarget($fixed, 'fixed-topin')
     })
 
     // THIẾT LẬP EVENT RESIZE
@@ -40,9 +40,9 @@ const scrollfixed = function() {
     $(window).resize(function() {
       clearTimeout(timer2)
       timer2 = setTimeout(function() {
-        toggleActiveWhenGotoTarget($fixed, 'fixed-bottomin')
+        // toggleActiveWhenGotoTarget($fixed, 'fixed-bottomin')
         toggleActiveWhenGotoTarget($fixed, 'fixed-bottomout')
-        toggleActiveWhenGotoTarget($fixed, 'fixed-topin')
+        // toggleActiveWhenGotoTarget($fixed, 'fixed-topin')
       }, 200)
     })
     
@@ -51,13 +51,13 @@ const scrollfixed = function() {
      * FUNCTION THIẾT LẬP CHÍNH
      */
     function toggleActiveWhenGotoTarget($fixed, dataTarget) {
-      var $inner = $fixed.find('.scrollfixed__inner');
+      // var $inner = $fixed.find('.scrollfixed__inner');
       // var $holder = $fixed.find('.scrollfixed__holder');
       var target = $fixed.data(dataTarget);
       var $target = $(target);
 
       // Điều kiện thực hiện
-      if ( !($inner.length && $target.length) ) return
+      // if ( !($inner.length && $target.length) ) return
       // Setup chiều cao cho $holder
       $fixed.addClass(enabled)
       // $holder.css('min-height', $inner.outerHeight())
@@ -66,7 +66,7 @@ const scrollfixed = function() {
       // Tiếp tục thiết lập
       var rectFixed = $fixed[0].getBoundingClientRect();
       var rectTarget = $target[0].getBoundingClientRect();
-      var rectInner = $inner[0].getBoundingClientRect();
+      // var rectInner = $inner[0].getBoundingClientRect();
       var hWin = $(window).height();
       var fixedTopInViewport = Math.round(rectFixed.top - hWin);
 
@@ -88,11 +88,9 @@ const scrollfixed = function() {
       // So sánh
       if (boundaryToShow < 0) {
         $fixed.addClass(actived +' '+ dataTarget)
-        // $fixed.addClass(dataTarget)
       }
       else {
         $fixed.removeClass(actived +' '+ dataTarget)
-        // $fixed.removeClass(dataTarget)
       }
 
 
@@ -115,24 +113,22 @@ const scrollfixed = function() {
   })
 }
 onMounted(() => {
-  setTimeout(scrollfixed, 200)
+  // setTimeout(scrollfixed, 200)
+  scrollfixed()
 })
 </script>
 
 
 <template>
 <header id="header" class="header scrollfixed" data-fixed-bottomout=".anchor-first">
-  <!-- <div class="scrollfixed__holder"></div> -->
-  <!-- <div class="scrollfixed__inner"> -->
-    <div class="container">
-      <div class="header__inner">
-        <!-- Logo -->
-        <Logo />
+  <div class="container">
+    <div class="header__inner">
+      <!-- Logo -->
+      <Logo />
 
-        <!-- Navigation Mega -->
-        <MegaMenu />
-      </div>
+      <!-- Navigation Mega -->
+      <MegaMenu />
     </div>
-  <!-- </div> -->
+  </div>
 </header>
 </template>

@@ -16,7 +16,7 @@
 .typo {
   padding-top: 50px; padding-bottom: 50px;
   text-align: center;
-  font-size: 14px;
+  font-size: .875em;
 }
 .typo-1, .typo-2, .typo-3 {
   display: inline-block;

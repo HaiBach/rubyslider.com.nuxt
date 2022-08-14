@@ -44,14 +44,14 @@ function randomNum() {
 
 <template>
   <section class="mv anchor-first">
-    <div class="title-head">
-      <div class="title-head-inner">
-          <!-- <h1>PLUGIN PREVIEW</h1>
-          <p>Best slider &amp; tabs premium jQuery plugin</p> -->
-          <h1>RUBY SLIDER </h1>
-          <p>Plugin jQuery tốt nhất dành cho Slider & Tabs</p>
-      </div>
-    </div>
+    <TitleHead>
+      <template #title>
+        <h1>RUBY SLIDER</h1>
+      </template>
+      <template #desc>
+        <p>Plugin jQuery tốt nhất dành cho Slider & Tabs</p>
+      </template>
+    </TitleHead>
 
 
     <div class="container">
@@ -67,23 +67,19 @@ function randomNum() {
 </template>
 
 
-<style scoped>
+<style lang="scss">
 .mv {
   overflow: hidden;
   padding-top: 50px;
   padding-bottom: 100px;
 }
-.title-head h1 {
-  margin-bottom: 15px;
-  font-size: 62px;
-  letter-spacing: 4px;
+.title-head {
+  &__title {
+    h1 {
+      letter-spacing: 8px;
+    }
+  }
 }
-.title-head p {
-  font-size: 18px;
-}
-</style>
-
-<style lang="scss">
 .mv__slider {
   // filter: grayscale(1);
   max-height: 400px;

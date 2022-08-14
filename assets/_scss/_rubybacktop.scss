@@ -1,0 +1,68 @@
+/**
+ * RUBY BACKTOP MAIN STYLE
+ * @package     RubyBackTop
+ * @author      HaiBach
+ * @link      http://haibach.net
+ * @version     1.0
+ */
+ .rubybacktop {
+  position: fixed;
+  right: -100px; bottom: 50px;
+  display: block;
+  width: 38px; height: 38px;
+  margin-right: 15px;
+
+  background-color: #ccc;
+  border-radius: 4px;
+  color: #fff;
+  opacity: .3;
+  line-height: 38px;
+  text-indent: -9999px;
+  cursor: pointer;
+  z-index: 999999;
+
+  -webkit-transition: right .2s;
+      transition: right .2s;
+}
+.rubybacktop:hover, .rubybacktop:focus {
+  background-color: var(--color-primary);
+  opacity: 1;
+}
+.rubybacktop.rubybacktop-actived {
+  right: 0;
+}
+
+/***** BACKTOP ARROW *****/
+.rubybacktop > .rubybacktop-first {
+  position: absolute;
+  display: block;
+  width: 0; height: 0;
+  top: 50%; left: 50%;
+  margin-left: -8px; margin-top: -8px;
+
+  border: 8px solid transparent;
+  border-bottom-color: #000;
+  border-top: none;
+}
+.rubybacktop > .rubybacktop-last {
+  position: absolute;
+  display: block;
+  width: 6px; height: 6px;
+  top: 50%; left: 50%;
+  margin-left: -3px; margin-top: -1px;
+  background-color: #000;
+}
+.rubybacktop:hover > .rubybacktop-first,
+.rubybacktop:focus > .rubybacktop-first {
+  border-bottom-color: #fff;
+}
+.rubybacktop:hover > .rubybacktop-last,
+.rubybacktop:focus > .rubybacktop-last {
+  background-color: #fff;
+}
+
+
+/***** BACKTOP MEDIA *****/
+@media only screen and (max-width: 767px) {
+  .rubybacktop { display: none; }
+}

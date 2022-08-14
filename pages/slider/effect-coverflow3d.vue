@@ -24,21 +24,37 @@ const optsDefault = {
 }
 const aFxCustom = [
   {
-    zDeep: 600,
-    rotate: 30,
-    opacity: 0.7
+    fx: 'coverflow3D',
+    coverflow3D: {
+      widthSlide: '70%',
+      zDeep: 600,
+      rotate: 30,
+      opacity: 0.7
+    },
   }, {
-    zDeep: 0,
-    rotate: 0,
-    opacity: 0.25
+    fx: 'coverflow3D',
+    coverflow3D: {
+      widthSlide: '70%',
+      zDeep: 0,
+      rotate: 0,
+      opacity: 0.25
+    }
   }, {
-    zDeep: 700,
-    rotate: 0,
-    opacity: 0.25
+    fx: 'coverflow3D',
+    coverflow3D: {
+      widthSlide: '70%',
+      zDeep: 700,
+      rotate: 0,
+      opacity: 0.25
+    }
   }, {
-    zDeep: 400,
-    rotate: -30,
-    opacity: 0.25
+    fx: 'coverflow3D',
+    coverflow3D: {
+      widthSlide: '70%',
+      zDeep: 400,
+      rotate: -30,
+      opacity: 0.25
+    }
   }
 ]
 const initSetup = function() {
@@ -61,7 +77,7 @@ const initSetup = function() {
   $fx.each(function(i) {
     const $fxCur = jQuery(this)
     const $sliderCur = $fxCur.find('.rs01')
-    const optsCur = jQuery.extend( true, {}, optsDefault, { 'coverflow3D': aFxCustom[i] } )
+    const optsCur = jQuery.extend( true, {}, optsDefault, aFxCustom[i] )
 
     // Khoi tao Slider
     $sliderCur.rubyslider(optsCur)

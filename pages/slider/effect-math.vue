@@ -106,11 +106,11 @@ onMounted(() => {
         </div>
       </div>
 
-      <div class="fxmath__table">
+      <div class="fxmath__table grid-custom">
         <div
           v-for="(fx, key) in aFx"
           :key="key"
-          class="fxmath__item"
+          class="fxmath__item grid-custom__item"
           >
           <div class="fxmath__item_inner">
             <div class="rs01 fxmath__slider" :data-fx="fx">
@@ -142,8 +142,6 @@ onMounted(() => {
 
 <style lang="scss">
 .fxmath {
-  padding-left: 50px;
-  padding-right: 50px;
   background-color: #f0f0f0;
   .hr {
     margin-top: 80px;
@@ -155,17 +153,6 @@ onMounted(() => {
     h2 {
       font-size: 46px;
     }
-  }
-  &__table {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  &__item {
-    width: 50%;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 150px;
-    box-sizing: border-box;
   }
   &__item_footer {
     display: flex;
@@ -222,23 +209,19 @@ onMounted(() => {
 
   /** Media */
   @media (min-width: 1200px) {
-    &__item {
-      padding-left: 50px;
-      padding-right: 50px;
+    // &__item {
+    //   padding-left: 50px;
+    //   padding-right: 50px;
+    // }
+    .grid-custom__item {
+      margin-bottom: 150px;
     }
   }
   @media (min-width: 1400px) {
   }
   @media (min-width: 1600px) {
-    padding-left: 150px;
-    padding-right: 150px;
   }
   @media (max-width: 991px) {
-    padding-left: 20px;
-    padding-right: 20px;
-    &__item {
-      margin-bottom: 100px;
-    }
     &__tag {
       font-size: 21px;
     }
@@ -258,13 +241,8 @@ onMounted(() => {
         font-size: 35px;
       }
     }
-    &__item {
-      width: 100%;
-    }
   }
   @media (max-width: 575px) {
-    padding-left: 20px;
-    padding-right: 20px;
     .hr {
       margin-top: 60px;
       margin-bottom: 60px;
@@ -274,11 +252,6 @@ onMounted(() => {
       h2 {
         font-size: 28px;
       }
-    }
-    &__item {
-      padding-left: 0;
-      padding-right: 0;
-      margin-bottom: 100px;
     }
   }
 }

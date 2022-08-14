@@ -655,7 +655,7 @@ onMounted(() => {
     position: absolute;
     left: 0;
     top: 0;
-    font-size: 14px;
+    font-size: .875em;
     color: #999;
   }
   // Select button

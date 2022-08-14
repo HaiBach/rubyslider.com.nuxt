@@ -149,77 +149,14 @@ body.bg-dark .menu-toggle>span {
 
 
 
-.menu-ver .menu>li .menu,
-.menu-ver .menu .menu>li .menu {
-  display: none;
-}
-
-.menu-ver .menu>li .menu.actived {
-  display: block;
-}
 
 
-
-/* Menu Arrow
-  ---------------------------------------------------------- */
-.menu-ver>.menu>li.selected>a:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: 0;
-  top: 50%;
-  margin-top: -5px;
-  border: 5px solid transparent;
-  border-left-color: #e5e5e5;
-}
-
-
-/* Menu Caret
-  ---------------------------------------------------------- */
-.menu-ver a>.caret {
-  top: 23px;
-  background-color: #ddd;
-}
-
-.menu-ver a.actived>.caret {
-  background-color: #333;
-}
-
-
-/* Menu Border
-  ---------------------------------------------------------- */
-.menu-ver .bo-t,
-.menu-ver .bo-b {
-  border-color: #ccc;
-}
-
-
-
-/*  Form Search
-============================================================== */
-
-.menu input.search-value {
-  margin-bottom: 0;
-  background: url(../imgs/icon_zoom.png) no-repeat right 11px;
-  border: none;
-}
 
 
 
 
 /* Menu horizontal search
   ---------------------------------------------------------- */
-/* Search position */
-.logo-left .search form {
-  right: 0;
-}
-
-.logo-center .search form {
-  right: 0;
-}
-
 /* Search style */
 .menu-hor .search {
   position: static;
@@ -1150,39 +1087,6 @@ body.bg-dark .menu-toggle>span {
 .menu .bo-t,
 .menu .bo-bo {
   border-color: #999;
-}
-
-
-/* Logo position and menu
----------------------------------------------------------- */
-.logo-left .menu-hor {
-  float: right;
-}
-.logo-right .menu-hor {
-  float: left;
-}
-.logo-center.logo-v2 .menu-hor {
-  float: right;
-  position: relative;
-  left: -50%;
-}
-.logo-center.logo-v2 .menu-hor>.menu {
-  position: relative;
-  left: 50%;
-}
-.logo-center.logo-v3 .menu-hor>.menu {
-  width: 94%;
-  margin-right: 6%;
-}
-.logo-center.logo-v3 .float-right {
-  float: right;
-}
-.logo-center .menu {
-  text-align: left;
-}
-.logo-center .menu-hor>.menu>li>a {
-  padding-left: 40px;
-  padding-right: 40px;
 }
 
 

@@ -1,14 +1,13 @@
 @charset 'utf-8';
 
-// @import './_scss/normalize';
 @import './_scss//bootstrap-reboot';
 @import './_scss/variables';
 
-// @import './_scss/rubygrid';
 @import './_scss/bootstrap-grid';
-@import './_scss/ruby00';
-@import './_scss/ruby01';
+// @import './_scss/ruby00';
+@import './_scss/base';
 
+@import './_scss/rubymenu';
 @import './_scss/rubyslider_17';
 @import './_scss/rubyslider_skin_17';
 @import './_scss/rubyform';
@@ -21,5 +20,4 @@
 @import './_scss/megamenu';
 @import './_scss/footer';
 
-@import './_scss/dark';
 @import './_scss/custom';
