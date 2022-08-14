@@ -18,21 +18,17 @@ const scrollfixed = function() {
 
   $scrollFixed.each(function() {
     var $fixed = $(this);
-    // var targetBottomIn = $fixed.data('fixed-bottomin');
-    // var targetBottomOut = $fixed.data('fixed-bottomout');
-    // var targetBottomOut = $fixed.data('fixed-bottomout');
-
 
     // THỰC HIỆN LÚC BAN ĐẦU
-    // toggleActiveWhenGotoTarget($fixed, 'fixed-bottomin')
+    toggleActiveWhenGotoTarget($fixed, 'fixed-bottomin')
     toggleActiveWhenGotoTarget($fixed, 'fixed-bottomout')
-    // toggleActiveWhenGotoTarget($fixed, 'fixed-topin')
+    toggleActiveWhenGotoTarget($fixed, 'fixed-topin')
 
     // THIẾT LẬP EVENT SCROLL
     $(document).on('scroll', function(e) {
-      // toggleActiveWhenGotoTarget($fixed, 'fixed-bottomin')
+      toggleActiveWhenGotoTarget($fixed, 'fixed-bottomin')
       toggleActiveWhenGotoTarget($fixed, 'fixed-bottomout')
-      // toggleActiveWhenGotoTarget($fixed, 'fixed-topin')
+      toggleActiveWhenGotoTarget($fixed, 'fixed-topin')
     })
 
     // THIẾT LẬP EVENT RESIZE
@@ -40,9 +36,9 @@ const scrollfixed = function() {
     $(window).resize(function() {
       clearTimeout(timer2)
       timer2 = setTimeout(function() {
-        // toggleActiveWhenGotoTarget($fixed, 'fixed-bottomin')
+        toggleActiveWhenGotoTarget($fixed, 'fixed-bottomin')
         toggleActiveWhenGotoTarget($fixed, 'fixed-bottomout')
-        // toggleActiveWhenGotoTarget($fixed, 'fixed-topin')
+        toggleActiveWhenGotoTarget($fixed, 'fixed-topin')
       }, 200)
     })
     
@@ -57,7 +53,7 @@ const scrollfixed = function() {
       var $target = $(target);
 
       // Điều kiện thực hiện
-      // if ( !($inner.length && $target.length) ) return
+      if ( !$target.length ) return
       // Setup chiều cao cho $holder
       $fixed.addClass(enabled)
       // $holder.css('min-height', $inner.outerHeight())
@@ -113,7 +109,6 @@ const scrollfixed = function() {
   })
 }
 onMounted(() => {
-  // setTimeout(scrollfixed, 200)
   scrollfixed()
 })
 </script>

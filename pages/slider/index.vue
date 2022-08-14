@@ -178,7 +178,7 @@ const sliderOptions = {
 
 onMounted(() => {
   setTimeout(() => {
-    const $sliderListTemplates = jQuery('#list-templates__slider')
+    const $sliderListTemplates = jQuery('.list-templates__slider')
     if ($sliderListTemplates.length) {
       $sliderListTemplates.rubyslider( sliderOptions )
     }
@@ -188,48 +188,47 @@ onMounted(() => {
 
 
 <template>
-  <div>
-    <SliderTypography />
+<div>
+  <SliderTypography />
 
-    <!-- Slider List Templates -->
-    <div class="list-templates">
-      <div id="list-templates__slider" class="rs01">
-        <div
-          v-for="(items, tabName) in sliderData"
-          :id="tabName.toLowerCase()"
-          >
+  <!-- Slider List Templates -->
+  <div class="list-templates">
+    <div class="list-templates__slider rs01">
+      <div
+        v-for="(items, tabName) in sliderData"
+        :id="tabName.toLowerCase()">
 
-          <div class="rs01pagitem">{{ tabName }}</div>
-          <div class="container">
-            <div class="row items show-full">
-              <div
-                v-for="(item, itemName) in items"
-                class="col-4 col-sm-3 col-xxs-6"
-                >
-                <article>
-                  <NuxtLink class="linkto" :to="item.link">
-                    <figure class="thumbnail">
-                      <img :src="item.thumbnail" :alt="itemName">
-                      <figcaption>{{ itemName }}</figcaption>
-                    </figure>
-                  </NuxtLink>
-                </article>
-              </div> <!-- /.item -->
-            </div>
+        <div class="rs01pagitem">{{ tabName }}</div>
+        <div class="container">
+          <div class="row items showfull">
+            <div
+              v-for="(item, itemName) in items"
+              class="showfull__items col-4 col-sm-3 col-xxs-6">
+
+              <div class="showfull__item">
+                <NuxtLink class="showfull__link linkto" :to="item.link">
+                  <figure class="showfull__thumb">
+                    <img :src="item.thumbnail" :alt="itemName">
+                    <figcaption class="showfull__name">{{ itemName }}</figcaption>
+                  </figure>
+                </NuxtLink>
+              </div>
+            </div> <!-- /.item -->
           </div>
-
         </div>
+
       </div>
     </div>
   </div>
+</div>
 </template>
 
 
 <style scoped>
-#list-templates__slider {
+.list-templates__slider {
   margin-top: 50px;
 }
-#list-templates__slider .rs01pagitem {
+.list-templates__slider .rs01pagitem {
   padding: 10px 25px !important;
   margin-left: 10px;
   margin-right: 10px;
@@ -237,13 +236,102 @@ onMounted(() => {
   border-radius: 20px;
   color: #333;
 }
-#list-templates__slider .rs01pagitem:hover {
+.list-templates__slider .rs01pagitem:hover {
   background-color: #e5e5e5;
   color: #000;
 }
-#list-templates__slider .rs01pagitem.rs01cur {
-  background-color: #cc0055;
-  border-color: #cc0055;
+.list-templates__slider .rs01pagitem.rs01cur {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
   color: #fff;
+}
+</style>
+
+<style lang="scss">
+.showfull {
+  &__item {
+    margin-bottom: 50px;
+    border: 1px dotted transparent;
+    border-bottom-color: #ccc;
+    &:hover {
+      border-color: var(--color-primary);
+      border-color: rgba($color: #000, $alpha: .35);
+      border-radius: 6px;
+    }
+  }
+  &__thumb {
+    display: block;
+    position: relative;
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      transition: transform .25s;
+    }
+  }
+  &__name {
+    transition: all .25s;
+  }
+  &__link {
+    display: block;
+    position: relative;
+    margin-bottom: 0;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: transparent;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      transition: all .25s;
+    }
+    &::before {
+      visibility: hidden;
+      display: block;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 50%;
+      margin-top: -25px;
+      color: #000;
+      font-family: "fontello";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 50px;
+      line-height: 1em;
+      text-align: center;
+      z-index: 2;
+      transition: transform .15s .1s;
+      transform: scale(0);
+    }
+    &:hover {
+      color: var(--color-primary);
+      &::before {
+        visibility: visible;
+        transform: scale(1);
+      }
+      &::after {
+        background-color: rgba($color: #c05, $alpha: .05);
+        transform: scale(.85);
+      }
+      .showfull__thumb {
+        img {
+          transform: translate3d(0,-25px,0) scale(.5);
+        }
+      }
+      .showfull__name {
+        font-weight: bold;
+        transform: translate3d(0,-68px,0) scale(1.4);
+      }
+    }
+  }
 }
 </style>
