@@ -394,7 +394,7 @@ const MENUS = {
  * So, I choose 'click' action instead 
  **/
 const megamenu = function() {
-  const $linkLevel1 = document.querySelectorAll('.megamenu--link-lv1')
+  const $linkLevel1 = document.querySelectorAll('.megamenu--link-lv1:not([href])')
   const $linkLevel3 = document.querySelectorAll('.megamenu--link-lv3')
   const $ghost = document.querySelector('.megamenu__ghost')
   const open = 'megamenu--open'

@@ -260,8 +260,8 @@ onMounted(() => {
     }
   }
   &__thumb {
-    display: block;
     position: relative;
+    margin-bottom: 0;
     img {
       display: block;
       max-width: 100%;
@@ -271,6 +271,8 @@ onMounted(() => {
     }
   }
   &__name {
+    // padding-top: 10px;
+    padding-bottom: 10px;
     transition: all .25s;
   }
   &__link {
@@ -293,25 +295,23 @@ onMounted(() => {
       border-radius: 8px;
       transition: all .25s;
     }
-    &::before {
-      visibility: hidden;
-      display: block;
-      position: absolute;
-      width: 100%;
-      left: 0;
-      top: 50%;
-      margin-top: -25px;
-      color: #000;
-      font-family: "fontello";
-      font-style: normal;
-      font-weight: normal;
-      font-size: 50px;
-      line-height: 1em;
-      text-align: center;
-      z-index: 2;
-      transition: transform .15s .1s;
-      transform: scale(0);
-    }
+    // &::before {
+    //   visibility: hidden;
+    //   position: absolute;
+    //   left: 0;
+    //   top: 50%;
+    //   display: block;
+    //   width: 100%;
+    //   margin-top: -25px;
+    //   color: #000;
+    //   font-family: "fontello";
+    //   font-size: 50px;
+    //   line-height: 1;
+    //   text-align: center;
+    //   z-index: 2;
+    //   transition: transform .15s .1s;
+    //   transform: scale(0);
+    // }
     &:hover {
       color: var(--color-primary);
       &::before {

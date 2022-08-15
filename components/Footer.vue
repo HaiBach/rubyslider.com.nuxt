@@ -5,7 +5,7 @@ const year = date.getFullYear()
 
 
 <template>
-<footer id="footer" class="wrapper footer">
+<footer id="footer" class="footer">
   <div class="container">
     <div class="footer__copyright">
       <p>&copy;{{ year }} Nguyễn Văn Thy. All Rights Reserved.</p>
@@ -17,8 +17,8 @@ const year = date.getFullYear()
 
 <style lang="scss">
 .footer {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   &__copyright {
     p {
       margin-bottom: 0;

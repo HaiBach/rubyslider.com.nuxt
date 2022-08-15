@@ -70,19 +70,19 @@ function randomNum() {
 <style lang="scss">
 .mv {
   overflow: hidden;
-  padding-top: 50px;
-  padding-bottom: 100px;
-}
-.title-head {
-  &__title {
-    h1 {
-      letter-spacing: 8px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .title-head {
+    &__title {
+      h1 {
+        letter-spacing: 8px;
+      }
     }
   }
 }
+
 .mv__slider {
-  // filter: grayscale(1);
-  max-height: 400px;
+  // max-height: 400px;
   > .rs01viewport {
     overflow: visible;
   }

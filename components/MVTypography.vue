@@ -18,12 +18,9 @@
   align-items: flex-start;  
   padding-top: 50px;
   padding-bottom: 50px;
-  min-height: 700px;
-  // &__inner {
-  //   padding: 30px 40px;
-  //   border: 1px solid rgba(#000, .5);
-  // }
+  min-height: 600px;
   .h1 {
+    margin-bottom: 20px;
     font-size: 80px;
     line-height: 1.1;
   }
