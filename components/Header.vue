@@ -7,7 +7,13 @@
  * Thêm class `.scrollfixed__inner` element bên dưới để tính toán vị trí
  * Hỗ trợ element holder để giữ vị trí chiều cao giống header --> hỗ trợ hiệu ứng mượt hơn
  * Thêm elemnt với class `.scrollfixed__holder` để thiết lập holder
- * Thêm data `fixed-bottomin` để trở tới vị trí chỉ định, khi scroll tới ví trí đó thì header sẽ chuyển sang vị trí fixed
+ * Thêm data `bottomedge-scrollto-bottom` để trở tới vị trí chỉ định, khi scroll tới ví trí đó thì header sẽ chuyển sang vị trí fixed
+ * 
+ * Các hướng scroll to:
+ * "bottomedge-scrollto-top": cạnh đáy của section di chuyển đến vị trí top của window browser.
+ * "bottomedge-scrollto-bottom": cạnh đáy của section di chuyển đến vị trí bottom của window browser.
+ * "topedge-scrollto-top": cạnh trên của section di chuyển đến vị trí top của window browser.
+ * "topedge-scrollto-bottom": cạnh trên của section di chuyển đến vị trí bottom của window browser.
  */
 const scrollfixed = function() {
   var $scrollFixed = $('.scrollfixed');
@@ -20,15 +26,11 @@ const scrollfixed = function() {
     var $fixed = $(this);
 
     // THỰC HIỆN LÚC BAN ĐẦU
-    toggleActiveWhenGotoTarget($fixed, 'fixed-bottomin')
-    toggleActiveWhenGotoTarget($fixed, 'fixed-bottomout')
-    toggleActiveWhenGotoTarget($fixed, 'fixed-topin')
+    toggleActiveWhenGotoTarget($fixed)
 
     // THIẾT LẬP EVENT SCROLL
     $(document).on('scroll', function(e) {
-      toggleActiveWhenGotoTarget($fixed, 'fixed-bottomin')
-      toggleActiveWhenGotoTarget($fixed, 'fixed-bottomout')
-      toggleActiveWhenGotoTarget($fixed, 'fixed-topin')
+      toggleActiveWhenGotoTarget($fixed)
     })
 
     // THIẾT LẬP EVENT RESIZE
@@ -36,9 +38,7 @@ const scrollfixed = function() {
     $(window).resize(function() {
       clearTimeout(timer2)
       timer2 = setTimeout(function() {
-        toggleActiveWhenGotoTarget($fixed, 'fixed-bottomin')
-        toggleActiveWhenGotoTarget($fixed, 'fixed-bottomout')
-        toggleActiveWhenGotoTarget($fixed, 'fixed-topin')
+        toggleActiveWhenGotoTarget($fixed)
       }, 200)
     })
     
@@ -46,84 +46,99 @@ const scrollfixed = function() {
     /**
      * FUNCTION THIẾT LẬP CHÍNH
      */
-    function toggleActiveWhenGotoTarget($fixed, dataTarget) {
-      // var $inner = $fixed.find('.scrollfixed__inner');
-      // var $holder = $fixed.find('.scrollfixed__holder');
-      var target = $fixed.data(dataTarget);
-      var $target = $(target);
+    function toggleActiveWhenGotoTarget($fixed) {
+      [
+        'bottomedge-scrollto-top',
+        'bottomedge-scrollto-bottom',
+        'topedge-scrollto-top',
+        'topedge-scrollto-bottom',
+      ].forEach((dataTarget) => {
 
-      // Điều kiện thực hiện
-      if ( !$target.length ) return
-      // Setup chiều cao cho $holder
-      $fixed.addClass(enabled)
-      // $holder.css('min-height', $inner.outerHeight())
+        // var $inner = $fixed.find('.scrollfixed__inner');
+        // var $holder = $fixed.find('.scrollfixed__holder');
+        var target = $fixed.data(dataTarget);
+        var $target = $(target).eq(0);
 
-
-      // Tiếp tục thiết lập
-      var rectFixed = $fixed[0].getBoundingClientRect();
-      var rectTarget = $target[0].getBoundingClientRect();
-      // var rectInner = $inner[0].getBoundingClientRect();
-      var hWin = $(window).height();
-      var fixedTopInViewport = Math.round(rectFixed.top - hWin);
-
-      /**
-       * CLASS `ACTIVED`
-       * Thêm class `actived` vào $scroll khi vượt qua đối tượng $target
-       */
-      var boundaryToShow;
-      if (dataTarget == 'fixed-bottomin') {
-        boundaryToShow = Math.round(rectTarget.bottom - hWin);
-      }
-      else if (dataTarget == 'fixed-bottomout') {
-        boundaryToShow = Math.round(rectTarget.bottom);
-      }
-      else if (dataTarget == 'fixed-topin') {
-        boundaryToShow = Math.round(rectTarget.y - hWin);
-      }
-      
-      // So sánh
-      if (boundaryToShow < 0) {
-        $fixed.addClass(actived +' '+ dataTarget)
-      }
-      else {
-        $fixed.removeClass(actived +' '+ dataTarget)
-      }
+        // Điều kiện thực hiện
+        if ( !$target.length ) return
+        // Setup chiều cao cho $holder
+        $fixed.addClass(enabled)
+        // $holder.css('min-height', $inner.outerHeight())
 
 
-      /**
-       * PHỤC HỒI VỊ TRÍ
-       * Khi $fixed trong Viewport thì phục hồi vị trí
-       */
-      if (fixedTopInViewport < 0 && rectFixed.bottom > 0) {
-        $fixed.addClass(inViewport)
-      }
-      else {
-        $fixed.removeClass(inViewport)
-      }
+        // Tiếp tục thiết lập
+        var rectFixed = $fixed[0].getBoundingClientRect();
+        var rectTarget = $target[0].getBoundingClientRect();
+        // var rectInner = $inner[0].getBoundingClientRect();
+        var hWin = $(window).height();
+        var fixedTopInViewport = Math.round(rectFixed.top - hWin);
 
-      // Cập nhật lại kích thước của holder
-      // if ($holder.length) {
-      //   $holder.css('min-height', Math.round(rectInner.height))
-      // }
+        /**
+         * CLASS `ACTIVED`
+         * Thêm class `actived` vào $scroll khi vượt qua đối tượng $target
+         */
+        var boundaryToShow;
+        if (dataTarget == 'bottomedge-scrollto-top') {
+          boundaryToShow = Math.round(rectTarget.bottom);
+        }
+        else if (dataTarget == 'bottomedge-scrollto-bottom') {
+          boundaryToShow = Math.round(rectTarget.bottom - hWin);
+        }
+        else if (dataTarget == 'topedge-scrollto-top') {
+          boundaryToShow = Math.round(rectTarget.y);
+        }
+        else if (dataTarget == 'topedge-scrollto-bottom') {
+          boundaryToShow = Math.round(rectTarget.y - hWin);
+        }
+        
+        // So sánh
+        if (boundaryToShow < 0) {
+          $fixed.addClass(actived +' '+ dataTarget)
+        }
+        else {
+          $fixed.removeClass(actived +' '+ dataTarget)
+        }
+
+
+        /**
+         * PHỤC HỒI VỊ TRÍ
+         * Khi $fixed trong Viewport thì phục hồi vị trí
+         */
+        if (fixedTopInViewport < 0 && rectFixed.bottom > 0) {
+          $fixed.addClass(inViewport)
+        }
+        else {
+          $fixed.removeClass(inViewport)
+        }
+
+        // Cập nhật lại kích thước của holder
+        // if ($holder.length) {
+        //   $holder.css('min-height', Math.round(rectInner.height))
+        // }
+      })
     }
   })
 }
 onMounted(() => {
   scrollfixed()
 })
+// if (process.client) {
+//   window.addEventListener('load', () => {
+//     console.log('window load: scrollfixed')
+//     scrollfixed()
+//   })
+// }
 </script>
 
 
 <template>
-<header id="header" class="header scrollfixed" data-fixed-bottomout=".anchor-first">
-  <div class="container">
-    <div class="header__inner">
-      <!-- Logo -->
-      <Logo />
+<header id="header" class="header scrollfixed" data-topedge-scrollto-top=".anchor-first">
+  <div class="header__inner">
+    <!-- Logo -->
+    <Logo />
 
-      <!-- Navigation Mega -->
-      <MegaMenu />
-    </div>
+    <!-- Navigation Mega -->
+    <MegaMenu />
   </div>
 </header>
 </template>
@@ -137,8 +152,7 @@ onMounted(() => {
     justify-content: space-between;
     align-items: center;
     min-height: 90px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 50px;
   }
 }
 
@@ -162,7 +176,7 @@ onMounted(() => {
       padding-bottom: 10px;
     }
     .megamenu__board {
-      top: calc(100% - 4px);
+      top: calc(100% + 1px);
     }
   }
 }

@@ -12,7 +12,7 @@ const sliderOptions = {
   },
   isNav: true,
   isKeyboard: true,
-  isSlideshow: true,
+  // isSlideshow: true,
   slideshow: {
     delay: 4000,  
     isAutoRun: true
@@ -43,27 +43,27 @@ function randomNum() {
 
 
 <template>
-  <section class="mv anchor-first">
-    <TitleHead>
-      <template #title>
-        <h1>RUBY SLIDER</h1>
-      </template>
-      <template #desc>
-        <p>Plugin jQuery tốt nhất dành cho Slider & Tabs</p>
-      </template>
-    </TitleHead>
+<section class="mv">
+  <TitleHead>
+    <template #title>
+      <h1>RUBY SLIDER</h1>
+    </template>
+    <template #desc>
+      <p>Plugin jQuery tốt nhất dành cho Slider & Tabs</p>
+    </template>
+  </TitleHead>
 
 
-    <div class="container">
-      <div class="mv__slider rs01 rs01timer-arcTop">
-        <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 1</a>
-        <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 2</a>
-        <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 3</a>
-        <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 4</a>
-        <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 5</a>
-      </div>
+  <div class="container">
+    <div class="mv__slider rs01 rs01timer-arcTop">
+      <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 1</a>
+      <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 2</a>
+      <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 3</a>
+      <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 4</a>
+      <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 5</a>
     </div>
-  </section>
+  </div>
+</section>
 </template>
 
 

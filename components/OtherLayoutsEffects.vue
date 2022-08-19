@@ -52,7 +52,7 @@ function getRandomNum() {
 
 
 <template>
-<div class="effect-others">
+<section class="effect-others anchor-first">
   <!-- <TitleHead title="CÁC HIỆU ỨNG <strong>&amp;</strong> BỐ CỤC KHÁC">
     <div class="title-desc">RubySlider hỗ trợ nhiều hiệu ứng khác nhau, từ hiệu ứng đơn giản đến hiệu ứng 3d nổi bật.<br>Đáp đứng gần như đầy đủ trong các thiết kế website thông thường.</div>
   </TitleHead> -->
@@ -77,7 +77,9 @@ function getRandomNum() {
           :href="'https://picsum.photos/800/480?random=' + getRandomNum()"
           >Lorem Picsum {{ randomNum }}</a>
       </div>
-      <NuxtLink class="effect-others__btn" to="/slider/effect-math">8 hiệu ứng Math</NuxtLink>
+      <div class="btn">
+        <NuxtLink class="effect-others__btn" to="/slider/effect-math">8 hiệu ứng Math</NuxtLink>
+      </div>
     </div>
     <!-- MATH EFFECT - end -->
 
@@ -91,7 +93,9 @@ function getRandomNum() {
           :href="'https://picsum.photos/800/480?random=' + getRandomNum()"
           >Lorem Picsum {{ randomNum }}</a>
       </div>
-      <NuxtLink class="effect-others__btn" to="/slider/effect-css-one">50+ hiệu ứng CSS One</NuxtLink>
+      <div class="btn">
+        <NuxtLink class="effect-others__btn" to="/slider/effect-css-one">50+ hiệu ứng CSS One</NuxtLink>
+      </div>
     </div>
     <!-- CSS ONE EFFECT - end -->
 
@@ -106,7 +110,9 @@ function getRandomNum() {
           :href="'https://picsum.photos/800/550?random=' + getRandomNum()"
           >Lorem Picsum {{ randomNum }}</a>
       </div>
-      <NuxtLink class="effect-others__btn" to="/slider/layout-center">Bố cục chính giữa</NuxtLink>
+      <div class="btn">
+        <NuxtLink class="effect-others__btn" to="/slider/layout-center">Bố cục chính giữa</NuxtLink>  
+      </div>
     </div>
     <!-- CENTER LAYOUT - LINE EFFECT - end -->
 
@@ -184,12 +190,14 @@ function getRandomNum() {
           </div>
         </div>
       </div>
-      <NuxtLink class="effect-others__btn" to="/tabs">Bố cục Tabs</NuxtLink>
+      <div class="btn">
+        <NuxtLink class="effect-others__btn" to="/tabs">Bố cục Tabs</NuxtLink>
+      </div>
     </div>
     <!-- TABS LAYOUT - end -->
 
   </div>
-</div>
+</section>
 </template>
 
 
@@ -217,23 +225,6 @@ function getRandomNum() {
   .rs01bullet {
     .rs01pagitem {
       background-color: rgba($color: #000, $alpha: .75);
-    }
-  }
-
-  /** Button */
-  &__btn {
-    display: inline-block;
-    min-width: 250px;
-    padding: 10px 25px;
-    margin: 20px auto;
-    border-radius: 8px;
-    background-color: rgba($color: #000, $alpha: .1);
-    color: #000;
-    font-size: .875em;;
-    text-decoration: none;
-    &:hover {
-      background-color: rgba($color: #000, $alpha: .75);
-      color: #fff;
     }
   }
 }

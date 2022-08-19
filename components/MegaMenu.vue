@@ -424,6 +424,12 @@ const megamenu = function() {
       const isTrueParent = $parent.classList.contains('megamenu--li-lv1')
       // console.log(isTrueParent, $parent)
       
+      // End the loop when parent list not found
+      if ($parent == document.body) {
+        $listParent = null
+        break
+      }
+
       if (isTrueParent) {
         $listParent = $parent
         break
@@ -433,14 +439,21 @@ const megamenu = function() {
       }
     }
     // Add event click to Link level 3
-    $link.addEventListener('click', () => { toggleMenu($listParent) })
+    if ($listParent == null) {
+      $link.addEventListener('click', closeMenu)
+    }
+    else {
+      $link.addEventListener('click', () => { toggleMenu($listParent) })
+    }
   })
   
 
 
   // Function Open Menu
   function toggleMenu($parent) {
-    // const $parent = this.parentNode
+    if ($parent == null) {
+      $parent = $parentCurrent
+    }
 
     // Menu open --> close
     if ( $parent.classList.contains(open) ) {
@@ -460,7 +473,6 @@ const megamenu = function() {
   }
   // Function Close Menu
   function closeMenu(e) {
-    console.log($parentCurrent)
     if (!$parentCurrent) return
     
     $parentCurrent.classList.remove(open)
