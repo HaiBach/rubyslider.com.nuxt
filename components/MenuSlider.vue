@@ -7,8 +7,8 @@ const sliderName = 'megaslider-' + menuLevel1.slug
 const initSetup = function() {
   const sliderOptions = {
     name: sliderName,
-    fx: 'cssOne',
-    cssOne: 'fade',
+    fx: 'line',
+    // cssOne: 'fade',
     speed: 400,
     margin: 50,
     isNav: true,
