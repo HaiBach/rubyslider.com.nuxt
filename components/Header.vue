@@ -18,6 +18,7 @@
 const scrollfixed = function() {
   var $scrollFixed = $('.scrollfixed');
   var actived = 'scrollfixed--actived';
+  var bodyActived = 'scrollfixed--body-actived';
   var enabled = 'scrollfixed--enabled';
   var inViewport = 'scrollfixed--in-viewport';
   var hChenhlenh = 10;
@@ -92,11 +93,14 @@ const scrollfixed = function() {
         }
         
         // So sánh
+        const $body = $('body')
         if (boundaryToShow < 0) {
           $fixed.addClass(actived +' '+ dataTarget)
+          $body.addClass(bodyActived)
         }
         else {
           $fixed.removeClass(actived +' '+ dataTarget)
+          $body.removeClass(bodyActived)
         }
 
 
@@ -146,6 +150,10 @@ onMounted(() => {
 
 <style lang="scss">
 .header {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
   &__inner {
     position: relative;
     display: flex;
@@ -166,8 +174,12 @@ onMounted(() => {
  
   /** FIXED ACTIVED - KHI SCROLL FIXED KÍCH HOẠT **/
   &--actived {
-    position: sticky;
+    // position: sticky;
+    // top: 0;
+    position: fixed;
+    left: 0;
     top: 0;
+    width: 100%;
     box-shadow: 0 1px 2px rgba($color: #000, $alpha: 0.2);
     animation: headerMoveDown .2s both;
     .header__inner {
