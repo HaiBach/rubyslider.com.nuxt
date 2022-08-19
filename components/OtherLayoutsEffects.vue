@@ -77,8 +77,8 @@ function getRandomNum() {
           :href="'https://picsum.photos/800/480?random=' + getRandomNum()"
           >Lorem Picsum {{ randomNum }}</a>
       </div>
-      <div class="btn">
-        <NuxtLink class="effect-others__btn" to="/slider/effect-math">8 hiệu ứng Math</NuxtLink>
+      <div class="effect-others__btn btn">
+        <NuxtLink to="/slider/effect-math">8 hiệu ứng Math</NuxtLink>
       </div>
     </div>
     <!-- MATH EFFECT - end -->
@@ -93,8 +93,8 @@ function getRandomNum() {
           :href="'https://picsum.photos/800/480?random=' + getRandomNum()"
           >Lorem Picsum {{ randomNum }}</a>
       </div>
-      <div class="btn">
-        <NuxtLink class="effect-others__btn" to="/slider/effect-css-one">50+ hiệu ứng CSS One</NuxtLink>
+      <div class="effect-others__btn btn">
+        <NuxtLink to="/slider/effect-css-one">50+ hiệu ứng CSS One</NuxtLink>
       </div>
     </div>
     <!-- CSS ONE EFFECT - end -->
@@ -110,8 +110,8 @@ function getRandomNum() {
           :href="'https://picsum.photos/800/550?random=' + getRandomNum()"
           >Lorem Picsum {{ randomNum }}</a>
       </div>
-      <div class="btn">
-        <NuxtLink class="effect-others__btn" to="/slider/layout-center">Bố cục chính giữa</NuxtLink>  
+      <div class="effect-others__btn btn">
+        <NuxtLink to="/slider/layout-center">Bố cục chính giữa</NuxtLink>  
       </div>
     </div>
     <!-- CENTER LAYOUT - LINE EFFECT - end -->
@@ -190,8 +190,8 @@ function getRandomNum() {
           </div>
         </div>
       </div>
-      <div class="btn">
-        <NuxtLink class="effect-others__btn" to="/tabs">Bố cục Tabs</NuxtLink>
+      <div class="effect-others__btn btn">
+        <NuxtLink to="/tabs">Bố cục Tabs</NuxtLink>
       </div>
     </div>
     <!-- TABS LAYOUT - end -->
@@ -211,6 +211,7 @@ function getRandomNum() {
 
   /* SLIDER */
   .rs01 {
+    margin-bottom: 20px;
     text-align: left;
   }
   .rs01slide {
@@ -225,6 +226,12 @@ function getRandomNum() {
   .rs01bullet {
     .rs01pagitem {
       background-color: rgba($color: #000, $alpha: .75);
+    }
+  }
+  /** Button */
+  &__btn {
+    a {
+      min-width: 250px;
     }
   }
 }

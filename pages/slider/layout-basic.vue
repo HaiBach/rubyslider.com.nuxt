@@ -11,11 +11,14 @@ const initSetup = () => {
   const $slider = jQuery('.layout-basic__slider')
   if ($slider.length) {
     $slider.rubyslider( sliderOptions )
-  }
 }
-
+}
+function randomNum() {
+  return Math.round(Math.random() * 10000000)
+}
 onMounted(() => {
-  setTimeout(initSetup, 400)
+  // setTimeout(initSetup, 400)
+  initSetup()
 })
 </script>
 
@@ -26,12 +29,12 @@ onMounted(() => {
     <TitleHead title="LAYOUT CƠ BẢN" />
 
     <div class="layout-basic__slider rs01">
-      <a class="rs01imgback" href="/img/vietnam-large1.jpg">Việt Nam 1</a>
-      <a class="rs01imgback" href="/img/vietnam-large2.jpg">Việt Nam 2</a>
-      <a class="rs01imgback" href="/img/vietnam-large3.jpg">Việt Nam 3</a>
-      <a class="rs01imgback" href="/img/vietnam-large4.jpg">Việt Nam 4</a>
-      <a class="rs01imgback" href="/img/vietnam-large5.jpg">Việt Nam 5</a>
-      <a class="rs01imgback" href="/img/vietnam-large6.jpg">Việt Nam 6</a>
+      <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 1</a>
+      <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 2</a>
+      <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 3</a>
+      <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 4</a>
+      <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 5</a>
+      <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 6</a>
     </div>
   </div>
 </main>

@@ -150,17 +150,13 @@ onMounted(() => {
 
 <style lang="scss">
 .header {
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
   &__inner {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 90px;
-    padding: 20px 50px;
+    padding: 20px 40px;
   }
 }
 

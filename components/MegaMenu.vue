@@ -15,6 +15,62 @@ const MENUS = {
         thumbnail: '/img/template-slider-list-all.svg',
       },
       {
+        key: '1.3',
+        // name: 'Effect',
+        name: 'Hiệu ứng',
+        menus:
+        [
+          {
+            key: '1.3.1',
+            name: 'Line Effect',
+            to: '/slider/effect-line',
+            thumbnail: '/img/template-fx-line.png',
+          },
+          {
+            key: '1.3.2',
+            name: 'Fade Effect',
+            to: '/slider/effect-fade',
+            thumbnail: '/img/template-fx-fade.png',
+          },
+          {
+            key: '1.3.3',
+            name: 'Math Effect',
+            to: '/slider/effect-math',
+            thumbnail: '/img/template-fx-math.png',
+          },
+          {
+            key: '1.3.4',
+            name: 'CSS One Effect',
+            to: '/slider/effect-css-one',
+            thumbnail: '/img/template-fx-cssOne.png',
+          },
+          {
+            key: '1.3.5',
+            name: 'CSS Two Effect',
+            to: '/slider/effect-css-two',
+            thumbnail: '/img/template-fx-cssTwo.png',
+          },
+          {
+            key: '1.3.6',
+            name: 'CSS Four Effect',
+            to: '/slider/effect-css-four',
+            thumbnail: '/img/template-fx-cssFour.png',
+          },
+          {
+            key: '1.3.7',
+            name: 'Coverflow3D Effect',
+            to: '/slider/effect-coverflow3d',
+            thumbnail: '/img/template-fx-coverflow3D.png',
+          },
+          {
+            key: '1.3.9',
+            name: 'Control Effect',
+            to: '/slider/effect-control',
+            thumbnail: '/img/template-fx-control.png',
+          },
+        ]
+      },
+      {
         key: '1.2',
         // name: 'Layout',
         name: 'Bố cục',
@@ -131,62 +187,6 @@ const MENUS = {
             name: 'Chiều cao cố định',
             to: '/slider/layout-height-fixed',
             thumbnail: '/img/template-layout-heightFixed.png',
-          },
-        ]
-      },
-      {
-        key: '1.3',
-        // name: 'Effect',
-        name: 'Hiệu ứng',
-        menus:
-        [
-          {
-            key: '1.3.1',
-            name: 'Line Effect',
-            to: '/slider/effect-line',
-            thumbnail: '/img/template-fx-line.png',
-          },
-          {
-            key: '1.3.2',
-            name: 'Fade Effect',
-            to: '/slider/effect-fade',
-            thumbnail: '/img/template-fx-fade.png',
-          },
-          {
-            key: '1.3.3',
-            name: 'Math Effect',
-            to: '/slider/effect-math',
-            thumbnail: '/img/template-fx-math.png',
-          },
-          {
-            key: '1.3.4',
-            name: 'CSS One Effect',
-            to: '/slider/effect-css-one',
-            thumbnail: '/img/template-fx-cssOne.png',
-          },
-          {
-            key: '1.3.5',
-            name: 'CSS Two Effect',
-            to: '/slider/effect-css-two',
-            thumbnail: '/img/template-fx-cssTwo.png',
-          },
-          {
-            key: '1.3.6',
-            name: 'CSS Four Effect',
-            to: '/slider/effect-css-four',
-            thumbnail: '/img/template-fx-cssFour.png',
-          },
-          {
-            key: '1.3.7',
-            name: 'Coverflow3D Effect',
-            to: '/slider/effect-coverflow3d',
-            thumbnail: '/img/template-fx-coverflow3D.png',
-          },
-          {
-            key: '1.3.9',
-            name: 'Control Effect',
-            to: '/slider/effect-control',
-            thumbnail: '/img/template-fx-control.png',
           },
         ]
       },

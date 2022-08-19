@@ -4,6 +4,41 @@ definePageMeta({
 })
 
 const sliderData = {
+  'EFFECT': {
+    'Line Effect': {
+      link: '/slider/effect-line',
+      thumbnail: '/img/template-fx-line.png',
+    },
+    'Fade Effect': {
+      link: '/slider/effect-fade',
+      thumbnail: '/img/template-fx-fade.png',
+    },
+    'Math Effect': {
+      link: '/slider/effect-math',
+      thumbnail: '/img/template-fx-math.png',
+    },
+    'CSS One Effect': {
+      link: '/slider/effect-css-one',
+      thumbnail: '/img/template-fx-cssOne.png',
+    },
+    'CSS Two Effect': {
+      link: '/slider/effect-css-two',
+      thumbnail: '/img/template-fx-cssTwo.png',
+    },
+    'CSS Four Effect': {
+      link: '/slider/effect-css-four',
+      thumbnail: '/img/template-fx-cssFour.png',
+    },
+    'Coverflow3D Effect': {
+      link: '/slider/effect-coverflow3d',
+      thumbnail: '/img/template-fx-coverflow3D.png',
+    },
+    'Control Effect': {
+      link: '/slider/effect-control',
+      thumbnail: '/img/template-fx-control.png',
+    },
+  },
+  
   'LAYOUT': {
     'Basic Layout': {
       link: '/slider/layout-basic',
@@ -73,41 +108,6 @@ const sliderData = {
     //   link: '/slider/layout-inbox',
     //   thumbnail: '/img/template-layout-box.png',
     // },
-  },
-
-  'EFFECT': {
-    'Line Effect': {
-      link: '/slider/effect-line',
-      thumbnail: '/img/template-fx-line.png',
-    },
-    'Fade Effect': {
-      link: '/slider/effect-fade',
-      thumbnail: '/img/template-fx-fade.png',
-    },
-    'Math Effect': {
-      link: '/slider/effect-math',
-      thumbnail: '/img/template-fx-math.png',
-    },
-    'CSS One Effect': {
-      link: '/slider/effect-css-one',
-      thumbnail: '/img/template-fx-cssOne.png',
-    },
-    'CSS Two Effect': {
-      link: '/slider/effect-css-two',
-      thumbnail: '/img/template-fx-cssTwo.png',
-    },
-    'CSS Four Effect': {
-      link: '/slider/effect-css-four',
-      thumbnail: '/img/template-fx-cssFour.png',
-    },
-    'Coverflow3D Effect': {
-      link: '/slider/effect-coverflow3d',
-      thumbnail: '/img/template-fx-coverflow3D.png',
-    },
-    'Control Effect': {
-      link: '/slider/effect-control',
-      thumbnail: '/img/template-fx-control.png',
-    },
   },
 
   'SLIDESHOW': {

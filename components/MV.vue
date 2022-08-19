@@ -24,18 +24,12 @@ const sliderOptions = {
     isPauseThenRemove: true
   }
 }
-
 const initSetup = function() {
-  const $sliderPreview = jQuery('.mv__slider')
-
-  if ($sliderPreview.length) {
-    $sliderPreview.rubyslider( sliderOptions )
-  }
+  const sliderPreview = jQuery('.mv__slider').rubyslider( sliderOptions )
 }
 onMounted(() => {
   setTimeout(initSetup, 400)
 })
-
 function randomNum() {
   return Math.round(Math.random() * 10000000)
 }
@@ -53,7 +47,6 @@ function randomNum() {
     </template>
   </TitleHead>
 
-
   <div class="container">
     <div class="mv__slider rs01 rs01timer-arcTop">
       <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 1</a>
@@ -62,6 +55,22 @@ function randomNum() {
       <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 4</a>
       <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 5</a>
     </div>
+
+    <div class="mv__avatar">
+      <svg width="350" height="392" viewBox="0 0 350 392" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M335.837 119.619C342.964 82.0121 351.462 16.5625 327.483 2.71292C312.041 -6.20253 285.268 8.18227 260.65 26.5614C235.313 10.5971 207.066 1.40756 174.941 1.30313C143.861 1.40756 114.635 10.5971 89.2981 26.5614C64.6794 8.18227 37.9722 -6.20253 22.5432 2.71292C-1.43588 16.5756 7.04882 82.0121 14.189 119.619C5.06471 143.206 0 169.156 0 196.451C0 209.087 1.10953 221.396 3.13281 233.379L107.39 376.418C127.479 386.064 148.821 391.521 174.941 391.599C200.643 391.521 222.482 386.064 242.558 376.418L346.854 233.379C348.864 221.396 350 209.087 350 196.451C350.013 169.156 344.948 143.206 335.837 119.619ZM106.855 200.811C90.8775 200.811 77.9286 187.862 77.9286 171.885C77.9286 168.412 78.6465 165.123 79.7691 162.042C98.0961 161.116 119.073 163.061 135.755 172.211C135.559 188.019 122.715 200.811 106.855 200.811ZM243.197 200.811C227.337 200.811 214.493 188.032 214.31 172.224C230.992 163.074 251.969 161.116 270.296 162.055C271.419 165.136 272.137 168.425 272.137 171.898C272.124 187.862 259.175 200.811 243.197 200.811Z" fill="#CC0055"/>
+      </svg>
+    </div>
+    <div class="mv__btns">
+      <div class="btn btn--btns btn--large">
+        <a class="btn--first btn--primary" href="#">
+          <span>CÁC HIỆU ỨNG<br>VÀ LAYOUT KHÁC</span>
+        </a>
+        <a class="btn--second btn--alter" href="#">
+          <span>HƯỚNG DẪN SỬ DỤNG</span>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 </template>
@@ -69,9 +78,10 @@ function randomNum() {
 
 <style lang="scss">
 .mv {
+  position: relative;
   overflow: hidden;
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
   .title-head {
     &__title {
       h1 {
@@ -79,10 +89,31 @@ function randomNum() {
       }
     }
   }
+  &__avatar {
+    position: absolute;
+    top: 250px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    perspective: 800px;
+    z-index: -1;
+    transition: all .4s;
+    svg {
+      display: block;
+      animation: avatarRotate 6s 3s linear infinite both;
+    }
+  }
+  &__btns {
+    a {
+      min-width: 350px;
+    }
+  }
 }
-
 .mv__slider {
-  // max-height: 400px;
+  min-height: 400px;
+  margin-bottom: 70px;
+  opacity: 0;
   > .rs01viewport {
     overflow: visible;
   }
@@ -109,11 +140,22 @@ function randomNum() {
   }
   &.rs01ready {
     opacity: 1;
-    max-height: none;
-    filter: none;
+    min-height: auto;
     .rs01imgback {
       visibility: visible;
     }
+    + .mv__avatar {
+      opacity: .25;
+      transform: translate3d(0,-330px,0) scale(.32);
+    }
+  }
+}
+@keyframes avatarRotate {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(180deg);
   }
 }
 </style>

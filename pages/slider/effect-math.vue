@@ -120,7 +120,7 @@ onMounted(() => {
             </div>
             <div class="fxmath__item_footer">
               <h3 class="fxmath__tag">#{{ (key + 1)  + ' - ' + fx }}</h3>
-              <div class="fxmath__btn">
+              <div class="fxmath__btn btn">
                 <button class="fxmath__select" :data-fx="fx">
                   <span>Apply to Slider Preview</span>
                   <i>
@@ -172,35 +172,22 @@ onMounted(() => {
     .rs01viewport {
       border-radius: 8px;
     }
+    .rs01pag {
+      &.rs01bullet {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    .rs01bullet {
+      .rs01pagitem {
+        background-color: rgba($color: #000, $alpha: .75);
+      }
+    }
   }
 
   /** Button Select */
-  &__select {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 13px 20px;
-    background-color: #fff;
-    background-color: rgba($color: #000, $alpha: .1);
-    border-width: 0;
-    border-radius: 6px;
-    color: #333;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    &:hover {
-      background-color: rgba($color: #000, $alpha: .75);
-      border-color: rgba($color: #000, $alpha: .5);
-      color: #fff;
-    }
-    i {
-      display: block;
-      padding-left: 8px;
-    }
-    svg {
-      display: block;
-    }
-    &.fxmath--actived {
+  &__btn {
+    .fxmath--actived {
       background-color: #cc0055;
       border-color: #cc0055;
       color: #fff;
@@ -209,10 +196,6 @@ onMounted(() => {
 
   /** Media */
   @media (min-width: 1200px) {
-    // &__item {
-    //   padding-left: 50px;
-    //   padding-right: 50px;
-    // }
     .grid-custom__item {
       margin-bottom: 150px;
     }
