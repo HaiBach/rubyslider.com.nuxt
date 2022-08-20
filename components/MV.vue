@@ -60,15 +60,16 @@ function randomNum() {
       <svg width="350" height="392" viewBox="0 0 350 392" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path d="M335.837 119.619C342.964 82.0121 351.462 16.5625 327.483 2.71292C312.041 -6.20253 285.268 8.18227 260.65 26.5614C235.313 10.5971 207.066 1.40756 174.941 1.30313C143.861 1.40756 114.635 10.5971 89.2981 26.5614C64.6794 8.18227 37.9722 -6.20253 22.5432 2.71292C-1.43588 16.5756 7.04882 82.0121 14.189 119.619C5.06471 143.206 0 169.156 0 196.451C0 209.087 1.10953 221.396 3.13281 233.379L107.39 376.418C127.479 386.064 148.821 391.521 174.941 391.599C200.643 391.521 222.482 386.064 242.558 376.418L346.854 233.379C348.864 221.396 350 209.087 350 196.451C350.013 169.156 344.948 143.206 335.837 119.619ZM106.855 200.811C90.8775 200.811 77.9286 187.862 77.9286 171.885C77.9286 168.412 78.6465 165.123 79.7691 162.042C98.0961 161.116 119.073 163.061 135.755 172.211C135.559 188.019 122.715 200.811 106.855 200.811ZM243.197 200.811C227.337 200.811 214.493 188.032 214.31 172.224C230.992 163.074 251.969 161.116 270.296 162.055C271.419 165.136 272.137 168.425 272.137 171.898C272.124 187.862 259.175 200.811 243.197 200.811Z" fill="#CC0055"/>
       </svg>
+      <p>Xin chờ 1 chút, đang load hình đầu tiên...</p>
     </div>
     <div class="mv__btns">
       <div class="btn btn--btns btn--large">
-        <a class="btn--first btn--primary" href="#">
+        <NuxtLink to="/slider" class="btn--primary">
           <span>CÁC HIỆU ỨNG<br>VÀ LAYOUT KHÁC</span>
-        </a>
-        <a class="btn--second btn--alter" href="#">
+        </NuxtLink>
+        <NuxtLink to="/documentation" class="btn--alter">
           <span>HƯỚNG DẪN SỬ DỤNG</span>
-        </a>
+        </NuxtLink>
       </div>
     </div>
   </div>
@@ -94,7 +95,9 @@ function randomNum() {
     top: 0;
     left: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
     perspective: 800px;
     z-index: -1;
@@ -103,6 +106,10 @@ function randomNum() {
     svg {
       display: block;
       animation: avatarRotate 6s 3s linear infinite both;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 18px;
     }
   }
   &__btns {
@@ -147,7 +154,10 @@ function randomNum() {
     }
     + .mv__avatar {
       opacity: .25;
-      transform: translate3d(0,-80px,0) scale(.32);
+      transform: translate3d(0,-100px,0) scale(.32);
+      p {
+        visibility: hidden;
+      }
     }
   }
 }

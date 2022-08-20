@@ -1,6 +1,7 @@
 <script setup>
-const MENUS = {
-  'Slider': {
+const MENUS = [
+  {
+    status: true,
     key: '1',
     slug: 'slider',
     name: 'Slider',
@@ -273,12 +274,14 @@ const MENUS = {
     ],
   },
 
-  'Tabs': {
+  {
+    status: false,
     key: '2',
+    name: 'Tabs',
     slug: 'tabs',
     name: 'Tabs',
     description: 'Dummy text',
-    // icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-segmented-nav" viewBox="0 0 16 16"><path d="M0 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6zm6 3h4V5H6v4zm9-1V6a1 1 0 0 0-1-1h-3v4h3a1 1 0 0 0 1-1z"/></svg>',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-segmented-nav" viewBox="0 0 16 16"><path d="M0 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6zm6 3h4V5H6v4zm9-1V6a1 1 0 0 0-1-1h-3v4h3a1 1 0 0 0 1-1z"/></svg>',
     menus: [
       {
         key: '2.1',
@@ -346,12 +349,14 @@ const MENUS = {
     ],
   },
 
-  'Công cụ': {
+  {
+    status: true,
     key: '3',
+    name: 'Công cụ',
     slug: 'tools',
     name: 'Công cụ',
     description: 'Trang này cho phép bạn tạo mới, kiểm tra hiệu ứng mới cũng như các hiệu ứng đã xây dựng sẵn trong plugin. Bằng những dòng code thân thiện (tương tự như css animation) tạo điều kiện dễ dàng cho các bạn mới tiếp xúc.',
-    // icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16"><path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"/></svg>',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16"><path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"/></svg>',
     menus: [
       {
         key: '3.1',
@@ -368,22 +373,24 @@ const MENUS = {
     ],
   },
 
-  // 'Docs': {
-  'Hướng dẫn': {
+  {
+    status: true,
     key: '4',
+    name: 'Hướng dẫn',
     slug: 'docs',
     to: '/documentation',
-    // icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16"><path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/><path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/><path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/></svg>',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16"><path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/><path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/><path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/></svg>',
   },
-  // 'Download': {
-  'Github': {
+  {
+    status: true,
     key: '5',
+    name: 'Github',
     slug: 'download',
     to: 'https://github.com/HaiBach/RubySlider',
     linkTarget: '_blank',
     icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>',
   },
-}
+]
 
 
 /**
@@ -418,12 +425,10 @@ const megamenu = function() {
   $linkLevel3.forEach(($link) => {
     let $listParent = null
     let $nodeCurrent = $link
-    console.log($link)
 
     while (!$listParent) {
       const $parent = $nodeCurrent.parentNode
       const isTrueParent = $parent.classList.contains('megamenu--li-lv1')
-      // console.log(isTrueParent, $parent)
       
       // End the loop when parent list not found
       if ($parent == document.body) {
@@ -504,44 +509,45 @@ onMounted(() => {
   <div class="megamenu__ghost"></div>
   <div class="megamenu--ul-lv1">
     <div
-      v-for="(menuLevel1, indexLevel1) in MENUS"
+      v-for="menuLevel1 in MENUS"
       class="megamenu--li-lv1">
+      <template v-if="menuLevel1.status">
 
-      <!-- Link level 1 -->
+        <!-- Link level 1 -->
         <NuxtLink
           :to="menuLevel1.to"
           :target="menuLevel1.linkTarget"
           class="megamenu--link-lv1">
           <i v-if="menuLevel1.icon" v-html="menuLevel1.icon "></i>
-          <span>{{ indexLevel1 }}</span>
+          <span>{{ menuLevel1.name }}</span>
           <span class="megamenu__caret" v-if="menuLevel1.menus"></span>
         </NuxtLink>
 
-      <!-- Board -->
-      <div
-        v-if="menuLevel1.menus"
-        class="megamenu__board">
+        <!-- Board -->
+        <div
+          v-if="menuLevel1.menus"
+          class="megamenu__board">
 
-        <div class="megamenu__board_inner">
-          <div class="megamenu__left">
-            <div class="megamenu__title">
-              <h2 class="megamenu__name">{{ menuLevel1.name }}</h2>
-              <p class="megamenu__desc" v-html="menuLevel1.description"></p>
-            </div>
+          <div class="megamenu__board_inner">
+            <div class="megamenu__left">
+              <div class="megamenu__title">
+                <h2 class="megamenu__name">{{ menuLevel1.name }}</h2>
+                <p class="megamenu__desc" v-html="menuLevel1.description"></p>
+              </div>
 
-            <!-- Rubyslider Pagination -->
-            <div
-              :class="'megamenu__links rs01pag megaslider-' + menuLevel1.slug"
-              :data-rubyslider-markup="'megaslider-' + menuLevel1.slug">
-            </div>
-          </div> <!-- ./megamenu__left -->
+              <!-- Rubyslider Pagination -->
+              <div
+                :class="'megamenu__links rs01pag megaslider-' + menuLevel1.slug"
+                :data-rubyslider-markup="'megaslider-' + menuLevel1.slug">
+              </div>
+            </div> <!-- ./megamenu__left -->
 
-          <div class="megamenu__right">
-            <MenuSlider :menu-items="menuLevel1" />
-          </div> <!-- ./megamenu__right -->
+            <div class="megamenu__right">
+              <MenuSlider :menu-items="menuLevel1" />
+            </div> <!-- ./megamenu__right -->
+          </div>
         </div>
-      </div>
-
+      </template>
     </div>
   </div> <!-- ./megamenu__menu -->
 </nav>

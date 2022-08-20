@@ -942,9 +942,12 @@
 */
 .rs01imgback {
     position: relative;
-    left: 0; top: 0;
+    left: 0;
+    top: 0;
     display: block;
     max-width: none !important;
+    color: rgba($color: #000, $alpha: .5);
+    text-decoration: none;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1464,7 +1467,8 @@ a.rs01flickr-album-title:hover, a.rs01flickr-author:hover {
 .rs01bullet .rs01pagitem {
     display: block;
     float: left;
-    width: 8px; height: 8px;
+    width: 8px;
+    height: 8px;
     background-color: #333;
     background-color: rgba(0,0,0,0.3);
     border-radius: 100%;

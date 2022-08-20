@@ -33,7 +33,7 @@ const props = defineProps({
       letter-spacing: 1px;
     }
     h1 {
-      font-size: 62px;
+      // font-size: 62px;
     }
     h2 {
       font-size: 54px;
