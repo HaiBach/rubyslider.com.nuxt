@@ -91,7 +91,7 @@ function randomNum() {
   }
   &__avatar {
     position: absolute;
-    top: 250px;
+    top: 0;
     left: 0;
     display: flex;
     justify-content: center;
@@ -99,6 +99,7 @@ function randomNum() {
     perspective: 800px;
     z-index: -1;
     transition: all .4s;
+    transform: translate3d(0,220px,0) scale(.8);
     svg {
       display: block;
       animation: avatarRotate 6s 3s linear infinite both;
@@ -111,7 +112,7 @@ function randomNum() {
   }
 }
 .mv__slider {
-  min-height: 400px;
+  min-height: 350px;
   margin-bottom: 70px;
   opacity: 0;
   > .rs01viewport {
@@ -146,7 +147,7 @@ function randomNum() {
     }
     + .mv__avatar {
       opacity: .25;
-      transform: translate3d(0,-330px,0) scale(.32);
+      transform: translate3d(0,-80px,0) scale(.32);
     }
   }
 }

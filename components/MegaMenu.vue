@@ -4,7 +4,7 @@ const MENUS = {
     key: '1',
     slug: 'slider',
     name: 'Slider',
-    description: 'Các ví dụ cơ bản về Slider hình ảnh. <br>Bao gồm các thể loại bố cục, hiệu ứng, slideshow và api. <br>Hơn 50+ ví dụ để bắt đầu sử dụng Slider.',
+    description: 'Các ví dụ cơ bản về Slider hình ảnh. <br>Bao gồm các thể loại bố cục, hiệu ứng, slideshow và api. <br>Hơn 50+ ví dụ để bạn bắt đầu sử dụng RubySlider.',
     icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-images" viewBox="0 0 16 16"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"/></svg>',
     menus: [
       {
@@ -395,7 +395,7 @@ const MENUS = {
  **/
 const megamenu = function() {
   const $linkLevel1 = document.querySelectorAll('.megamenu--link-lv1:not([href])')
-  const $linkLevel3 = document.querySelectorAll('.megamenu--link-lv3')
+  const $linkLevel3 = document.querySelectorAll('.megamenu--link-lv3, .megamenu--link-lv1[href]')
   const $ghost = document.querySelector('.megamenu__ghost')
   const open = 'megamenu--open'
   const actived = 'megamenu--actived'
@@ -418,6 +418,7 @@ const megamenu = function() {
   $linkLevel3.forEach(($link) => {
     let $listParent = null
     let $nodeCurrent = $link
+    console.log($link)
 
     while (!$listParent) {
       const $parent = $nodeCurrent.parentNode
@@ -430,10 +431,18 @@ const megamenu = function() {
         break
       }
 
+      // Đường link phải có parent là list $li
+      // Đường link phải có megamenu__board
       if (isTrueParent) {
-        $listParent = $parent
+        if ($parent.querySelector('.megamenu__board')) {
+          $listParent = $parent
+        }
+        else {
+          $listParent = null
+        }
         break
       }
+      // Tiếp tục vòng lặp
       else {
         $nodeCurrent = $parent
       }
