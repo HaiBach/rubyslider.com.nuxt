@@ -50,6 +50,9 @@
     display: block;
   }
 
+  &--left {
+    justify-content: flex-start;
+  }
   &--btns {
     margin-left: -10px;
     margin-right: -10px;

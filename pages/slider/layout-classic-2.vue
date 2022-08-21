@@ -32,7 +32,7 @@ onMounted(() => {
         </div>
       </div>
 
-      <div id="layout-classic__slider" class="slider-preview rs01 ruby-mark">
+      <div id="layout-classic__slider" class="layout-classic__slider slider-preview rs01 ruby-mark">
         <div class="rs01viewport">
           <div class="rs01slide">
             <a class="rs01imgback" href="/img/vietnam-large1.jpg">Việt Nam 1</a>
@@ -71,33 +71,33 @@ onMounted(() => {
 .container {
   overflow: hidden;
 }
-.slider-preview {
+.layout-classic__slider {
   padding: 10px 12px;
   border: 1px solid #ccc;
   border-radius: 16px;
 }
-.slider-preview .rs01pag.rs01pag-hor {
+.layout-classic__slider .rs01pag.rs01pag-hor {
   margin-top: 10px;
 }
-.slider-preview .rs01pagitem {
+.layout-classic__slider .rs01pagitem {
   border-radius: 4px;
   color: #333;
 }
-.slider-preview .rs01pagitem:hover {
+.layout-classic__slider .rs01pagitem:hover {
   color: #cc0055;
 }
-.slider-preview .rs01pagitem.rs01cur {
+.layout-classic__slider .rs01pagitem.rs01cur {
   background-color: #cc0055;
   color: #fff;
 }
 
 @media only screen and (max-width: 767px) {
-  .slider-preview .rs01pagitem {
+  .layout-classic__slider .rs01pagitem {
       padding: 15px !important;
   }
 }
 @media only screen and (max-width: 575px) {
-  .slider-preview {
+  .layout-classic__slider {
       padding: 0;
       border-width: 0;
   }

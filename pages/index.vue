@@ -6,7 +6,7 @@ definePageMeta({
 
 
 <template>
-  <main>
+  <main id="main">
     <MV />
     <OtherLayoutsEffects />
   </main>

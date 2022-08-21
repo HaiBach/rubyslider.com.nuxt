@@ -6504,7 +6504,7 @@ $[rs01VA.rubyName] = function($ruby, OptsJS) {
         },
 
         refresh : function() {
-            console.log('refresh');
+            // console.log('refresh');
             PROP.MergeAllModules();
             UPDATE.RemoveClass();
 

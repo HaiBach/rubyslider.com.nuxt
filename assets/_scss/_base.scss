@@ -62,12 +62,18 @@ h3, h4, h5, h6 {
 /** Code Print **/
 .codeprint {
   padding: 10px 20px;
+  margin-bottom: 20px;
   background-color: #fff;
   border-radius: 8px;
   font-family: var(--font-code);
   font-size: 16px;
   line-height: 1.8;
   box-shadow: 0 1px 2px rgba($color: #000, $alpha: .1);
+}
+
+/** Slider Preview **/
+.slider-preview {
+  margin-bottom: 30px;
 }
 
 

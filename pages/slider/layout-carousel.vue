@@ -27,7 +27,7 @@ onMounted(() => {
         </div>
       </div>
 
-      <div id="layout-carousel__slider" class="slider-preview rs01">
+      <div id="layout-carousel__slider" class="layout-carousel__slider slider-preview rs01">
         <a class="rs01imgback" href="/img/season-landscape1.jpg">Season 1</a>
         <a class="rs01imgback" href="/img/season-landscape2.jpg">Season 2</a>
         <a class="rs01imgback" href="/img/season-landscape3.jpg">Season 3</a>
@@ -44,11 +44,8 @@ onMounted(() => {
 
 
 <style>
-.slider-preview > .rs01viewport {
+.layout-carousel__slider > .rs01viewport {
   overflow: visible;
-}
-.slider-preview .rs01slide {
-  border-radius: 8px;
 }
 </style>
  

@@ -1,15 +1,14 @@
 <script setup>
 const sliderOptions = {
   fx: 'line',
-  speed: 600,
-  width: 1140,
-  height: 550,
-  margin: 10,
-  imagePosition: 'fill'
+  speed: 400,
+  width: 1880,
+  margin: 5,
+  // imagePosition: 'fill'
 }
 const initSetup = () => {
-  const rs01imgback = jQuery('.rs01imgback')
-  rs01imgback.css({ width: '', height: '', left: '', top: '' })
+  const $rs01imgback = jQuery('.rs01imgback')
+  $rs01imgback.css({ width: '', height: '', left: '', top: '' })
 
   const rubyEffectLine = jQuery('.effect-line__slider').rubyslider( sliderOptions )
 }
@@ -20,8 +19,8 @@ onMounted(() => {
 
 
 <template>
-<main class="">
-  <section class="wrapper effect-line">
+<main id="main">
+  <section class="effect-line wrapper">
     <div class="container">
       <TitleHead>
         <template #title>
@@ -29,7 +28,7 @@ onMounted(() => {
         </template>
       </TitleHead>
 
-      <div class="effect-line__slider rs01">
+      <div class="effect-line__slider slider-preview rs01">
         <a class="rs01imgback" href="/img/vietnam-large1.jpg">Việt Nam 1</a>
         <a class="rs01imgback" href="/img/vietnam-large2.jpg">Việt Nam 2</a>
         <a class="rs01imgback" href="/img/vietnam-large4.jpg">Việt Nam 4</a>
@@ -55,6 +54,12 @@ onMounted(() => {
       <h2>❖ Thiết lập slider</h2>
       <p>Các bạn có thể được hướng dẫn thiết lập slider chi tiết ở trang <NuxtLink to="/documentation">hướng dẫn</NuxtLink> này.<br>Dưới đây là options hiện tại của slider phía trên:</p>
       <pre class="codeprint">{{ sliderOptions }}</pre>
+
+      <ButtonPrevNext
+        prev-name="Tất cả ví dụ"
+        prev-to="/slider"
+        next-name="Hiệu ứng Fade"
+        next-to="/slider/effect-fade" />
     </div>
   </section>
 </main>
@@ -62,13 +67,5 @@ onMounted(() => {
 
 
 <style lang="scss">
-.effect-line {
-  &__slider {
-    margin-bottom: 30px;
-    .rs01viewport {
-      // overflow: hidden;
-    }
-  }
-}
 </style>
  
