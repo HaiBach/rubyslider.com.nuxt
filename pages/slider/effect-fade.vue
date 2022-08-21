@@ -12,13 +12,14 @@ const initSetup = () => {
   const rubyEffectFade = jQuery('.effect-fade__slider').rubyslider( sliderOptions )
 }
 onMounted(() => {
+  window.scrollTo({ top: 0, behavior: 'instant' })
   setTimeout(initSetup, 400)
 })
 </script>
 
 
 <template>
-<main>
+<main id="main">
   <section class="effect-fade wrapper">
     <div class="container">
       <TitleHead>

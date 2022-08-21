@@ -1,5 +1,8 @@
 <script setup>
 const initSetup = function() {
+  const $rs01imgback = jQuery('.rs01imgback')
+  $rs01imgback.css({ width: '', height: '', left: '', top: '' })
+  
   const sliderMath = jQuery('.slider-math').rubyslider({
     fx: 'rectRun',
     speed: 800,

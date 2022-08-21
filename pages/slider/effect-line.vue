@@ -13,6 +13,7 @@ const initSetup = () => {
   const rubyEffectLine = jQuery('.effect-line__slider').rubyslider( sliderOptions )
 }
 onMounted(() => {
+  window.scrollTo({ top: 0, behavior: 'instant' })
   setTimeout(initSetup, 400)
 })
 </script>
@@ -42,8 +43,8 @@ onMounted(() => {
     <div class="container">
       <div class="hr hr--circle"></div>
       <h2>❖ Giới thiệu</h2>
+      <p>Hiệu ứng Line là hiệu ứng truyền thống của slider cũng là hiệu ứng đàu tiên của RubySlider phát triển.</p>
       <ul>
-        <li>Là hiệu ứng đầu tiên của RubySlider phát triển.</li>
         <li>Là hiệu ứng cơ bản của RubySlider.</li>
         <li>Có tính ổn định và hiệu suất cao nhất trong các hiệu ứng của plugin.</li>
         <li>Bạn có thể kéo rê ra ngoài slider để di chuyển sang nhiều slide hơn.</li>

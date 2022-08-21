@@ -1,6 +1,5 @@
 <script setup>
 const props = defineProps(['prev-name', 'prev-to', 'next-name', 'next-to'])
-console.log(props.prevName)
 </script>
 
 

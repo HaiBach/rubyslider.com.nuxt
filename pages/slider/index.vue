@@ -9,7 +9,7 @@ const sliderData = [
     name: 'HIỆU ỨNG',
     header: {
       title: 'CÁC LOẠI HIỆU ỨNG',
-      desc: 'Các loại hiệu ứng trong RubySlider. RubySlider hỗ trợ nhiều hiệu ứng, bao gồm các hiệu ứng đơn giản hiệu suất cao Fade, Line cho đến các hiệu ứng phức tạp và đẹp mắt như Math, CSS One, Coverflow3D. <br>Đồng thời các hiệu ứng đều hỗ trợ chức năng thay đổi trực tiếp khi kéo, rê các slide này sang các slide khác'
+      desc: 'Các loại hiệu ứng trong RubySlider. RubySlider hỗ trợ nhiều hiệu ứng, bao gồm các hiệu ứng đơn giản có hiệu suất cao <b>Line</b>, <b>Fade</b> cho đến các hiệu ứng phức tạp và đẹp mắt như <b>Math</b>, <b>CSS One</b>, <b>Coverflow3D</b>. <br/>Đồng thời các hiệu ứng đều hỗ trợ chức năng thay đổi trực tiếp khi kéo, rê các slide này sang các slide khác'
     },
     items: [
       {
@@ -232,6 +232,7 @@ const sliderOptions = {
   pag: {
     align: "center"
   },
+  isNav: true,
   isKeyboard: true,
   isDeeplinking: true,
   load: {
@@ -239,12 +240,14 @@ const sliderOptions = {
   }
 }
 const initSetup = () => {
+  const $rs01imgback = jQuery('.rs01imgback')
+  $rs01imgback.css({ width: '', height: '', left: '', top: '' })
+
   const sliderListTemplates = jQuery('.list-templates__slider').rubyslider( sliderOptions )
 }
 onMounted(() => {
-  setTimeout(() => {
-    initSetup()
-  }, 200)
+  window.scrollTo({ top: 0, behavior: 'instant' })
+  setTimeout(initSetup, 200)
 })
 </script>
 
@@ -344,9 +347,6 @@ onMounted(() => {
     margin-bottom: 50px;
     background-color: #fff;
     border-radius: 8px;
-    // border: 1px dashed transparent;
-    // border-bottom-color: #ccc;
-    // box-shadow: 0 1px 2px rgba($color: #000, $alpha: .2);
     &:hover {
       border-color: rgba($color: #000, $alpha: .35);
       border-radius: 6px;
@@ -361,12 +361,12 @@ onMounted(() => {
       max-width: 100%;
       height: auto;
       margin: 0 auto;
-      transition: transform .25s;
+      transition: transform .2s;
     }
   }
   &__name {
     padding-bottom: 10px;
-    transition: all .25s;
+    transition: all .2s;
   }
   &__link {
     display: block;
