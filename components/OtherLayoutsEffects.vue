@@ -2,7 +2,7 @@
 const initSetup = function() {
   const $rs01imgback = jQuery('.rs01imgback')
   $rs01imgback.css({ width: '', height: '', left: '', top: '' })
-  
+
   const sliderMath = jQuery('.slider-math').rubyslider({
     fx: 'rectRun',
     speed: 800,
@@ -50,7 +50,6 @@ function getRandomNum() {
   randomNum = num
   return num
 }
-
 </script>
 
 
@@ -201,17 +200,20 @@ function getRandomNum() {
 
 <style lang="scss">
 .effect-others {
-  padding-top: 50px;
+  padding-top: 80px;
   background-color: #f5f5f5;
   border: 1px solid #e0e0e0;
   border-width: 1px 0;
   text-align: center;
-  h2 {
-    font-weight: 100;
-    span {
-      display: inline-block;
-      font-weight: 700;
-      transform: scale(.5);
+  .title-head {
+    margin-bottom: 80px;
+    h2 {
+      font-weight: 100;
+      span {
+        display: inline-block;
+        font-weight: 700;
+        transform: scale(.5);
+      }
     }
   }
 

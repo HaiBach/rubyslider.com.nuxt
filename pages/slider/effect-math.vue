@@ -163,7 +163,7 @@ onMounted(() => {
         prev-name="Hiệu ứng Fade"
         prev-to="/slider/effect-fade"
         next-name="Hiệu ứng CssOne"
-        next-to="/slider/effect-cssOne" />
+        next-to="/slider/effect-css-one" />
     </div>
   </section>
 </main>

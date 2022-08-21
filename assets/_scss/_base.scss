@@ -83,7 +83,22 @@ h3, h4, h5, h6 {
 .guide {
   padding-bottom: 60px;
   background-color: rgba($color: #000, $alpha: .05);
+  font-size: 1.125em;
   .hr {
     margin-bottom: 60px;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  p {
+    a {
+      font-weight: bold;
+    }
+  }
+  li {
+    margin-bottom: 5px;
+  }
+  .btn {
+    margin-bottom: 20px;
   }
 }

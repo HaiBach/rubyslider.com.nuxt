@@ -27,7 +27,7 @@ const sliderOptions = {
 const initSetup = function() {
   const $rs01imgback = jQuery('.rs01imgback')
   $rs01imgback.css({ width: '', height: '', left: '', top: '' })
-  
+
   const sliderPreview = jQuery('.mv__slider').rubyslider( sliderOptions )
 }
 onMounted(() => {
@@ -84,9 +84,10 @@ function randomNum() {
 .mv {
   position: relative;
   overflow: hidden;
-  padding-top: 60px;
-  padding-bottom: 80px;
+  padding-top: 80px;
+  padding-bottom: 100px;
   .title-head {
+    margin-bottom: 80px;
     &__title {
       h1 {
         letter-spacing: 8px;

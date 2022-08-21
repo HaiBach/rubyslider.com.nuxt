@@ -1,10 +1,10 @@
 <script setup>
 const sliderOptions = {
   fx: 'cssOne',
+  cssOne: 'roDeal',
   speed: 800,
   width: 1880,
-  height: 500,
-  // imagePosition: 'fill'
+  height: 520,
 }
 const aFx = [
   'glueHor', 'glueVer', 'foldHor', 'foldVer', 'foldFromHor', 'foldFromVer', 'roomHor', 'roomVer', 'flitHor', 'flitVer',
@@ -23,267 +23,299 @@ const aFxName = [
 ]
 let fxCount = 1
 
-onMounted(() => {
-  setTimeout(() => {
-    const $slider = jQuery('#effect-cssone__slider')
-    let code
+const initSetup = () => {
+  const $rs01imgback = jQuery('.rs01imgback')
+  $rs01imgback.css({ width: '', height: '', left: '', top: '' })
 
-    if ($slider.length) {
-      code = $slider.rubyslider( sliderOptions )
-    }
+  const $slider = jQuery('.effect-cssone__slider')
+  let code = $slider.rubyslider( sliderOptions )
+
+  /**
+   * ***********************************************************
+   * EFFECTS LIVE SHOW
+   * ***********************************************************
+   */
+  const $fx = jQuery('.cssone__item')
+  const actived = 'cssone--actived'
+
+  const speed = 800
+  const delay = 0
+  const $effect = $('#effects')
+  const $fxTable = $('.cssone__table')
+  const fxNext = 'ruby-slideNext'
+  const fxPrev = 'ruby-slidePrev'
+  const fxIn = 'ruby-slideIn'
+  const fxOut = 'ruby-slideOut'
+  const fxAnim = 'ruby-animated'
+  let $fxLast
+
+  $fx.each(function() {
+    const $el       = $(this)
+    const $fxName   = $el.find('.cssone__name')
+    const $fxLive   = $el.find('.cssone__preview')
+    const $fxOne    = $el.find('.cssone__one')
+    const $slide    = $el.find('.cssone__slide')
+    const $slide1   = $el.find('.cssone--slide-1')
+    const $slide2   = $el.find('.cssone--slide-2')
+    const fxName    = $el.data('fx')
+    const fxAdd     = 'rubyone-' + fxName
+    const tween     = new RubyTween()
+    const styleBegin1 = $slide.attr('style') || ''
+    const styleBegin2 = $slide.attr('style') || ''
 
     /**
-     * ***********************************************************
-     * EFFECTS LIVE SHOW
-     * ***********************************************************
-     */
-    const $fx = jQuery('.cssone__item')
-    const actived = 'cssone--actived'
+      * CHUYEN DOI TEN HIEU UNG ONE THANH TUNG TEN HIEU UNG RIENG LE
+      */
+    const nameOne = $.extend(true, {}, code.one.va.rubyAnimateOne[fxName]);
+    // console.log(nameOne);
 
-    const speed = 800
-    const delay = 0
-    const $effect = $('#effects')
-    const $fxTable = $('.cssone__table')
-    const fxNext = 'ruby-slideNext'
-    const fxPrev = 'ruby-slidePrev'
-    const fxIn = 'ruby-slideIn'
-    const fxOut = 'ruby-slideOut'
-    const fxAnim = 'ruby-animated'
-    let $fxLast
+    /**
+      * FUNCTION SETUP RUBYTWEEN CHO HIEU UNG
+      *  + Ho tro setup tu RubyAnimate
+      */
+    function Tween(fxNameCur, $slCur) {
+      /**
+        * LAY TWEEN ANIMATE TUONG UNG TEN HIEU UNG
+        */
+      const anim = rs01MODULE.RUBYANIMATE.Tween(fxNameCur, speed, delay, null, code.one.va.rubyAnimateKeyframes);
 
-    $fx.each(function() {
-      const $el       = $(this)
-      const $fxName   = $el.find('.cssone__name')
-      const $fxLive   = $el.find('.cssone__preview')
-      const $fxOne    = $el.find('.cssone__one')
-      const $slide    = $el.find('.cssone__slide')
-      const $slide1   = $el.find('.cssone--slide-1')
-      const $slide2   = $el.find('.cssone--slide-2')
-      const fxName    = $el.data('fx')
-      const fxAdd     = 'rubyone-' + fxName
-      const tween     = new RubyTween()
-      const styleBegin1 = $slide.attr('style') || ''
-      const styleBegin2 = $slide.attr('style') || ''
+      // Dieu kien thuc hien function
+      if( !$.isArray(anim) ) return;
+
 
       /**
-        * CHUYEN DOI TEN HIEU UNG ONE THANH TUNG TEN HIEU UNG RIENG LE
+        * SETUP TUNG ANIMATE
         */
-      const nameOne = $.extend(true, {}, code.one.va.rubyAnimateOne[fxName]);
-      // console.log(nameOne);
-
-      /**
-        * FUNCTION SETUP RUBYTWEEN CHO HIEU UNG
-        *  + Ho tro setup tu RubyAnimate
-        */
-      function Tween(fxNameCur, $slCur) {
+      for( var i = 0, len = anim.length ; i < len; i++ ) {
+        var propCur = $.extend({}, anim[i]['prop'] || anim[i]);
         /**
-          * LAY TWEEN ANIMATE TUONG UNG TEN HIEU UNG
+          * TRUONG HOP TRANSFORM LUC DAU CHO LAYER
           */
-        const anim = rs01MODULE.RUBYANIMATE.Tween(fxNameCur, speed, delay, null, code.one.va.rubyAnimateKeyframes);
-
-        // Dieu kien thuc hien function
-        if( !$.isArray(anim) ) return;
-
-
-        /**
-          * SETUP TUNG ANIMATE
-          */
-        for( var i = 0, len = anim.length ; i < len; i++ ) {
-          var propCur = $.extend({}, anim[i]['prop'] || anim[i]);
-          /**
-            * TRUONG HOP TRANSFORM LUC DAU CHO LAYER
-            */
-          if( i == 0 ) {
-            tween.css($slCur, propCur, { 'type': 'reset' });
-          }
-
-          /**
-            * TRUONG HOP ANIMATE CHO LAYER
-            */
-          else {
-            /**
-              * CHEN THUOC TINH 'COMPLETE' VAO ANIMATE CUOI
-              */
-            var optsCur = $.extend({}, anim[i]['opts']);
-
-            // Setup Tween Animate
-            tween.animate($slCur, propCur, optsCur, false);
-          }
-        }
-      }
-
-
-      /**
-        * FUNCTION SETUP NEXT SLIDE - PREV SLIDE
-        */
-      function NextSlide() {
-
-        // Setup Tween cho cac Slide
-        Tween(nameOne.next[0], $slide2);
-        Tween(nameOne.next[1], $slide1);
-
-        // Setup Mask cho hieu ung neu ton tai
-        if( nameOne.isMask ) {
-          $fxLive.addClass('rs01mask');
+        if( i == 0 ) {
+          tween.css($slCur, propCur, { 'type': 'reset' });
         }
 
         /**
-          * SETUP SAU KHI KET THUC TWEEN
+          * TRUONG HOP ANIMATE CHO LAYER
           */
-        tween.eventComplete(function() {
-          // Setup Tween cho truong hop Prev Slide
-          PrevSlide();
-        });
-
-        // Bat dau Tween
-        tween.restart();
-      }
-
-      function PrevSlide() {
-        // Setup Tween cho cac Slide
-        Tween(nameOne.prev[0], $slide1);
-        Tween(nameOne.prev[1], $slide2);
-
-        /**
-          * SETUP SAU KHI KET THUC TWEEN
-          */
-        tween.eventComplete(function() {
-
-          // Phuc hoi style ban dau cho doi tuong Slide
-          $slide1.attr('style', styleBegin1);
-          $slide2.attr('style', styleBegin2);
-
-          // Loai bo class Actived tren Hieu ung
-          $el.removeClass(actived);
-
-          // Loai bo class Mask cho hieu ung
-          $fxLive.removeClass('rs01mask');
-        });
-
-        // Bat dau Tween
-        tween.restart();
-      }
-
-
-      /**
-        * SETUP EVENTS CLICK CHO HIEU UNG
-        */
-      $fxLive.on('click', function(e) {
-        /**
-          * TRUONG HOP HIEU UNG CHUA ACTIVED
-          */
-        if( !$el.hasClass(actived) ) {
-          // Them class Actived cho doi tuong hieu ung hien tai
-          $el.addClass(actived);
-
-          // Bau dau thuc hien hieu ung
-          NextSlide();
-        }
-        return false;
-      });
-
-
-      /**
-        * EVENTS CLICK CHO BUTTON TOGGLE ONE
-        */
-      $fxOne.on('click', function() {
-        if( $fxOne.hasClass(actived) ) {
-          $fxOne.removeClass(actived);
-        }
         else {
-          if( !!$fxLast ) $fxLast.removeClass(actived);
-          $fxOne.addClass(actived);
+          /**
+            * CHEN THUOC TINH 'COMPLETE' VAO ANIMATE CUOI
+            */
+          var optsCur = $.extend({}, anim[i]['opts']);
 
-          // Assign to varible fxlast
-          $fxLast = $fxOne;
-
-          // Update options
-          code.update({ 'cssOne': fxName });
+          // Setup Tween Animate
+          tween.animate($slCur, propCur, optsCur, false);
         }
+      }
+    }
+
+
+    /**
+      * FUNCTION SETUP NEXT SLIDE - PREV SLIDE
+      */
+    function NextSlide() {
+
+      // Setup Tween cho cac Slide
+      Tween(nameOne.next[0], $slide2);
+      Tween(nameOne.next[1], $slide1);
+
+      // Setup Mask cho hieu ung neu ton tai
+      if( nameOne.isMask ) {
+        $fxLive.addClass('rs01mask');
+      }
+
+      /**
+        * SETUP SAU KHI KET THUC TWEEN
+        */
+      tween.eventComplete(function() {
+        // Setup Tween cho truong hop Prev Slide
+        PrevSlide();
       });
-    })
-  }, 400)
+
+      // Bat dau Tween
+      tween.restart();
+    }
+
+    function PrevSlide() {
+      // Setup Tween cho cac Slide
+      Tween(nameOne.prev[0], $slide1);
+      Tween(nameOne.prev[1], $slide2);
+
+      /**
+        * SETUP SAU KHI KET THUC TWEEN
+        */
+      tween.eventComplete(function() {
+
+        // Phuc hoi style ban dau cho doi tuong Slide
+        $slide1.attr('style', styleBegin1);
+        $slide2.attr('style', styleBegin2);
+
+        // Loai bo class Actived tren Hieu ung
+        $el.removeClass(actived);
+
+        // Loai bo class Mask cho hieu ung
+        $fxLive.removeClass('rs01mask');
+      });
+
+      // Bat dau Tween
+      tween.restart();
+    }
+
+
+    /**
+      * SETUP EVENTS CLICK CHO HIEU UNG
+      */
+    $fxLive.on('click', function(e) {
+      /**
+        * TRUONG HOP HIEU UNG CHUA ACTIVED
+        */
+      if( !$el.hasClass(actived) ) {
+        // Them class Actived cho doi tuong hieu ung hien tai
+        $el.addClass(actived);
+
+        // Bau dau thuc hien hieu ung
+        NextSlide();
+      }
+      return false;
+    });
+
+
+    /**
+      * EVENTS CLICK CHO BUTTON TOGGLE ONE
+      */
+    $fxOne.on('click', function() {
+      if( $fxOne.hasClass(actived) ) {
+        $fxOne.removeClass(actived);
+      }
+      else {
+        if( !!$fxLast ) $fxLast.removeClass(actived);
+        $fxOne.addClass(actived);
+
+        // Assign to varible fxlast
+        $fxLast = $fxOne;
+
+        // Update options
+        code.update({ 'cssOne': fxName });
+      }
+    });
+  })
+}
+onMounted(() => {
+  window.scrollTo({ top: 0, behavior: 'instant' })
+  setTimeout(initSetup, 400)
 })
 </script>
 
 
 <template>
-  <div>
-    <div id="effect-cssone" class="wrapper">
-      <div class="container">
-        <TitleHead title="CSS ONE EFFECTS">
-          <div class="title-desc">Slider Preview</div>
-        </TitleHead>
+<main id="main">
+  <section id="effect-cssone" class="effect-cssone wrapper">
+    <div class="container">
+      <TitleHead>
+        <template #title>
+          <h1>HIỆU ỨNG CSS ONE</h1>
+        </template>
+        <template #desc>
+          <p>Slider Main</p>
+        </template>
+      </TitleHead>
 
-        <div id="effect-cssone__slider" class="slider-preview rs01">
-          <a class="rs01imgback" href="/img/vietnam-large1.jpg">Việt Nam 1</a>
-          <a class="rs01imgback" href="/img/vietnam-large2.jpg">Việt Nam 2</a>
-          <a class="rs01imgback" href="/img/vietnam-large3.jpg">Việt Nam 3</a>
-          <a class="rs01imgback" href="/img/vietnam-large4.jpg">Việt Nam 4</a>
-          <a class="rs01imgback" href="/img/vietnam-large5.jpg">Việt Nam 5</a>
-          <a class="rs01imgback" href="/img/vietnam-large6.jpg">Việt Nam 6</a>
-        </div> <!-- /.rs01 -->
-      </div>
+      <div class="effect-cssone__slider slider-preview rs01">
+        <a class="rs01imgback" href="/img/vietnam-large1.jpg">Việt Nam 1</a>
+        <a class="rs01imgback" href="/img/vietnam-large2.jpg">Việt Nam 2</a>
+        <a class="rs01imgback" href="/img/vietnam-large4.jpg">Việt Nam 4</a>
+        <a class="rs01imgback" href="/img/vietnam-large5.jpg">Việt Nam 5</a>
+        <a class="rs01imgback" href="/img/vietnam-large6.jpg">Việt Nam 6</a>
+      </div> <!-- /.rs01 -->
+    </div>
+  </section>
+
+  <section class="cssone">
+    <div class="container">
+      <div class="hr hr--circle"></div>
+      <!-- <div class="cssone__title">
+        <h2>DANH SÁCH HIỆU ỨNG CSS ONE</h2>
+      </div> -->
+      <TitleHead>
+        <template #title>
+          <h2>DANH SÁCH HIỆU ỨNG CSS ONE</h2>
+        </template>
+        <template #desc>
+          <p>Có tất cả 57 hiệu ứng CssOne. Click vào đối tượng để xem từng hiệu ứng.</p>
+        </template>
+      </TitleHead>
     </div>
 
-    <div class="cssone">
-      <div class="container">
-        <div class="hr circle"></div>
-        <div class="cssone__title">
-          <h2>EXAMPLES OF LIVE EFFECT</h2>
-        </div>
-      </div>
+    <div class="cssone__table row">
+      <template
+        v-for="(fx, index) in aFx"
+        :key="index">
 
-      <div class="cssone__table row">
-        <template
-          v-for="(fx, index) in aFx"
-          :key="index"
+        <div
+          v-if="fx != 'br'"
+          class="col-3 col-xxs-6"
           >
-          <div
-            v-if="fx != 'br'"
-            class="col3 col-xxs-6"
-            >
-            <div class="cssone__item" :data-fx="fx">
-              <div class="cssone__preview">
-                <div class="cssone__slide cssone--slide-1">
-                  <div class="cssone__name">{{ aFxName[index] }}</div>
-                  <div class="cssone__slide_name">Back</div>
-                </div>
-                <div class="cssone__slide cssone--slide-2">
-                  <div class="cssone__name">{{ aFxName[index] }}</div>
-                  <div class="cssone__slide_name">Front</div>
-                </div>
+          <div class="cssone__item" :data-fx="fx">
+            <div class="cssone__preview">
+              <div class="cssone__slide cssone--slide-1">
+                <div class="cssone__name">{{ aFxName[index] }}</div>
+                <div class="cssone__slide_name">Back</div>
               </div>
-              <div class="cssone__item_footer">
-                <div class="cssone__tag">#{{ fxCount++ }}</div>
-                <div class="cssone__select">
-                  <button class="cssone__one">
-                    <span>Apply to Slider</span>
-                    <i>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-magic" viewBox="0 0 16 16">
-                        <path d="M9.5 2.672a.5.5 0 1 0 1 0V.843a.5.5 0 0 0-1 0v1.829Zm4.5.035A.5.5 0 0 0 13.293 2L12 3.293a.5.5 0 1 0 .707.707L14 2.707ZM7.293 4A.5.5 0 1 0 8 3.293L6.707 2A.5.5 0 0 0 6 2.707L7.293 4Zm-.621 2.5a.5.5 0 1 0 0-1H4.843a.5.5 0 1 0 0 1h1.829Zm8.485 0a.5.5 0 1 0 0-1h-1.829a.5.5 0 0 0 0 1h1.829ZM13.293 10A.5.5 0 1 0 14 9.293L12.707 8a.5.5 0 1 0-.707.707L13.293 10ZM9.5 11.157a.5.5 0 0 0 1 0V9.328a.5.5 0 0 0-1 0v1.829Zm1.854-5.097a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L8.646 5.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0l1.293-1.293Zm-3 3a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L.646 13.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0L8.354 9.06Z"/>
-                      </svg>
-                    </i>
-                  </button>
-                </div>
+              <div class="cssone__slide cssone--slide-2">
+                <div class="cssone__name">{{ aFxName[index] }}</div>
+                <div class="cssone__slide_name">Front</div>
               </div>
             </div>
-
+            <div class="cssone__item_footer">
+              <div class="cssone__tag">#{{ fxCount++ }}</div>
+              <div class="cssone__select btn btn--small">
+                <button class="cssone__one">
+                  <span>Cập nhật SliderMain</span>
+                  <i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/></svg></i>
+                </button>
+              </div>
+            </div>
           </div>
-          <div v-else class="cssone__br"></div>
-        </template>
 
-      </div> <!-- /.cssone__table -->
+        </div>
+        <div v-else class="cssone__br"></div>
+      </template>
+
+    </div> <!-- /.cssone__table -->
+  </section>
+
+  <section class="guide">
+    <div class="container">
+      <div class="hr hr--circle"></div>
+      <h2>❖ Giới thiệu</h2>
+      <p>Hiệu ứng CssOne là hiệu ứng dựa trên <NuxtLink to="https://www.w3schools.com/css/css3_animations.asp" target="_blank">CSS Animations</NuxtLink>, cho nên bạn sẽ nó thấy thân thiện và có rất nhiều nhiều hiệu ứng khác nhau. <br>Đặc biệt vì dựa trên CSS Animations cho nên bạn hoàn toàn có thể tuỳ biến hiệu ứng theo ý của bạn, dựa theo cấu trúc gần giống CSS Keyframes. <br>Bạn có thử nghiệm và tuỳ biến hiệu ứng ở trang <NuxtLink to="/tools/create-css-effect">công cụ</NuxtLink>.</p>
+      <ul>
+        <li>Hiệu ứng hỗ trợ thời gian thực khi bạn đang kéo rê trên slider.</li>
+        <li>RubySlider hiện tại hỗ trợ tới 57 hiệu ứng CssOne xây dựng sẵn.</li>
+        <li>Bạn có thể cập nhật hiệu ứng ở phần danh sách sang <b>Slider Main</b> để xem hiệu ứng Math dễ dàng hơn.</li>
+      </ul>
+      
+      <LineSpace />
+
+      <h2>❖ Thiết lập slider</h2>
+      <p>Các bạn có thể được hướng dẫn thiết lập slider chi tiết ở trang <NuxtLink to="/documentation">hướng dẫn</NuxtLink> này.<br>Dưới đây là options hiện tại của slider phía trên:</p>
+      <pre class="codeprint">{{ sliderOptions }}</pre>
+
+      <ButtonPrevNext
+        prev-name="Hiệu ứng Math"
+        prev-to="/slider/effect-math"
+        next-name="Hiệu ứng CssFour"
+        next-to="/slider/effect-css-four" />
     </div>
-  </div>
+  </section>
+</main>
 </template>
 
 
 <style lang="scss">
 .cssone {
-  padding-bottom: 100px;
-  margin-top: 50px;
-  background-color: #f0f0f0;
+  padding-bottom: 60px;
   .hr {
     margin-top: 0;
     margin-bottom: 80px;
@@ -358,40 +390,10 @@ onMounted(() => {
   // Select button
   &__select {
     button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-width: 120px;
-      padding: 5px;
-      padding: 12px 20px;
-      margin-left: 10px;
-      margin-right: 10px;
-      background-color: rgba($color: #000, $alpha: .1);
-      border-width: 0;
-      border-radius: 6px;
-      color: #333;
-      font-size: 12px;
-      line-height: 1.2;
-      text-align: center;
-      box-sizing: content-box;
-      outline: none;
-      cursor: pointer;
-      transition: all .2s;
-      &:hover {
-        background-color: rgba($color: #000, $alpha: .25);
-        color: #000;
-      }
       &.cssone--actived {
-        background-color: rgba($color: #000, $alpha: .85);
+        background-color: var(--color-primary);
         color: #fff;
       }
-    }
-    i {
-      padding-left: 5px;
-      font-size: 0.8em;
-    }
-    svg {
-      display: block;
     }
   }
   &__br {
