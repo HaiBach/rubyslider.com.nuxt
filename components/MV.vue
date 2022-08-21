@@ -46,7 +46,7 @@ function randomNum() {
       <h1>RUBY SLIDER</h1>
     </template>
     <template #desc>
-      <p>Plugin jQuery tốt nhất dành cho Slider & Tabs</p>
+      <p>Plugin jQuery dành cho Slider & Tabs</p>
     </template>
   </TitleHead>
 
