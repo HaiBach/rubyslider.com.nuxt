@@ -5,6 +5,7 @@ const sliderOptions = {
   speed: 800,
   width: 1880,
   height: 520,
+  isNav: true
 }
 const aFx = [
   'glueHor', 'glueVer', 'foldHor', 'foldVer', 'foldFromHor', 'foldFromVer', 'roomHor', 'roomVer', 'flitHor', 'flitVer',
@@ -289,11 +290,15 @@ onMounted(() => {
     <div class="container">
       <div class="hr hr--circle"></div>
       <h2>❖ Giới thiệu</h2>
-      <p>Hiệu ứng CssOne là hiệu ứng dựa trên <NuxtLink to="https://www.w3schools.com/css/css3_animations.asp" target="_blank">CSS Animations</NuxtLink>, cho nên bạn sẽ nó thấy thân thiện và có rất nhiều nhiều hiệu ứng khác nhau. <br>Đặc biệt vì dựa trên CSS Animations cho nên bạn hoàn toàn có thể tuỳ biến hiệu ứng theo ý của bạn, dựa theo cấu trúc gần giống CSS Keyframes. <br>Bạn có thử nghiệm và tuỳ biến hiệu ứng ở trang <NuxtLink to="/tools/create-css-effect">công cụ</NuxtLink>.</p>
+      <p>Hiệu ứng CssOne là hiệu ứng dựa trên <NuxtLink to="https://www.w3schools.com/css/css3_animations.asp" target="_blank">CSS Animations</NuxtLink>, cho nên bạn sẽ thấy nó thân thiện và có rất nhiều hiệu ứng khác nhau. <br>
+      Đặc biệt vì dựa trên CSS Animations cho nên bạn hoàn toàn có thể tuỳ biến hiệu ứng theo ý của bạn, dựa theo cấu trúc gần giống CSS Keyframes.<br>
+      Bạn có thể thử nghiệm và tuỳ biến hiệu ứng ở trang <NuxtLink to="/tools/create-css-effect">công cụ</NuxtLink>.<br>
+      Thực tế hiệu ứng CssOne là tên bao gồm 4 hiệu ứng css riêng lẻ kết hợp với nhau thành 1 hiệu ứng, do đó ra đời chữ <b>"One"</b> trong CssOne, để bạn dễ dàng thiết lập slider hơn trước hàng trăm hiệu ứng css khác nhau.</p>
       <ul>
         <li>Hiệu ứng hỗ trợ thời gian thực khi bạn đang kéo rê trên slider.</li>
-        <li>RubySlider hiện tại hỗ trợ tới 57 hiệu ứng CssOne xây dựng sẵn.</li>
+        <li>RubySlider hiện tại hỗ trợ 57 hiệu ứng CssOne xây dựng sẵn.</li>
         <li>Bạn có thể cập nhật hiệu ứng ở phần danh sách sang <b>Slider Main</b> để xem hiệu ứng Math dễ dàng hơn.</li>
+        <li>Hiệu ứng Fade thuộc hệ thống của hiệu ứng CssOne.</li>
       </ul>
       
       <LineSpace />
