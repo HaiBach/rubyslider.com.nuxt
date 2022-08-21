@@ -53,12 +53,9 @@ function getRandomNum() {
 
 <template>
 <section class="effect-others anchor-first">
-  <!-- <TitleHead title="CÁC HIỆU ỨNG <strong>&amp;</strong> BỐ CỤC KHÁC">
-    <div class="title-desc">RubySlider hỗ trợ nhiều hiệu ứng khác nhau, từ hiệu ứng đơn giản đến hiệu ứng 3d nổi bật.<br>Đáp đứng gần như đầy đủ trong các thiết kế website thông thường.</div>
-  </TitleHead> -->
   <TitleHead>
     <template #title>
-      <h2>CÁC HIỆU ỨNG <strong>&amp;</strong> BỐ CỤC KHÁC</h2>
+      <h2>CÁC HIỆU ỨNG<span>và</span>BỐ CỤC KHÁC</h2>
     </template>
     <template #desc>
       <p>RubySlider hỗ trợ nhiều hiệu ứng khác nhau, từ hiệu ứng đơn giản đến 3D nổi bật.<br>Đáp đứng gần như đầy đủ trong các thiết kế website thông thường.</p>
@@ -100,7 +97,6 @@ function getRandomNum() {
     <!-- CSS ONE EFFECT - end -->
 
 
-
     <!-- CENTER LAYOUT - LINE EFFECT - begin -->
     <div class="effect-others__item grid-custom__item">
       <div class="slider-line-effect rs01">
@@ -115,7 +111,6 @@ function getRandomNum() {
       </div>
     </div>
     <!-- CENTER LAYOUT - LINE EFFECT - end -->
-
 
 
     <!-- TABS LAYOUT - begin -->
@@ -208,6 +203,14 @@ function getRandomNum() {
   border: 1px solid #e0e0e0;
   border-width: 1px 0;
   text-align: center;
+  h2 {
+    font-weight: 100;
+    span {
+      display: inline-block;
+      font-weight: 700;
+      transform: scale(.5);
+    }
+  }
 
   /* SLIDER */
   .rs01 {

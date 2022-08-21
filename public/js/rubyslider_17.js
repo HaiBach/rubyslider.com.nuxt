@@ -6504,7 +6504,7 @@ $[rs01VA.rubyName] = function($ruby, OptsJS) {
         },
 
         refresh : function() {
-            // console.log('refresh');
+            console.log('refresh');
             PROP.MergeAllModules();
             UPDATE.RemoveClass();
 
@@ -6521,6 +6521,11 @@ $[rs01VA.rubyName] = function($ruby, OptsJS) {
             is.PAG && PAG.RenderSelf();                 // Pagination: update markup
             is.CAP && CAPTION.Render();                 // Caption: update markup
 
+            // va.$s.each(function() {
+            //     var $imgback = $(this).find('.rs01imgback');
+            //     console.log($imgback)
+            //     $imgback.css({ width: '', height: '', left: '', top: '' })
+            // })
             PROP.Slides();
             LOAD.IDMap();
 

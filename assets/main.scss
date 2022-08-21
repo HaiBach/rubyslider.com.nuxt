@@ -1,9 +1,8 @@
 @charset 'utf-8';
 
 @import './_scss//bootstrap-reboot';
-@import './_scss/variables';
-
 @import './_scss/bootstrap-grid';
+@import './_scss/variables';
 @import './_scss/base';
 
 @import './_scss/rubymenu';
@@ -12,7 +11,6 @@
 @import './_scss/rubyform';
 @import './_scss/rubyruler';
 @import './_scss/codemirror';
-@import './_scss/prettify.light';
 
 @import './_scss/menu';
 @import './_scss/megamenu';

@@ -283,11 +283,6 @@ onMounted(() => {
       display: block;
     }
   }
-  .prettyprint {
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 1px 2px rgba($color: #000, $alpha: .2);
-  }
 
   /** Media */
   @media (min-width: 1200px) {

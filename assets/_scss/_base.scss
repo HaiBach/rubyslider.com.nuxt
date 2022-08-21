@@ -15,7 +15,7 @@ h1 {
 }
 h2 {
   font-size: 3em;
-  font-weight: 100;
+  font-weight: 200;
 }
 h3, h4, h5, h6 {
   font-weight: 300;
@@ -30,4 +30,54 @@ h3, h4, h5, h6 {
 .text-code,
 .label.code {
   font-family: "Source Code Pro", monospace, serif;
+}
+
+/** Hr **/
+.hr {
+  &--circle {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: rgba($color: #000, $alpha: .25);
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: -4px;
+      display: block;
+      width: 7px;
+      height: 7px;
+      background-color: #fff;
+      border: 1px solid rgba($color: #000, $alpha: .5);
+      border-radius: 50%;
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
+    }
+  }
+}
+
+/** Code Print **/
+.codeprint {
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  font-family: var(--font-code);
+  font-size: 16px;
+  line-height: 1.8;
+  box-shadow: 0 1px 2px rgba($color: #000, $alpha: .1);
+}
+
+
+
+
+/** Guide **/
+.guide {
+  padding-bottom: 60px;
+  background-color: rgba($color: #000, $alpha: .05);
+  .hr {
+    margin-bottom: 60px;
+  }
 }
