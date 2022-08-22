@@ -7,8 +7,10 @@ const sliderOptions = {
   // imagePosition: 'fill'
 }
 const initSetup = () => {
-  const $rs01imgback = jQuery('.rs01imgback')
-  $rs01imgback.css({ width: '', height: '', left: '', top: '' })
+  jQuery('#main .rs01nav').remove()
+  jQuery('#main .rs01pag').remove()
+  jQuery('#main .rs01overlay-ghost').remove()
+  jQuery('#main .rs01imgback').css({ width: '', height: '', left: '', top: '' })
 
   const rubyEffectLine = jQuery('.effect-line__slider').rubyslider( sliderOptions )
 }

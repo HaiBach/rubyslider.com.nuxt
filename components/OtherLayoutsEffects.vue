@@ -1,7 +1,9 @@
 <script setup>
 const initSetup = function() {
-  const $rs01imgback = jQuery('.rs01imgback')
-  $rs01imgback.css({ width: '', height: '', left: '', top: '' })
+  jQuery('.effect-others .rs01nav').remove()
+  jQuery('.effect-others .rs01pag').remove()
+  jQuery('.effect-others .rs01overlay-ghost').remove()
+  jQuery('.effect-others .rs01imgback').css({ width: '', height: '', left: '', top: '' })
 
   const sliderMath = jQuery('.slider-math').rubyslider({
     fx: 'rectRun',

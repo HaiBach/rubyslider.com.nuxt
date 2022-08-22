@@ -25,8 +25,10 @@ const sliderOptions = {
   }
 }
 const initSetup = function() {
-  const $rs01imgback = jQuery('.rs01imgback')
-  $rs01imgback.css({ width: '', height: '', left: '', top: '' })
+  jQuery('.mv__slider .rs01nav').remove()
+  jQuery('.mv__slider .rs01pag').remove()
+  jQuery('.mv__slider .rs01overlay-ghost').remove()
+  jQuery('.mv__slider .rs01imgback').css({ width: '', height: '', left: '', top: '' })
 
   const sliderPreview = jQuery('.mv__slider').rubyslider( sliderOptions )
 }

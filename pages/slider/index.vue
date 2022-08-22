@@ -233,6 +233,7 @@ const sliderOptions = {
     align: "center"
   },
   isNav: true,
+  isSwipe: false,
   isKeyboard: true,
   isDeeplinking: true,
   load: {
@@ -240,8 +241,10 @@ const sliderOptions = {
   }
 }
 const initSetup = () => {
-  const $rs01imgback = jQuery('.rs01imgback')
-  $rs01imgback.css({ width: '', height: '', left: '', top: '' })
+  jQuery('#main .rs01nav').remove()
+  jQuery('#main .rs01pag').remove()
+  jQuery('#main .rs01overlay-ghost').remove()
+  jQuery('#main .rs01imgback').css({ width: '', height: '', left: '', top: '' })
 
   const sliderListTemplates = jQuery('.list-templates__slider').rubyslider( sliderOptions )
 }
@@ -253,7 +256,7 @@ onMounted(() => {
 
 
 <template>
-<main>
+<main id="main">
   <SliderTypography />
   <div class="hr cycle"></div>
 

@@ -6,8 +6,10 @@ const sliderOptions = {
   width: 1880,
 }
 const initSetup = () => {
-  const $rs01imgback = jQuery('.rs01imgback')
-  $rs01imgback.css({ width: '', height: '', left: '', top: '' })
+  jQuery('#main .rs01nav').remove()
+  jQuery('#main .rs01pag').remove()
+  jQuery('#main .rs01overlay-ghost').remove()
+  jQuery('#main .rs01imgback').css({ width: '', height: '', left: '', top: '' })
 
   const rubyEffectFade = jQuery('.effect-fade__slider').rubyslider( sliderOptions )
 }

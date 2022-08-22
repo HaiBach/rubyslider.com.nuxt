@@ -58,15 +58,17 @@ const aFxCustom = [
   }
 ]
 const initSetup = function() {
+  jQuery('#main .rs01nav').remove()
+  jQuery('#main .rs01pag').remove()
+  jQuery('#main .rs01overlay-ghost').remove()
+  jQuery('#main .rs01imgback').css({ width: '', height: '', left: '', top: '' })
+
   const actived = 'coverflow3d--actived'
   const $fxTable = jQuery('.coverflow3d__table')
   // const fxDefault = code.optsCur().fx
 
-  const $slider = jQuery('#effect-coverflow3d__slider')
-  let code
-  if ($slider.length) {
-    code = $slider.rubyslider( sliderOptions )
-  }
+  const $slider = jQuery('.effect-coverflow3d__slider')
+  let code = $slider.rubyslider( sliderOptions )
 
   /**
    * ***********************************************************
@@ -120,89 +122,122 @@ const initSetup = function() {
     return false
   })
 }
-
 onMounted(() => {
+  window.scrollTo({ top: 0, behavior: 'instant' })
   setTimeout(initSetup, 600)
 })
 </script>
 
 
 <template>
-  <div>
-    <div class="wrapper">
-      <div class="container">
-        <TitleHead title="COVERFLOW 3D EFFECTS">
-          <div class="title-desc">Slider Preview</div>
-        </TitleHead>
-      </div>
-
-      <div id="effect-coverflow3d__slider" class="slider-preview rs01">
-        <a class="rs01imgback" href="/img/vietnam-large1.jpg">Việt Nam 1</a>
-        <a class="rs01imgback" href="/img/vietnam-large2.jpg">Việt Nam 2</a>
-        <a class="rs01imgback" href="/img/vietnam-large3.jpg">Việt Nam 3</a>
-        <a class="rs01imgback" href="/img/vietnam-large4.jpg">Việt Nam 4</a>
-        <a class="rs01imgback" href="/img/vietnam-large5.jpg">Việt Nam 5</a>
-        <a class="rs01imgback" href="/img/vietnam-large6.jpg">Việt Nam 6</a>
-      </div> <!-- /.rs01 -->
+<main id="main">
+  <section class="effect-coverflow3d wrapper">
+    <div class="container">
+      <TitleHead>
+        <template #title>
+          <h1>HIỆU ỨNG COVERFLOW 3D</h1>
+        </template>
+        <template #desc>
+          <p>Slider Main</p>
+        </template>
+      </TitleHead>
     </div>
 
-    <div class="coverflow3d">
-      <div class="container">
-        <div class="coverflow3d__hr hr circle"></div>
-        <div class="coverflow3d__title">
-          <h2>CUSTOM STYLE OF EFFECTS</h2>
+    <div class="effect-coverflow3d__slider slider-preview rs01">
+      <a class="rs01imgback" href="/img/vietnam-large1.jpg">Việt Nam 1</a>
+      <a class="rs01imgback" href="/img/vietnam-large2.jpg">Việt Nam 2</a>
+      <a class="rs01imgback" href="/img/vietnam-large4.jpg">Việt Nam 4</a>
+      <a class="rs01imgback" href="/img/vietnam-large5.jpg">Việt Nam 5</a>
+      <a class="rs01imgback" href="/img/vietnam-large6.jpg">Việt Nam 6</a>
+    </div> <!-- /.rs01 -->
+  </section>
+
+  <section class="coverflow3d">
+    <div class="container">
+      <div class="hr hr--circle"></div>
+      <TitleHead>
+        <template #title>
+          <h2>TUỲ BIẾN KIỂU DÁNG HIỆU ỨNG</h2>
+        </template>
+        <template #desc>
+          <p>Hiệu ứng có các options khác nhau, có thể tuỳ biến để thay đổi kiểu dáng.</p>
+        </template>
+      </TitleHead>
+    </div>
+
+    <!-- Templates gallery -->
+    <div class="coverflow3d__table">
+      <div
+        v-for="(fx, index) in aFxCustom"
+        :key="index"
+        class="coverflow3d__item">
+
+        <div class="coverflow3d__live">
+          <div class="coverflow3d__slider rs01">
+            <a class="rs01imgback" href="/img/season-landscape2.jpg">Season 2</a>
+            <a class="rs01imgback" href="/img/season-landscape4.jpg">Season 4</a>
+            <a class="rs01imgback" href="/img/season-landscape6.jpg">Season 6</a>
+            <a class="rs01imgback" href="/img/season-landscape7.jpg">Season 7</a>
+          </div>
+        </div>
+        <pre class="coverflow3d__option codeprint">{{ fx }}</pre>
+        <div class="coverflow3d__item_footer">
+          <h3 class="coverflow3d__tag">#{{ index + 1 }} - Style {{ index + 1 }}</h3>
+          <div class="coverflow3d__btn btn">
+            <button class="coverflow3d__select" :data-fx-index="index">
+              <span>Cập nhật Slider Main</span>
+              <i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/></svg></i>
+            </button>
+          </div>
         </div>
       </div>
+    </div> <!-- /.coverflow3d__table -->
+  </section>
 
-      <!-- Templates gallery -->
-      <div class="coverflow3d__table">
-        <div
-          v-for="(fx, index) in aFxCustom"
-          :key="index"
-          class="coverflow3d__item"
-          >
-          <div class="coverflow3d__live">
-            <div class="coverflow3d__slider rs01">
-              <a class="rs01imgback" href="/img/season-landscape2.jpg">Season 2</a>
-              <a class="rs01imgback" href="/img/season-landscape4.jpg">Season 4</a>
-              <a class="rs01imgback" href="/img/season-landscape6.jpg">Season 6</a>
-              <a class="rs01imgback" href="/img/season-landscape7.jpg">Season 7</a>
-            </div>
-          </div>
-          <pre class="coverflow3d__option prettyprint">{{ fx }}</pre>
-          <div class="coverflow3d__item_footer">
-            <h3 class="coverflow3d__tag">#{{ index + 1 }} - Style {{ index + 1 }}</h3>
-            <div class="coverflow3d__btn">
-              <button class="coverflow3d__select" :data-fx-index="index">
-                <span>Apply to Slider Preview</span>
-                <i>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
-                    <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
-                    <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
-                  </svg>
-                </i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> <!-- /.coverflow3d__table -->
+  <section class="guide">
+    <div class="container">
+      <div class="hr hr--circle"></div>
+      <h2>❖ Giới thiệu</h2>
+      <p>Hiệu ứng Math sẽ tính toán kích thước của hình ảnh để phân chia thành nhiều phần khác nhau theo hình chữ nhật (rectangle) hoặc hình vuông (square).</p>
+      <ul>
+        <li>Hiệu ứng hỗ trợ thời gian thực khi bạn đang kéo rê trên slider.</li>
+        <li>RubySlider hiện tại hỗ trợ 8 hiệu ứng Math khác nhau.</li>
+        <li>Bạn có thể chọn chế độ <b>"randomMath"</b> để slider có thể chạy 8 hiệu ứng một cách ngẫu nhiên.</li>
+        <li>Bạn có thể cập nhật hiệu ứng ở phần danh sách sang <b>Slider Main</b> để xem hiệu ứng Math dễ dàng hơn.</li>
+      </ul>
+      
+      <LineSpace />
+
+      <h2>❖ Thiết lập slider</h2>
+      <p>Các bạn có thể được hướng dẫn thiết lập slider chi tiết ở trang <NuxtLink to="/documentation">hướng dẫn</NuxtLink> này.<br>Dưới đây là options hiện tại của slider phía trên:</p>
+      <pre class="codeprint">{{ sliderOptions }}</pre>
+
+      <ButtonPrevNext
+        prev-name="Hiệu ứng CssFour"
+        prev-to="/slider/effect-css-four"
+        next-name="Tuỳ biến hiệu ứng"
+        next-to="/slider/effect-control" />
     </div>
-  </div>
+  </section>
+</main>
 </template>
 
 
 <style lang="scss">
+.effect-coverflow3d {
+  &__slider {
+    margin-bottom: 30px;
+  }
+}
+
 .coverflow3d {
   padding-left: 40px;
   padding-right: 40px;
-  background-color: #f0f0f0;
   .hr {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
-  &__title {
-    margin-bottom: 100px;
-    text-align: center;
+  .title-head {
+    margin-bottom: 80px;
     h2 {
       font-size: 46px;
     }
@@ -218,13 +253,9 @@ onMounted(() => {
     margin-bottom: 150px;
     box-sizing: border-box;
   }
-  &__option {
-    padding-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-left: 1px dashed #999;
-    font-size: 12px;
-    line-height: 1.6em;
+  &__option.codeprint {
+    background-color: rgba($color: #000, $alpha: .05);
+    box-shadow: none;
   }
   /** Slider */
   &__slider {
@@ -232,9 +263,12 @@ onMounted(() => {
     .rs01slide {
       border-radius: 6px;
     }
-    .rs01pag {
+    .rs01pag.rs01bullet {
       position: absolute;
       bottom: 0;
+      .rs01pagitem {
+        background-color: rgba($color: #000, $alpha: .75);
+      }
     }
   }
   &__item_footer {
@@ -254,33 +288,9 @@ onMounted(() => {
     justify-content: center;
   }
   &__select {
-    display: flex;
-    justify-content: center;
-    min-width: 250px;
-    padding: 13px 20px;
-    background-color: rgba($color: #000, $alpha: .1);
-    border-width: 0;
-    border-radius: 6px;
-    color: #333;
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.2;
-    outline: none;
-    cursor: pointer;
-    &:hover {
-      background-color: rgba($color: #000, $alpha: .75);
-      color: #fff;
-    }
     &.coverflow3d--actived {
       background-color: var(--color-primary);
       color: #fff;
-    }
-    i {
-      display: block;
-      padding-left: 8px;
-    }
-    svg {
-      display: block;
     }
   }
 
@@ -307,29 +317,18 @@ onMounted(() => {
     }
   }
   @media (max-width: 767px) {
-    .hr {
-      margin-top: 80px;
-      margin-bottom: 80px;
-    }
-    &__title {
-      margin-bottom: 80px;
-      h2 {
-        font-size: 35px;
-      }
+    h2 {
+      font-size: 35px;
     }
   }
   @media (max-width: 575px) {
     padding-left: 20px;
     padding-right: 20px;
     .hr {
-      margin-top: 60px;
       margin-bottom: 60px;
     }
-    &__title {
-      margin-bottom: 60px;
-      h2 {
-        font-size: 28px;
-      }
+    h2 {
+      font-size: 28px;
     }
     &__item {
       padding-left: 0;

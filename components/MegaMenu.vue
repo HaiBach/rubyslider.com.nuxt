@@ -496,7 +496,6 @@ const megamenu = function() {
   }
 }
 
-
 // Lifecycle mounted
 onMounted(() => {
   megamenu()

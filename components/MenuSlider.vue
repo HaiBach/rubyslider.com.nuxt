@@ -5,10 +5,14 @@ const sliderName = 'megaslider-' + menuLevel1.slug
 
 // Slider setup
 const initSetup = function() {
+  jQuery('megamenu__slider .rs01nav').remove()
+  jQuery('megamenu__slider .rs01pag').remove()
+  jQuery('megamenu__slider .rs01overlay-ghost').remove()
+  jQuery('megamenu__slider .rs01imgback').css({ width: '', height: '', left: '', top: '' })
+
   const sliderOptions = {
     name: sliderName,
     fx: 'line',
-    // cssOne: 'fade',
     speed: 400,
     margin: 50,
     isNav: true,
