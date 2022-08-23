@@ -2,6 +2,7 @@
 const props = defineProps({
   title: String
 })
+const slots = useSlots()
 </script>
 
 
@@ -11,10 +12,10 @@ const props = defineProps({
       <div v-if="props.title" class="title-head__title">
         <h1 v-html="props.title"></h1>
       </div>
-      <div v-if="this.$slots.title" class="title-head__title">
+      <div v-if="slots.title" class="title-head__title">
         <slot name="title"></slot>
       </div>
-      <div v-if="this.$slots.desc" class="title-head__desc">
+      <div v-if="slots.desc" class="title-head__desc">
         <slot name="desc"></slot>
       </div>
     </div>
@@ -36,7 +37,7 @@ const props = defineProps({
       // font-size: 62px;
     }
     h2 {
-      font-size: 54px;
+      // font-size: 54px;
     }
   }
   &__desc {
@@ -53,7 +54,7 @@ const props = defineProps({
       transform: translate3d(-50%,0,0);
     }
     p {
-      font-size: 18px;
+      // font-size: 18px;
     }
   }
   /** MEDIA **/

@@ -10,11 +10,11 @@ h4, h5, h6 {
   line-height: 1.1;
 }
 h1 {
-  font-size: 4em;
+  font-size: 3.75rem;
   font-weight: 100;
 }
 h2 {
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: 200;
 }
 h3, h4, h5, h6 {
@@ -83,7 +83,7 @@ h3, h4, h5, h6 {
 .guide {
   padding-bottom: 60px;
   background-color: rgba($color: #000, $alpha: .05);
-  font-size: 1.125em;
+  // font-size: 1.125em;
   .hr {
     margin-bottom: 60px;
   }
