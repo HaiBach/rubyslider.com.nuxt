@@ -1,0 +1,46 @@
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+  display: block;
+  width: 220px;
+  height: 38px;
+  max-width: 100%;
+  margin: 0 0 10px;
+  padding: 9px 12px;
+  border: 1px solid rgba($color: #000, $alpha: .1);
+  border-left-width: 4px;
+  outline: none;
+  background-color: #fff;
+  color: #999;
+  font-size: 14px;
+  line-height: 18px;
+  box-sizing: border-box;
+  &:focus {
+    border-color: var(--color-primary);
+    color: #000;
+  }
+}
+/** Textarea **/
+textarea {
+  min-height: 160px;
+  resize: vertical;
+  overflow-y: hidden;
+  line-height: 21px;
+}
+/** Select **/
+select {
+  width: 220px;
+  margin: 0 0 10px;
+  padding: 9px 10px;
+  border: 1px solid #e5e5e5;
+  outline: none;
+  background-color: transparent;
+  color: #444;
+  &:focus {
+    border-color: var(--color-primary);
+  }
+}
+option {
+  margin-top: 10px;
+}

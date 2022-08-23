@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12px 25px;
+    padding: 11px 25px;
     border-radius: 8px;
     border: none;
     background-color: rgba($color: #000, $alpha: .1);
@@ -30,7 +30,7 @@
       transition: all .2s;
     }
     &:hover {
-      background-color: rgba($color: #000, $alpha: .75);
+      background-color: rgba($color: #000, $alpha: .85);
       color: #fff;
       &.btn--primary {
         background-color: var(--color-primary-dark);

@@ -5,6 +5,11 @@ const sliderOptions = {
   width: 1880,
 }
 const initSetup = function() {
+  jQuery('#main .rs01nav').remove()
+  jQuery('#main .rs01pag').remove()
+  jQuery('#main .rs01overlay-ghost').remove()
+  jQuery('#main .rs01imgback').css({ width: '', height: '', left: '', top: '' })
+
   const code = $('.control-effect__slider').rubyslider( sliderOptions )
   const actived = 'actived'
   const speed = 1000
@@ -75,32 +80,42 @@ const initSetup = function() {
   Render($easing, aEasing, 0, 'cssEasing')
   Render($speed, aSpeed, 0, 'speed')
 }
-
 onMounted(() => {
+  window.scrollTo({ top: 0, behavior: 'instant' })
   setTimeout(initSetup, 400)
 })
 </script>
 
 
 <template>
-  <div class="wrapper control-effect">
+<main id="main">
+  <div class="control-effect wrapper">
     <div class="container">
-      <TitleHead title="CONTROL EFFECT" />
+      <TitleHead>
+        <template #title>
+          <h1>TUỲ BIẾN HIỆU ỨNG</h1>
+        </template>
+        <template #desc>
+          <p>Slider Main</p>
+        </template>
+      </TitleHead>
 
       <!-- FORM EFFECT - begin -->
-      <div class="fx-form ma-b-50 row">
-        <form>
-          <div class="col4 ma-b-20">
-            <h4 class="">Effects select :</h4>
-            <select id="effects" class="form-control"></select>
-          </div>
-          <div class="col4">
-            <h4 class="">Easing select :</h4>
-            <select id="easing" class="form-control"></select>
-          </div>
-          <div class="col4">
-            <h4 class="">Speed select :</h4>
-            <select id="speed" class="form-control"></select>
+      <div class="fxform">
+        <form class="fxform__form">
+          <div class="row">
+            <div class="col-4">
+              <label for="effects">Hãy chọn hiệu ứng</label>
+              <select id="effects" class="form-control"></select>
+            </div>
+            <div class="col-4">
+              <label for="easing">Hãy chọn easing</label>
+              <select id="easing" class="form-control"></select>
+            </div>
+            <div class="col-4">
+              <label for="speed">Hãy chọn tốc độ</label>
+              <select id="speed" class="form-control"></select>
+            </div>
           </div>
         </form>
       </div>
@@ -109,13 +124,13 @@ onMounted(() => {
       <div class="control-effect__slider slider-preview rs01">
         <a class="rs01imgback" href="/img/vietnam-large1.jpg">Việt Nam 1</a>
         <a class="rs01imgback" href="/img/vietnam-large2.jpg">Việt Nam 2</a>
-        <a class="rs01imgback" href="/img/vietnam-large3.jpg">Việt Nam 3</a>
         <a class="rs01imgback" href="/img/vietnam-large4.jpg">Việt Nam 4</a>
         <a class="rs01imgback" href="/img/vietnam-large5.jpg">Việt Nam 5</a>
         <a class="rs01imgback" href="/img/vietnam-large6.jpg">Việt Nam 6</a>
       </div> <!-- /.rs01 -->
     </div>
   </div>
+</main>
 </template>
 
 
@@ -124,6 +139,14 @@ onMounted(() => {
   .form-control {
     display: block;
     width: 100%;
+  }
+}
+.fxform {
+  &__form {
+    margin-bottom: 50px;
+  }
+  label {
+    margin-bottom: 10px;
   }
 }
 </style>

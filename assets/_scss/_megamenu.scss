@@ -203,6 +203,7 @@
         animation: zoomOut .2s both;
       }
       .megamenu__figcaption {
+        max-height: 21px;
         animation: moveCenterTop .2s both;
         color: var(--color-primary);
         font-weight: bold;
