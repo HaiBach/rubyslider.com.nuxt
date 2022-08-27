@@ -391,7 +391,6 @@
     position: relative;
 }
 .rs01pagitem {
-    background-color: #fff;
     cursor: pointer;
 }
 
@@ -484,7 +483,8 @@
 * PAGINATION TYPE : THUMBNAIL
 */
 .rs01thumbnail .rs01pagitem {
-    width: 100px; height: 70px;
+    width: 100px;
+    height: 70px;
     border: 1px solid #e5e5e5;
     border-radius: 3px;
 }
@@ -517,12 +517,13 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
-.rs01thumbwrap img {
+.rs01thumbitem {
     position: relative;
     max-width: none !important;
+    background-color: #fff;
     -webkit-transform: translateZ(0);               /* chrome image fix */
 }
-.rs01pagitem .rs01thumbwrap img {
+.rs01pagitem .rs01thumbitem {
     opacity: 1;
     -webkit-transition: -webkit-transform .15s, opacity .15s;
             transition:         transform .15s, opacity .15s;
