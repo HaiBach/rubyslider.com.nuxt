@@ -67,7 +67,7 @@ onMounted(() => {
       <ButtonPrevNext
         prev-name="Layout cơ bản"
         prev-to="/slider/layout-basic"
-        next-name="Layout cổ điển 2"
+        next-name="Layout cổ điển số 2"
         next-to="/slider/layout-classic-2" />
     </div>
   </section>

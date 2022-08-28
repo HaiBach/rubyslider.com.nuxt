@@ -1,105 +1,134 @@
 <script setup>
 const sliderOptions = {
-  fx: 'line',
-  speed: 600,
+  fx: 'cssOne',
+  cssOne: 'scalePulse',
+  speed: 800,
   width: 1140,
-  height: 600,
-  margin: 10,
-  imagePosition: 'fill',
+  // height: 600,
+  margin: 5,
+  // imagePosition: 'fill',
   pag: {
     type: 'tabs'
-  }
+  },
+  isKeyboard: true
 }
+const initSetup = () => {
+  jQuery('#main .rs01nav').remove()
+  jQuery('#main .rs01pag').remove()
+  jQuery('#main .rs01overlay-ghost').remove()
+  jQuery('#main .rs01imgback').css({ width: '', height: '', left: '', top: '' })
 
+  const rubyLayoutClassic2 = jQuery('.layout-classic2__slider').rubyslider( sliderOptions )
+}
 onMounted(() => {
-  setTimeout(() => {
-    const $slider = jQuery('#layout-classic__slider')
-    if ($slider.length) {
-      $slider.rubyslider( sliderOptions )
-    }
-  }, 400)
+  setTimeout(initSetup, 400)
 })
 </script>
 
 
 <template>
-  <div class="wrapper">
+<main id="main">
+  <section class="layout-classic2 wrapper">
     <div class="container">
+      <TitleHead>
+        <template #title>
+          <h1>LAYOUT CỔ ĐIỂN SỐ 2</h1>
+        </template>
+      </TitleHead>
 
-      <div class="title-head">
-        <div class="title-head-inner">
-          <h1>CLASSIC 2 LAYOUT</h1>
-        </div>
-      </div>
-
-      <div id="layout-classic__slider" class="layout-classic__slider slider-preview rs01 ruby-mark">
+      <div class="layout-classic2__slider slider-preview rs01">
         <div class="rs01viewport">
           <div class="rs01slide">
-            <a class="rs01imgback" href="/img/vietnam-large1.jpg">Việt Nam 1</a>
+            <a class="rs01imgback" href="/img/vietnam-1140-1.jpg">Việt Nam 1</a>
             <div class="rs01pagitem">Ha Noi</div>
           </div>
           <div class="rs01slide">
-            <a class="rs01imgback" href="/img/vietnam-large2.jpg">Việt Nam 2</a>
+            <a class="rs01imgback" href="/img/vietnam-1140-2.jpg">Việt Nam 2</a>
             <div class="rs01pagitem">Ha Long Bay</div>
           </div>
           <div class="rs01slide">
-            <a class="rs01imgback" href="/img/vietnam-large3.jpg">Việt Nam 3</a>
+            <a class="rs01imgback" href="/img/vietnam-1140-3.jpg">Việt Nam 3</a>
             <div class="rs01pagitem">Nha Trang</div>
           </div>
           <div class="rs01slide">
-            <a class="rs01imgback" href="/img/vietnam-large4.jpg">Việt Nam 4</a>
+            <a class="rs01imgback" href="/img/vietnam-1140-4.jpg">Việt Nam 4</a>
             <div class="rs01pagitem">Ho Chi Minh</div>
           </div>
           <div class="rs01slide">
-            <a class="rs01imgback" href="/img/vietnam-large5.jpg">Việt Nam 5</a>
+            <a class="rs01imgback" href="/img/vietnam-1140-5.jpg">Việt Nam 5</a>
             <div class="rs01pagitem">Son Doong Cave</div>
           </div>
           <div class="rs01slide">
-            <a class="rs01imgback" href="/img/vietnam-large6.jpg">Việt Nam 6</a>
+            <a class="rs01imgback" href="/img/vietnam-1140-6.jpg">Việt Nam 6</a>
             <div class="rs01pagitem">Viet Nam</div>
           </div>
         </div>
-        <div class="rs01pag"></div>
       </div>
-
     </div>
-  </div>
+  </section>
+
+  <section class="guide">
+    <div class="container">
+      <div class="hr hr--circle"></div>
+      <h2>❖ Giới thiệu</h2>
+      <p>Layout cổ điển số 2. Bạn có thể di chuyển giữa các slide bằng phím mũi tên trái/phải.</p>
+      
+      <LineSpace />
+
+      <h2>❖ Thiết lập slider</h2>
+      <p>Các bạn có thể được hướng dẫn thiết lập slider chi tiết ở trang <NuxtLink to="/documentation">hướng dẫn</NuxtLink> này.<br>Dưới đây là options hiện tại của slider phía trên:</p>
+      <pre class="codeprint">{{ sliderOptions }}</pre>
+
+      <ButtonPrevNext
+        prev-name="Layout cổ điển số 1"
+        prev-to="/slider/layout-classic-1"
+        next-name="Layout chính giữa"
+        next-to="/slider/layout-center" />
+    </div>
+  </section>
+</main>
 </template>
 
 
-<style scoped>
-.container {
-  overflow: hidden;
-}
-.layout-classic__slider {
-  padding: 10px 12px;
-  border: 1px solid #ccc;
-  border-radius: 16px;
-}
-.layout-classic__slider .rs01pag.rs01pag-hor {
-  margin-top: 10px;
-}
-.layout-classic__slider .rs01pagitem {
-  border-radius: 4px;
-  color: #333;
-}
-.layout-classic__slider .rs01pagitem:hover {
-  color: #cc0055;
-}
-.layout-classic__slider .rs01pagitem.rs01cur {
-  background-color: #cc0055;
-  color: #fff;
-}
-
-@media only screen and (max-width: 767px) {
-  .layout-classic__slider .rs01pagitem {
-      padding: 15px !important;
+<style lang="scss">
+.layout-classic2 {
+  .rs01 {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    .rs01pag.rs01tabs {
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+    .rs01pagitem {
+      margin-left: 2px;
+      margin-right: 2px;
+      border-radius: 6px;
+      color: #333;
+      transition: background .2s;
+      &:hover {
+        background-color: rgba($color: #000, $alpha: .1);
+      }
+      &.rs01cur {
+        background-color: var(--color-primary);
+        color: #fff;
+      }
+    }
   }
-}
-@media only screen and (max-width: 575px) {
-  .layout-classic__slider {
+
+  /** MEDIA */
+  @media only screen and (max-width: 767px) {
+    .rs01 {
+      .rs01pagitem {
+        padding: 15px !important;
+      }
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    .rs01 {
       padding: 0;
       border-width: 0;
+    }
   }
 }
 </style>
