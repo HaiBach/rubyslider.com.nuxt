@@ -1,9 +1,10 @@
 <script setup>
 definePageMeta({
-  key: route => route.fullPath
+  key: route => route.fullPath,
+  middleware: ['init'] 
 })
 onMounted(() => {
-  window.scrollTo({ top: 0, behavior: 'instant' })
+  // window.scrollTo({ top: 0, behavior: 'instant' })
 })
 </script>
 

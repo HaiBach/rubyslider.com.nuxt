@@ -48,12 +48,13 @@ const scrollfixed = function() {
      * FUNCTION THIẾT LẬP CHÍNH
      */
     function toggleActiveWhenGotoTarget($fixed) {
-      [
+      const dataTargets = [
         'bottomedge-scrollto-top',
         'bottomedge-scrollto-bottom',
         'topedge-scrollto-top',
         'topedge-scrollto-bottom',
-      ].forEach((dataTarget) => {
+      ]
+      dataTargets.forEach((dataTarget) => {
 
         // var $inner = $fixed.find('.scrollfixed__inner');
         // var $holder = $fixed.find('.scrollfixed__holder');
