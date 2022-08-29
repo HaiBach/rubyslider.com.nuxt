@@ -3568,7 +3568,7 @@ $[rs01VA.rubyName] = function($ruby, OptsJS) {
 
             // Store object into data slide then remove
             slData.$pagItem = $pagItem;
-            $pagItem.remove();
+            // $pagItem.remove();
         },
 
 
@@ -6504,7 +6504,7 @@ $[rs01VA.rubyName] = function($ruby, OptsJS) {
         },
 
         refresh : function() {
-            // console.log('refresh');
+            console.log('refresh');
             PROP.MergeAllModules();
             UPDATE.RemoveClass();
 
@@ -11421,6 +11421,9 @@ $(document).ready(function() { rs01MODULE.AUTOINIT( $('.' + rs01VA.namespace) ) 
           RenderSelf : function() {
               var that = this;
               VariableModule(that);
+
+            //   if (cs.$ruby.find('.rs01pag').length) return;
+            //   console.log(va.$pag, cs.$ruby.find('.rs01pag'))
   
   
               /**

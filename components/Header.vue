@@ -164,6 +164,7 @@ onMounted(() => {
 /** SCROLL FIXED **/
 .scrollfixed {
   background-color: var(--color-primary);
+  background-color: rgba($color: #000, $alpha: .1);
   z-index: 99;
 
   /** FIXED ENABLE - ĐỦ ĐIỀU KIỆN ĐỂ SCROLL FIXED HOẠT ĐỘNG **/
