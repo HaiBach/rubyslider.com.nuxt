@@ -1,4 +1,7 @@
 <script setup>
+definePageMeta({
+  middleware: ['init']
+})
 const sliderOptions = {
   fx: 'line',
   speed: 400,
@@ -15,7 +18,6 @@ const initSetup = () => {
   const rubyEffectLine = jQuery('.effect-line__slider').rubyslider( sliderOptions )
 }
 onMounted(() => {
-  window.scrollTo({ top: 0, behavior: 'instant' })
   setTimeout(initSetup, 400)
 })
 </script>

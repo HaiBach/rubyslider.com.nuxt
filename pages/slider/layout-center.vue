@@ -1,6 +1,6 @@
 <script setup>
 definePageMeta({
-  middle
+  middleware: ['init']
 })
 const sliderOptions = {
   // fx: 'coverflow3D',

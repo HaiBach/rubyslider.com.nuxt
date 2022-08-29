@@ -1,4 +1,8 @@
 <script setup>
+definePageMeta({
+  middleware: ['init']
+})
+
 const sliderOptions = {
   fx: 'cssOne',
   speed: 800,
@@ -81,7 +85,6 @@ const initSetup = function() {
   Render($speed, aSpeed, 0, 'speed')
 }
 onMounted(() => {
-  window.scrollTo({ top: 0, behavior: 'instant' })
   setTimeout(initSetup, 400)
 })
 </script>

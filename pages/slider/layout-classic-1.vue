@@ -1,4 +1,7 @@
 <script setup>
+definePageMeta({
+  middleware: ['init']
+})
 const sliderOptions = {
   // name: 'layoutClassic1',
   fx: 'line',

@@ -1,6 +1,7 @@
 <script setup>
 definePageMeta({
-  key: route => route.fullPath
+  key: route => route.fullPath,
+  middleware: ['init']
 })
 
 const sliderData = [
@@ -249,7 +250,6 @@ const initSetup = () => {
   const sliderListTemplates = jQuery('.list-templates__slider').rubyslider( sliderOptions )
 }
 onMounted(() => {
-  window.scrollTo({ top: 0, behavior: 'instant' })
   setTimeout(initSetup, 200)
 })
 </script>

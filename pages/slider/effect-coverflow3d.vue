@@ -1,4 +1,8 @@
 <script setup>
+definePageMeta({
+  middleware: ['init']
+})
+
 const sliderOptions = {
   fx: 'coverflow3D',
   coverflow3D: {
@@ -123,7 +127,6 @@ const initSetup = function() {
   })
 }
 onMounted(() => {
-  window.scrollTo({ top: 0, behavior: 'instant' })
   setTimeout(initSetup, 600)
 })
 </script>
