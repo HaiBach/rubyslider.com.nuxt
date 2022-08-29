@@ -5,7 +5,7 @@ definePageMeta({
 const sliderOptions = {
   // fx: 'coverflow3D',
   fx: 'line',
-  speed: 600,
+  speed: 6000,
   width: 1140,
   widthSlide: [1140, 940, '70%'],
   margin: [10, 5, 5],
@@ -38,6 +38,7 @@ onMounted(() => {
     <div class="layout-center__slider slider-preview rs01">
       <a class="rs01imgback" href="/img/vietnam-1140-1.jpg">Việt Nam 1</a>
       <a class="rs01imgback" href="/img/vietnam-1140-2.jpg">Việt Nam 2</a>
+      <a class="rs01imgback" href="/img/vietnam-1140-3.jpg">Việt Nam 3</a>
       <a class="rs01imgback" href="/img/vietnam-1140-4.jpg">Việt Nam 4</a>
       <a class="rs01imgback" href="/img/vietnam-1140-5.jpg">Việt Nam 5</a>
       <a class="rs01imgback" href="/img/vietnam-1140-6.jpg">Việt Nam 6</a>
@@ -73,6 +74,14 @@ onMounted(() => {
 
 <style lang="scss">
 .layout-center {
+  .rs01 {
+    .rs01slide {
+      transition: all .6s;
+      &.rs01deactived {
+        filter: brightness(180%) grayscale(1);
+      }
+    }
+  }
 }
 </style>
  
