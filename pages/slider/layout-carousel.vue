@@ -1,33 +1,39 @@
 <script setup>
+definePageMeta({
+  middleware: ['init']
+})
 const sliderOptions = {
-  optionsPlus: 'carousel',
-  widthSlide: 300,
-  height: 450,
-  imagePosition: 'fit'
+  type: 'carousel',
+  widthSlide: 360,
+  height: 500,
+  margin: 5,
+  imagePosition: 'fill',
 }
-
+const initSetup = () => {
+  jQuery('#main .rs01nav').remove()
+  jQuery('#main .rs01pag').remove()
+  jQuery('#main .rs01overlay-ghost').remove()
+  jQuery('#main .rs01imgback').css({ width: '', height: '', left: '', top: '' })
+  
+  const rubyLayoutCarousel = jQuery('.layout-carousel__slider').rubyslider( sliderOptions )
+}
 onMounted(() => {
-  setTimeout(() => {
-    const $slider = jQuery('#layout-carousel__slider')
-    if ($slider.length) {
-      $slider.rubyslider( sliderOptions )
-    }
-  }, 400)
+  setTimeout(initSetup, 400)
 })
 </script>
 
 
 <template>
-  <div class="wrapper">
+<main id="main">
+  <section class="layout-carousel wrapper">
     <div class="container">
+      <TitleHead>
+        <template #title>
+          <h1>LAYOUT BĂNG CHUYỀN</h1>
+        </template>
+      </TitleHead>
 
-      <div class="title-head">
-        <div class="title-head-inner">
-          <h1>CAROUSEL LAYOUT</h1>
-        </div>
-      </div>
-
-      <div id="layout-carousel__slider" class="layout-carousel__slider slider-preview rs01">
+      <div class="layout-carousel__slider slider-preview rs01">
         <a class="rs01imgback" href="/img/season-landscape1.jpg">Season 1</a>
         <a class="rs01imgback" href="/img/season-landscape2.jpg">Season 2</a>
         <a class="rs01imgback" href="/img/season-landscape3.jpg">Season 3</a>
@@ -37,15 +43,40 @@ onMounted(() => {
         <a class="rs01imgback" href="/img/season-landscape7.jpg">Season 7</a>
         <a class="rs01imgback" href="/img/season-landscape8.jpg">Season 8</a>
       </div>
-
     </div>
-  </div>
+  </section>
+
+  <section class="guide">
+    <div class="container">
+      <div class="hr hr--circle"></div>
+      <h2>❖ Giới thiệu</h2>
+      <p>Layout băng chuyền.</p>
+      
+      <LineSpace />
+
+      <h2>❖ Thiết lập slider</h2>
+      <p>Các bạn có thể được hướng dẫn thiết lập slider chi tiết ở trang <NuxtLink to="/documentation">hướng dẫn</NuxtLink> này.<br>Dưới đây là options hiện tại của slider phía trên:</p>
+      <pre class="codeprint">{{ sliderOptions }}</pre>
+
+      <ButtonPrevNext
+        prev-name="Layout chính giữa"
+        prev-to="/slider/layout-center"
+        next-name="Layout bên ngoài hộp"
+        next-to="/slider/layout-outbox" />
+    </div>
+  </section>
+</main>
 </template>
 
 
-<style>
-.layout-carousel__slider > .rs01viewport {
-  overflow: visible;
+<style lang="scss">
+.layout-carousel {
+  overflow: hidden;
+  .rs01 {
+    .rs01viewport {
+      overflow: visible;
+    }
+  }
 }
 </style>
  

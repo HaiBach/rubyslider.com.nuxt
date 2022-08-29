@@ -65,7 +65,7 @@ if( !window.rs01VA ) {
         /**
          * OPTIONS TYPE OF ELEMENTS
          */
-        // Change multiple options at once, like shortcut to a group priority options. included value: ["slider", "tabs"]
+        // Change multiple options at once, like shortcut to a group priority options. included value: ["slider", "tabs", "carousel"]
         "type"          : "slider",
 
         // Option beta: layout size. List of value: "auto", "fullwidth", "fullscreen"

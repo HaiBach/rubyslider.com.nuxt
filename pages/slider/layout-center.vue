@@ -49,9 +49,9 @@ onMounted(() => {
       <div class="hr hr--circle"></div>
       <h2>❖ Giới thiệu</h2>
       <p>Hiệu ứng được sử dụng trong layout chính giữa là hiệu ứng <b>Line</b>, hoặc <b>Coverflow3D</b>. trong trường hợp này là hiệu ứng Line.<br>
-      Layout được sử dụng khi cần sử dụng slider có chiều dài lớn hơn chiều dài của slide.</p>
+      Layout chính giữa được sử dụng khi slider có chiều dài lớn hơn chiều dài của các slide.</p>
       <ul>
-        <li>Cần ít nhất 3 hình ảnh để có layout chính giữa.</li>
+        <li>Cần ít nhất 3 slide để có layout chính giữa.</li>
       </ul>
       
       <LineSpace />
