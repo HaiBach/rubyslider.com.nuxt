@@ -4,10 +4,16 @@ definePageMeta({
 })
 const sliderOptions = {
   fx: 'cssOne',
+  cssOne: 'wheelHor',
   speed: 800,
   width: 1140,
-  // height: 636,
-  imagePosition: 'fill'
+  height: 580,
+  imageback: {
+    position: 'fill'
+  },
+  pag: {
+    type: 'bullet'
+  }
 }
 const initSetup = () => {
   jQuery('#main .rs01nav').remove()
@@ -52,7 +58,7 @@ onMounted(() => {
     <div class="container">
       <div class="hr hr--circle"></div>
       <h2>❖ Giới thiệu</h2>
-      <p>Layout trên thiết bị.</p>
+      <p>Layout slider trên mockup thiết bị.</p>
       
       <LineSpace />
 
@@ -61,7 +67,7 @@ onMounted(() => {
       <pre class="codeprint">{{ sliderOptions }}</pre>
 
       <ButtonPrevNext
-        prev-name="Layout bên ngoài hộp"
+        prev-name="Layout bên ngoài khung"
         prev-to="/slider/layout-outbox"
         next-name="Layout toàn màn hình"
         next-to="/slider/layout-coverscreen" />
@@ -78,10 +84,21 @@ onMounted(() => {
     margin-bottom: 100px;
   }
   &__bg {
+    position: relative;
     overflow: hidden;
     height: 630px;
-    box-shadow: inset 0 -10px 25px -20px hsla(0,0%,0%,.5);
-    border-bottom: 1px solid #f9f9f9;
+    box-shadow: inset 0 -10px 25px -20px rgba($color: #000, $alpha: .75);
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000, $alpha: .1);
+      border-radius: 55px;
+      z-index: -1;
+    }
     img {
       display: block;
       width: 100%;
@@ -90,16 +107,30 @@ onMounted(() => {
   }
   .rs01 {
     position: absolute;
-    left: 109px;
-    top: 39px;
-    width: 896px;
-    .rs01slide {
-      border-radius: 0;
-    }
+    left: 115px;
+    top: 44px;
+    width: 882px;
     .rs01thumbnail {
       .rs01pagitem {
         width: 100px;
         height: 70px;
+      }
+    }
+    .rs01pag.rs01bullet {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 10px;
+      .rs01paginner {
+        &::before {
+          content: '';
+          position: absolute;
+          top: -6px;
+          left: -6px;
+          width: calc(100% + 12px);
+          padding: 10px;
+          background-color: #fff;
+          border-radius: 100px;
+        }
       }
     }
   }

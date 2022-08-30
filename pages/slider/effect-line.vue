@@ -7,7 +7,6 @@ const sliderOptions = {
   speed: 400,
   width: 1140,
   margin: 5,
-  // imagePosition: 'fill'
 }
 const initSetup = () => {
   jQuery('#main .rs01nav').remove()

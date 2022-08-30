@@ -4,14 +4,18 @@ const sliderOptions1 = {
   speed: 800,
   width: 1140,
   height: 550,
-  imagePosition: 'fill'
+  imageback: {
+    position: 'fill'
+  }
 }
 const sliderOptions2 = {
   fx: 'rectMove',
   speed: 800,
   width: 1140,
   height: 550,
-  imagePosition: 'fill'
+  imageback: {
+    position: 'fill'
+  }
 }
 
 onMounted(() => {

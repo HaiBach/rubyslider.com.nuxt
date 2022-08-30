@@ -4,7 +4,9 @@ const sliderOptions = {
   speed: 800,
   width: 1140,
   height: 620,
-  imagePosition: 'fill',
+  imageback: {
+    position: 'fill'
+  }
 }
 
 onMounted(() => {

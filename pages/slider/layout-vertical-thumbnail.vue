@@ -4,7 +4,6 @@ const sliderOptions = {
   speed: 800,
   width: 1140,
   height: 550,
-  // imagePosition: 'fill',
   pag: {
     direction: 'ver'
   }

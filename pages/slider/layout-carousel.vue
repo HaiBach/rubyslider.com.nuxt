@@ -3,11 +3,18 @@ definePageMeta({
   middleware: ['init']
 })
 const sliderOptions = {
-  type: 'carousel',
+  fx: 'line',
+  speed: 6000,
+  fxEasing: 'linear',
   widthSlide: 360,
   height: 500,
-  margin: 5,
-  imagePosition: 'fill',
+  margin: 20,
+  isSwipe: false,
+  isSlideshow: true,
+  slideshow: {
+    delay: 0
+  },
+  isPag: false,
 }
 const initSetup = () => {
   jQuery('#main .rs01nav').remove()
@@ -61,7 +68,7 @@ onMounted(() => {
       <ButtonPrevNext
         prev-name="Layout chính giữa"
         prev-to="/slider/layout-center"
-        next-name="Layout bên ngoài hộp"
+        next-name="Layout bên ngoài khung"
         next-to="/slider/layout-outbox" />
     </div>
   </section>
@@ -75,6 +82,9 @@ onMounted(() => {
   .rs01 {
     .rs01viewport {
       overflow: visible;
+    }
+    .rs01ss-control {
+      display: none;
     }
   }
 }

@@ -1,11 +1,13 @@
 <script setup>
 const sliderOptions = {
+  name: 'sliderPreview',
   fx: 'cssOne',
   speed: 800,
   width: 1140,
   height: 650,
-  imagePosition: 'fill',
-  name: 'sliderPreview',
+  imageback: {
+    position: 'fill'
+  },
   isCap: true
 }
 

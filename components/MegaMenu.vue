@@ -115,14 +115,14 @@ const MENUS = [
           {
             key: '1.2.6',
             // name: 'Outbox',
-            name: 'Bên ngoài cái hộp',
+            name: 'Bên ngoài khung',
             to: '/slider/layout-outbox',
             thumbnail: '/img/template-layout-outbox.png',
           },
           {
             key: '1.2.7',
             // name: 'Device',
-            name: 'iPad',
+            name: 'Thiết bị',
             to: '/slider/layout-device',
             thumbnail: '/img/template-layout-device.png',
           },

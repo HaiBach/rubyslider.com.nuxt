@@ -4,15 +4,19 @@ const sliderOptions = {
   speed: 800,
   width: 1140,
   height: 550,
-  imagePosition: 'fill'
+  imageback: {
+    position: 'fill'
+  }
 }
 const sliderOptions2 = {
   fx: 'line',
   speed: 400,
   width: 1140,
   height: 550,
-  imagePosition: 'fill',
   margin: 5,
+  imageback: {
+    position: 'fill'
+  },
   pag: {
     type: "bullet",
     isMark: true

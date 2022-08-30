@@ -5,11 +5,11 @@ definePageMeta({
 const sliderOptions = {
   fx: 'line',
   speed: 600,
-  widthSlide: 778,
+  widthSlide: 900,
+  margin: 10,
   isPag: false,
   isLoop: false,
   isCenter: false,
-  margin: 10,
 }
 const initSetup = () => {
   jQuery('#main .rs01nav').remove()
@@ -31,7 +31,7 @@ onMounted(() => {
     <div class="container">
       <TitleHead>
         <template #title>
-          <h1>LAYOUT BÊN NGOÀI HỘP</h1>
+          <h1>LAYOUT BÊN NGOÀI KHUNG</h1>
         </template>
       </TitleHead>
 
@@ -51,7 +51,7 @@ onMounted(() => {
     <div class="container">
       <div class="hr hr--circle"></div>
       <h2>❖ Giới thiệu</h2>
-      <p>Layout bên ngoài hộp.</p>
+      <p>Layout bên ngoài khung.</p>
       
       <LineSpace />
 

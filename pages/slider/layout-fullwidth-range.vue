@@ -3,8 +3,6 @@ const sliderOptions = {
   fx: 'rectRun',
   speed: 800,
   width: 1140,
-  // height: 620,
-  // imagePosition: 'fill',
   widthRange: [
     [748, 768, 959],
     [940, 960, 1200],
