@@ -1,4 +1,5 @@
 <script setup>
+import Couter from '~~/components/Couter.vue';
 definePageMeta({
   middleware: ['init']
 })
@@ -66,6 +67,7 @@ onMounted(() => {
         prev-to="/slider"
         next-name="Layout cổ điển 1"
         next-to="/slider/layout-classic-1" />
+
     </div>
   </section>
 </main>

@@ -224,6 +224,8 @@ const sliderData = [
     ]
   }
 ]
+const MENUS = useMenu()
+console.log(MENUS._object.menu[1])
 
 // LifeCycle
 const sliderOptions = {

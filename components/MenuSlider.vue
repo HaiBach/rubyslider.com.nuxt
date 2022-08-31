@@ -5,10 +5,10 @@ const sliderName = 'megaslider-' + menuLevel1.slug
 
 // Slider setup
 const initSetup = function() {
-  jQuery('megamenu__slider .rs01nav').remove()
-  jQuery('megamenu__slider .rs01pag').remove()
-  jQuery('megamenu__slider .rs01overlay-ghost').remove()
-  jQuery('megamenu__slider .rs01imgback').css({ width: '', height: '', left: '', top: '' })
+  jQuery('.megamenu__slider .rs01nav').remove()
+  jQuery('.megamenu__slider .rs01pag').remove()
+  jQuery('.megamenu__slider .rs01overlay-ghost').remove()
+  jQuery('.megamenu__slider .rs01imgback').css({ width: '', height: '', left: '', top: '' })
 
   const sliderOptions = {
     name: sliderName,
@@ -50,7 +50,9 @@ onMounted(() => {
       v-for="(menuLevel2, indexLevel2) in menuLevel1.menus"
       :key="menuLevel2.key">
 
-      <div class="megamenu__slide rs01slide">
+      <div
+        v-if="menuLevel2.status"
+        class="megamenu__slide rs01slide">
 
         <div class="megamenu--link-lv2 rs01pagitem" :data-slide-num="indexLevel2">
           <i v-if="menuLevel2.icon" v-html="menuLevel2.icon "></i>
@@ -64,20 +66,22 @@ onMounted(() => {
         </div>
 
         <div v-if="menuLevel2.menus" class="megamenu__items">
-          <div
+          <template
             v-for="menuLevel3 in menuLevel2.menus"
-            :key="menuLevel3.key"
-            class="megamenu__item">
+            :key="menuLevel3.key">
 
-            <NuxtLink
-              :to="menuLevel3.to"
-              class="megamenu--link-lv3">
-              <figure class="megamenu__thumb">
-                <img :src="menuLevel3.thumbnail" :alt="menuLevel3.name">
-              </figure>
-              <span class="megamenu__figcaption">{{ menuLevel3.name }}</span>
-            </NuxtLink>
-          </div> <!-- ./megamenu__item -->
+            <div v-if="menuLevel3.status" class="megamenu__item">
+              <NuxtLink
+                :to="menuLevel3.to"
+                class="megamenu--link-lv3">
+                <figure class="megamenu__thumb">
+                  <img :src="menuLevel3.thumbnail" :alt="menuLevel3.name">
+                </figure>
+                <span class="megamenu__figcaption">{{ menuLevel3.name }}</span>
+              </NuxtLink>
+            </div>
+
+          </template> <!-- ./megamenu__item -->
         </div> <!-- ./megamenu__items -->
 
         <div v-if="menuLevel2.to" class="megamenu__item_single">

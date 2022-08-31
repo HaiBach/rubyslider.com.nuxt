@@ -2720,7 +2720,6 @@ $[rs01VA.rubyName] = function($ruby, OptsJS) {
                 // va.wRes = o.width;
                 va.wRes = va.wGrid[0];
                 // va.hRes = is.heightFixed ? o.height : 0;
-                console.log(va.hGrid)
                 va.hRes = is.heightFixed ? va.hGrid[0] : 0;
 
                 // Fullscreen: setup
