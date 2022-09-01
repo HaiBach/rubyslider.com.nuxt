@@ -20,6 +20,7 @@ const MENUS = [
         key: '1.3',
         // name: 'Effect',
         name: 'Hiệu ứng',
+        slug: 'effects',
         header: {
           title: 'CÁC LOẠI HIỆU ỨNG',
           desc: 'Các loại hiệu ứng trong RubySlider. RubySlider hỗ trợ nhiều hiệu ứng, bao gồm các hiệu ứng đơn giản có hiệu suất cao <b>Line</b>, <b>Fade</b> cho đến các hiệu ứng phức tạp và đẹp mắt như <b>Math</b>, <b>CSS One</b>, <b>Coverflow3D</b>. <br/>Đồng thời các hiệu ứng đều hỗ trợ chức năng thay đổi trực tiếp khi kéo, rê các slide này sang các slide khác'
@@ -89,6 +90,7 @@ const MENUS = [
         key: '1.2',
         // name: 'Layout',
         name: 'Bố cục',
+        slug: 'layout',
         header: {
           title: 'BỐ CỤC/LAYOUT DỰNG SẴN',
           desc: 'Hỗ trợ các layout dựng sẵn trong các trường hợp khác nhau. Đáp ứng đầy đủ cho nhu cầu cơ bản. Đồng thời hướng dẫn bạn bắt đầu sử dụng RubySlider dễ dàng hơn.',
@@ -229,6 +231,7 @@ const MENUS = [
         status: true,
         key: '1.4',
         name: 'Slideshow',
+        slug: 'slideshow',
         header: {
           title: 'TỰ ĐỘNG SLIDESHOW',
           desc: 'RubySlider có hỗ trợ chức năng tự động slideshow nội dung, bạn có thể thiết lập thời gian hiệu ứng, loại timer, nút dừng slideshow...<br>Đặc biệt bạn có thể tuỳ biến timer dễ dàng bằng css, hoặc bạn có thể cho slideshow có thể chạy ngẫu nhiên.',
@@ -269,6 +272,7 @@ const MENUS = [
         status: true,
         key: '1.5',
         name: 'API',
+        slug: 'api',
         header: {
           title: 'PHƯƠNG THỨC API',
           desc: 'Phương thức giao tiếp của RubySlider và người sử dụng, bạn có thể đều khiển và cập nhật hầu hết các tuỳ chọn của plugin thông qua các phương thức API đơn giản.',
@@ -593,7 +597,7 @@ const MENUS = [
         thumbnail: '/img/create-css-effect/create-css-effect-01.svg'
       },
       {
-        status: true,
+        status: false,
         key: '3.2',
         name: 'Preview CSS effect',
         to: '/tools/preview-css-effect',
