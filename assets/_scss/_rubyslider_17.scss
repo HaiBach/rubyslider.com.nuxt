@@ -325,7 +325,7 @@
 */
 .rs01nav-next, .rs01nav-prev, .rs01playpause {
     cursor: pointer;
-    z-index: 99999;
+    // z-index: 99999;
 }
 .rs01nav-prev, .rs01nav-next {
     position: absolute;
@@ -385,7 +385,7 @@
 */
 .rs01pag {
     overflow: hidden;
-    z-index: 3;
+    // z-index: 3;
 }
 .rs01paginner {
     position: relative;

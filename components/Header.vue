@@ -127,12 +127,6 @@ const scrollfixed = function() {
 onMounted(() => {
   scrollfixed()
 })
-// if (process.client) {
-//   window.addEventListener('load', () => {
-//     console.log('window load: scrollfixed')
-//     scrollfixed()
-//   })
-// }
 </script>
 
 
@@ -159,12 +153,20 @@ onMounted(() => {
     min-height: 90px;
     padding: 20px 40px;
   }
+  /** MEDIA */
+  @media (max-width: 991px) {
+    &__inner {
+      justify-content: center;
+      min-height: 70px;
+      padding: 15px 5px 15px 15px;
+    }
+  }
 }
 
 /** SCROLL FIXED **/
 .scrollfixed {
   background-color: var(--color-primary);
-  background-color: rgba($color: #000, $alpha: .8);
+  // background-color: rgba($color: #000, $alpha: .8);
   z-index: 99;
 
   /** FIXED ENABLE - ĐỦ ĐIỀU KIỆN ĐỂ SCROLL FIXED HOẠT ĐỘNG **/
@@ -188,6 +190,11 @@ onMounted(() => {
     .megamenu__board {
       top: calc(100% + 1px);
     }
+  }
+
+  /** MEDIA */
+  @media (max-width: 991px) {
+
   }
 }
 

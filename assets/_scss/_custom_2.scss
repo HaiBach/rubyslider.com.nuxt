@@ -9,6 +9,11 @@
 /** RUBYSLIDER **/
 .rs01 {
   .rs01slide {
-    border-radius: 8px;
+    border-radius: 12px;
+  }
+  @media (max-width: 991px) {
+    .rs01slide {
+      border-radius: 8px;
+    }
   }
 }

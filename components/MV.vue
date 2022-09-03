@@ -110,12 +110,12 @@ function randomNum() {
     justify-content: center;
     align-items: center;
     width: 100%;
-    perspective: 800px;
     z-index: -1;
     transition: all .4s;
     transform: translate3d(0,180px,0) scale(.6);
     figure {
       display: block;
+      perspective: 800px;
     }
     svg {
       display: block;

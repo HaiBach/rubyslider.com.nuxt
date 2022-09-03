@@ -93,8 +93,10 @@
     &__text_4 {
       display: inline-block;
       padding-top: 10px;
+      margin-top: 10px;
       border-top: 1px solid #aaa;
       font-size: 1.4em;
+      line-height: 1.3;
       font-weight: 300;
     }
   }

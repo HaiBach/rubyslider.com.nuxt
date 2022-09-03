@@ -8,7 +8,7 @@
         </template>
       </TitleHead>
       <div class="docs__content">
-        <p>Nội dung đang được xây dưng!</p>
+        <p>Nội dung đang được xây dựng!</p>
       </div>
     </div>
   </div>

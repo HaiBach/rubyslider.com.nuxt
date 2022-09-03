@@ -1,5 +1,5 @@
 <script setup>
-import './assets/main.scss'
+// import './assets/main.scss'
 </script>
 
 

@@ -1,0 +1,59 @@
+/** KEYFRAMES **/
+@keyframes menu-effect {
+  0% {
+    transform: translate3d(0, 20px,0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+}
+@keyframes rotateUpOut {
+  0% {
+    transform-origin: 50% 50% -150px;
+    transform: perspective(800px) rotateY(0) translateZ(-150px);
+    opacity: 1;
+  }
+  100% {
+    transform-origin: 50% 50% -150px;
+    transform: perspective(800px) rotateX(180deg) translateZ(0);
+    opacity: 0;
+  }
+}
+@keyframes moveCenterTop {
+  0% {
+    transform: translate3d(0,0,0) scale(1);
+  }
+  100% {
+    transform: translate3d(0,-60px,0) scale(1.2);
+  }
+}
+@keyframes moveRightShort {
+  0% {
+    transform: translate3d(0,0,0) scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(15px,0,0) scale(1.4);
+    opacity: 1;
+  }
+}
+@keyframes zoomOut {
+  0% {
+    transform: perspective(800px) translate3d(0,0,0);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(800px) translate3d(0,0,-500px);
+    opacity: 0;
+  }
+}
+@keyframes shadowDownOut {
+  0% {
+    transform: translate3d(0,0,0) scale(1);
+  }
+  100% {    
+    transform: translate3d(0,20px,0) scale(.9);
+  }
+}
