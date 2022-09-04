@@ -77,7 +77,7 @@ function randomNum() {
         <NuxtLink to="/slider" class="btn--primary">
           <span>CÁC HIỆU ỨNG<br>VÀ LAYOUT KHÁC</span>
         </NuxtLink>
-        <NuxtLink to="/documentation" class="btn--alter">
+        <NuxtLink to="/docs" class="btn--alter">
           <span>HƯỚNG DẪN SỬ DỤNG</span>
         </NuxtLink>
       </div>
