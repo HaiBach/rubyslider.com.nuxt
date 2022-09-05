@@ -1,6 +1,14 @@
 <template>
-<div id="quick-start" class="docs__section">
-  <h1 class="title ma-b-50">QUICK GUIDE</h1>
+<section id="quick-start" class="docs__section">
+  <h1 class="title ma-b-50">CÀI ĐẶT NHANH</h1>
+
+  <p>Trang này cung cấp cài đặt nhanh RubySlider.</p>
+  
+  <p><b>Cài đặt CSS</b></p>
+  <p>Plugin bao gồm 1 file css chính, hãy chèn nó vào thẻ <code>&lt;header&gt;</code></p>
+  <pre><code>&lt;!-- Main css of rubytabs, including styles, skins --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;ruby/rubyslider.css&quot;&gt;</code></pre>
+
 
 
   <p><span class="text-success">Quick guide</span> to set up most basic for active rubytabs. The other section will provide detailed options.</p>
@@ -119,5 +127,5 @@ $(".rt01").rubytabs({
             <h5>With a few simple steps, rubytabs ready to work!</h5>
             <a class="success" href="../templates/tabs-layout-simplest.html" style="text-decoration: underline"><h3>View example</h3></a>
         </div>
-    </div>
+</section>
 </template>
