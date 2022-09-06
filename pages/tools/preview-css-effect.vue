@@ -85,7 +85,7 @@ onMounted(() => {
 
     <!-- Line space -->
     <div class="container">
-      <div class="line-space"></div>
+      <div class="linespace"></div>
     </div>
 
 
@@ -111,7 +111,7 @@ onMounted(() => {
 
     <!-- Line space -->
     <div class="container">
-      <div class="line-space"></div>
+      <div class="linespace"></div>
     </div>
 
     <!-- Manual -->

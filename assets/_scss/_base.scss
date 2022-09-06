@@ -27,8 +27,8 @@ h3, h4, h5, h6 {
   padding-bottom: 60px;
 }
 /* Text & Label */
-.text-code,
-.label.code {
+pre, code,
+.text-code {
   font-family: "Source Code Pro", monospace, serif;
 }
 
@@ -83,7 +83,6 @@ h3, h4, h5, h6 {
 .guide {
   padding-bottom: 60px;
   background-color: rgba($color: #000, $alpha: .05);
-  // font-size: 1.125em;
   .hr {
     margin-bottom: 60px;
   }

@@ -1,6 +1,25 @@
 .docs {
   display: flex;
   padding: 50px 50px;
+  h1 {
+    margin-bottom: 30px;
+  }
+  p {
+    code {
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+  }
+  pre {
+    background-color: rgba($color: #000, $alpha: .05);
+  }
+  .codeprint {
+    font-size: 14px;
+    box-shadow: none;
+  }
+  .linespace-2 {
+    height: 50px;
+  }
   &__sidebar {
     width: 300px;
     padding-right: 50px;
