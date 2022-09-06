@@ -26,5 +26,13 @@ const year = date.getFullYear()
       font-size: .875em;
     }
   }
+  /** Media **/
+  @media (max-width: 767px) {
+    &__copyright {
+      p {
+        font-size: .8125em;
+      }
+    }
+  }
 }
 </style>

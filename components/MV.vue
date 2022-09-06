@@ -43,16 +43,16 @@ function randomNum() {
 
 <template>
 <section class="mv">
-  <TitleHead>
-    <template #title>
-      <h1>RUBY SLIDER</h1>
-    </template>
-    <template #desc>
-      <p>Plugin jQuery dành cho Slider & Tabs</p>
-    </template>
-  </TitleHead>
-
   <div class="container">
+    <TitleHead>
+      <template #title>
+        <h1>RUBY SLIDER</h1>
+      </template>
+      <template #desc>
+        <p>Plugin jQuery dành cho Slider & Tabs</p>
+      </template>
+    </TitleHead>
+  
     <div class="mv__slider rs01 rs01timer-arcTop">
       <!-- <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 1</a>
       <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 2</a>
@@ -75,10 +75,10 @@ function randomNum() {
     <div class="mv__btns">
       <div class="btn btn--btns btn--large">
         <NuxtLink to="/slider" class="btn--primary">
-          <span>CÁC HIỆU ỨNG<br>VÀ LAYOUT KHÁC</span>
+          <span>CÁC HIỆU ỨNG<br><small><b>&</b></small> LAYOUT KHÁC</span>
         </NuxtLink>
         <NuxtLink to="/docs/quick-start" class="btn--alter">
-          <span>HƯỚNG DẪN SỬ DỤNG</span>
+          <span>HƯỚNG DẪN<br class="br--max-sm">SỬ DỤNG</span>
         </NuxtLink>
       </div>
     </div>
@@ -130,6 +130,22 @@ function randomNum() {
     a {
       min-width: 350px;
     }
+    small {
+      font-size: .85em;
+    }
+  }
+  /** Media **/
+  @media (max-width: 767px) {
+    padding-bottom: 40px;
+    &__btns {
+      .btn--btns {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      a {
+        min-width: 150px;
+      }
+    }
   }
 }
 .mv__slider {
@@ -175,6 +191,7 @@ function randomNum() {
     }
   }
 }
+
 @keyframes avatarRotate {
   0% {
     transform: rotateY(0);

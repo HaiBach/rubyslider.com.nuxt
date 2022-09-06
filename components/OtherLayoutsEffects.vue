@@ -244,5 +244,10 @@ function getRandomNum() {
       min-width: 250px;
     }
   }
+
+  /** Media */
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
 </style>

@@ -63,6 +63,16 @@ pre, code,
     }
   }
 }
+[class*="br--"] {
+  display: none;
+}
+.br {
+  @media (max-width: 767px) {
+    &--max-sm {
+      display: block;
+    }
+  }
+}
 
 /** Code Print **/
 .codeprint {

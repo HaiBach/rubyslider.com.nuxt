@@ -174,8 +174,6 @@ onMounted(() => {
  
   /** FIXED ACTIVED - KHI SCROLL FIXED KÍCH HOẠT **/
   &--actived {
-    // position: sticky;
-    // top: 0;
     position: fixed;
     left: 0;
     top: 0;
@@ -194,7 +192,11 @@ onMounted(() => {
 
   /** MEDIA */
   @media (max-width: 991px) {
-
+    &--actived {
+      .header__inner {
+        min-height: 54px;
+      }
+    }
   }
 }
 

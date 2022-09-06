@@ -57,26 +57,33 @@ const slots = useSlots()
       // font-size: 18px;
     }
   }
+
   /** MEDIA **/
   @media (max-width: 767px) {
     &__title {
       h1 {
-        font-size: 35px;
+        font-size: 46px;
+        font-weight: 200;
       }
       h2 {
-        font-size: 28px;
+        font-size: 36px;
         font-weight: 200;
+      }
+    }
+    &__desc {
+      p {
+        font-size: 14px;
       }
     }
   }
   @media (max-width: 575px) {
     &__title {
       h1 {
-        font-size: 28px;
-        font-weight: 200;
+        font-size: 36px;
+        // font-weight: 200;
       }
       h2 {
-        font-size: 24px;
+        font-size: 28px;
       }
     }
   }

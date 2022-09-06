@@ -58,8 +58,7 @@
     margin-left: -10px;
     margin-right: -10px;
     a, button {
-      margin-left: 10px;
-      margin-right: 10px;
+      margin: 0 10px 10px;
     }
   }
   &--small {
@@ -82,6 +81,24 @@
     a, button {
       background-color: var(--color-primary);
       color: #fff;
+    }
+  }
+
+  /** Media **/
+  @media (max-width: 991px) {
+    // &--btns {
+    //   margin-left: -5px;
+    //   margin-right: -5px;
+    //   a, button {
+    //     margin: 0 5px 10px;
+    //   }
+    // }
+    &--large {
+      a, button {
+        min-height: 60px;
+        padding: 5px 15px;
+        font-size: 15px;
+      }
     }
   }
 }
