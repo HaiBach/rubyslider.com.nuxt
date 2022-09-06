@@ -22,7 +22,7 @@
 &lt;script src=&quot;ruby/rubyslider.js&quot;&gt;&lt;/script&gt;
 
 &lt;!-- File JS chứa hiệu ứng CSS trong RubySlider --&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;ruby/rubyanimate.js&quot;&gt;</code></pre>
+&lt;script src=&quot;ruby/rubyanimate.js&quot;&gt;&lt;/script&gt;</code></pre>
   <div class="linespace-2"></div>
     
   <p><b>3. Thiết lập HTML</b></p>
