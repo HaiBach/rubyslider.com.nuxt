@@ -8,7 +8,7 @@ $background-board: #f0f0f0;
   &__header {
     display: none;
   }
-  @media (max-width: 991px) {
+  @media (max-width: 767px) {
     overflow-y: auto;
     position: fixed;
     display: none;
@@ -159,9 +159,9 @@ $background-board: #f0f0f0;
       font-size: 12px;
     }
   }
-  @media (max-width: 767px) {
+  // @media (max-width: 767px) {
 
-  }
+  // }
   @media (max-width: 575px) {
 
   }

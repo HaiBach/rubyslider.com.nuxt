@@ -14,3 +14,8 @@
   --font-alter: 'Raleway', sans-serif;
   --font-code: 'Source Code Pro', monospace;
 }
+
+/** Mixins **/
+// @mixin sizeRem($size) {
+//   font-size: ($size / 16) * 1rem;
+// }

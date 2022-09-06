@@ -135,13 +135,32 @@ function randomNum() {
     }
   }
   /** Media **/
-  @media (max-width: 767px) {
-    padding-bottom: 40px;
+  @media (max-width: 991px) {
     &__btns {
       .btn--btns {
         margin-left: 0;
         margin-right: 0;
       }
+      a {
+        min-width: 250px;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    .title-head {
+      margin-bottom: 60px;
+      &__title {
+        h1 {
+          letter-spacing: 4px;
+        }
+      }
+    }
+    &__avatar {
+      transform: translate3d(0,80px,0) scale(.45);
+    }
+    &__btns {
       a {
         min-width: 150px;
       }
@@ -187,6 +206,18 @@ function randomNum() {
       transform: translate3d(0,-100px,0) scale(.32);
       p {
         visibility: hidden;
+      }
+    }
+  }
+  /** Media **/
+  @media (max-width: 767px) {
+    min-height: 210px;
+    .rs01slide {
+      border-radius: 8px;
+    }
+    &.rs01ready {
+      + .mv__avatar {
+        transform: translate3d(0,-125px,0) scale(.25);
       }
     }
   }

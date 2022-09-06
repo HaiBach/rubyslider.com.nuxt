@@ -601,7 +601,8 @@
 }
 .rs01pagarrow-item.rs01actived {
     opacity: 1;
-    z-index: 99999;
+    // z-index: 99999;
+    z-index: 2;
 }
 .rs01pagdirs-hor .rs01pagarrow-item         { top: 0; width: 25px; height: 100%; }
 .rs01pagdirs-hor .rs01pagarrow-left         { left: 0; }
