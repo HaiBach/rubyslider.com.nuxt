@@ -17,7 +17,7 @@ const year = date.getFullYear()
 
 <style lang="scss">
 @mixin sizeRem($size) {
-  font-size: ($size / 16) * 1rem;
+  font-size: calc($size / 16) * 1rem;
 }
 .footer {
   padding-top: 40px;
@@ -26,15 +26,19 @@ const year = date.getFullYear()
     p {
       margin-bottom: 0;
       color: #666;
-      // font-size: .875em;
       @include sizeRem(14);
     }
   }
   /** Media **/
   @media (max-width: 767px) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: rgba($color: #000, $alpha: 0.05);
     &__copyright {
       p {
+        color: #444;
         @include sizeRem(12);
+        text-align: center;
       }
     }
   }

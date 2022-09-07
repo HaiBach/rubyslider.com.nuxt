@@ -134,6 +134,7 @@ function randomNum() {
       font-size: .85em;
     }
   }
+  
   /** Media **/
   @media (max-width: 991px) {
     &__btns {
@@ -219,6 +220,14 @@ function randomNum() {
       + .mv__avatar {
         transform: translate3d(0,-125px,0) scale(.25);
       }
+    }
+  }
+  @media (max-width: 575px) {
+    .rs01nav-prev {
+      left: -15px;
+    }
+    .rs01nav-next {
+      right: -15px;
     }
   }
 }

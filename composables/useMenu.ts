@@ -664,5 +664,4 @@ const MENUS = [
 
 export default function() {
   return useState('menu', () => MENUS)
-  // return MENUS
 }
