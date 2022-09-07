@@ -8,8 +8,8 @@ const initSetup = () => {
   })
 }
 onMounted(() => {
-  // setTimeout(initSetup, 400)
-  initSetup()
+  setTimeout(initSetup, 400)
+  // initSetup()
 })
 </script>
 

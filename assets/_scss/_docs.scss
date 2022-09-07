@@ -13,7 +13,7 @@
     }
   }
   pre {
-    background-color: rgba($color: #000, $alpha: .05);
+    // background-color: rgba($color: #000, $alpha: .05);
   }
   .codeprint {
     background-color: #282936;
@@ -67,6 +67,9 @@
     td {
       padding: 10px 10px 10px 0;
       border-bottom: 1px solid rgba($color: #000, $alpha: .2);
+      &:first-child {
+        font-weight: 700;
+      }
       &:last-child {
         min-width: 50%;
         vertical-align: text-top;

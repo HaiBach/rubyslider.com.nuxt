@@ -345,6 +345,39 @@
       margin-right: auto;
     }
   }
+
+  @media (max-width: 991px) {
+    &__left {
+      width: 250px;
+    }
+    &__right {
+      width: calc(100% - 250px);
+    }
+    &__item {
+      width: 33.3%;
+    }
+    &__figcaption {
+      font-size: 12px;
+    }
+    &__name {
+      font-size: 62px;
+    }
+    &__desc {
+      font-size: 14px;
+    }
+    .megamenu--link-lv1 {
+      padding: 10px 12px;
+      font-size: 13px;
+    }
+    .megamenu--link-lv2 {
+      font-size: 18px;
+    }
+    &__item_single {
+      img {
+        max-width: 280px;
+      }
+    }
+  }
 }
 
 body {

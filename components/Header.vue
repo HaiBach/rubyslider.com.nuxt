@@ -156,9 +156,15 @@ onMounted(() => {
   /** MEDIA */
   @media (max-width: 991px) {
     &__inner {
+      padding-left: 20px;
+      padding-right: 10px;
+    }
+  }
+  @media (max-width: 767px) {
+    &__inner {
       justify-content: center;
       min-height: 70px;
-      padding: 15px 5px 15px 15px;
+      padding: 15px 10px 15px 20px;
     }
   }
 }

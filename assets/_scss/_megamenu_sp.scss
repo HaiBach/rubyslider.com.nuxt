@@ -64,6 +64,7 @@ $background-board: #f0f0f0;
     .megamenu--link-lv1 {
       display: flex;
       width: max-content;
+      margin-left: 15px;
       background-color: rgba($color: #000, $alpha: .1);
       color: #000;
     }
@@ -82,7 +83,7 @@ $background-board: #f0f0f0;
     &__board_inner {
       display: block;
       width: 100%;
-      padding: 25px 12px 0;
+      padding: 25px 15px 0;
       margin-left: 0;
       background-color: transparent;
       border-radius: 0;
@@ -159,16 +160,13 @@ $background-board: #f0f0f0;
       font-size: 12px;
     }
   }
-  // @media (max-width: 767px) {
-
-  // }
   @media (max-width: 575px) {
 
   }
 }
 
 body.megamenu--open .megamenu {
-  @media (max-width: 991px) {
+  @media (max-width: 767px) {
     display: block;
     &__ghost {
       visibility: visible;
@@ -179,9 +177,6 @@ body.megamenu--open .megamenu {
     &__header {
       display: block;
     }
-  }
-  @media (max-width: 767px) {
-
   }
   @media (max-width: 575px) {
 
