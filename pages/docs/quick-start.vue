@@ -8,8 +8,8 @@ const initSetup = () => {
   })
 }
 onMounted(() => {
-  setTimeout(initSetup, 400)
-  // initSetup()
+  // setTimeout(initSetup, 400)
+  initSetup()
 })
 </script>
 
@@ -23,7 +23,7 @@ onMounted(() => {
   
   <p><b>1. Cài đặt CSS</b></p>
   <p>Plugin bao gồm 1 file css chính, hãy chèn nó vào thẻ <code>&lt;header&gt;</code></p>
-  <pre class="codeprint"><code class="language-html">&lt;!-- Main css of rubytabs, including styles, skins --&gt;
+  <pre class="codeprint"><code>&lt;!-- Main css of rubytabs, including styles, skins --&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;ruby/rubyslider.css&quot;&gt;</code></pre>
   <div class="linespace-2"></div>
   
