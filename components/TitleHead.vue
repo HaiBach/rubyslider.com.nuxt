@@ -42,8 +42,8 @@ const slots = useSlots()
   }
   &__desc {
     position: relative;
-    margin-top: 10px;
     padding-top: 12px;
+    margin-top: 10px;
     &::before {
       content: '';
       position: absolute;
@@ -71,8 +71,10 @@ const slots = useSlots()
       }
     }
     &__desc {
+      padding-top: 10px;
+      margin-top: 8px;
       p {
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }

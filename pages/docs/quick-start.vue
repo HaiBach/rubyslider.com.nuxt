@@ -1,3 +1,19 @@
+<script setup>
+import hljs from 'highlight.js'
+
+const initSetup = () => {
+  const $codeprint = document.querySelectorAll('.codeprint code')
+  $codeprint.forEach((el) => {
+    hljs.highlightElement(el)
+  })
+}
+onMounted(() => {
+  setTimeout(initSetup, 400)
+  // initSetup()
+})
+</script>
+
+
 <template>
 <section id="quick-start" class="docs__section">
   <h1 class="title ma-b-50">CÀI ĐẶT NHANH</h1>
@@ -7,7 +23,7 @@
   
   <p><b>1. Cài đặt CSS</b></p>
   <p>Plugin bao gồm 1 file css chính, hãy chèn nó vào thẻ <code>&lt;header&gt;</code></p>
-  <pre class="codeprint"><code>&lt;!-- Main css of rubytabs, including styles, skins --&gt;
+  <pre class="codeprint"><code class="language-html">&lt;!-- Main css of rubytabs, including styles, skins --&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;ruby/rubyslider.css&quot;&gt;</code></pre>
   <div class="linespace-2"></div>
   
@@ -15,7 +31,7 @@
   <p>Plugin bao gồm 1 file <code>rubyslider.js</code> chính và 1 file <code>rubyanimate.js</code> hỗ trợ hiệu ứng CSS. <br>
     Nếu không sử dụng hiệu ứng CSS thì không cần chèn file <code>rubyanimate.js</code> vào trang web.</p>
   
-    <pre class="codeprint"><code>&lt;!-- jQuery 1.9+ required --&gt;
+    <pre class="codeprint"><code class="lang-html">&lt;!-- jQuery 1.9+ required --&gt;
 &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;!-- File JS chính của RubySlider --&gt;

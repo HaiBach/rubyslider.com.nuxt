@@ -2,7 +2,7 @@
 const sliderOptions = {
   fx: 'coverflow3D',
   coverflow3D: {
-    widthSlide: [1040, '80%'],
+    widthSlide: [1040, '85%'],
     opacity: 0.3
   },
   speed: 800,
@@ -14,7 +14,7 @@ const sliderOptions = {
   isKeyboard: true,
   // isSlideshow: true,
   slideshow: {
-    delay: 4000,  
+    delay: 4000,
     isAutoRun: true
   },
   timerArc: {

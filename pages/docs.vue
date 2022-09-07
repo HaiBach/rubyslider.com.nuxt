@@ -26,4 +26,3 @@ definePageMeta({
 
 <style lang="scss">
 </style>
-  
