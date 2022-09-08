@@ -21,20 +21,36 @@ h3, h4, h5, h6 {
   font-weight: 300;
   line-height: 1.2;
 }
-
+// List ul li
 ::marker {
   color: rgba($color: #000, $alpha: .75);
   font-size: .8em;
 }
+pre, code {
+  font-family: var(--font-code);
+}
+/** Media **/
+@media (max-width: 991px) {
+  h1 {
+    font-size: 38px;
+    font-weight: 200;
+  }
+  h2 {
+    font-size: 32px;
+  }
+}
+
+
+
+
 
 .wrapper {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 /* Text & Label */
-pre, code,
 .text-code {
-  font-family: "Source Code Pro", monospace, serif;
+  font-family: var(--font-code);
 }
 
 /** Hr **/
@@ -90,6 +106,7 @@ pre, code,
 .slider-preview {
   margin-bottom: 30px;
 }
+
 
 
 

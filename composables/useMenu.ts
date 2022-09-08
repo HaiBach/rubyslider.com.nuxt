@@ -24,7 +24,7 @@ const MENUS = [
         slug: 'effects',
         header: {
           title: 'CÁC LOẠI HIỆU ỨNG',
-          desc: 'Các loại hiệu ứng trong RubySlider. RubySlider hỗ trợ nhiều hiệu ứng, bao gồm các hiệu ứng đơn giản có hiệu suất cao <b>Line</b>, <b>Fade</b> cho đến các hiệu ứng phức tạp và đẹp mắt như <b>Math</b>, <b>CSS One</b>, <b>Coverflow3D</b>. <br/>Đồng thời các hiệu ứng đều hỗ trợ chức năng thay đổi trực tiếp khi kéo, rê các slide này sang các slide khác'
+          desc: 'Slide này hiển thị các loại hiệu ứng trong RubySlider. RubySlider hỗ trợ nhiều hiệu ứng, bao gồm các hiệu ứng đơn giản với hiệu suất cao <b>Line</b>, <b>Fade</b> cho đến các hiệu ứng phức tạp và đẹp mắt như <b>Math</b>, <b>CSS One</b>, <b>Coverflow3D</b>. <br/>Đồng thời các hiệu ứng đều hỗ trợ chức năng thay đổi trực tiếp khi kéo, rê các slide này sang các slide khác'
         },
         menus:
         [
@@ -102,7 +102,7 @@ const MENUS = [
         slug: 'layout',
         header: {
           title: 'BỐ CỤC/LAYOUT DỰNG SẴN',
-          desc: 'Hỗ trợ các layout dựng sẵn trong các trường hợp khác nhau. Đáp ứng đầy đủ cho nhu cầu cơ bản. Đồng thời hướng dẫn bạn bắt đầu sử dụng RubySlider dễ dàng hơn.',
+          desc: 'Slide này hiển thị RubySlider trong các trường hợp layout khác nhau, thể hiện tính linh động và khả năng thiết lập trong các layout khác nhau của RubySlider.'
         },
         menus:
         [
@@ -259,7 +259,7 @@ const MENUS = [
         slug: 'slideshow',
         header: {
           title: 'TỰ ĐỘNG SLIDESHOW',
-          desc: 'RubySlider có hỗ trợ chức năng tự động slideshow nội dung, bạn có thể thiết lập thời gian hiệu ứng, loại timer, nút dừng slideshow...<br>Đặc biệt bạn có thể tuỳ biến timer dễ dàng bằng css, hoặc bạn có thể cho slideshow có thể chạy ngẫu nhiên.',
+          desc: 'RubySlider có hỗ trợ chức năng tự động slideshow nội dung, bạn có thể thiết lập thời gian hiệu ứng, loại timer, nút dừng slideshow...<br>Bạn còn có thể tuỳ biến timer dễ dàng bằng css, hoặc bạn có thể cho slideshow có thể chạy ngẫu nhiên.',
         },
         menus:
         [

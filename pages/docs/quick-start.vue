@@ -9,7 +9,6 @@ const initSetup = () => {
 }
 onMounted(() => {
   setTimeout(initSetup, 400)
-  // initSetup()
 })
 </script>
 

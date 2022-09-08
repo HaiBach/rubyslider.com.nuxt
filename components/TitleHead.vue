@@ -81,7 +81,7 @@ const slots = useSlots()
   @media (max-width: 575px) {
     &__title {
       h1 {
-        font-size: 36px;
+        font-size: 38px;
         // font-weight: 200;
       }
       h2 {

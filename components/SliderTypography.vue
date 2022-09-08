@@ -77,6 +77,7 @@
     }
   }
   @media (max-width: 767px) {
+    display: none;
     &__h1 {
       padding-top: 50px; padding-bottom: 50px;
       text-align: left;
