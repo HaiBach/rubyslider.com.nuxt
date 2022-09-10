@@ -68,7 +68,7 @@ onMounted(() => {
 
                     <div
                       v-if="item.status"
-                      class="showfull__item col-4 col-sm-3 col-xxs-6">
+                      class="showfull__item col-6 col-sm-4 col-lg-3">
 
                       <div class="showfull__item_inner">
                         <NuxtLink class="showfull__link linkto" :to="item.to">
@@ -140,6 +140,15 @@ onMounted(() => {
 
   /** Media **/
   @media (max-width: 991px) {
+    
+  }
+  @media (max-width: 767px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &__header {
+      padding: 25px 30px 20px;
+      margin-bottom: 30px;
+    }
     &__slider {
       .rs01pag {
         .rs01pagitem {
@@ -151,19 +160,17 @@ onMounted(() => {
       }
     }
   }
-  @media (max-width: 767px) {
-    padding-top: 40px;
-    padding-bottom: 40px;
-
-  }
   @media (max-width: 575px) {
 
   }
 }
 
 .showfull {
-  &__item_inner {
+  &__item {
     margin-bottom: 50px;
+  }
+  &__item_inner {
+    height: 100%;
     background-color: #fff;
     border-radius: 8px;
     &:hover {
@@ -184,7 +191,7 @@ onMounted(() => {
     }
   }
   &__name {
-    padding-bottom: 10px;
+    padding: 0 10px 10px;
     transition: all .2s;
   }
   &__link {
@@ -231,10 +238,14 @@ onMounted(() => {
 
   /** Media **/
   @media (max-width: 991px) {
-
+    &__name {
+      font-size: 14px;
+    }
   }
   @media (max-width: 767px) {
-
+    &__item {
+      margin-bottom: 30px;
+    }
   }
   @media (max-width: 575px) {
 
