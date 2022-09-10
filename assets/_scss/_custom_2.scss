@@ -1,3 +1,10 @@
+#main {
+  @media (max-width: 757px) {
+    min-height: calc(100vh - 70px - 68px); // - #header - #footer
+  }
+}
+
+
 /** HEADER **/
 .scrollfixed--body-actived {
   #page {

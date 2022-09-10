@@ -154,6 +154,7 @@ function randomNum() {
       margin-bottom: 60px;
       &__title {
         h1 {
+          font-size: 38px;
           letter-spacing: 3px;
         }
       }

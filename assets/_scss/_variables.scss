@@ -1,11 +1,16 @@
 /** VARIABLES **/
+$color-primary: #c05;
+$color-primary-dark: #66002a;
+$color-alter: #0096ff;
+$color-alter-dark: #004A7e;
+
 :root {
-  --color-primary: #c05;
-  --color-primary-dark: #66002a;
-  --color-alter: #0096ff;
-  --color-alter-dark: #004A7e;
+  --color-primary: #{$color-primary};
+  --color-primary-dark: #{$color-alter-dark};
+  --color-alter: #{$color-alter};
+  --color-alter-dark: #{$color-alter-dark};
   // Color link a
-  --bs-link-color: #c05;
+  --bs-link-color: #{ $color-primary };
   --bs-link-hover-color: #000;
 
 

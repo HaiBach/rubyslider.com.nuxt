@@ -16,7 +16,8 @@ $background-board: #f0f0f0;
     top: 0;
     width: 100vw;
     height: 100vh;
-    padding-bottom: 60px;
+    padding-top: 80px;
+    padding-bottom: 20px;
     z-index: 999999;
     &--sp {
       display: block;
@@ -26,17 +27,22 @@ $background-board: #f0f0f0;
       z-index: -1;
     }
     &__header {
-      position: relative;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9;
+      width: 100%;
+      box-shadow: 0 1px 2px rgba($color: #000, $alpha: .1);
       .logo {
-        margin-bottom: 20px;
         background-color: #fff;
         a, a:visited {
           justify-content: center;
           padding: 15px 20px;
-          color: rgba($color: #000, $alpha: .85);
+          color: var(--color-primary);
         }
         &__version {
-          color: rgba($color: #000, $alpha: .5);
+          display: none;
+          color: rgba($color: $color-primary, $alpha: .35);
         }
       }
       .hamburger {
@@ -56,17 +62,20 @@ $background-board: #f0f0f0;
     &--li-lv1 {
       padding-bottom: 20px;
       margin-bottom: 20px;
-      border-bottom: 1px solid rgba($color: #000, $alpha: .15);
+      border-bottom: 1px dashed rgba($color: #000, $alpha: .25);
       &:last-child {
         border-bottom: none;
       }
     }
     .megamenu--link-lv1 {
       display: flex;
+      justify-content: center;
       width: max-content;
+      min-width: 150px;
       margin-left: 15px;
-      background-color: rgba($color: #000, $alpha: .1);
-      color: #000;
+      // background-color: rgba($color: #000, $alpha: .1);
+      background-color: var(--color-primary);
+      color: #fff;
     }
     .megamenu--link-lv2 {
       font-size: 18px;

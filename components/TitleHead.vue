@@ -60,13 +60,14 @@ const slots = useSlots()
 
   /** MEDIA **/
   @media (max-width: 767px) {
+    margin-bottom: 40px;
     &__title {
       h1 {
-        font-size: 46px;
+        // font-size: 38px;
         font-weight: 200;
       }
       h2 {
-        font-size: 36px;
+        // font-size: 32px;
         font-weight: 200;
       }
     }
@@ -81,11 +82,11 @@ const slots = useSlots()
   @media (max-width: 575px) {
     &__title {
       h1 {
-        font-size: 38px;
+        // font-size: 32px;
         // font-weight: 200;
       }
       h2 {
-        font-size: 28px;
+        // font-size: 28px;
       }
     }
   }
