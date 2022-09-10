@@ -44,10 +44,8 @@ onMounted(() => {
     </div>
   </section>
 
-  <section class="guide">
-    <div class="container">
-      <div class="hr hr--circle"></div>
-      <h2>❖ Giới thiệu</h2>
+  <Guide>
+    <template #gioi-thieu>
       <p>Hiệu ứng được sử dụng trong layout chính giữa là hiệu ứng <b>Line</b>, hoặc <b>Coverflow3D</b>. trong trường hợp này là hiệu ứng Line.<br>
       Layout chính giữa được sử dụng khi slider có chiều dài lớn hơn chiều dài của các slide.</p>
       <ul>
@@ -65,8 +63,8 @@ onMounted(() => {
         prev-to="/slider/layout-classic-2"
         next-name="Layout băng chuyền"
         next-to="/slider/layout-carousel" />
-    </div>
-  </section>
+    </template>
+  </Guide>
 </main>
 </template>
 

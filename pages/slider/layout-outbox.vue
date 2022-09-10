@@ -47,25 +47,21 @@ onMounted(() => {
     </div>
   </section>
 
-  <section class="guide">
-    <div class="container">
-      <div class="hr hr--circle"></div>
-      <h2>❖ Giới thiệu</h2>
+  <Guide>
+    <template #gioi-thieu>
       <p>Layout bên ngoài khung.</p>
-      
-      <LineSpace />
-
-      <h2>❖ Thiết lập slider</h2>
-      <p>Các bạn có thể được hướng dẫn thiết lập slider chi tiết ở trang <NuxtLink to="/docs/quick-start">hướng dẫn</NuxtLink> này.<br>Dưới đây là options hiện tại của slider phía trên:</p>
+      </template>
+    <template #thiet-lap>
       <pre class="codeprint">{{ sliderOptions }}</pre>
-
+    </template>
+    <template #nav>
       <ButtonPrevNext
         prev-name="Layout băng chuyền"
         prev-to="/slider/layout-carousel"
         next-name="Layout trên thiết bị"
         next-to="/slider/layout-device" />
-    </div>
-  </section>
+    </template>
+  </Guide>
 </main>
 </template>
 

@@ -197,10 +197,8 @@ onMounted(() => {
     </div> <!-- /.coverflow3d__table -->
   </section>
 
-  <section class="guide">
-    <div class="container">
-      <div class="hr hr--circle"></div>
-      <h2>❖ Giới thiệu</h2>
+  <Guide>
+    <template #gioi-thieu>
       <p>Hiệu ứng Math sẽ tính toán kích thước của hình ảnh để phân chia thành nhiều phần khác nhau theo hình chữ nhật (rectangle) hoặc hình vuông (square).</p>
       <ul>
         <li>Hiệu ứng hỗ trợ thời gian thực khi bạn đang kéo rê trên slider.</li>
@@ -208,20 +206,18 @@ onMounted(() => {
         <li>Bạn có thể chọn chế độ <b>"randomMath"</b> để slider có thể chạy 8 hiệu ứng một cách ngẫu nhiên.</li>
         <li>Bạn có thể cập nhật hiệu ứng ở phần danh sách sang <b>Slider Main</b> để xem hiệu ứng Math dễ dàng hơn.</li>
       </ul>
-      
-      <LineSpace />
-
-      <h2>❖ Thiết lập slider</h2>
-      <p>Các bạn có thể được hướng dẫn thiết lập slider chi tiết ở trang <NuxtLink to="/docs/quick-start">hướng dẫn</NuxtLink> này.<br>Dưới đây là options hiện tại của slider phía trên:</p>
+      </template>
+    <template #thiet-lap>
       <pre class="codeprint">{{ sliderOptions }}</pre>
-
+    </template>
+    <template #nav>
       <ButtonPrevNext
         prev-name="Hiệu ứng CssFour"
         prev-to="/slider/effect-css-four"
         next-name="Tuỳ biến hiệu ứng"
         next-to="/slider/effect-control" />
-    </div>
-  </section>
+    </template>
+  </Guide>
 </main>
 </template>
 

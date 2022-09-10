@@ -42,30 +42,26 @@ onMounted(() => {
     </div>
   </section>
 
-  <section class="guide">
-    <div class="container">
-      <div class="hr hr--circle"></div>
-      <h2>❖ Giới thiệu</h2>
+  <Guide>
+    <template #gioi-thieu>
       <p>Hiệu ứng Line là hiệu ứng truyền thống của slider cũng là hiệu ứng đàu tiên của RubySlider phát triển.</p>
       <ul>
         <li>Là hiệu ứng cơ bản của RubySlider.</li>
         <li>Có tính ổn định và hiệu suất cao nhất trong các hiệu ứng của plugin.</li>
         <li>Bạn có thể kéo rê ra ngoài slider để di chuyển sang nhiều slide hơn.</li>
       </ul>
-      
-      <LineSpace />
-
-      <h2>❖ Thiết lập slider</h2>
-      <p>Các bạn có thể được hướng dẫn thiết lập slider chi tiết ở trang <NuxtLink to="/docs/quick-start">hướng dẫn</NuxtLink> này.<br>Dưới đây là options hiện tại của slider phía trên:</p>
+    </template>
+    <template #thiet-lap>
       <pre class="codeprint">{{ sliderOptions }}</pre>
-
+    </template>
+    <template #nav>
       <ButtonPrevNext
         prev-name="Tất cả ví dụ"
         prev-to="/slider"
         next-name="Hiệu ứng Fade"
         next-to="/slider/effect-fade" />
-    </div>
-  </section>
+    </template>
+  </Guide>
 </main>
 </template>
 

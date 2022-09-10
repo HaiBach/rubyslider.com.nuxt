@@ -291,10 +291,8 @@ onMounted(() => {
     </div> <!-- /.cssone__table -->
   </section>
 
-  <section class="guide">
-    <div class="container">
-      <div class="hr hr--circle"></div>
-      <h2>❖ Giới thiệu</h2>
+  <Guide>
+    <template #gioi-thieu>
       <p>Hiệu ứng CssOne là hiệu ứng dựa trên <NuxtLink to="https://www.w3schools.com/css/css3_animations.asp" target="_blank">CSS Animations</NuxtLink>, cho nên bạn sẽ thấy nó thân thiện và có rất nhiều hiệu ứng khác nhau. <br>
       Đặc biệt vì dựa trên CSS Animations cho nên bạn hoàn toàn có thể tuỳ biến hiệu ứng theo ý của bạn, dựa theo cấu trúc gần giống CSS Keyframes.<br>
       Bạn có thể thử nghiệm và tuỳ biến hiệu ứng ở trang <NuxtLink to="/tools/create-css-effect">công cụ</NuxtLink>.<br>
@@ -305,20 +303,18 @@ onMounted(() => {
         <li>Bạn có thể cập nhật hiệu ứng ở phần danh sách sang <b>Slider Main</b> để xem hiệu ứng Math dễ dàng hơn.</li>
         <li>Hiệu ứng Fade thuộc hệ thống của hiệu ứng CssOne.</li>
       </ul>
-      
-      <LineSpace />
-
-      <h2>❖ Thiết lập slider</h2>
-      <p>Các bạn có thể được hướng dẫn thiết lập slider chi tiết ở trang <NuxtLink to="/docs/quick-start">hướng dẫn</NuxtLink> này.<br>Dưới đây là options hiện tại của slider phía trên:</p>
+      </template>
+    <template #thiet-lap>
       <pre class="codeprint">{{ sliderOptions }}</pre>
-
+    </template>
+    <template #nav>
       <ButtonPrevNext
         prev-name="Hiệu ứng Math"
         prev-to="/slider/effect-math"
         next-name="Hiệu ứng CssFour"
         next-to="/slider/effect-css-four" />
-    </div>
-  </section>
+    </template>
+  </Guide>
 </main>
 </template>
 

@@ -51,10 +51,8 @@ onMounted(() => {
     </div>
   </section>
 
-  <section class="guide">
-    <div class="container">
-      <div class="hr hr--circle"></div>
-      <h2>❖ Giới thiệu</h2>
+  <Guide>
+    <template #gioi-thieu>
       <p>Layout cổ điển số 1 được thiết lập hiệu ứng Line đơn giản.<br>Slider được hiển thị với navigation (button next/prev) và pagination kiểu bullet, đặc biệt kết hợp với shadow ở dưới slider để thể hiện các slider có phong cách cổ điển 1 thời.</p>
       <ul>
         <li>Hiệu ứng mặc định của plugin RubySlider là <b>Line</b>.</li>
@@ -72,8 +70,8 @@ onMounted(() => {
         prev-to="/slider/layout-basic"
         next-name="Layout cổ điển số 2"
         next-to="/slider/layout-classic-2" />
-    </div>
-  </section>
+    </template>
+  </Guide>
 </main>
 </template>
 

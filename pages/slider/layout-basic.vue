@@ -1,5 +1,4 @@
 <script setup>
-import Couter from '~~/components/Couter.vue';
 definePageMeta({
   middleware: ['init']
 })
@@ -46,30 +45,24 @@ onMounted(() => {
     </div>
   </section>
 
-  <section class="guide">
-    <div class="container">
-      <div class="hr hr--circle"></div>
-      <h2>❖ Giới thiệu</h2>
+  <Guide>
+    <template #gioi-thieu>
       <p>Như tên gọi, là layout cơ bản và đơn giản nhất khi thiết lập RubySlider. Thiết lập hiệu ứng cssOne để slider có hiệu ứng ấn tượng hơn.<br>Mặc định thì navigation (button next/prev) được tắt đi, chỉ có pagination được hiển thị với các hình thumbnail nhỏ bên dưới.</p>
       <ul>
         <li>Hiệu ứng mặc định của plugin RubySlider là 'Line'.</li>
       </ul>
-
-      <LineSpace />
-
-      <h2>❖ Thiết lập slider</h2>
-      <p>Các bạn có thể được hướng dẫn thiết lập slider chi tiết ở trang <NuxtLink to="/docs/quick-start">hướng dẫn
-        </NuxtLink> này.<br>Dưới đây là options hiện tại của slider phía trên:</p>
+    </template>
+    <template #thiet-lap>
       <pre class="codeprint">{{ sliderOptions }}</pre>
-
+    </template>
+    <template #nav>
       <ButtonPrevNext
         prev-name="Tất cả ví dụ"
         prev-to="/slider"
         next-name="Layout cổ điển 1"
         next-to="/slider/layout-classic-1" />
-
-    </div>
-  </section>
+    </template>
+  </Guide>
 </main>
 </template>
  
