@@ -14,6 +14,8 @@
   }
   pre {
     // background-color: rgba($color: #000, $alpha: .05);
+    overflow-x: auto;
+    white-space: pre-wrap;
   }
   .codeprint {
     background-color: #282936;
@@ -30,8 +32,10 @@
     margin-right: 50px;
     border-right: 1px solid rgba($color: #000, $alpha: .1);
   }
-  &__section {
+  &__content {
+    flex: 1;
     max-width: 1024px;
+    // padding-left: 50px;
   }
   &--ul-lv1 {
     display: flex;
@@ -89,4 +93,21 @@
   }
 
   /** Media **/
+  @media (min-width: 1200px) {
+    &__table {
+      display: table;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    &__table {
+      &, & tr {
+        display: flex;
+        flex-direction: column;
+      }
+      tr {
+        margin-bottom: 40px;
+      }
+    }
+  }
 }

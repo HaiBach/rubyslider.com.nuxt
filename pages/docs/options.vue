@@ -223,7 +223,7 @@
   <!-- TUY CHON CHUNG - end -->
 
   <!-- TUY CHON TRONG 'LOAD' OBJECT - begin -->
-  <table class="table hover condensed tb-options ma-b-100">
+  <table class="docs__table none">
     <caption><h3>Options in <span class="text-success">load</span> object</h3></caption>
 
     <thead>
@@ -257,7 +257,7 @@
   <!-- TUY CHON TRONG 'LOAD' OBJECT - end -->
 
   <!-- TUY CHON TRONG 'PAG' OBJECT - begin -->
-  <table class="table hover condensed tb-options ma-b-100">
+  <table class="docs__table none">
     <caption><h3>Options in <span class="text-success">pag</span> object</h3></caption>
 
     <thead>
@@ -391,7 +391,7 @@
   <!-- TUY CHON TRONG 'PAG' OBJECT - end -->
 
   <!-- TUY CHON TRONG 'SWIPE' OBJECT - begin -->
-  <table class="table hover condensed tb-options ma-b-100">
+  <table class="docs__table none">
     <caption><h3>Options in <span class="text-success">swipe</span> object</h3></caption>
 
     <thead>
@@ -437,25 +437,25 @@
       <div class="rt01 rt01round rt01size-s" data-tabs='{ "fx": "line", "speed": 200, "isSwipe": false }'>
         <div>
           <span class="rt01pagitem text-mini">HTML5 DATA</span>
-          <pre class="prettyprint">&lt;div class=&quot;rt01&quot; data-tabs='{
-&quot;fx&quot;    : &quot;line&quot;,
-&quot;speed&quot;   : 400,
-&quot;slideshow&quot; : {
-&quot;delay&quot; : 5000,
-&quot;timer&quot; : &quot;line&quot;
+          <pre>&lt;div class="rt01" data-tabs='{
+"fx"    : "line",
+"speed"   : 400,
+"slideshow" : {
+"delay" : 5000,
+"timer" : "line"
 }
 }'&gt; ... &lt;/div&gt;</pre>
         </div>
 
         <div>
           <span class="rt01pagitem text-mini">JAVASCRIPT</span>
-          <pre class="prettyprint">// Setup options in javascript
-$(&quot;.rt01&quot;).rubytabs({
-&quot;fx&quot;    : &quot;line&quot;,
-&quot;speed&quot;   : 400,
-&quot;slideshow&quot; : {
-&quot;delay&quot; : 5000,
-&quot;timer&quot; : &quot;line&quot;
+          <pre>// Setup options in javascript
+$(".rt01").rubytabs({
+"fx"    : "line",
+"speed"   : 400,
+"slideshow" : {
+"delay" : 5000,
+"timer" : "line"
 }
 });</pre>
         </div>
@@ -467,12 +467,17 @@ $(&quot;.rt01&quot;).rubytabs({
 
       <p class="ma-b-10">RubyTabs will priority get the option on each slide compared with same name the general options.</p>
 
-      <pre class="prettyprint">&lt;div class=&quot;rt01&quot; data-tabs='{ &quot;speed&quot;: 400, &quot;slideshow&quot;: { &quot;delay&quot;: 5000 } }'&gt;
+      <pre class="codeprint"><code>&lt;div class="rs01" data-slider='{
+    "speed": 400,
+    "slideshow": {
+      "delay": 5000
+    }
+  }'&gt;
 
 &lt;!-- Slide custom setup --&gt;
-&lt;div data-slide='{ &quot;speed&quot;: 600, &quot;slideshow&quot;: { &quot;delay&quot;: 8000 } }'&gt; ... &lt;/div&gt;
+&lt;div data-slide='{ "speed": 600, "slideshow": { "delay": 8000 } }'&gt; ... &lt;/div&gt;
 ...
-&lt;/div&gt;</pre>
+&lt;/div&gt;</code></pre>
     </li>
   </ul>
   <!-- DESCRIPTION - end -->
