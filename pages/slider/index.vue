@@ -58,17 +58,17 @@ onMounted(() => {
               <div class="rs01pagitem">{{ slideData.name.toUpperCase() }}</div>
               <div class="container">
                 <div v-if="slideData.header" class="list-templates__header">
-                  <h2><span>{{ slideData.header.title }}</span></h2>
-                  <p v-html="slideData.header.desc"></p>
+                  <h2><span v-html="slideData.header.title"></span></h2>
+                  <div v-html="slideData.header.desc"></div>
                 </div>
-                <div class="showfull row">
+                <div class="showfull row gx-2 gx-sm-3 gx-md-4">
                   <template
                     v-for="item in slideData.menus"
                     :key="item.key">
 
                     <div
                       v-if="item.status"
-                      class="showfull__item col-6 col-sm-4 col-lg-3">
+                      class="showfull__item col-4 col-sm-4 col-lg-3">
 
                       <div class="showfull__item_inner">
                         <NuxtLink class="showfull__link linkto" :to="item.to">
@@ -146,8 +146,11 @@ onMounted(() => {
     padding-top: 40px;
     padding-bottom: 40px;
     &__header {
-      padding: 25px 30px 20px;
+      padding: 25px 30px 15px;
       margin-bottom: 30px;
+      p {
+        font-size: 14px;
+      }
     }
     &__slider {
       .rs01pag {
@@ -161,7 +164,15 @@ onMounted(() => {
     }
   }
   @media (max-width: 575px) {
-
+    &__header {
+      padding: 20px 25px 5px;
+      h2 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
   }
 }
 
@@ -244,7 +255,11 @@ onMounted(() => {
   }
   @media (max-width: 767px) {
     &__item {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+    }
+    &__name {
+      font-size: 12px;
+      line-height: 1.3;
     }
   }
   @media (max-width: 575px) {

@@ -45,5 +45,21 @@ const sliderOptions = props['slider-options']
   .btn {
     margin-bottom: 20px;
   }
+
+  /** Media **/
+  @media (max-width: 991px) {
+    padding-bottom: 40px;
+    .hr {
+      margin-bottom: 40px;
+    }
+  }
+  @media (max-width: 575px) {
+    .linespace {
+      text-align: center;
+      svg {
+        transform-origin: center;
+      }
+    }
+  }
 }
 </style>

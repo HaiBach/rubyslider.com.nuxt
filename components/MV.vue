@@ -155,6 +155,7 @@ function randomNum() {
       &__title {
         h1 {
           font-size: 38px;
+          font-weight: 200;
           letter-spacing: 3px;
         }
       }
@@ -169,6 +170,7 @@ function randomNum() {
     }
   }
 }
+
 .mv__slider {
   min-height: 320px;
   margin-bottom: 70px;
@@ -224,6 +226,7 @@ function randomNum() {
     }
   }
   @media (max-width: 575px) {
+    margin-bottom: 50px;
     .rs01nav-prev {
       left: -15px;
     }

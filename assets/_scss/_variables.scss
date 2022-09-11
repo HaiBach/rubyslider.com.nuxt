@@ -6,7 +6,7 @@ $color-alter-dark: #004A7e;
 
 :root {
   --color-primary: #{$color-primary};
-  --color-primary-dark: #{$color-alter-dark};
+  --color-primary-dark: #{$color-primary-dark};
   --color-alter: #{$color-alter};
   --color-alter-dark: #{$color-alter-dark};
   // Color link a

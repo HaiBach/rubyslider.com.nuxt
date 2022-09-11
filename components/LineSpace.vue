@@ -14,5 +14,15 @@
   margin-top: 80px;
   margin-bottom: 80px;
   color: rgba($color: #000, $alpha: .2);
+
+  /** Media **/
+  @media (max-width: 757px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    svg {
+      transform-origin: 0 center;
+      transform: scale(.75);
+    }
+  }
 }
 </style>

@@ -86,13 +86,11 @@
 
   /** Media **/
   @media (max-width: 991px) {
-    // &--btns {
-    //   margin-left: -5px;
-    //   margin-right: -5px;
-    //   a, button {
-    //     margin: 0 5px 10px;
-    //   }
-    // }
+    a, button {
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-size: 13px;
+    }
     &--large {
       a, button {
         min-height: 60px;

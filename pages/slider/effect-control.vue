@@ -99,7 +99,7 @@ onMounted(() => {
           <h1>TUỲ BIẾN HIỆU ỨNG</h1>
         </template>
         <template #desc>
-          <p>Slider Main</p>
+          <p>Main Slider</p>
         </template>
       </TitleHead>
 

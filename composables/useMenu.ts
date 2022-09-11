@@ -2,7 +2,7 @@ const MENUS = [
   {
     status: true,
     key: '1',
-    name: 'Slider',
+    name: 'Ví dụ',
     slug: 'slider',
     description: 'Các ví dụ cơ bản về slider. <br>Bao gồm các thể loại hiệu ứng, bố cục, slideshow và api khác nhau. <br>Hơn 50+ ví dụ để bạn có thể bắt đầu sử dụng RubySlider.',
     icon: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-images" viewBox="0 0 16 16"><path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/><path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"/></svg>',
@@ -24,7 +24,7 @@ const MENUS = [
         slug: 'effects',
         header: {
           title: 'CÁC LOẠI HIỆU ỨNG',
-          desc: 'Slide này hiển thị các loại hiệu ứng trong RubySlider. RubySlider hỗ trợ nhiều hiệu ứng, bao gồm các hiệu ứng đơn giản với hiệu suất cao <b>Line</b>, <b>Fade</b> cho đến các hiệu ứng phức tạp và đẹp mắt như <b>Math</b>, <b>CSS One</b>, <b>Coverflow3D</b>. <br/>Đồng thời các hiệu ứng đều hỗ trợ chức năng thay đổi trực tiếp khi kéo, rê các slide này sang các slide khác'
+          desc: '<p>Slide này hiển thị các loại hiệu ứng trong RubySlider. RubySlider hỗ trợ nhiều hiệu ứng, bao gồm các hiệu ứng đơn giản với hiệu suất cao <b>Line</b>, <b>Fade</b> cho đến các hiệu ứng phức tạp và đẹp mắt như <b>Math</b>, <b>CSS One</b>, <b>Coverflow3D</b>.</p><p>Đồng thời các hiệu ứng đều hỗ trợ chức năng thay đổi trực tiếp khi kéo, rê các slide này sang các slide khác.</p>'
         },
         menus:
         [
@@ -101,8 +101,8 @@ const MENUS = [
         name: 'Bố cục',
         slug: 'layout',
         header: {
-          title: 'BỐ CỤC/LAYOUT DỰNG SẴN',
-          desc: 'Slide này hiển thị RubySlider trong các trường hợp layout khác nhau, thể hiện tính linh động và khả năng thiết lập trong các layout khác nhau của RubySlider.'
+          title: 'BỐ CỤC/LAYOUT<br class="br--max-sm"> DỰNG SẴN',
+          desc: '<p>Slide này hiển thị RubySlider trong các trường hợp layout khác nhau, thể hiện tính linh động và khả năng thiết lập trong các layout khác nhau của RubySlider.</p>'
         },
         menus:
         [
@@ -259,7 +259,7 @@ const MENUS = [
         slug: 'slideshow',
         header: {
           title: 'TỰ ĐỘNG SLIDESHOW',
-          desc: 'RubySlider có hỗ trợ chức năng tự động slideshow nội dung, bạn có thể thiết lập thời gian hiệu ứng, loại timer, nút dừng slideshow...<br>Bạn còn có thể tuỳ biến timer dễ dàng bằng css, hoặc bạn có thể cho slideshow có thể chạy ngẫu nhiên.',
+          desc: '<p>RubySlider có hỗ trợ chức năng tự động slideshow nội dung, bạn có thể thiết lập thời gian hiệu ứng, loại timer, nút dừng slideshow...</p><p>Bạn còn có thể tuỳ biến timer dễ dàng bằng css, hoặc bạn có thể cho slideshow có thể chạy ngẫu nhiên.</p>',
         },
         menus:
         [
@@ -304,7 +304,7 @@ const MENUS = [
         slug: 'api',
         header: {
           title: 'PHƯƠNG THỨC API',
-          desc: 'Phương thức giao tiếp của RubySlider và người sử dụng, bạn có thể đều khiển và cập nhật hầu hết các tuỳ chọn của plugin thông qua các phương thức API đơn giản.',
+          desc: '<p>Phương thức giao tiếp của RubySlider và người sử dụng, bạn có thể đều khiển và cập nhật hầu hết các tuỳ chọn của plugin thông qua các phương thức API đơn giản.</p>',
         },
         menus:
         [
@@ -618,7 +618,7 @@ const MENUS = [
   },
 
   {
-    status: true,
+    status: false,
     key: '3',
     name: 'Công cụ',
     slug: 'tools',

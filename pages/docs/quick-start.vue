@@ -65,6 +65,6 @@ onMounted(() => {
   <div class="linespace-2"></div>
 
   <p>※RubySlider của bạn đã sẵn sàng hoạt động.<br>
-    Chúc các bạn thiết lập RubySlider thành công.🎉🎉🎉</p>
+    Chúc các bạn thiết lập RubySlider thành công 🎉🎉🎉</p>
 </section>
 </template>

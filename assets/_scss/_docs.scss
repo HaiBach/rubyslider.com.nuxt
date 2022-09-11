@@ -17,6 +17,7 @@
   }
   .codeprint {
     background-color: #282936;
+    color: #fff;
     font-size: 14px;
     box-shadow: none;
   }
@@ -28,6 +29,9 @@
     padding-right: 50px;
     margin-right: 50px;
     border-right: 1px solid rgba($color: #000, $alpha: .1);
+  }
+  &__section {
+    max-width: 1024px;
   }
   &--ul-lv1 {
     display: flex;
@@ -65,8 +69,9 @@
       border: none;
     }
     td {
-      padding: 10px 10px 10px 0;
+      padding: 10px 15px 10px 0;
       border-bottom: 1px solid rgba($color: #000, $alpha: .2);
+      // font-size: 14px;
       &:first-child {
         font-weight: 700;
       }
@@ -75,5 +80,13 @@
         vertical-align: text-top;
       }
     }
+    code {
+      // color: #000;
+    }
+    ul {
+      padding-left: 20px;
+    }
   }
+
+  /** Media **/
 }

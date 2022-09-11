@@ -22,7 +22,7 @@
         <td>
           <ul>
             <li><code>line</code></li>
-            <li><code>rectMove</code> / <code>rectRun</code> / <code>rectSlice</code><br><code>rubyFade</code> / <code>rubyMove</code> / <code>rubyRun</code> / <code>rubySlice</code><br><code>randomMath</code></li>
+            <li><code>rectMove</code>, <code>rectRun</code>, <code>rectSlice</code><br><code>rubyFade</code>, <code>rubyMove</code>, <code>rubyRun</code>, <code>rubySlice</code><br><code>randomMath</code></li>
             <li><code>cssOne</code></li>
             <li><code>coverflow3D</code></li>
           </ul>

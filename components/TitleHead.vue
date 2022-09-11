@@ -64,11 +64,11 @@ const slots = useSlots()
     &__title {
       h1 {
         // font-size: 38px;
-        font-weight: 200;
+        // font-weight: 200;
       }
       h2 {
         // font-size: 32px;
-        font-weight: 200;
+        // font-weight: 200;
       }
     }
     &__desc {
@@ -83,7 +83,7 @@ const slots = useSlots()
     &__title {
       h1 {
         // font-size: 32px;
-        // font-weight: 200;
+        // font-weight: 300;
       }
       h2 {
         // font-size: 28px;
