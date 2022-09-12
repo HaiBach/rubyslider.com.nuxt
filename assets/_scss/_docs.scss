@@ -105,8 +105,45 @@
         display: flex;
         flex-direction: column;
       }
+      thead {
+        display: none;
+      }
       tr {
         margin-bottom: 40px;
+      }
+      td {
+        padding: 0;
+        margin-bottom: 10px;
+        border-bottom: none;
+        &::before {
+          display: block;
+          // padding-right: 10px;
+          font-size: 14px;
+          // background-color: red;
+        }
+        &:nth-child(1) {
+          span {
+            padding: 2px 15px;
+            border: 1px dashed rgba($color: #000, $alpha: .5);
+            border-radius: 6px;
+            background-color: #fff;
+          }
+        }
+        &:nth-child(2) {
+          &::before {
+            content: '※Giá trị mặc định';
+          }
+        }
+        &:nth-child(3) {
+          &::before {
+            content: '※Danh sách giá trị';
+          }
+        }
+        &:nth-child(4) {
+          &::before {
+            content: '※Mô tả';
+          }
+        }
       }
     }
   }

@@ -17,7 +17,7 @@
     </thead>
     <tbody>
       <tr>
-        <td>fx</td>
+        <td><span>fx</span></td>
         <td><code class="text-success">line</code></td>
         <td>
           <ul>
