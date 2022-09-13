@@ -97,6 +97,8 @@ function randomNum() {
     margin-bottom: 80px;
     &__title {
       h1 {
+        font-size: 60px;
+        font-weight: 100;
         letter-spacing: 8px;
       }
     }
@@ -137,6 +139,13 @@ function randomNum() {
   
   /** Media **/
   @media (max-width: 991px) {
+    .title-head {
+      &__title {
+        h1 {
+          font-size: 48px;
+        }
+      }
+    } 
     &__btns {
       .btn--btns {
         margin-left: 0;

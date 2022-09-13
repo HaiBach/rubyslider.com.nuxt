@@ -17,7 +17,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span>fx</span></td>
+        <td><span class="docs__table_name">fx</span></td>
         <td><code class="text-success">line</code></td>
         <td>
           <ul>
@@ -31,68 +31,68 @@
           RubySlider có tổng cộng 4 loại hiệu ứng chính, đặc biệt hiệu ứng CSS có nhiều hiệu ứng nhỏ khác nhau, tạo ra hàng trăm hiệu ứng đẹp mắt và ấn tượng.</td>
       </tr>
       <tr>
-        <td>cssOne</td>
+        <td><span class="docs__table_name">cssOne</span></td>
         <td><code class="text-success">roDeal</code></td>
         <td>--</td>
         <td>Thiết lập tên hiệu ứng của loại hiệu ứng CssOne. Danh sách đầy đủ tên các hiệu ứng có thể xem ở trang này.</td>
       </tr>
       <tr>
-        <td>cssTwoOut</td>
-        <td><span class="text-success">"slideShortDownOut"</span></td>
+        <td><span class="docs__table_name">cssTwoOut</span></td>
+        <td><code class="text-success">slideShortDownOut</code></td>
         <td>--</td>
         <td>Setup name for Out effect of CSS Two effects</td>
       </tr>
       <tr>
-        <td>cssTwoIn</td>
-        <td><span class="text-success">"pushSoftIn"</span></td>
+        <td><span class="docs__table_name">cssTwoIn</span></td>
+        <td><code class="text-success">pushSoftIn</code></td>
         <td>--</td>
         <td>Setup name for In effect of CSS Two effects</td>
       </tr>
       <tr>
-        <td>cssFourPrevOut</td>
-        <td><span class="text-success">"roEdgeRightOut"</span></td>
+        <td><span class="docs__table_name">cssFourPrevOut</span></td>
+        <td><code class="text-success">roEdgeRightOut</code></td>
         <td>--</td>
         <td>Setup name for CSS Four effect when swap to previous slide out</td>
       </tr>
       <tr>
-        <td>cssFourPrevIn</td>
-        <td><span class="text-success">"roEdgeLeftIn"</span></td>
+        <td><span class="docs__table_name">cssFourPrevIn</span></td>
+        <td><code class="text-success">roEdgeLeftIn</code></td>
         <td>--</td>
         <td>Setup name for CSS Four effect when swap to previous slide in</td>
       </tr>
       <tr>
-        <td>cssFourNextOut</td>
-        <td><span class="text-success">"roEdgeLeftOut"</span></td>
+        <td><span class="docs__table_name">cssFourNextOut</span></td>
+        <td><code class="text-success">roEdgeLeftOut</code></td>
         <td>--</td>
         <td>Setup name for CSS Four effect when swap to next slide out</td>
       </tr>
       <tr>
-        <td>cssFourNextIn</td>
-        <td><span class="text-success">"roEdgeRightIn"</span></td>
+        <td><span class="docs__table_name">cssFourNextIn</span></td>
+        <td><code class="text-success">roEdgeRightIn</code></td>
         <td>--</td>
         <td>Setup name for CSS Four effect when swap to next slide in</td>
       </tr>
       <tr>
-        <td>fxEasing</td>
-        <td><span class="text-success">"easeOutCubic"</span></td>
+        <td><span class="docs__table_name">fxEasing</span></td>
+        <td><code class="text-success">easeOutCubic</code></td>
         <td>--</td>
         <td>Easing of main effect.</td>
       </tr>
       <tr>
-        <td>cssEasing</td>
-        <td><span class="text-success">null</span></td>
+        <td><span class="docs__table_name">cssEasing</span></td>
+        <td><code class="text-success">null</code></td>
         <td>--</td>
         <td>Easing of effect in CSS One, Two, Four effects.</td>
       </tr>
       <tr>
-        <td>speed</td>
-        <td><span class="text-info">400</span></td>
+        <td><span class="docs__table_name">speed</span></td>
+        <td><code class="text-info">400</code></td>
         <td>--</td>
         <td>Duration of the effect. Unit millisecond.</td>
       </tr>
       <tr>
-        <td>margin</td>
-        <td><span class="text-info">30</span></td>
+        <td><span class="docs__table_name">margin</span></td>
+        <td><code class="text-info">30</code></td>
         <td>--</td>
         <td>Distance between slides. Unit is px and supports distances left and right. Example:
           <ul class="list disc condensed">
@@ -102,8 +102,8 @@
         </td>
       </tr>
       <tr id="options-idBegin">
-        <td>idBegin</td>
-        <td><span class="bold">0</span></td>
+        <td><span class="docs__table_name">idBegin</span></td>
+        <td><code class="bold">0</code></td>
         <td>--</td>
         <td>Set the slide will appear as rubytabs initialization, ID of slides started with 0. List of value option: <br>
           <ul class="list disc condensed">
@@ -120,13 +120,13 @@
         </td>
       </tr>
       <tr>
-        <td>showBy</td>
-        <td><span class="text-success">"all"</span></td>
+        <td><span class="docs__table_name">showBy</span></td>
+        <td><code class="text-success">all</code></td>
         <td>--</td>
         <td>Set rubytabs initialized only on the specified device. List of value: "desktop", "mobile" and "all".</td>
       </tr>
       <tr>
-        <td>showFrom</td>
+        <td><span class="docs__table_name">showFrom</span></td>
         <td><span class="text-info">0</span></td>
         <td>--</td>
         <td>Set rubytabs will appear in range width of the site. Range-width have 2 values "min-width" and "max-width"(optional).</td>
@@ -141,80 +141,80 @@
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <td>isAutoInit</td>
-        <td><span class="text-error">true</span></td>
+        <td><span class="docs__table_name">isAutoInit</span></td>
+        <td><code class="text-error">true</code></td>
         <td>--</td>
         <td>Option exclusively for HTML5 data. RubyTabs is automatically initialized after markup have loaded.</td>
       </tr>
       <tr>
-        <td>isSlideshow</td>
-        <td><span class="text-error">false</span></td>
+        <td><span class="docs__table_name">isSlideshow</span></td>
+        <td><code class="text-error">false</code></td>
         <td>--</td>
         <td>Turn on/off slideshow.</td>
       </tr>
       <tr>
-        <td>isNav</td>
-        <td><span class="text-error">false</span></td>
+        <td><span class="docs__table_name">isNav</span></td>
+        <td><code class="text-error">false</code></td>
         <td>--</td>
         <td>Turn on/off navigation tabs.</td>
       </tr>
       <tr>
-        <td>isPag</td>
-        <td><span class="text-error">true</span></td>
+        <td><span class="docs__table_name">isPag</span></td>
+        <td><code class="text-error">true</code></td>
         <td>--</td>
         <td>Turn on/off pagination(tablist) tabs.</td>
       </tr>
       <tr>
-        <td>isSwipe</td>
-        <td><span class="text-error">true</span></td>
+        <td><span class="docs__table_name">isSwipe</span></td>
+        <td><code class="text-error">true</code></td>
         <td>--</td>
         <td>Turn on/off swipe gestures on rubytabs.</td>
       </tr>
       <tr>
-        <td>isKeyboard</td>
-        <td><span class="text-error">false</span></td>
+        <td><span class="docs__table_name">isKeyboard</span></td>
+        <td><code class="text-error">false</code></td>
         <td>--</td>
         <td>Turn on/off keyboard navigation, left/right arrow on keyboard to go prev/next slide.</td>
       </tr>
       <tr>
-        <td>isDeeplinking</td>
-        <td><span class="text-error">false</span></td>
+        <td><span class="docs__table_name">isDeeplinking</span></td>
+        <td><code class="text-error">false</code></td>
         <td>--</td>
         <td>Turn on/off <a class="btn-goto" href="#deeplinking">deep-linkinging</a> features.</td>
       </tr>
       <tr>
-        <td>isCookie</td>
-        <td><span class="text-error">false</span></td>
+        <td><span class="docs__table_name">isCookie</span></td>
+        <td><code class="text-error">false</code></td>
         <td>--</td>
         <td>Turn on/off <a class="btn-goto" href="#cookie">cookie</a> features.</td>
       </tr>
       <tr>
-        <td>name</td>
-        <td><span>null</span></td>
+        <td><span class="docs__table_name">name</span></td>
+        <td><code>null</code></td>
         <td>--</td>
         <td>The proper name for each rubytabs in the site. Used to link components markup outside with main markup of rubytabs.</td>
       </tr>
       <tr>
-        <td>nameViewport</td>
-        <td><span class="text-success">"viewport"</span></td>
+        <td><span class="docs__table_name">nameViewport</span></td>
+        <td><code class="text-success">viewport</code></td>
         <td>--</td>
         <td>Set the name-class of the component "viewport".</td>
       </tr>
       <tr>
-        <td>nameCanvas</td>
-        <td><span class="text-success">"canvas"</span></td>
+        <td><span class="docs__table_name">nameCanvas</span></td>
+        <td><code class="text-success">canvas</code></td>
         <td>--</td>
         <td>Set the name-class of the component "canvas".</td>
       </tr>
       <tr>
-        <td>nameSlide</td>
-        <td><span class="text-success">"slide"</span></td>
+        <td><span class="docs__table_name">nameSlide</span></td>
+        <td><code class="text-success">slide</code></td>
         <td>--</td>
         <td>Set the name-class of the components "slides".</td>
       </tr>
       <tr>
-        <td>nameDataLazy</td>
-        <td><span class="text-success">"src"</span></td>
+        <td><span class="docs__table_name">nameDataLazy</span></td>
+        <td><code class="text-success">src</code></td>
         <td>--</td>
         <td>Name to be replaced in "data-src" on &lt;img&gt; tag using image lazyload function.</td>
       </tr>

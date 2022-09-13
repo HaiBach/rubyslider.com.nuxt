@@ -10,12 +10,14 @@ h4, h5, h6 {
   line-height: 1.1;
 }
 h1 {
-  font-size: 3.75rem;
-  font-weight: 100;
+  // font-size: 3.75rem;
+  font-size: 52px;
+  font-weight: 200;
 }
 h2 {
-  font-size: 3rem;
-  font-weight: 200;
+  // font-size: 3rem;
+  font-size: 42px;
+  font-weight: 300;
 }
 h3, h4, h5, h6 {
   font-weight: 300;
@@ -35,16 +37,19 @@ pre, code {
     font-size: 14px;
   }
   h1 {
-    font-size: 3rem;
-    font-weight: 200;
+    // font-size: 3rem;
+    font-size: 46px;
+    // font-weight: 200;
   }
   h2 {
-    font-size: 2.5rem;
+    // font-size: 2.5rem;
+    font-size: 36px;
   }
 }
 @media (max-width: 767px) {
   h1 {
     font-size: 38px;
+    font-weight: 300;
   }
   h2 {
     font-size: 30px;
@@ -58,8 +63,11 @@ pre, code {
     font-size: 32px;
   }
   h2 {
-    font-size: 28px;
-    font-weight: 300;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  h3, h4, h5, h6 {
+    font-weight: 400;
   }
 }
 
