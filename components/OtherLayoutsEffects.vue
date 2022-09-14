@@ -8,7 +8,8 @@ const initSetup = function() {
   const sliderMath = jQuery('.slider-math').rubyslider({
     fx: 'rectRun',
     speed: 800,
-    width: 800,
+    width: 1140,
+    idBegin: 0,
     pag: {
       type: 'bullet',
     }
@@ -17,6 +18,7 @@ const initSetup = function() {
     fx: 'cssOne',
     speed: 800,
     width: 800,
+    idBegin: 1,
     pag: {
       type: 'bullet',
     }
@@ -75,8 +77,8 @@ function getRandomNum() {
         <a
           v-for="i in 4"
           class="rs01imgback"
-          :href="'https://picsum.photos/800/480?random=' + getRandomNum()"
-          >Lorem Picsum {{ randomNum }}</a>
+          :href="'/img/vietnam2-1140-' + (i+1) + '.jpg'"
+          >Hình ảnh Việt Nam {{ i+1 }}</a>
       </div>
       <div class="effect-others__btn btn">
         <NuxtLink to="/slider/effect-math">8 hiệu ứng Math</NuxtLink>
@@ -91,8 +93,8 @@ function getRandomNum() {
         <a
           v-for="i in 4"
           class="rs01imgback"
-          :href="'https://picsum.photos/800/480?random=' + getRandomNum()"
-          >Lorem Picsum {{ randomNum }}</a>
+          :href="'/img/vietnam2-1140-' + (i+1) + '.jpg'"
+          >Hình ảnh Việt Nam {{ i+1 }}</a>
       </div>
       <div class="effect-others__btn btn">
         <NuxtLink to="/slider/effect-css-one">50+ hiệu ứng CSS One</NuxtLink>
@@ -107,8 +109,8 @@ function getRandomNum() {
         <a
           v-for="i in 4"
           class="rs01imgback"
-          :href="'https://picsum.photos/800/550?random=' + getRandomNum()"
-          >Lorem Picsum {{ randomNum }}</a>
+          :href="'/img/vietnam2-1140-' + (i+1) + '.jpg'"
+          >Hình ảnh Việt Nam {{ i+1 }}</a>
       </div>
       <div class="effect-others__btn btn">
         <NuxtLink to="/slider/layout-center">Bố cục chính giữa</NuxtLink>  
@@ -210,7 +212,7 @@ function getRandomNum() {
   .title-head {
     margin-bottom: 80px;
     h2 {
-      font-weight: 100;
+      font-weight: 200;
       span {
         display: inline-block;
         font-weight: 700;
