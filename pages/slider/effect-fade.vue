@@ -6,7 +6,7 @@ const sliderOptions = {
   fx: 'cssOne',
   cssOne: 'fade',
   speed: 800,
-  width: 1880,
+  width: 1140,
 }
 const initSetup = () => {
   jQuery('#main .rs01nav').remove()
@@ -33,11 +33,11 @@ onMounted(() => {
       </TitleHead>
 
       <div class="effect-fade__slider slider-preview rs01">
-        <a class="rs01imgback" href="/img/vietnam-large1.jpg">Việt Nam 1</a>
-        <a class="rs01imgback" href="/img/vietnam-large2.jpg">Việt Nam 2</a>
-        <a class="rs01imgback" href="/img/vietnam-large4.jpg">Việt Nam 4</a>
-        <a class="rs01imgback" href="/img/vietnam-large5.jpg">Việt Nam 5</a>
-        <a class="rs01imgback" href="/img/vietnam-large6.jpg">Việt Nam 6</a>
+        <a class="rs01imgback" href="/img/vietnam-1140-1.jpg">Việt Nam 1</a>
+        <a class="rs01imgback" href="/img/vietnam-1140-2.jpg">Việt Nam 2</a>
+        <a class="rs01imgback" href="/img/vietnam-1140-4.jpg">Việt Nam 4</a>
+        <a class="rs01imgback" href="/img/vietnam-1140-5.jpg">Việt Nam 5</a>
+        <a class="rs01imgback" href="/img/vietnam-1140-6.jpg">Việt Nam 6</a>
       </div> <!-- /.rs01 -->
     </div>
   </section>
