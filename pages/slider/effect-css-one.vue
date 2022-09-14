@@ -245,7 +245,7 @@ onMounted(() => {
       </div> -->
       <TitleHead>
         <template #title>
-          <h2>DANH SÁCH HIỆU ỨNG CSS ONE</h2>
+          <h2>DANH SÁCH<br class="br--max-xs">HIỆU ỨNG CSS ONE</h2>
         </template>
         <template #desc>
           <p>Có tất cả 57 hiệu ứng CssOne. Click vào đối tượng để xem từng hiệu ứng.</p>
@@ -311,8 +311,8 @@ onMounted(() => {
       <ButtonPrevNext
         prev-name="Hiệu ứng Math"
         prev-to="/slider/effect-math"
-        next-name="Hiệu ứng CssFour"
-        next-to="/slider/effect-css-four" />
+        next-name="Hiệu ứng Coverflow3D"
+        next-to="/slider/effect-coverflow3d" />
     </template>
   </Guide>
 </main>
