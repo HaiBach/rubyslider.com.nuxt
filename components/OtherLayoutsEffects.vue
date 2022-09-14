@@ -17,7 +17,7 @@ const initSetup = function() {
   const sliderOneEffect = jQuery('.slider-one-effect').rubyslider({
     fx: 'cssOne',
     speed: 800,
-    width: 800,
+    width: 1140,
     idBegin: 1,
     pag: {
       type: 'bullet',
@@ -26,7 +26,11 @@ const initSetup = function() {
   const sliderLineEffect = jQuery('.slider-line-effect').rubyslider({
     fx: 'line',
     speed: 400,
-    width: 800,
+    width: 1140,
+    imageback: {
+      position: 'fill'
+    },
+    idBegin: 2,
     widthSlide: '80%',
     margin: 1,
     pag: {
@@ -184,12 +188,12 @@ function getRandomNum() {
           </div>
         </div>
 
-        <div>
+        <!-- <div>
           <div class="rs01pagitem">IFRAME</div>
           <div>
             <a class="rs01iframe" href="https://www.google.com/maps/embed/v1/place?key=AIzaSyCCdHNpkWq_yU8PbLAF_r6CnnGCfNWcfro&amp;q=Tour+Eiffel,Champ-de-Mars,5+Avenue+Anatole+France,75007+Paris&amp;zoom=17" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></a>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="effect-others__btn btn">
         <NuxtLink to="/tabs">Bố cục Tabs</NuxtLink>
@@ -238,6 +242,18 @@ function getRandomNum() {
   .rs01bullet {
     .rs01pagitem {
       background-color: rgba($color: #000, $alpha: .75);
+    }
+  }
+  /** Form **/
+  form {
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+    }
+    input[type="submit"] {
+      margin-top: 10px;
     }
   }
   /** Button */
