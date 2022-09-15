@@ -6,6 +6,7 @@ const sliderOptions = {
   fx: 'line',
   speed: 6000,
   fxEasing: 'linear',
+  // width: 940,
   widthSlide: 360,
   height: 500,
   margin: 20,

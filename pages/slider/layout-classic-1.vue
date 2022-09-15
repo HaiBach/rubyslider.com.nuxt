@@ -7,7 +7,6 @@ const sliderOptions = {
   fx: 'line',
   speed: 600,
   width: 1140,
-  // height: 600,
   margin: 5,
   pag: {
     type: 'bullet',
@@ -57,14 +56,11 @@ onMounted(() => {
       <ul>
         <li>Hiệu ứng mặc định của plugin RubySlider là <b>Line</b>.</li>
       </ul>
-
-      <LineSpace />
-
-      <h2>❖ Thiết lập slider</h2>
-      <p>Các bạn có thể được hướng dẫn thiết lập slider chi tiết ở trang <NuxtLink to="/docs/quick-start">hướng dẫn
-        </NuxtLink> này.<br>Dưới đây là options hiện tại của slider phía trên:</p>
+    </template>
+    <template #thiet-lap>
       <pre class="codeprint">{{ sliderOptions }}</pre>
-
+    </template>
+    <template #nav>
       <ButtonPrevNext
         prev-name="Layout cơ bản"
         prev-to="/slider/layout-basic"
@@ -84,7 +80,7 @@ onMounted(() => {
       bottom: 0;
       padding-bottom: 15px;
       .rs01pagmark-item {
-        height: 10px;
+        height: 8px;
       }
     }
     .rs01paginner {
@@ -101,8 +97,8 @@ onMounted(() => {
       }
     }
     .rs01pagitem {
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       background-color: rgba($color: #000, $alpha: .75);
     }
     &.rs01ready {

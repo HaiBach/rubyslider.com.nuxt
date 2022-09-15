@@ -51,13 +51,11 @@ onMounted(() => {
       <ul>
         <li>Cần ít nhất 3 slide để có layout chính giữa.</li>
       </ul>
-      
-      <LineSpace />
-
-      <h2>❖ Thiết lập slider</h2>
-      <p>Các bạn có thể được hướng dẫn thiết lập slider chi tiết ở trang <NuxtLink to="/docs/quick-start">hướng dẫn</NuxtLink> này.<br>Dưới đây là options hiện tại của slider phía trên:</p>
-      <pre class="codeprint">{{ JSON.stringify(sliderOptions, null, 4) }}</pre>
-
+    </template>
+    <template #thiet-lap>
+      <pre class="codeprint">{{ sliderOptions }}</pre>
+    </template>
+    <template #nav>
       <ButtonPrevNext
         prev-name="Layout cổ điển số 2"
         prev-to="/slider/layout-classic-2"
