@@ -10,7 +10,7 @@ const sliderOptions = {
     opacity: .7
   },
   speed: 800,
-  width: 1880,
+  width: 1140,
   margin: 10
 }
 const optsDefault = {
@@ -138,7 +138,7 @@ onMounted(() => {
     <div class="container">
       <TitleHead>
         <template #title>
-          <h1>HIỆU ỨNG COVERFLOW 3D</h1>
+          <h1>HIỆU ỨNG <br class="br--max-xs">COVERFLOW 3D</h1>
         </template>
         <template #desc>
           <p>Main Slider</p>
@@ -147,11 +147,11 @@ onMounted(() => {
     </div>
 
     <div class="effect-coverflow3d__slider slider-preview rs01">
-      <a class="rs01imgback" href="/img/vietnam-large1.jpg">Việt Nam 1</a>
-      <a class="rs01imgback" href="/img/vietnam-large2.jpg">Việt Nam 2</a>
-      <a class="rs01imgback" href="/img/vietnam-large4.jpg">Việt Nam 4</a>
-      <a class="rs01imgback" href="/img/vietnam-large5.jpg">Việt Nam 5</a>
-      <a class="rs01imgback" href="/img/vietnam-large6.jpg">Việt Nam 6</a>
+      <a class="rs01imgback" href="/img/vietnam-1140-1.jpg">Việt Nam 1</a>
+      <a class="rs01imgback" href="/img/vietnam-1140-2.jpg">Việt Nam 2</a>
+      <a class="rs01imgback" href="/img/vietnam-1140-4.jpg">Việt Nam 4</a>
+      <a class="rs01imgback" href="/img/vietnam-1140-5.jpg">Việt Nam 5</a>
+      <a class="rs01imgback" href="/img/vietnam-1140-6.jpg">Việt Nam 6</a>
     </div> <!-- /.rs01 -->
   </section>
 
@@ -160,7 +160,7 @@ onMounted(() => {
       <div class="hr hr--circle"></div>
       <TitleHead>
         <template #title>
-          <h2>TUỲ BIẾN KIỂU DÁNG HIỆU ỨNG</h2>
+          <h2>TUỲ BIẾN<br class="br--max-xs">THAM SỐ HIỆU ỨNG</h2>
         </template>
         <template #desc>
           <p>Hiệu ứng có các options khác nhau, có thể tuỳ biến để thay đổi kiểu dáng.</p>
@@ -177,10 +177,10 @@ onMounted(() => {
 
         <div class="coverflow3d__live">
           <div class="coverflow3d__slider rs01">
-            <a class="rs01imgback" href="/img/season-landscape2.jpg">Season 2</a>
-            <a class="rs01imgback" href="/img/season-landscape4.jpg">Season 4</a>
-            <a class="rs01imgback" href="/img/season-landscape6.jpg">Season 6</a>
-            <a class="rs01imgback" href="/img/season-landscape7.jpg">Season 7</a>
+            <a class="rs01imgback" href="/img/vietnam2-1140-2.jpg">Việt Nam 2</a>
+            <a class="rs01imgback" href="/img/vietnam2-1140-4.jpg">Việt Nam 4</a>
+            <a class="rs01imgback" href="/img/vietnam2-1140-6.jpg">Việt Nam 6</a>
+            <a class="rs01imgback" href="/img/vietnam2-1140-7.jpg">Việt Nam 7</a>
           </div>
         </div>
         <pre class="coverflow3d__option codeprint">{{ fx }}</pre>
@@ -212,10 +212,10 @@ onMounted(() => {
     </template>
     <template #nav>
       <ButtonPrevNext
-        prev-name="Hiệu ứng CssFour"
-        prev-to="/slider/effect-css-four"
-        next-name="Tuỳ biến hiệu ứng"
-        next-to="/slider/effect-control" />
+        prev-name="Hiệu ứng CssOne"
+        prev-to="/slider/effect-css-one"
+        next-name="Tất cả ví dụ"
+        next-to="/slider" />
     </template>
   </Guide>
 </main>
@@ -234,12 +234,6 @@ onMounted(() => {
   padding-right: 40px;
   .hr {
     margin-bottom: 80px;
-  }
-  .title-head {
-    margin-bottom: 80px;
-    h2 {
-      font-size: 46px;
-    }
   }
   &__table {
     display: flex;
@@ -294,14 +288,13 @@ onMounted(() => {
   }
 
   /** Media */
-  @media (min-width: 1200px) {
-  }
   @media (min-width: 1400px) {
     &__item {
       padding-left: 50px;
       padding-right: 50px;
     }
   }
+
   @media (max-width: 991px) {
     &__item {
       width: 100%;
@@ -316,9 +309,6 @@ onMounted(() => {
     }
   }
   @media (max-width: 767px) {
-    h2 {
-      font-size: 35px;
-    }
   }
   @media (max-width: 575px) {
     padding-left: 20px;
@@ -326,13 +316,19 @@ onMounted(() => {
     .hr {
       margin-bottom: 60px;
     }
-    h2 {
-      font-size: 28px;
-    }
     &__item {
       padding-left: 0;
       padding-right: 0;
       margin-bottom: 100px;
+    }
+    &__select {
+      min-width: 80px;
+      span {
+        display: none;
+      }
+      i {
+        padding-left: 0;
+      }
     }
   }
 }

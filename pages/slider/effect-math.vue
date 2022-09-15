@@ -13,7 +13,7 @@ const aFx = [
 let sliderOptions = {
   fx: 'rectRun',
   speed: 1000,
-  width: 1880,
+  width: 1140,
   // height: 520,
 }
 
@@ -36,13 +36,14 @@ const initSetup = () => {
 
   /** FX LIVE */
   const $fxmath = jQuery('.fxmath__slider')
-  $fxmath.each(function() {
+  $fxmath.each(function(index) {
     const $fxSlider = $(this)
     const fxName = $fxSlider.data('fx')
     const options = {
       fx: fxName,
       speed: 800,
-      width: 1880,
+      width: 1140,
+      idBegin: index % 5,
       isNav: false,
       pag: {
         type: 'bullet'
@@ -100,11 +101,11 @@ onMounted(() => {
       </TitleHead>
 
       <div class="effect-math__slider slider-preview rs01">
-        <a class="rs01imgback" href="/img/vietnam-large1.jpg">Việt Nam 1</a>
-        <a class="rs01imgback" href="/img/vietnam-large2.jpg">Việt Nam 2</a>
-        <a class="rs01imgback" href="/img/vietnam-large4.jpg">Việt Nam 4</a>
-        <a class="rs01imgback" href="/img/vietnam-large5.jpg">Việt Nam 5</a>
-        <a class="rs01imgback" href="/img/vietnam-large6.jpg">Việt Nam 6</a>
+        <a class="rs01imgback" href="/img/vietnam-1140-1.jpg">Việt Nam 1</a>
+        <a class="rs01imgback" href="/img/vietnam-1140-2.jpg">Việt Nam 2</a>
+        <a class="rs01imgback" href="/img/vietnam-1140-4.jpg">Việt Nam 4</a>
+        <a class="rs01imgback" href="/img/vietnam-1140-5.jpg">Việt Nam 5</a>
+        <a class="rs01imgback" href="/img/vietnam-1140-6.jpg">Việt Nam 6</a>
       </div> <!-- /.rs01 -->
     </div>
   </section>
@@ -125,9 +126,11 @@ onMounted(() => {
         >
         <div class="fxmath__item_inner">
           <div class="rs01 fxmath__slider" :data-fx="fx">
-            <a class="rs01imgback" href="/img/vietnam-large2.jpg">Việt Nam 2</a>
-            <a class="rs01imgback" href="/img/vietnam-large4.jpg">Việt Nam 4</a>
-            <a class="rs01imgback" href="/img/vietnam-large6.jpg">Việt Nam 6</a>
+            <a class="rs01imgback" href="/img/vietnam2-1140-1.jpg">Việt Nam 1</a>
+            <a class="rs01imgback" href="/img/vietnam2-1140-2.jpg">Việt Nam 2</a>
+            <a class="rs01imgback" href="/img/vietnam2-1140-3.jpg">Việt Nam 3</a>
+            <a class="rs01imgback" href="/img/vietnam2-1140-4.jpg">Việt Nam 4</a>
+            <a class="rs01imgback" href="/img/vietnam2-1140-6.jpg">Việt Nam 6</a>
           </div>
           <div class="fxmath__item_footer">
             <h3 class="fxmath__tag">#{{ (key + 1)  + ' - ' + fx }}</h3>

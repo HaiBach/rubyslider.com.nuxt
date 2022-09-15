@@ -7,8 +7,8 @@ const sliderOptions = {
   fx: 'cssOne',
   cssOne: 'roDeal',
   speed: 800,
-  width: 1880,
-  height: 520,
+  width: 1140,
+  // height: 520,
   isNav: true
 }
 const aFx = [
@@ -228,11 +228,11 @@ onMounted(() => {
       </TitleHead>
 
       <div class="effect-cssone__slider slider-preview rs01">
-        <a class="rs01imgback" href="/img/vietnam-large1.jpg">Việt Nam 1</a>
-        <a class="rs01imgback" href="/img/vietnam-large2.jpg">Việt Nam 2</a>
-        <a class="rs01imgback" href="/img/vietnam-large4.jpg">Việt Nam 4</a>
-        <a class="rs01imgback" href="/img/vietnam-large5.jpg">Việt Nam 5</a>
-        <a class="rs01imgback" href="/img/vietnam-large6.jpg">Việt Nam 6</a>
+        <a class="rs01imgback" href="/img/vietnam-1140-1.jpg">Việt Nam 1</a>
+        <a class="rs01imgback" href="/img/vietnam-1140-2.jpg">Việt Nam 2</a>
+        <a class="rs01imgback" href="/img/vietnam-1140-4.jpg">Việt Nam 4</a>
+        <a class="rs01imgback" href="/img/vietnam-1140-5.jpg">Việt Nam 5</a>
+        <a class="rs01imgback" href="/img/vietnam-1140-6.jpg">Việt Nam 6</a>
       </div> <!-- /.rs01 -->
     </div>
   </section>
@@ -245,7 +245,7 @@ onMounted(() => {
       </div> -->
       <TitleHead>
         <template #title>
-          <h2>DANH SÁCH HIỆU ỨNG CSS ONE</h2>
+          <h2>DANH SÁCH<br class="br--max-xs">HIỆU ỨNG CSS ONE</h2>
         </template>
         <template #desc>
           <p>Có tất cả 57 hiệu ứng CssOne. Click vào đối tượng để xem từng hiệu ứng.</p>
@@ -253,14 +253,14 @@ onMounted(() => {
       </TitleHead>
     </div>
 
-    <div class="cssone__table row">
+    <div class="cssone__table row gx-3 gx-sm-4">
       <template
         v-for="(fx, index) in aFx"
         :key="index">
 
         <div
           v-if="fx != 'br'"
-          class="col-3 col-xxs-6"
+          class="col-6 col-sm-4 col-lg-3"
           >
           <div class="cssone__item" :data-fx="fx">
             <div class="cssone__preview">
@@ -311,8 +311,8 @@ onMounted(() => {
       <ButtonPrevNext
         prev-name="Hiệu ứng Math"
         prev-to="/slider/effect-math"
-        next-name="Hiệu ứng CssFour"
-        next-to="/slider/effect-css-four" />
+        next-name="Hiệu ứng Coverflow3D"
+        next-to="/slider/effect-coverflow3d" />
     </template>
   </Guide>
 </main>
@@ -334,8 +334,9 @@ onMounted(() => {
     }
   }
   &__table {
-    padding-left: 100px;
-    padding-right: 100px;
+    overflow: hidden;
+    padding-left: 50px;
+    padding-right: 50px;
   }
   &__item {
     position: relative;
@@ -356,8 +357,9 @@ onMounted(() => {
     opacity: .7;
   }
   &__name {
-    font-size: 16px;
+    // font-size: 16px;
     font-weight: bold;
+    text-align: center;
   }
   /** Effect Preview */
   &__preview {
@@ -418,9 +420,46 @@ onMounted(() => {
   }
 
   /** Media */
-  @media only screen and (max-width: 959px) {
+  @media (min-width: 1200px) {
+    &__table {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+  }
+  @media (max-width: 991px) {
     &__item {
       margin-bottom: 20px;
+    }
+  }
+  @media (max-width: 757px) {
+    &__table {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    &__preview {
+      height: 120px;
+    }
+    &__select {
+      button {
+        min-width: 70px;
+        padding: 8px 20px;
+      }
+      span {
+        display: none;
+      }
+      i {
+        padding-left: 0;
+      }
+    }
+  }
+  @media (max-width: 575px) {
+    &__name {
+      font-size: 12px;
+    }
+    &__slide_name {
+      font-size: 12px;
     }
   }
 }
