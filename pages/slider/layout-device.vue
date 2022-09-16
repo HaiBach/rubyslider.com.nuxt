@@ -35,7 +35,7 @@ onMounted(() => {
     <div class="container">
       <TitleHead>
         <template #title>
-          <h1>LAYOUT TRÊN THIẾT BỊ</h1>
+          <h1>LAYOUT TRÊN <br class="br--max-xs">THIẾT BỊ</h1>
         </template>
       </TitleHead>
   
@@ -75,6 +75,7 @@ onMounted(() => {
 
 <style lang="scss">
 .layout-device {
+  overflow: hidden;
   &__device {
     position: relative;
     margin-bottom: 100px;

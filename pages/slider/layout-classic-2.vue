@@ -46,7 +46,7 @@ onMounted(() => {
     <div class="container">
       <TitleHead>
         <template #title>
-          <h1>LAYOUT CỔ ĐIỂN SỐ 2</h1>
+          <h1>LAYOUT CỔ ĐIỂN <br class="br--max-xs">SỐ 2</h1>
         </template>
       </TitleHead>
 
@@ -102,6 +102,7 @@ onMounted(() => {
 
 <style lang="scss">
 .layout-classic2 {
+  overflow: hidden;
   .rs01 {
     padding: 10px 12px;
     border: 1px solid #ccc;
@@ -129,15 +130,25 @@ onMounted(() => {
   /** MEDIA */
   @media only screen and (max-width: 767px) {
     .rs01 {
+      padding: 6px 7px;
+      border-radius: 12px;
+      .rs01pag.rs01tabs {
+        margin-top: 8px;
+        margin-bottom: 2px;
+      }
       .rs01pagitem {
-        padding: 15px !important;
+        padding: 10px 15px !important;
+        font-size: 14px;
       }
     }
   }
   @media only screen and (max-width: 575px) {
     .rs01 {
-      padding: 0;
-      border-width: 0;
+      
+      .rs01pagitem {
+        padding: 10px 10px !important;
+        font-size: 12px;
+      }
     }
   }
 }

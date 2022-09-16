@@ -33,7 +33,7 @@ onMounted(() => {
     <div class="container">
       <TitleHead>
         <template #title>
-          <h1>LAYOUT CỔ ĐIỂN SỐ 1</h1>
+          <h1>LAYOUT CỔ ĐIỂN <br class="br--max-xs">SỐ 1</h1>
         </template>
       </TitleHead>
         
@@ -52,7 +52,7 @@ onMounted(() => {
 
   <Guide>
     <template #gioi-thieu>
-      <p>Layout cổ điển số 1 được thiết lập hiệu ứng Line đơn giản.<br>Slider được hiển thị với navigation (button next/prev) và pagination kiểu bullet, đặc biệt kết hợp với shadow ở dưới slider để thể hiện các slider có phong cách cổ điển 1 thời.</p>
+      <p>Layout cổ điển số 1 được thiết lập với hiệu ứng Line đơn giản.<br>Slider được hiển thị với navigation (button next/prev) và pagination kiểu bullet, đặc biệt kết hợp với shadow ở dưới slider để thể hiện các slider có phong cách cổ điển 1 thời.</p>
       <ul>
         <li>Hiệu ứng mặc định của plugin RubySlider là <b>Line</b>.</li>
       </ul>
@@ -74,6 +74,7 @@ onMounted(() => {
 
 <style lang="scss">
 .layout-classic1 {
+  overflow: hidden;
   .rs01 {
     .rs01pag {
       position: absolute;
@@ -111,8 +112,21 @@ onMounted(() => {
     visibility: hidden;
     width: 100%;
     height: 46px;
+    margin-top: -5px;
     background: url(/img/shadow.png) no-repeat center center;
-    background-size: cover;
+    background-size: contain;
+    z-index: -1;
+  }
+
+  @media (max-width: 991px) {
+    .rs01shadow {
+      height: 38px;
+    }
+  }
+  @media (max-width: 767px) {
+    .rs01shadow {
+      height: 24px;
+    }
   }
 }
 </style>

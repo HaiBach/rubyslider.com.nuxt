@@ -10,6 +10,9 @@ const sliderOptions = {
   widthSlide: 360,
   height: 500,
   margin: 20,
+  // imageback: {
+  //   position: 'center'
+  // },
   isSwipe: false,
   isSlideshow: true,
   slideshow: {
@@ -37,7 +40,7 @@ onMounted(() => {
     <div class="container">
       <TitleHead>
         <template #title>
-          <h1>LAYOUT BĂNG CHUYỀN</h1>
+          <h1>LAYOUT <br class="br--max-xs">BĂNG CHUYỀN</h1>
         </template>
       </TitleHead>
 

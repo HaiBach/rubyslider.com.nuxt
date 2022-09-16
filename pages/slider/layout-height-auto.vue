@@ -1,27 +1,37 @@
 <script setup>
+definePageMeta({
+  middleware: ['init']
+})
 const sliderOptions = {
   fx: 'line',
   speed: 600,
   width: 1140,
 }
+const initSetup = () => {
+  jQuery('#main .rs01nav').remove()
+  jQuery('#main .rs01pag').remove()
+  jQuery('#main .rs01overlay-ghost').remove()
+  jQuery('#main .rs01imgback').css({ width: '', height: '', left: '', top: '' })
 
+  const rubyLayoutHeightAuto = jQuery('.layout-auto-height__slider').rubyslider( sliderOptions )
+}
 onMounted(() => {
-  setTimeout(() => {
-    const $slider = jQuery('#layout-auto-height__slider')
-    if ($slider.length) {
-      $slider.rubyslider( sliderOptions )
-    }
-  }, 400)
+  setTimeout(initSetup, 400)
 })
 </script>
 
 
 <template>
-  <div class="wrapper">
+<main id="main">
+  <section class="wrapper">
     <div class="container">
-      <TitleHead title="AUTO-HEIGHT LAYOUT" />
+      <TitleHead>
+        <template #title>
+          <h1>LAYOUT CÓ <br class="br--max-xs">CHIỀU CAO TỰ ĐỘNG</h1>
+        </template>
+      </TitleHead>
 
-      <div id="layout-auto-height__slider" class="slider-preview rs01">
+      <div class="layout-auto-height__slider slider-preview rs01">
         <a class="rs01imgback" href="/img/animal-focus-free1.jpg">Animal 1</a>
         <a class="rs01imgback" href="/img/animal-focus-free2.jpg">Animal 2</a>
         <a class="rs01imgback" href="/img/animal-focus-free3.jpg">Animal 3</a>
@@ -30,6 +40,23 @@ onMounted(() => {
         <a class="rs01imgback" href="/img/animal-focus-free6.jpg">Animal 6</a>
       </div> <!-- /.rs01 -->
     </div>
-  </div>
+  </section>
+
+  <Guide>
+    <template #gioi-thieu>
+      <p>...</p>
+    </template>
+    <template #thiet-lap>
+      <pre class="codeprint">{{ sliderOptions }}</pre>
+    </template>
+    <template #nav>
+      <ButtonPrevNext
+        prev-name="Layout có phụ đề"
+        prev-to="/slider/layout-caption"
+        next-name="Layout chiều cao cố định"
+        next-to="/slider/layout-height-fixed" />
+    </template>
+  </Guide>
+</main>
 </template>
  

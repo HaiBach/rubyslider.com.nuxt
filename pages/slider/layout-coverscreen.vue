@@ -83,25 +83,21 @@ onMounted(() => {
     </div>
   </section>
 
-  <section class="guide">
-  <div class="container">
-    <!-- <div class="hr hr--circle"></div> -->
-    <h2>❖ Giới thiệu</h2>
-    <p>Layout toàn màn hình.</p>
-    
-    <LineSpace />
-
-    <h2>❖ Thiết lập slider</h2>
-    <p>Các bạn có thể được hướng dẫn thiết lập slider chi tiết ở trang <NuxtLink to="/docs/quick-start">hướng dẫn</NuxtLink> này.<br>Dưới đây là options hiện tại của slider phía trên:</p>
-    <pre class="codeprint">{{ sliderOptions }}</pre>
-
-    <ButtonPrevNext
-      prev-name="Layout trên thiết bị"
-      prev-to="/slider/layout-device"
-      next-name="Layout toàn chiều dài"
-      next-to="/slider/layout-fullwidth" />
-  </div>
-  </section>
+  <Guide>
+    <template #gioi-thieu>
+      <p>Layout toàn màn hình.</p>
+    </template>
+    <template #thiet-lap>
+      <pre class="codeprint">{{ sliderOptions }}</pre>
+    </template>
+    <template #nav>
+      <ButtonPrevNext
+        prev-name="Layout trên thiết bị"
+        prev-to="/slider/layout-device"
+        next-name="Layout thumnail chiều dọc"
+        next-to="/slider/layout-vertical-thumbnail" />
+    </template>
+  </Guide>
 </main>
 </template>
 

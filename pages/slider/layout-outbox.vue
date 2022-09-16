@@ -5,7 +5,8 @@ definePageMeta({
 const sliderOptions = {
   fx: 'line',
   speed: 600,
-  widthSlide: 900,
+  width: 940,
+  widthSlide: '80%',
   margin: 10,
   isPag: false,
   isLoop: false,
@@ -31,7 +32,7 @@ onMounted(() => {
     <div class="container">
       <TitleHead>
         <template #title>
-          <h1>LAYOUT BÊN NGOÀI KHUNG</h1>
+          <h1>LAYOUT BÊN <br class="br--max-xs">NGOÀI KHUNG</h1>
         </template>
       </TitleHead>
 
