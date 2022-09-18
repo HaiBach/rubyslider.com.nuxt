@@ -1,6 +1,9 @@
 <script setup>
 import hljs from 'highlight.js'
 
+definePageMeta({
+  middleware: ['init']
+})
 const initSetup = () => {
   const $codeprint = document.querySelectorAll('.codeprint code')
   $codeprint.forEach((el) => {

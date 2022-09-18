@@ -1,3 +1,10 @@
+<script setup>
+definePageMeta({
+  middleware: ['init']
+})
+</script>
+
+
 <template>
 <section id="options" class="docs__section">
   <h1 class="docs__title">DANH SÁCH OPTIONS</h1>

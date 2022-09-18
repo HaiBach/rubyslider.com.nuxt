@@ -8,7 +8,8 @@ const year = date.getFullYear()
 <footer id="footer" class="footer">
   <div class="container">
     <div class="footer__copyright">
-      <p>&copy;{{ year }} Nguyễn Văn Thy. All Rights Reserved.</p>
+      <p>&copy;{{ year }} Nguyễn Văn Thy. All Rights Reserved.<br>
+      Hình ảnh được sử dụng trên trang này thuộc bản quyền <a href="https://unsplash.com/" target="_blank">unsplash.com</a></p>
     </div>
   </div>
 </footer> 
@@ -28,6 +29,12 @@ const year = date.getFullYear()
       color: #666;
       @include sizeRem(14);
     }
+    a {
+      color: #444;
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
   }
   /** Media **/
   @media (max-width: 767px) {
@@ -38,7 +45,7 @@ const year = date.getFullYear()
       p {
         color: #444;
         @include sizeRem(12);
-        text-align: center;
+        // text-align: center;
       }
     }
   }

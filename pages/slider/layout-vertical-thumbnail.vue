@@ -8,7 +8,8 @@ const sliderOptions = {
   width: 1140,
   height: 550,
   pag: {
-    direction: 'ver'
+    direction: 'ver',
+    position: 'begin',
   }
 }
 const initSetup = () => {
@@ -69,9 +70,14 @@ onMounted(() => {
 
 
 <style lang="scss">
-#layout-vertical__slider {
+.layout-vertical__slider {
   .rs01viewport {
     overflow: hidden;
+  }
+  @media (max-width: 575px) {
+    .rs01pag.rs01pagdirs-ver {
+      margin-right: 10px;
+    }
   }
 }
 </style>
