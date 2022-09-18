@@ -1,6 +1,19 @@
 <script setup>
 definePageMeta({
-  middleware: ['init']
+  middleware: ['init'],
+})
+useHead({
+  title: 'Hiệu ứng Line | RubySlider',
+  meta: [
+    { name: 'description', content: '' },
+    { name: 'og:title', content: 'Hiệu ứng Line | RubySlider' },
+    { name: 'og:description', content: '' },
+    { name: 'og:image', content: '' },
+    { name: 'og:type', content: 'article' }
+  ],
+  bodyAttrs: {
+    class: 'page-effect-line'
+  }
 })
 const sliderOptions = {
   fx: 'line',
