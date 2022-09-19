@@ -216,7 +216,7 @@ onMounted(() => {
 
 <template>
 <main id="main">
-  <section id="effect-cssone" class="effect-cssone wrapper">
+  <section class="effect-cssone wrapper">
     <div class="container">
       <TitleHead>
         <template #title>
@@ -320,8 +320,11 @@ onMounted(() => {
 
 
 <style lang="scss">
-.cssone {
+.effect-cssone {
   overflow: hidden;
+}
+
+.cssone {
   padding-bottom: 60px;
   .hr {
     margin-top: 0;

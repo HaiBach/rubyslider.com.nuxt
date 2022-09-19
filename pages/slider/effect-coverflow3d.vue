@@ -224,6 +224,7 @@ onMounted(() => {
 
 <style lang="scss">
 .effect-coverflow3d {
+  overflow: hidden;
   &__slider {
     margin-bottom: 30px;
   }
