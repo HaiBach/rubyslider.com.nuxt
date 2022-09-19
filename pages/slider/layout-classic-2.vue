@@ -50,7 +50,7 @@ onMounted(() => {
         </template>
       </TitleHead>
 
-      <div class="layout-classic2__slider slider-preview rs01">
+      <div class="layout-classic2__slider slider-preview rs01 image-for-sp">
         <div class="rs01viewport">
           <div class="rs01slide">
             <a class="rs01imgback" href="/img/vietnam-1140-1.jpg">Ha Noi</a>

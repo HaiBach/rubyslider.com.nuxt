@@ -157,10 +157,21 @@ pre, code {
 .slider-preview {
   margin-bottom: 30px;
 }
+.image-for-sp {
+  @media (max-width: 575px) {
+    .rs01imgback {
+      aspect-ratio: 1 / 1;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+    }
+  }
+}
 
 .none {
   display: none !important;
 }
+
 
 
 

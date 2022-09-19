@@ -36,7 +36,7 @@ onMounted(() => {
         </template>
       </TitleHead>
 
-      <div class="layout-outbox__slider slider-preview rs01">
+      <div class="layout-outbox__slider slider-preview rs01 image-for-sp">
         <a class="rs01imgback" href="/img/season-landscape2.jpg">Season 2</a>
         <a class="rs01imgback" href="/img/season-landscape3.jpg">Season 3</a>
         <a class="rs01imgback" href="/img/season-landscape4.jpg">Season 4</a>
