@@ -38,7 +38,7 @@ onMounted(() => {
             <div class="rs01cap" data-rubyslider-markup="sliderPreview"></div>
         </div>
 
-        <div class="layout-caption__slider slider-preview rs01 col-12 col-sm-9">
+        <div class="col-12 col-sm-9 layout-caption__slider slider-preview rs01 image-for-sp">
           <div>
             <a class="rs01imgback" href="/img/vietnam-1140-1.jpg">Việt Nam 1</a>
             <div class="rs01capitem">

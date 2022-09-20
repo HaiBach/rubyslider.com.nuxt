@@ -43,7 +43,7 @@ onMounted(() => {
           <p class="font-blokk">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur sunt eaque molestias corporis possimus dolorum consectetur voluptatem, ut, consequatur ipsam dicta soluta! Nobis dolorum ut ullam velit illum sunt, ipsum!</p>
         </div>
         <div class="col-12 col-sm-9">
-          <div class="layout-multi__slider_1 slider-preview rs01">
+          <div class="layout-multi__slider_1 slider-preview rs01 image-for-sp">
             <a class="rs01imgback" href="/img/vietnam-1140-1.jpg">Việt Nam 1</a>
             <a class="rs01imgback" href="/img/vietnam-1140-2.jpg">Việt Nam 2</a>
             <a class="rs01imgback" href="/img/vietnam-1140-3.jpg">Việt Nam 3</a>

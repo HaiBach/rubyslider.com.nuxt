@@ -171,6 +171,11 @@ onMounted(() => {
       width: auto;
     }
   }
+  @media (max-width: 575px) {
+    &__device {
+      margin-bottom: 20px;
+    }
+  }
 }
 </style>
  

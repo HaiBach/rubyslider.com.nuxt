@@ -53,7 +53,11 @@ function randomNum() {
       </template>
     </TitleHead>
   
+<<<<<<< HEAD
     <div class="mv__slider rs01 rs01timer-arcTop">
+=======
+    <div class="mv__slider rs01 image-for-sp">
+>>>>>>> 96b66bb7c4cdf56cc26d656dc2e0e64cf279e74b
       <a class="rs01imgback" href="/img/vietnam-1140-1.jpg">Việt Nam 1</a>
       <a class="rs01imgback" href="/img/vietnam-1140-2.jpg">Việt Nam 2</a>
       <a class="rs01imgback" href="/img/vietnam-1140-4.jpg">Việt Nam 4</a>
@@ -73,7 +77,7 @@ function randomNum() {
           <span>CÁC HIỆU ỨNG<br><small><b>&</b></small> LAYOUT KHÁC</span>
         </NuxtLink>
         <NuxtLink to="/docs/quick-start" class="btn--alter">
-          <span>HƯỚNG DẪN<br class="br--max-sm">SỬ DỤNG</span>
+          <span>HƯỚNG DẪN <br class="br--max-sm">SỬ DỤNG</span>
         </NuxtLink>
       </div>
     </div>
@@ -84,8 +88,8 @@ function randomNum() {
 
 <style lang="scss">
 .mv {
-  position: relative;
   overflow: hidden;
+  position: relative;
   padding-top: 80px;
   padding-bottom: 100px;
   .title-head {
@@ -153,7 +157,7 @@ function randomNum() {
   }
   @media (max-width: 767px) {
     padding-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
     .title-head {
       margin-bottom: 60px;
       &__title {

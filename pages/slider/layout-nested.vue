@@ -49,7 +49,7 @@ onMounted(() => {
         </template>
       </TitleHead>
 
-      <div class="layout-nested__slider slider-preview rs01">
+      <div class="layout-nested__slider slider-preview rs01 image-for-sp">
         <div>
           <a class="rs01imgback" href="/img/vietnam-1140-1.jpg">Việt Nam 1</a>
           <div class="layout-nested__slider2 rs01">

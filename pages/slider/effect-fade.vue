@@ -32,7 +32,7 @@ onMounted(() => {
         </template>
       </TitleHead>
 
-      <div class="effect-fade__slider slider-preview rs01">
+      <div class="effect-fade__slider slider-preview rs01 image-for-sp">
         <a class="rs01imgback" href="/img/vietnam-1140-1.jpg">Việt Nam 1</a>
         <a class="rs01imgback" href="/img/vietnam-1140-2.jpg">Việt Nam 2</a>
         <a class="rs01imgback" href="/img/vietnam-1140-4.jpg">Việt Nam 4</a>
