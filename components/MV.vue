@@ -53,11 +53,7 @@ function randomNum() {
       </template>
     </TitleHead>
   
-<<<<<<< HEAD
-    <div class="mv__slider rs01 rs01timer-arcTop">
-=======
     <div class="mv__slider rs01 image-for-sp">
->>>>>>> 96b66bb7c4cdf56cc26d656dc2e0e64cf279e74b
       <a class="rs01imgback" href="/img/vietnam-1140-1.jpg">Việt Nam 1</a>
       <a class="rs01imgback" href="/img/vietnam-1140-2.jpg">Việt Nam 2</a>
       <a class="rs01imgback" href="/img/vietnam-1140-4.jpg">Việt Nam 4</a>
