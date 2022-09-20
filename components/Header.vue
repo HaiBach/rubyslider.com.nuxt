@@ -36,7 +36,7 @@ const scrollfixed = function() {
 
     // THIẾT LẬP EVENT RESIZE
     var timer2;
-    $(window).resize(function() {
+    $(window).on('resize', function() {
       clearTimeout(timer2)
       timer2 = setTimeout(function() {
         toggleActiveWhenGotoTarget($fixed)

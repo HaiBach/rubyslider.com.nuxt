@@ -321,6 +321,7 @@ onMounted(() => {
 
 <style lang="scss">
 .cssone {
+  overflow: hidden;
   padding-bottom: 60px;
   .hr {
     margin-top: 0;

@@ -54,11 +54,6 @@ function randomNum() {
     </TitleHead>
   
     <div class="mv__slider rs01 rs01timer-arcTop">
-      <!-- <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 1</a>
-      <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 2</a>
-      <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 3</a>
-      <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 4</a>
-      <a class="rs01imgback" :href="'https://picsum.photos/1140/600?random=' + randomNum()">Lorem Picsum 5</a> -->
       <a class="rs01imgback" href="/img/vietnam-1140-1.jpg">Việt Nam 1</a>
       <a class="rs01imgback" href="/img/vietnam-1140-2.jpg">Việt Nam 2</a>
       <a class="rs01imgback" href="/img/vietnam-1140-4.jpg">Việt Nam 4</a>

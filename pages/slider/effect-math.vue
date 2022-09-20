@@ -1,4 +1,8 @@
 <script setup>
+definePageMeta({
+  middleware: ['init']
+})
+
 const aFx = [
   'rectMove',
   'rectRun',
@@ -81,7 +85,6 @@ const initSetup = () => {
   })
 }
 onMounted(() => {
-  window.scrollTo({ top: 0, behavior: 'instant' })
   setTimeout(initSetup, 400)
 })
 </script>

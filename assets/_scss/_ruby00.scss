@@ -548,7 +548,6 @@
     padding-bottom: 5px;
     z-index: 2;
   }
-  .ie7 .select { *display: inline; zoom: 1; }
   .select:hover {
     border: 1px solid #e5e5e5;
     background-color: #fff;
@@ -712,7 +711,6 @@
     width: 250px; height: 250px;
     margin: 0 auto;
     background-color: white;
-    *zoom: 1;
   }
   .lb-outerContainer:after {
     content: " ";
@@ -823,7 +821,6 @@
     width: 100%;
     margin: 0 auto;
     padding-top: 10px;
-    *zoom: 1;
   }
 
   .lb-dataContainer:after {
@@ -960,8 +957,6 @@
   /* Image hover ready */
   .fx-img-hover.fx-ready {
     display: inline-block !important;
-    *display: inline !important;
-    *zoom: 1;
   }
 
   .fx-img-hover a { width: 100%; }
@@ -1503,7 +1498,6 @@
   .tab-hor .tablist { border-bottom: 1px solid #e5e5e5; }
   .tab-hor .tablist li {
     display: inline-block;
-    *display: inline; zoom: 1;          /* Fix IE7 */
     margin-right: 30px; margin-bottom: 0;
   }
   .tab-hor .tablist li:hover,
