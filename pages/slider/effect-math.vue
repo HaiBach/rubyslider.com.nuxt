@@ -16,9 +16,8 @@ const aFx = [
 ]
 let sliderOptions = {
   fx: 'rectRun',
-  speed: 1000,
+  speed: 800,
   width: 1140,
-  // height: 520,
 }
 
 const initSetup = () => {

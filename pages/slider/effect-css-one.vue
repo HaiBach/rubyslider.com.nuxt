@@ -8,8 +8,10 @@ const sliderOptions = {
   cssOne: 'roDeal',
   speed: 800,
   width: 1140,
-  // height: 520,
-  isNav: true
+  isNav: true,
+  imageback: {
+    position: 'fit'
+  },
 }
 const aFx = [
   'glueHor', 'glueVer', 'foldHor', 'foldVer', 'foldFromHor', 'foldFromVer', 'roomHor', 'roomVer', 'flitHor', 'flitVer',
@@ -227,12 +229,27 @@ onMounted(() => {
         </template>
       </TitleHead>
 
-      <div class="effect-cssone__slider slider-preview rs01 image-for-sp">
-        <a class="rs01imgback" href="/img/vietnam-1140-1.jpg">Việt Nam 1</a>
-        <a class="rs01imgback" href="/img/vietnam-1140-2.jpg">Việt Nam 2</a>
-        <a class="rs01imgback" href="/img/vietnam-1140-4.jpg">Việt Nam 4</a>
-        <a class="rs01imgback" href="/img/vietnam-1140-5.jpg">Việt Nam 5</a>
-        <a class="rs01imgback" href="/img/vietnam-1140-6.jpg">Việt Nam 6</a>
+      <div class="effect-cssone__slider slider-preview rs01">
+        <picture class="rs01imgback-wrap">
+          <source media="(max-width: 767px)" srcset="/img/vietnam-500-1.jpg">
+          <a class="rs01imgback" href="/img/vietnam-1140-1.jpg">Việt Nam 1</a>
+        </picture>
+        <picture class="rs01imgback-wrap">
+          <source media="(max-width: 767px)" srcset="/img/vietnam-500-2.jpg">
+          <a class="rs01imgback" href="/img/vietnam-1140-2.jpg">Việt Nam 2</a>
+        </picture>
+        <picture class="rs01imgback-wrap">
+          <source media="(max-width: 767px)" srcset="/img/vietnam-500-3.jpg">
+          <a class="rs01imgback" href="/img/vietnam-1140-3.jpg">Việt Nam 3</a>
+        </picture>
+        <picture class="rs01imgback-wrap">
+          <source media="(max-width: 767px)" srcset="/img/vietnam-500-4.jpg">
+          <a class="rs01imgback" href="/img/vietnam-1140-4.jpg">Việt Nam 4</a>
+        </picture>
+        <picture class="rs01imgback-wrap">
+          <source media="(max-width: 767px)" srcset="/img/vietnam-500-5.jpg">
+          <a class="rs01imgback" href="/img/vietnam-1140-5.jpg">Việt Nam 5</a>
+        </picture>
       </div> <!-- /.rs01 -->
     </div>
   </section>
