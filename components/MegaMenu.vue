@@ -93,7 +93,7 @@ const megamenu = function() {
       $ghost.classList.add(actived)
       document.body.classList.add(actived)
     }
-    console.log('toggle Menu Level 1')
+    // console.log('toggle Menu Level 1')
   }
 
   function toggleMenuLevel3($parent) {
@@ -117,7 +117,7 @@ const megamenu = function() {
     }
     // document.body.classList.remove(open)
     hamburgerToggle()
-    console.log('toggle Menu Level 3')
+    // console.log('toggle Menu Level 3')
   }
 }
 
@@ -130,7 +130,7 @@ function closeBoardByGhost(event) {
   $ghost.classList.remove(actived)
   document.body.classList.remove(actived)
   document.body.classList.remove(open)
-  console.log('close board by ghost')
+  // console.log('close board by ghost')
   return false
 }
 function closeBoardbyMenuLevel3(event) {
@@ -141,7 +141,7 @@ function closeBoardbyMenuLevel3(event) {
   $ghost.classList.remove(actived)
   document.body.classList.remove(actived)
   document.body.classList.remove(open)
-  console.log('close board by menu level 3')
+  // console.log('close board by menu level 3')
   return false
 }
 
@@ -158,7 +158,7 @@ function hamburgerToggle(event) {
     $hamburger.classList.add(hamburgerActived)
     document.body.classList.add(open)
   }
-  console.log('hamburger toggle')
+  // console.log('hamburger toggle')
 }
 
 
