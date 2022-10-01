@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt'
+// const config = useRuntimeConfig()
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -11,7 +12,7 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Plugin jQuery với nhiều hiệu ứng dành cho Slider và Tabs' },
         { name: 'og:title', content: 'RubySlider | Nguyễn Văn Thy' },
         { name: 'og:description', content: 'Plugin jQuery với nhiều hiệu ứng dành cho Slider và Tabs' },
-        { name: 'og:image', content: '/img/screenshoot.jpg' },
+        { name: 'og:image', content: 'https://haibach.github.io/img/screenshoot.jpg' },
         { name: 'og:url', content: 'https://haibach.github.io/' },
         { name: 'og:type', content: 'article' },
         { name: 'og:locale', content: 'vi' },

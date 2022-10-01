@@ -43,7 +43,7 @@ const initSetup = function() {
     cssOne: 'scalePulse',
     speed: 800,
     pag: {
-      align: 'center'
+      align: 'begin'
     }
   })
 }
@@ -195,9 +195,9 @@ function getRandomNum() {
           </div>
         </div> -->
       </div>
-      <div class="effect-others__btn btn">
+      <!-- <div class="effect-others__btn btn">
         <NuxtLink to="/tabs">Bố cục Tabs</NuxtLink>
-      </div>
+      </div> -->
     </div>
     <!-- TABS LAYOUT - end -->
 

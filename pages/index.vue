@@ -3,7 +3,12 @@ definePageMeta({
   key: route => route.fullPath,
   middleware: ['init']
 })
-onMounted(() => {
+
+const baseURL = (typeof window === 'undefined') ? 'http://localhost:3000' : window.location.origin 
+useHead({
+  bodyAttrs: {
+    class: 'page-top'
+  }
 })
 </script>
 
