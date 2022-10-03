@@ -21,7 +21,7 @@ export default defineNuxtConfig({
         { rel: 'icon', href: "/favicon.ico" },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
-        // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Raleway:wght@100;200;300;400;700&family=Source+Code+Pro:wght@400;500;700&display=swap' },
+        // { rel: 'stylesheet preload', href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Raleway:wght@100;200;300;400;700&family=Source+Code+Pro:wght@400;500;700&display=swap', as: 'font', type: 'font/woff2', crossorigin: '' },
       ],
       script: [
         { src: 'https://www.googletagmanager.com/gtag/js?id=G-K64BJL8XGL', async: true },

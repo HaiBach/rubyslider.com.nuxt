@@ -81,7 +81,7 @@ function getRandomNum() {
         <a
           v-for="i in 4"
           class="rs01imgback"
-          :href="'/img/vietnam2-1140-' + (i+1) + '.jpg'"
+          :href="'/img/vietnam2-1140-' + (i+1) + '.webp'"
           >Hình ảnh Việt Nam {{ i+1 }}</a>
       </div>
       <div class="effect-others__btn btn">
@@ -97,7 +97,7 @@ function getRandomNum() {
         <a
           v-for="i in 4"
           class="rs01imgback"
-          :href="'/img/vietnam2-1140-' + (i+1) + '.jpg'"
+          :href="'/img/vietnam2-1140-' + (i+1) + '.webp'"
           >Hình ảnh Việt Nam {{ i+1 }}</a>
       </div>
       <div class="effect-others__btn btn">
@@ -113,7 +113,7 @@ function getRandomNum() {
         <a
           v-for="i in 4"
           class="rs01imgback"
-          :href="'/img/vietnam2-1140-' + (i+1) + '.jpg'"
+          :href="'/img/vietnam2-1140-' + (i+1) + '.webp'"
           >Hình ảnh Việt Nam {{ i+1 }}</a>
       </div>
       <div class="effect-others__btn btn">
@@ -168,22 +168,22 @@ function getRandomNum() {
           <div class="rs01pagitem">IMAGE LAZYLOAD</div>
           <div class="row">
             <div class="col-4 col-xs-4">
-              <img class="rs01img card-img" src="/img/food-thumbnail1.jpg" alt="Food 1">
+              <img class="rs01img card-img" src="/img/food-thumbnail1.webp" alt="Food 1">
             </div>
             <div class="col-4 col-xs-4">
-              <img class="rs01img card-img" src="/img/food-thumbnail2.jpg" alt="Food 2">
+              <img class="rs01img card-img" src="/img/food-thumbnail2.webp" alt="Food 2">
             </div>
             <div class="col-4 col-xs-4">
-              <img class="rs01img card-img" src="/img/food-thumbnail3.jpg" alt="Food 3">
+              <img class="rs01img card-img" src="/img/food-thumbnail3.webp" alt="Food 3">
             </div>
             <div class="col-4 col-xs-4">
-              <img class="rs01img card-img" src="/img/food-thumbnail4.jpg" alt="Food 4">
+              <img class="rs01img card-img" src="/img/food-thumbnail4.webp" alt="Food 4">
             </div>
             <div class="col-4 col-xs-4">
-              <img class="rs01img card-img" src="/img/food-thumbnail6.jpg" alt="Food 6">
+              <img class="rs01img card-img" src="/img/food-thumbnail6.webp" alt="Food 6">
             </div>
             <div class="col-4 col-xs-4">
-              <img class="rs01img card-img" src="/img/food-thumbnail7.jpg" alt="Food 7">
+              <img class="rs01img card-img" src="/img/food-thumbnail7.webp" alt="Food 7">
             </div>
           </div>
         </div>
