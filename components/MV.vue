@@ -60,19 +60,19 @@ function randomNum() {
       </picture>
       <picture class="rs01imgback-wrap">
         <source media="(max-width: 767px)" srcset="/img/vietnam-500-2.jpg">
-        <a class="rs01imgback" href="/img/vietnam-1140-2.webp">Việt Nam 2</a>
+        <img class="rs01imgback" src="/img/onepixel.gif" data-src="/img/vietnam-1140-2.webp" alt="Việt Nam 2">
       </picture>
       <picture class="rs01imgback-wrap">
         <source media="(max-width: 767px)" srcset="/img/vietnam-500-3.jpg">
-        <a class="rs01imgback" href="/img/vietnam-1140-3.webp">Việt Nam 3</a>
+        <img class="rs01imgback" src="/img/onepixel.gif" data-src="/img/vietnam-1140-3.webp" alt="Việt Nam 3">
       </picture>
       <picture class="rs01imgback-wrap">
         <source media="(max-width: 767px)" srcset="/img/vietnam-500-4.jpg">
-        <a class="rs01imgback" href="/img/vietnam-1140-4.webp">Việt Nam 4</a>
+        <img class="rs01imgback" src="/img/onepixel.gif" data-src="/img/vietnam-1140-4.webp" alt="Việt Nam 4">
       </picture>
       <picture class="rs01imgback-wrap">
         <source media="(max-width: 767px)" srcset="/img/vietnam-500-5.jpg">
-        <a class="rs01imgback" href="/img/vietnam-1140-5.webp">Việt Nam 5</a>
+        <img class="rs01imgback" src="/img/onepixel.gif" data-src="/img/vietnam-1140-5.webp" alt="Việt Nam 5">
       </picture>
     </div>
 
