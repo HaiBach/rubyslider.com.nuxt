@@ -3,8 +3,8 @@
  * @package         RubySlider
  * @author          HaiBach | Nguyễn Văn Thy
  * @link            http://haibach.net/rubyslider
- * @version         1.8
- * @lastUpdate      16/08/2022
+ * @version         1.8.1
+ * @lastUpdate      04/10/2022
  */
 
 
@@ -3520,9 +3520,10 @@ $[rs01VA.rubyName] = function($ruby, OptsJS) {
                 // Content of caption depends on tagName
                 // + is image: get content in 'alt' attribute
                 // + is link tag: get content inside tag
-                var tag = this.tagName.toLowerCase();
-                if     ( tag === 'img' ) capHTML = $i.attr('alt');
-                else if( tag === 'a' )   capHTML = $i.html();
+                var tag = this.tagName.toLowerCase()
+                if ( tag === 'img' ) capHTML = $i.attr('alt')
+                else if ( tag === 'a' ) capHTML = $i.html()
+                else if ( tag === 'div') capHTML = $i.html() 
             });
 
 

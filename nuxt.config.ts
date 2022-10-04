@@ -27,7 +27,7 @@ export default defineNuxtConfig({
         { src: 'https://www.googletagmanager.com/gtag/js?id=G-K64BJL8XGL', async: true },
         { src: '/js/jquery.min.js' },
         { src: '/js/rubyanimate.js' },
-        { src: '/js/rubyslider_17.js' },
+        { src: '/js/rubyslider.js' },
       ]
     }
   },

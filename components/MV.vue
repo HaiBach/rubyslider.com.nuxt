@@ -56,7 +56,7 @@ function randomNum() {
     <div class="mv__slider rs01">
       <picture class="rs01imgback-wrap">
         <source media="(max-width: 767px)" srcset="/img/vietnam-500-1.jpg">
-        <a class="rs01imgback" href="/img/vietnam-1140-1.webp">Việt Nam 1</a>
+        <img class="rs01imgback" src="/img/onepixel.gif" data-src="/img/vietnam-1140-1.webp" alt="Việt Nam 1">
       </picture>
       <picture class="rs01imgback-wrap">
         <source media="(max-width: 767px)" srcset="/img/vietnam-500-2.jpg">

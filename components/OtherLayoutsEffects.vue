@@ -156,7 +156,7 @@ function getRandomNum() {
             <input type="text" class="large" placeholder="Password">
             <input type="text" class="large" placeholder="Repeat Password">
             <input type="text" class="large" placeholder="Email">
-            <textarea name="" cols="30" rows="5" placeholder="Your bio"></textarea>
+            <textarea name="bio" cols="30" rows="5" placeholder="Your bio"></textarea>
             <label class="checkbox text-small muted pull-left" for="terms">
               <input id="terms" type="checkbox">I have read and I agree the Terms of Use
             </label>
