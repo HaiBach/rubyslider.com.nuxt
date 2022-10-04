@@ -57,6 +57,7 @@ const year = date.getFullYear()
 .footer {
   padding-top: 40px;
   padding-bottom: 40px;
+  // border-top: 1px solid #e0e0e0;
   &__inner {
     display: flex;
     justify-content: space-between;

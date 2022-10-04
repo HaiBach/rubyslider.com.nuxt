@@ -1,6 +1,19 @@
 <script setup>
 definePageMeta({
-  key: route => route.fullPath
+  key: route => route.fullPath,
+})
+useHead({
+  title: 'Hướng dẫn | RubySlider',
+  meta: [
+    { name: 'description', content: '' },
+    { name: 'og:title', content: 'Hướng dẫn | RubySlider' },
+    { name: 'og:description', content: '' },
+    { name: 'og:image', content: '' },
+    { name: 'og:type', content: 'article' }
+  ],
+  bodyAttrs: {
+    class: 'page-docs'
+  }
 })
 </script>
 
