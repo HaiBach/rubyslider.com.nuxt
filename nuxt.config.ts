@@ -5,6 +5,9 @@ import { defineNuxtConfig } from 'nuxt'
 export default defineNuxtConfig({
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'vi'
+      },
       title: 'RubySlider | Nguyễn Văn Thy',
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1.0',

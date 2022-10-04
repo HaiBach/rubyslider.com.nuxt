@@ -198,7 +198,8 @@ onMounted(() => {
           <NuxtLink
             :to="menuLevel1.to"
             :target="menuLevel1.linkTarget"
-            class="megamenu--link-lv1">
+            class="megamenu--link-lv1"
+            :title="menuLevel1.name">
             <i v-if="menuLevel1.icon" v-html="menuLevel1.icon "></i>
             <span>{{ menuLevel1.name }}</span>
             <span class="megamenu__caret" v-if="menuLevel1.menus"></span>
