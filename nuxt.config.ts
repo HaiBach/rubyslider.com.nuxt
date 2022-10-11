@@ -27,10 +27,10 @@ export default defineNuxtConfig({
         // { rel: 'stylesheet preload', href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Raleway:wght@100;200;300;400;700&family=Source+Code+Pro:wght@400;500;700&display=swap', as: 'font', type: 'font/woff2', crossorigin: '' },
       ],
       script: [
-        { src: 'https://www.googletagmanager.com/gtag/js?id=G-K64BJL8XGL', async: true },
+        // { src: 'https://www.googletagmanager.com/gtag/js?id=G-K64BJL8XGL', async: true },
         { src: '/js/jquery.min.js' },
-        { src: '/js/rubyanimate.js' },
-        { src: '/js/rubyslider.js' },
+        { src: '/js/rubyanimate.js', defer: true },
+        { src: '/js/rubyslider.js', defer: true },
       ]
     }
   },
